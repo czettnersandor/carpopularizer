@@ -1,7 +1,14 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
+<% if logged_in? %>
+  Welcome <%= current_user.login %>
+  <%= link_to("Logout", "logout") %>
+
+<% else %>
+  <%= link_to("Login", "login") %>
+<% end %>
+
+<% if flash[:login_message] %>
+  <%=flash[:login_message]%>
+<%end%>
 
 <%= @proba %>
 Layout
