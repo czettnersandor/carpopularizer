@@ -1,15 +1,36 @@
-<% if logged_in? %>
-  Welcome <%= current_user.login %>
-  <%= link_to("Logout", "logout") %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Boxutca</title>
 
-<% else %>
-  <%= link_to("Login", "login") %>
-<% end %>
+    <%= stylesheet_link_tag("style") %>
+    <%= javascript_include_tag 'jquery' %>
+    <%= javascript_include_tag 'jquery-ui' %>
+    <%= javascript_include_tag 'jrails' %>
+    <%= javascript_include_tag 'jquery.validate' %>
+    <%= javascript_include_tag 'application' %>
 
-<% if flash[:login_message] %>
-  <%=flash[:login_message]%>
-<%end%>
+  </head>
+  <body>
 
-<%= @proba %>
-Layout
-<%= yield %>
+    <% if logged_in? %>
+      Welcome <%= current_user.login %>
+      <%= link_to("Logout", "logout") %>
+
+    <% else %>
+      <%= link_to("Login", "login") %>
+    <% end %>
+
+    <% if flash[:login_message] %>
+      <%=flash[:login_message]%>
+    <%end%>
+
+    <% if flash[:notice] %>
+      <%=flash[:notice]%>
+    <%end%>
+    Layout
+    <%= yield %>
+
+  </body>
+</html>

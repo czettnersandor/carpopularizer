@@ -1,0 +1,31 @@
+input:focus {
+  border:1px dotted black;
+}
+
+input {
+  border:1px solid black;
+  color: black;
+  background-color: white;
+  float: left;
+}
+
+input, textarea, select {
+  font-family:inherit;
+  font-size:100%;
+  margin:0;
+  padding:1px;
+}
+
+label.error {
+  background: url(../images/exclamation.png) no-repeat;
+  padding-left: 16px;
+  height: 16px;
+  display: block;
+  float:left;
+}
+
+div.clearblock {
+  display: block;
+  height: 0;
+  clear: both;
+}

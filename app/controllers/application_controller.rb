@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   layout "main"
 
   def set_toppings
+    # set variables which needed everywhere
     @proba = "HELLO"
   end
   # Scrub sensitive parameters from your log

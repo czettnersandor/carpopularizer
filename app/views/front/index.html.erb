@@ -1,6 +1,8 @@
 <h1>Front#index</h1>
 <p>Find me in app/views/front/index.html.erb</p>
 
-<%  @roles.each { |role| %>
-  <%= role.name %>
-<% } %>
+<% if @roles %>
+  <%  @roles.each { |role| %>
+    <%= role.name %>
+  <% } %>
+<% end %>

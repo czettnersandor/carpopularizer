@@ -24,4 +24,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def check_username
+    if User.find_by_login(params['user']['login'])
+      @notice = "false"
+    else
+      @notice = "true"
+    end
+
+    respond_to do |format|
+      format.js { render :layout => false }
+    end
+    
+  end
+
 end
