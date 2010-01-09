@@ -2,19 +2,19 @@
 <% form_for :user, :url => users_path, :html => { :class => "user-register" } do |f| -%>
 
 <div class="form-item">
-<label for="user_login">Nickname</label><br/>
+<label for="user_login"><%=_('Nickname')%></label><br/>
 <%= f.text_field :login %>
 <hr/>
 </div>
 
 <div class="form-item">
-<label for="user_email">Email</label><br/>
+<label for="user_email"><%=_('Email')%></label><br/>
 <%= f.text_field :email %>
 <hr/>
 </div>
 
 <div class="form-item">
-<label for="user_password">Password</label><br/>
+<label for="user_password"><%=_('Password')%></label><br/>
 <%= f.password_field :password %>
 <hr/>
 </div>
@@ -25,5 +25,5 @@
 <hr/>
 </div>
 
-<p><%= submit_tag 'Sign up' %></p>
+<p><%= submit_tag _('Register') %></p>
 <% end -%>

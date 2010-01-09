@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-08 23:07+0100\n"
-"PO-Revision-Date: 2010-01-08 23:11+0100\n"
+"POT-Creation-Date: 2010-01-09 11:32+0100\n"
+"PO-Revision-Date: 2010-01-09 11:34+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,8 +18,24 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: app/views/users/new.html.erb:19
+#: app/views/users/new.html.erb:23
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
+
+#: app/views/users/new.html.erb:11
+msgid "Email"
+msgstr "E-mail"
+
+#: app/views/users/new.html.erb:5
+msgid "Nickname"
+msgstr "Becenév"
+
+#: app/views/users/new.html.erb:17
+msgid "Password"
+msgstr "Jelszó ismét"
+
+#: app/views/users/new.html.erb:28
+msgid "Register"
+msgstr "Regisztráció"
 
 

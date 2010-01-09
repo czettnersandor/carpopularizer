@@ -15,10 +15,9 @@ class ApplicationController < ActionController::Base
   end
 
   def set_gettext_locale
-    FastGettext.text_domain = 'boxutca'
+    FastGettext.text_domain = 'app'
     FastGettext.available_locales = ['en','hu'] #all you want to allow
-
-    FastGettext.locale = 'hu'
+    super
   end
 
   # Scrub sensitive parameters from your log
