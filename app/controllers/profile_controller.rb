@@ -24,7 +24,7 @@ class ProfileController < ApplicationController
 
     if @user.update_attributes(params[:user])
       # flash[:notice] = _('User profile was succesfully updated.')
-      render :action => "index"
+      redirect :action => "index"
     else
       render :action => "edit"
     end
