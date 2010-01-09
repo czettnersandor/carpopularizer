@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  before_filter :set_toppings
+  before_filter :set_toppings, :set_gettext_locale
   include AuthenticatedSystem
 
   layout "main"
@@ -13,6 +13,14 @@ class ApplicationController < ActionController::Base
     # set variables which needed everywhere
     @proba = "HELLO"
   end
+
+  def set_gettext_locale
+    FastGettext.text_domain = 'boxutca'
+    FastGettext.available_locales = ['en','hu'] #all you want to allow
+
+    FastGettext.locale = 'hu'
+  end
+
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

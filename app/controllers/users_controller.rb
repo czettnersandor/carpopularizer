@@ -30,11 +30,21 @@ class UsersController < ApplicationController
     else
       @notice = "true"
     end
-
     respond_to do |format|
-      format.js { render :layout => false }
+      format.js { render :layout => false, :template => 'users/true-false' }
+      format.html { render 'users/true-false' }
     end
-    
+  end
+  def check_email
+    if User.find_by_email(params['user']['email'])
+      @notice = "false"
+    else
+      @notice = "true"
+    end
+    respond_to do |format|
+      format.js { render :layout => false, :template => 'users/true-false' }
+      format.html { render 'users/true-false' }
+    end
   end
 
 end

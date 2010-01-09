@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users, :collection => { :check_username => :get }
+  map.resources :users, :collection => { :check_username => :get, :check_email => :get }
   map.resource :session, :collection => { :newpassword => :post }
   map.resource :front
 

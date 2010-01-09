@@ -41,9 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: boxutca_production
+  database: epersql13
   pool: 5
-  username: sandoruser
+  username: epersql13
   password: 123456
-  socket: /opt/lampp/var/mysql/mysql.sock
 

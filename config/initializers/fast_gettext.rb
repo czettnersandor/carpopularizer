@@ -1,0 +1,1 @@
+FastGettext.add_text_domain 'boxutca', :path => 'locale'

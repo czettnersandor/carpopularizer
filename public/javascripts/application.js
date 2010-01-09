@@ -4,7 +4,7 @@ $(document).ready(function(){
     rules: {
       'user[login]': {
         required: true,
-        minlength: 2,
+        minlength: 3,
         remote: "/users/check_username"
       },
       'user[password]': {
@@ -26,7 +26,7 @@ $(document).ready(function(){
       'user[login]': {
         required: "Enter a username",
         minlength: jQuery.format("Enter at least {0} characters"),
-        remote: jQuery.format("{0} is already in use")
+        remote: jQuery.format("Already in use")
       },
       'user[password]': {
         required: "Provide a password",
@@ -40,7 +40,7 @@ $(document).ready(function(){
       'user[email]': {
         required: "Please enter a valid email address",
         minlength: "Please enter a valid email address",
-        remote: jQuery.format("{0} is already in use")
+        remote: jQuery.format("Already in use")
       }
     }
   });
