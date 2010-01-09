@@ -35,8 +35,9 @@ label.error {
   float:left;
 }
 
-div.clearblock {
+.form-item hr {
   display: block;
-  height: 0;
-  clear: both;
+  clear: left;
+  margin: 0;
+  visibility: hidden;
 }
