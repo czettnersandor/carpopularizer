@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100105111453) do
+ActiveRecord::Schema.define(:version => 20100109131350) do
 
   create_table "roles", :force => true do |t|
     t.string   "name",       :null => false
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(:version => 20100105111453) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.string   "activation_code",           :limit => 40
+    t.datetime "activated_at"
+    t.string   "password_reset_code",       :limit => 40
+    t.boolean  "enabled",                                  :default => true
+    t.integer  "nem"
+    t.string   "country",                   :limit => 80
+    t.string   "city",                      :limit => 80
+    t.string   "name"
+    t.datetime "birth"
+    t.string   "zip",                       :limit => 16
+    t.string   "address"
+    t.string   "phone",                     :limit => 128
+    t.string   "langs"
+    t.string   "about"
+    t.string   "profileimage"
   end
 
 end

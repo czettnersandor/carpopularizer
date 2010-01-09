@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users, :collection => { :check_username => :get, :check_email => :get }
+  map.resources :users, :collection => { :check_username => :get, :check_email => :get, :activate => :get }
   map.resource :session, :collection => { :newpassword => :post }
   map.resource :front
+  map.resources :profile
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -49,4 +50,5 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.password '/password', :controller => 'sessions', :action => 'password'
   map.register '/register', :controller => 'users', :action => 'new'
+  map.activate '/activate', :controller => 'users', :action => 'activate'
 end

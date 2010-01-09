@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-09 11:32+0100\n"
+"POT-Creation-Date: 2010-01-09 17:49+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,22 +16,214 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/views/users/new.html.erb:23
+#: app/helpers/profile_helper.rb:4
+msgid "Argentina"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:5
+msgid "Australia"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:6
+msgid "Austria"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:7
+msgid "Belgium"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:8
+msgid "Brazil"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:9
+msgid "Bulgaria"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:10
+msgid "Canada"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:11
+msgid "Chile"
+msgstr ""
+
+#: app/views/profile/index.html.erb:20
+msgid "City"
+msgstr ""
+
+#: app/views/profile/index.html.erb:11 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr ""
 
-#: app/views/users/new.html.erb:11
+#: app/views/profile/index.html.erb:17
+msgid "Country"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:12
+msgid "Croatia"
+msgstr ""
+
+#: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
 
-#: app/views/users/new.html.erb:5
+#: app/views/profile/index.html.erb:15
+msgid "Female"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:14
+msgid "Finland"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:15
+msgid "France"
+msgstr ""
+
+#: app/views/profile/index.html.erb:14
+msgid "Gender"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:16
+msgid "Germany"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:13
+msgid "Hungary"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:20
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:17
+msgid "Israel"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:18
+msgid "Italy"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:19
+msgid "Japan"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:20
+msgid "Korea"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:12
+msgid "Log in"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:18
+msgid "Logged in successfully"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:21
+msgid "Malaysia"
+msgstr ""
+
+#: app/views/profile/index.html.erb:15
+msgid "Male"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:22
+msgid "Netherlands"
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.html.erb:3
+#: app/views/sessions/password.html.erb:2 app/views/sessions/new.html.erb:2
+#: app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr ""
 
-#: app/views/users/new.html.erb:17
+#: app/views/user_mailer/signup_notification.html.erb:4
+#: app/views/profile/index.html.erb:8 app/views/sessions/new.html.erb:5
+#: app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
 
-#: app/views/users/new.html.erb:28
+#: app/models/user_mailer.rb:4
+msgid "Please activate your new account"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:23
+msgid "Poland"
+msgstr ""
+
+#: app/views/users/new.html.erb:15
 msgid "Register"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:9
+msgid "Remember me"
+msgstr ""
+
+#: app/views/profile/index.html.erb:27
+msgid "Save"
+msgstr ""
+
+#: app/views/sessions/password.html.erb:5
+msgid "Send new password"
+msgstr ""
+
+#: app/controllers/users_controller.rb:51
+msgid "Signup complete!"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:24
+msgid "Slovenia"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:25
+msgid "South Africa"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:26
+msgid "Spain"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:27
+msgid "Sweden"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:28
+msgid "Taiwan"
+msgstr ""
+
+#: app/controllers/users_controller.rb:17
+msgid "Thanks for signing up!"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:29
+msgid "UK: England & Wales"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:30
+msgid "UK: Scotland"
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.html.erb:6
+msgid "Visit this url to activate your account"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:29
+msgid "You have been logged out."
+msgstr ""
+
+#: app/models/user_mailer.rb:18
+msgid "You have requested to change your password"
+msgstr ""
+
+#: app/models/user_mailer.rb:12
+msgid "Your account has been activated!"
+msgstr ""
+
+#: app/views/user_mailer/signup_notification.html.erb:1
+msgid "Your account has been created."
+msgstr ""
+
+#: app/models/user_mailer.rb:24
+msgid "Your password has been reset."
 msgstr ""

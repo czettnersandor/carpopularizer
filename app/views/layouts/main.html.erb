@@ -12,6 +12,7 @@
     <%= javascript_include_tag 'jquery-ui' %>
     <%= javascript_include_tag 'jrails' %>
     <%= javascript_include_tag 'jquery.validate' %>
+    <%= javascript_include_tag 'jquery.maskedinput' %>
     <%= javascript_include_tag 'application' %>
 
   </head>
@@ -25,11 +26,10 @@
         </div>
         <div class="grid_9 omega">
           <% if logged_in? %>
-            Welcome <%= current_user.login %>
-            <%= link_to("Logout", "/logout") %>
-
+            <%= _('Welcome')+" "+link_to(current_user.login, '/profile') %>
+            <%= link_to(_("Logout"), "/logout") %>
           <% else %>
-            <%= link_to("Login", "/login") %>
+            <%= link_to(_("Login"), "/login") %>
           <% end %>
 
           <% if flash[:login_message] %>

@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
-  # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
-  
 
-  # render new.rhtml
   def new
   end
 
@@ -16,9 +12,9 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.save
     if @user.errors.empty?
-      self.current_user = @user
+      # self.current_user = @user
       redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!"
+      flash[:notice] = _("Thanks for signing up!")
     else
       render :action => 'new'
     end
@@ -35,6 +31,7 @@ class UsersController < ApplicationController
       format.html { render 'users/true-false' }
     end
   end
+  
   def check_email
     if User.find_by_email(params['user']['email'])
       @notice = "false"
@@ -46,5 +43,16 @@ class UsersController < ApplicationController
       format.html { render 'users/true-false' }
     end
   end
+
+  def activate
+    self.current_user = params[:activation_code].blank? ? false : User.find_by_activation_code(params[:activation_code])
+    if logged_in? && !current_user.active?
+      current_user.activate
+      flash[:notice] = _("Signup complete!")
+    end
+    redirect_back_or_default('/')
+  end
+
+
 
 end

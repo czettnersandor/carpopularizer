@@ -1,29 +1,21 @@
 <%= error_messages_for :user %>
 <% form_for :user, :url => users_path, :html => { :class => "user-register" } do |f| -%>
+<div class="form-item"><label for="login"><%=_('Nickname')%></label><br/>
+<%= f.text_field :login %><hr/></div>
 
-<div class="form-item">
-<label for="user_login"><%=_('Nickname')%></label><br/>
-<%= f.text_field :login %>
-<hr/>
-</div>
+<div class="form-item"><label for="email"><%=_('Email')%></label><br/>
+<%= f.text_field :email %><hr/></div>
 
-<div class="form-item">
-<label for="user_email"><%=_('Email')%></label><br/>
-<%= f.text_field :email %>
-<hr/>
-</div>
+<div class="form-item"><label for="password"><%=_('Password')%></label><br/>
+<%= f.password_field :password %><hr/></div>
 
-<div class="form-item">
-<label for="user_password"><%=_('Password')%></label><br/>
-<%= f.password_field :password %>
-<hr/>
-</div>
+<div class="form-item"><label for="password_confirmation"><%=_('Confirm Password')%></label><br/>
+<%= f.password_field :password_confirmation %><hr/></div>
 
-<div class="form-item">
-<label for="user_password_confirmation"><%= _('Confirm Password') %></label><br/>
-<%= f.password_field :password_confirmation %>
-<hr/>
-</div>
-
-<p><%= submit_tag _('Register') %></p>
+<div class="form-item"><%= submit_tag _('Register') %><hr/></div>
 <% end -%>
+
+<p>megjegyzés: Kötelező adatok kitöltése után kap egy konfirmációs linket az e-mail címére. Arra kattintva folytathatja a regisztrációt az Alapadatok  majd További adatok ponttal.</p>
+<p>A regisztráció végeztével a Felhasználó saját adatlapjára ugrik.</p>
+<p>a megadott e-mail címet nem tüntetjük fel sehol az oldalon csak számunkra információ</p>
+

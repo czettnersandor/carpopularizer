@@ -13,14 +13,27 @@ class User < ActiveRecord::Base
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :email, :case_sensitive => false
   before_save :encrypt_password
-  
+  before_create :make_activation_code 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation
 
+  # Activates the user in the database.
+  def activate
+    @activated = true
+    self.activated_at = Time.now.utc
+    self.activation_code = nil
+    save(false)
+  end
+
+  def active?
+    # the existence of an activation code means they have not activated yet
+    activation_code.nil?
+  end
+
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
-    u = find_by_login(login) # need to get the salt
+    u = find :first, :conditions => ['login = ? and activated_at IS NOT NULL', login] # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
 
@@ -80,5 +93,9 @@ class User < ActiveRecord::Base
       crypted_password.blank? || !password.blank?
     end
     
+    def make_activation_code
+
+      self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+    end
     
 end
