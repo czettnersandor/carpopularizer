@@ -33,11 +33,12 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
-  config.gem "gettext", :version => '2.1.0'
 
   config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
   config.gem "gettext", :lib => false, :version => '>=2.1.0'
+
+  config.gem 'paperclip', :source => 'http://gemcutter.org'
 
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

@@ -50,11 +50,9 @@ $(document).ready(function(){
     $("form.user-profile").validate({
     rules: {
       'user[password]': {
-        required: true,
         minlength: 5
       },
       'user[password_confirmation]': {
-        required: true,
         minlength: 5,
         equalTo: "#user_password"
       },
