@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
 
   has_attached_file :avatar,
-    :styles => { :medium => "300x300>",
+    :styles => { :medium => "300x300#",
     :thumb => "100x100#" }
 
   validates_presence_of     :login, :email
