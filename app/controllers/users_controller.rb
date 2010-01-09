@@ -10,11 +10,11 @@ class UsersController < ApplicationController
     # uncomment at your own risk
     # reset_session
     @user = User.new(params[:user])
-    @user.save
+    @user.save!
     if @user.errors.empty?
       # self.current_user = @user
       redirect_back_or_default('/')
-      flash[:notice] = _("Thanks for signing up!")
+      flash[:notice] = _("Thanks for signing up! Please check your email to activate your account before logging in.")
     else
       render :action => 'new'
     end
