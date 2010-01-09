@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
     activation_code.nil?
   end
 
+  def pending?
+    @activated
+  end
+
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find :first, :conditions => ['login = ? and activated_at IS NOT NULL', login] # need to get the salt

@@ -49,8 +49,11 @@ class UsersController < ApplicationController
     if logged_in? && !current_user.active?
       current_user.activate
       flash[:notice] = _("Signup complete!")
+      redirect_to :controller => "profile", :action => "edit"
+    else
+      flash[:notice] = _("Invalid activation code")
+      redirect_back_or_default('/')
     end
-    redirect_back_or_default('/')
   end
 
 

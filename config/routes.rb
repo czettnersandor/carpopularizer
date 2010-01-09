@@ -50,5 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.password '/password', :controller => 'sessions', :action => 'password'
   map.register '/register', :controller => 'users', :action => 'new'
-  map.activate '/activate', :controller => 'users', :action => 'activate'
+  
+  map.connect 'activate/:activation_code', :controller => 'users', :action => 'activate'
+
 end

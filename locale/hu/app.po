@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-09 17:49+0100\n"
+"POT-Creation-Date: 2010-01-09 22:28+0100\n"
 "PO-Revision-Date: 2010-01-09 11:36+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,18 @@ msgstr ""
 "X-Poedit-Country: HUNGARY\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
+
+#: app/views/profile/edit.html.erb:54
+msgid "About Me"
+msgstr ""
+
+#: app/views/profile/edit.html.erb:45
+msgid "Address"
+msgstr ""
+
+#: app/controllers/profile_controller.rb:20
+msgid "An error occured, your password was not changed."
+msgstr ""
 
 #: app/helpers/profile_helper.rb:4
 msgid "Argentina"
@@ -30,8 +42,16 @@ msgstr ""
 msgid "Austria"
 msgstr ""
 
+#: app/views/profile/edit.html.erb:27
+msgid "Avatar"
+msgstr ""
+
 #: app/helpers/profile_helper.rb:7
 msgid "Belgium"
+msgstr ""
+
+#: app/views/profile/edit.html.erb:39
+msgid "Birth date"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:8
@@ -50,15 +70,15 @@ msgstr ""
 msgid "Chile"
 msgstr ""
 
-#: app/views/profile/index.html.erb:20
+#: app/views/profile/edit.html.erb:24
 msgid "City"
 msgstr ""
 
-#: app/views/profile/index.html.erb:11 app/views/users/new.html.erb:12
+#: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
 
-#: app/views/profile/index.html.erb:17
+#: app/views/profile/edit.html.erb:21
 msgid "Country"
 msgstr ""
 
@@ -70,7 +90,7 @@ msgstr ""
 msgid "Email"
 msgstr "E-mail"
 
-#: app/views/profile/index.html.erb:15
+#: app/views/profile/edit.html.erb:19
 msgid "Female"
 msgstr ""
 
@@ -82,7 +102,11 @@ msgstr ""
 msgid "France"
 msgstr ""
 
-#: app/views/profile/index.html.erb:14
+#: app/views/profile/edit.html.erb:36
+msgid "Full name"
+msgstr ""
+
+#: app/views/profile/edit.html.erb:18
 msgid "Gender"
 msgstr ""
 
@@ -114,6 +138,10 @@ msgstr ""
 msgid "Korea"
 msgstr ""
 
+#: app/views/profile/edit.html.erb:51
+msgid "Languages spoken"
+msgstr ""
+
 #: app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr ""
@@ -122,11 +150,19 @@ msgstr ""
 msgid "Logged in successfully"
 msgstr ""
 
+#: app/views/layouts/main.html.erb:32
+msgid "Login"
+msgstr ""
+
+#: app/views/layouts/main.html.erb:30
+msgid "Logout"
+msgstr ""
+
 #: app/helpers/profile_helper.rb:21
 msgid "Malaysia"
 msgstr ""
 
-#: app/views/profile/index.html.erb:15
+#: app/views/profile/edit.html.erb:19
 msgid "Male"
 msgstr ""
 
@@ -141,10 +177,18 @@ msgid "Nickname"
 msgstr "Becenév"
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/profile/index.html.erb:8 app/views/sessions/new.html.erb:5
+#: app/views/profile/edit.html.erb:12 app/views/sessions/new.html.erb:5
 #: app/views/users/new.html.erb:9
 msgid "Password"
 msgstr "Jelszó"
+
+#: app/controllers/profile_controller.rb:18
+msgid "Password successfully updated."
+msgstr ""
+
+#: app/views/profile/edit.html.erb:48
+msgid "Phone number"
+msgstr ""
 
 #: app/models/user_mailer.rb:4
 msgid "Please activate your new account"
@@ -162,7 +206,7 @@ msgstr "Regisztráció"
 msgid "Remember me"
 msgstr ""
 
-#: app/views/profile/index.html.erb:27
+#: app/views/profile/edit.html.erb:57
 msgid "Save"
 msgstr ""
 
@@ -210,6 +254,10 @@ msgstr ""
 msgid "Visit this url to activate your account"
 msgstr ""
 
+#: app/views/layouts/main.html.erb:29
+msgid "Welcome"
+msgstr ""
+
 #: app/controllers/sessions_controller.rb:29
 msgid "You have been logged out."
 msgstr ""
@@ -228,4 +276,8 @@ msgstr ""
 
 #: app/models/user_mailer.rb:24
 msgid "Your password has been reset."
+msgstr ""
+
+#: app/views/profile/edit.html.erb:42
+msgid "ZIP"
 msgstr ""

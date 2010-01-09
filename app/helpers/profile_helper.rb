@@ -1,4 +1,5 @@
 module ProfileHelper
+  FastGettext.add_text_domain 'app', :path => File.join(RAILS_ROOT, 'locale')
   FastGettext.text_domain = 'app'
   COUNTRIES = [
     ["ar", _("Argentina"),  ["2.5"]],
