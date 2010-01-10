@@ -27,6 +27,40 @@ input, textarea, select {
   padding:1px;
 }
 
+.btn, input[type="submit"], input[type="button"] {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  -moz-border-radius-bottomleft:4px;
+  -moz-border-radius-bottomright:4px;
+  -moz-border-radius-topleft:4px;
+  -moz-border-radius-topright:4px;
+  -x-system-font:none;
+  background:#DDDDDD url(http://s.twimg.com/a/1262981812/images/buttons/bg-btn.gif) repeat-x scroll 0 0;
+  border-color:#DDDDDD #DDDDDD #CCCCCC;
+  border-style:solid;
+  border-width:1px;
+  color:#333333;
+  font-family:"Lucida Grande",Sans-serif;
+  font-size:11px;
+  font-size-adjust:none;
+  font-stretch:normal;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal;
+  line-height:14px;
+  margin:0;
+  overflow:visible;
+  padding:4px 8px 5px;
+  text-shadow:1px 1px 0 #FFFFFF;
+  width:auto;
+}
+.btn, input[type="submit"]:hover, input[type="button"]:hover {
+  background-position:0 -6px;
+  border-color:#999999 #999999 #888888;
+  color:#000000;
+}
+
 label.error {
   background: url(../images/exclamation.png) no-repeat;
   padding-left: 16px;
