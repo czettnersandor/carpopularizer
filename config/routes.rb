@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace(:admin) do |admin|
     admin.root :controller => :front
     admin.resources :front
+    admin.resources :forums
     admin.resources :users
   end
   # The priority is based upon order of creation: first created -> highest priority.
