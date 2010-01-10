@@ -1,0 +1,11 @@
+<h1>Forums#index</h1>
+
+<% @forums.each do |forum|%>
+<%= link_to h(forum.name), forum_path(forum), :class => "title" %>
+
+<p class="desc"><%= forum.description%>
+</p>
+
+<% end %>
+
+<%= will_paginate @forums %>
