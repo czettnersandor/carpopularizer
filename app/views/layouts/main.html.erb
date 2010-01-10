@@ -30,6 +30,7 @@
             <%= link_to(_("Logout"), "/logout") %>
           <% else %>
             <%= link_to(_("Login"), "/login") %>
+            <%= render :partial => "layouts/login" %>
           <% end %>
 
           <% if flash[:login_message] %>

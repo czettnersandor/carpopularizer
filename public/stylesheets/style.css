@@ -27,6 +27,17 @@ input, textarea, select {
   padding:1px;
 }
 
+table th {
+  vertical-align: top;
+  padding-right: 10px;
+  text-align: right;
+}
+
+table td {
+  vertical-align: top;
+  text-align: left;
+}
+
 .btn, input[type="submit"], input[type="button"] {
   -moz-background-clip:border;
   -moz-background-inline-policy:continuous;

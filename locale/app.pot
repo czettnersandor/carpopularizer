@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-09 22:28+0100\n"
+"POT-Creation-Date: 2010-01-10 14:36+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/views/profile/edit.html.erb:54
+#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:56
 msgid "About Me"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:45
+#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:47
 msgid "Address"
 msgstr ""
 
@@ -28,47 +28,47 @@ msgstr ""
 msgid "An error occured, your password was not changed."
 msgstr ""
 
-#: app/helpers/profile_helper.rb:4
+#: app/helpers/profile_helper.rb:5
 msgid "Argentina"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:5
+#: app/helpers/profile_helper.rb:6
 msgid "Australia"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:6
+#: app/helpers/profile_helper.rb:7
 msgid "Austria"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:27
+#: app/views/profile/edit.html.erb:29
 msgid "Avatar"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:7
+#: app/helpers/profile_helper.rb:8
 msgid "Belgium"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:39
+#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:41
 msgid "Birth date"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:8
+#: app/helpers/profile_helper.rb:9
 msgid "Brazil"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:9
+#: app/helpers/profile_helper.rb:10
 msgid "Bulgaria"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:10
+#: app/helpers/profile_helper.rb:11
 msgid "Canada"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:11
+#: app/helpers/profile_helper.rb:12
 msgid "Chile"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:24
+#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:24
 msgid "City"
 msgstr ""
 
@@ -76,11 +76,11 @@ msgstr ""
 msgid "Confirm Password"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:21
+#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:21
 msgid "Country"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:12
+#: app/helpers/profile_helper.rb:13
 msgid "Croatia"
 msgstr ""
 
@@ -88,55 +88,59 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:19
+#: app/helpers/profile_helper.rb:36 app/views/profile/edit.html.erb:19
 msgid "Female"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:14
+#: app/helpers/profile_helper.rb:15
 msgid "Finland"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:15
+#: app/helpers/profile_helper.rb:16
 msgid "France"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:36
+#: app/views/profile/index.html.erb:9 app/views/profile/edit.html.erb:38
 msgid "Full name"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:18
+#: app/views/profile/index.html.erb:15 app/views/profile/edit.html.erb:18
 msgid "Gender"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:16
+#: app/helpers/profile_helper.rb:17
 msgid "Germany"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:13
+#: app/helpers/profile_helper.rb:14
 msgid "Hungary"
+msgstr ""
+
+#: app/controllers/users_controller.rb:54
+msgid "Invalid activation code"
 msgstr ""
 
 #: app/controllers/sessions_controller.rb:20
 msgid "Invalid username or password"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:17
+#: app/helpers/profile_helper.rb:18
 msgid "Israel"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:18
+#: app/helpers/profile_helper.rb:19
 msgid "Italy"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:19
+#: app/helpers/profile_helper.rb:20
 msgid "Japan"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:20
+#: app/helpers/profile_helper.rb:21
 msgid "Korea"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:51
+#: app/views/profile/index.html.erb:36 app/views/profile/edit.html.erb:53
 msgid "Languages spoken"
 msgstr ""
 
@@ -156,15 +160,15 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:21
+#: app/helpers/profile_helper.rb:22
 msgid "Malaysia"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:19
+#: app/helpers/profile_helper.rb:35 app/views/profile/edit.html.erb:19
 msgid "Male"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:22
+#: app/helpers/profile_helper.rb:23
 msgid "Netherlands"
 msgstr ""
 
@@ -184,7 +188,11 @@ msgstr ""
 msgid "Password successfully updated."
 msgstr ""
 
-#: app/views/profile/edit.html.erb:48
+#: app/views/profile/index.html.erb:33
+msgid "Phone"
+msgstr ""
+
+#: app/views/profile/edit.html.erb:50
 msgid "Phone number"
 msgstr ""
 
@@ -192,7 +200,7 @@ msgstr ""
 msgid "Please activate your new account"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:23
+#: app/helpers/profile_helper.rb:24
 msgid "Poland"
 msgstr ""
 
@@ -200,11 +208,15 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
+#: app/views/profile/index.html.erb:12
+msgid "Registration time"
+msgstr ""
+
 #: app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:57
+#: app/views/profile/edit.html.erb:59
 msgid "Save"
 msgstr ""
 
@@ -216,35 +228,37 @@ msgstr ""
 msgid "Signup complete!"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:24
+#: app/helpers/profile_helper.rb:25
 msgid "Slovenia"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:25
+#: app/helpers/profile_helper.rb:26
 msgid "South Africa"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:26
+#: app/helpers/profile_helper.rb:27
 msgid "Spain"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:27
+#: app/helpers/profile_helper.rb:28
 msgid "Sweden"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:28
+#: app/helpers/profile_helper.rb:29
 msgid "Taiwan"
 msgstr ""
 
 #: app/controllers/users_controller.rb:17
-msgid "Thanks for signing up!"
-msgstr ""
-
-#: app/helpers/profile_helper.rb:29
-msgid "UK: England & Wales"
+msgid ""
+"Thanks for signing up! Please check your email to activate your account "
+"before logging in."
 msgstr ""
 
 #: app/helpers/profile_helper.rb:30
+msgid "UK: England & Wales"
+msgstr ""
+
+#: app/helpers/profile_helper.rb:31
 msgid "UK: Scotland"
 msgstr ""
 
@@ -260,11 +274,11 @@ msgstr ""
 msgid "You have been logged out."
 msgstr ""
 
-#: app/models/user_mailer.rb:18
+#: app/models/user_mailer.rb:17
 msgid "You have requested to change your password"
 msgstr ""
 
-#: app/models/user_mailer.rb:12
+#: app/models/user_mailer.rb:11
 msgid "Your account has been activated!"
 msgstr ""
 
@@ -272,10 +286,14 @@ msgstr ""
 msgid "Your account has been created."
 msgstr ""
 
-#: app/models/user_mailer.rb:24
+#: app/models/user_mailer.rb:23
 msgid "Your password has been reset."
 msgstr ""
 
-#: app/views/profile/edit.html.erb:42
+#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:44
 msgid "ZIP"
+msgstr ""
+
+#: app/views/user_mailer/activation.html.erb:1
+msgid "your account has been activated."
 msgstr ""

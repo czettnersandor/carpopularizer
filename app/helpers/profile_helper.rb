@@ -30,6 +30,11 @@ module ProfileHelper
     ["uk", _("UK: England & Wales"),  ["2.0"]],
     ["scotland", _("UK: Scotland"),  ["2.5"]]
   ]
+
+  GENDER = {
+    1 => _('Male'),
+    2 => _('Female')
+  }
   def countrylist(selected_country='hu')
     opt_list = ""
     COUNTRIES.each do |country|
@@ -37,6 +42,10 @@ module ProfileHelper
       opt_list += '<option value='+country[0]+selected+country[1]+'</option>'
     end
     return opt_list
+  end
+
+  def gender(id)
+    GENDER[id]
   end
 
 end

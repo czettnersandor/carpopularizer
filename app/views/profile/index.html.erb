@@ -2,3 +2,42 @@
 
 <%= image_tag @user.avatar.url(:thumb) %>
 
+<table class="block_table">
+  <tbody>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Full name') , :var => @user.name } %>
+    
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Country') , :var => @user.country } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('City') , :var => @user.city } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('ZIP') , :var => @user.zip } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Address') , :var => @user.address } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Phone') , :var => @user.phone } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('About Me') , :var => @user.about } %>
+
+  </tbody>
+</table>
+
