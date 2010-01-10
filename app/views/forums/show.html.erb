@@ -1,2 +1,9 @@
-<h1>Forums#show</h1>
-<p>Find me in app/views/forums/show.html.erb</p>
+<h1><%= @forum.name %></h1>
+<p class="description"> <%= @forum.description %> </p>
+
+<% @topics.each do |topic|%>
+<%= link_to h(topic.title), topics_path(topic), :class => "title" %>
+
+<% end %>
+
+<%= will_paginate @topics %>

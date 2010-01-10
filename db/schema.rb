@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100110171638) do
+ActiveRecord::Schema.define(:version => 20100110182552) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20100110171638) do
     t.integer  "sticky"
     t.integer  "comment_count"
     t.boolean  "locked"
-    t.datetime "replied_at"
+    t.datetime "replyed_at"
     t.integer  "replyed_by"
     t.integer  "last_comment_id"
     t.datetime "created_at"

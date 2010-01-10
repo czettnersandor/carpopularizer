@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-09 22:28+0100\n"
-"PO-Revision-Date: 2010-01-09 11:36+0100\n"
+"POT-Creation-Date: 2010-01-10 14:36+0100\n"
+"PO-Revision-Date: 2010-01-10 14:46+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,157 +18,161 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: app/views/profile/edit.html.erb:54
+#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:56
 msgid "About Me"
-msgstr ""
+msgstr "Magamról"
 
-#: app/views/profile/edit.html.erb:45
+#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:47
 msgid "Address"
-msgstr ""
+msgstr "Cím"
 
 #: app/controllers/profile_controller.rb:20
 msgid "An error occured, your password was not changed."
-msgstr ""
-
-#: app/helpers/profile_helper.rb:4
-msgid "Argentina"
-msgstr ""
+msgstr "Hiba történt, a jelszó nem lett lecserélve"
 
 #: app/helpers/profile_helper.rb:5
-msgid "Australia"
-msgstr ""
+msgid "Argentina"
+msgstr "Argentína"
 
 #: app/helpers/profile_helper.rb:6
-msgid "Austria"
-msgstr ""
-
-#: app/views/profile/edit.html.erb:27
-msgid "Avatar"
-msgstr ""
+msgid "Australia"
+msgstr "Ausztrália"
 
 #: app/helpers/profile_helper.rb:7
-msgid "Belgium"
-msgstr ""
+msgid "Austria"
+msgstr "Ausztria"
 
-#: app/views/profile/edit.html.erb:39
-msgid "Birth date"
-msgstr ""
+#: app/views/profile/edit.html.erb:29
+msgid "Avatar"
+msgstr "Profil kép"
 
 #: app/helpers/profile_helper.rb:8
-msgid "Brazil"
-msgstr ""
+msgid "Belgium"
+msgstr "Belgium"
+
+#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:41
+msgid "Birth date"
+msgstr "Születési dátum"
 
 #: app/helpers/profile_helper.rb:9
-msgid "Bulgaria"
-msgstr ""
+msgid "Brazil"
+msgstr "Brazília"
 
 #: app/helpers/profile_helper.rb:10
-msgid "Canada"
-msgstr ""
+msgid "Bulgaria"
+msgstr "Bulgária"
 
 #: app/helpers/profile_helper.rb:11
-msgid "Chile"
-msgstr ""
+msgid "Canada"
+msgstr "Kanada"
 
-#: app/views/profile/edit.html.erb:24
+#: app/helpers/profile_helper.rb:12
+msgid "Chile"
+msgstr "Chile"
+
+#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:24
 msgid "City"
-msgstr ""
+msgstr "Város"
 
 #: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
 
-#: app/views/profile/edit.html.erb:21
+#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:21
 msgid "Country"
-msgstr ""
+msgstr "Ország"
 
-#: app/helpers/profile_helper.rb:12
+#: app/helpers/profile_helper.rb:13
 msgid "Croatia"
-msgstr ""
+msgstr "Horvátország"
 
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr "E-mail"
 
-#: app/views/profile/edit.html.erb:19
+#: app/helpers/profile_helper.rb:36 app/views/profile/edit.html.erb:19
 msgid "Female"
-msgstr ""
-
-#: app/helpers/profile_helper.rb:14
-msgid "Finland"
-msgstr ""
+msgstr "Nő"
 
 #: app/helpers/profile_helper.rb:15
-msgid "France"
-msgstr ""
-
-#: app/views/profile/edit.html.erb:36
-msgid "Full name"
-msgstr ""
-
-#: app/views/profile/edit.html.erb:18
-msgid "Gender"
-msgstr ""
+msgid "Finland"
+msgstr "Finnország"
 
 #: app/helpers/profile_helper.rb:16
-msgid "Germany"
-msgstr ""
+msgid "France"
+msgstr "Franciaország"
 
-#: app/helpers/profile_helper.rb:13
+#: app/views/profile/index.html.erb:9 app/views/profile/edit.html.erb:38
+msgid "Full name"
+msgstr "Teljes név"
+
+#: app/views/profile/index.html.erb:15 app/views/profile/edit.html.erb:18
+msgid "Gender"
+msgstr "Nem"
+
+#: app/helpers/profile_helper.rb:17
+msgid "Germany"
+msgstr "Németország"
+
+#: app/helpers/profile_helper.rb:14
 msgid "Hungary"
-msgstr ""
+msgstr "Magyarország"
+
+#: app/controllers/users_controller.rb:54
+msgid "Invalid activation code"
+msgstr "Hibás ellenőrző kód"
 
 #: app/controllers/sessions_controller.rb:20
 msgid "Invalid username or password"
-msgstr ""
-
-#: app/helpers/profile_helper.rb:17
-msgid "Israel"
-msgstr ""
+msgstr "Érvénytelen felhasználói név vagy jelszó"
 
 #: app/helpers/profile_helper.rb:18
-msgid "Italy"
-msgstr ""
+msgid "Israel"
+msgstr "Izrael"
 
 #: app/helpers/profile_helper.rb:19
-msgid "Japan"
-msgstr ""
+msgid "Italy"
+msgstr "Olaszország"
 
 #: app/helpers/profile_helper.rb:20
-msgid "Korea"
-msgstr ""
+msgid "Japan"
+msgstr "Japán"
 
-#: app/views/profile/edit.html.erb:51
+#: app/helpers/profile_helper.rb:21
+msgid "Korea"
+msgstr "Korea"
+
+#: app/views/profile/index.html.erb:36 app/views/profile/edit.html.erb:53
 msgid "Languages spoken"
-msgstr ""
+msgstr "Beszélt nyelvek"
 
 #: app/views/sessions/new.html.erb:12
 msgid "Log in"
-msgstr ""
+msgstr "Bejelentkezés"
 
 #: app/controllers/sessions_controller.rb:18
 msgid "Logged in successfully"
-msgstr ""
+msgstr "Sikeres bejelentkezés"
 
 #: app/views/layouts/main.html.erb:32
 msgid "Login"
-msgstr ""
+msgstr "Bejelentkezés"
 
 #: app/views/layouts/main.html.erb:30
 msgid "Logout"
-msgstr ""
-
-#: app/helpers/profile_helper.rb:21
-msgid "Malaysia"
-msgstr ""
-
-#: app/views/profile/edit.html.erb:19
-msgid "Male"
-msgstr ""
+msgstr "Kijelentkezés"
 
 #: app/helpers/profile_helper.rb:22
+msgid "Malaysia"
+msgstr "Malajzia"
+
+#: app/helpers/profile_helper.rb:35 app/views/profile/edit.html.erb:19
+msgid "Male"
+msgstr "Férfi"
+
+#: app/helpers/profile_helper.rb:23
 msgid "Netherlands"
-msgstr ""
+msgstr "Horvátország"
 
 #: app/views/user_mailer/signup_notification.html.erb:3
 #: app/views/sessions/password.html.erb:2 app/views/sessions/new.html.erb:2
@@ -184,100 +188,117 @@ msgstr "Jelszó"
 
 #: app/controllers/profile_controller.rb:18
 msgid "Password successfully updated."
-msgstr ""
+msgstr "A jelszó sikeresen megváltozott."
 
-#: app/views/profile/edit.html.erb:48
+#: app/views/profile/index.html.erb:33
+msgid "Phone"
+msgstr "Telefon"
+
+#: app/views/profile/edit.html.erb:50
 msgid "Phone number"
-msgstr ""
+msgstr "Telefon-szám"
 
 #: app/models/user_mailer.rb:4
 msgid "Please activate your new account"
-msgstr ""
+msgstr "Kérjük, aktiváld az új felhasználói fiókodat"
 
-#: app/helpers/profile_helper.rb:23
+#: app/helpers/profile_helper.rb:24
 msgid "Poland"
-msgstr ""
+msgstr "Lengyelország"
 
 #: app/views/users/new.html.erb:15
 msgid "Register"
 msgstr "Regisztráció"
 
+#: app/views/profile/index.html.erb:12
+msgid "Registration time"
+msgstr "Regisztráció ideje"
+
 #: app/views/sessions/new.html.erb:9
 msgid "Remember me"
-msgstr ""
+msgstr "Emlékezz rám"
 
-#: app/views/profile/edit.html.erb:57
+#: app/views/profile/edit.html.erb:59
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: app/views/sessions/password.html.erb:5
 msgid "Send new password"
-msgstr ""
+msgstr "Új jelszó küldése"
 
 #: app/controllers/users_controller.rb:51
 msgid "Signup complete!"
-msgstr ""
-
-#: app/helpers/profile_helper.rb:24
-msgid "Slovenia"
-msgstr ""
+msgstr "Sikeres regisztráció!"
 
 #: app/helpers/profile_helper.rb:25
-msgid "South Africa"
-msgstr ""
+msgid "Slovenia"
+msgstr "Szlovénia"
 
 #: app/helpers/profile_helper.rb:26
-msgid "Spain"
-msgstr ""
+msgid "South Africa"
+msgstr "Dél Afrika"
 
 #: app/helpers/profile_helper.rb:27
-msgid "Sweden"
-msgstr ""
+msgid "Spain"
+msgstr "Spanyolország"
 
 #: app/helpers/profile_helper.rb:28
-msgid "Taiwan"
-msgstr ""
-
-#: app/controllers/users_controller.rb:17
-msgid "Thanks for signing up!"
-msgstr ""
+msgid "Sweden"
+msgstr "Svédország"
 
 #: app/helpers/profile_helper.rb:29
-msgid "UK: England & Wales"
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: app/controllers/users_controller.rb:17
+msgid ""
+"Thanks for signing up! Please check your email to activate your account "
+"before logging in."
 msgstr ""
+"Köszönjük a regisztrációt! Kérjük, ellenőrizd az email címedet a "
+"felhasználói fiók aktiválásához."
 
 #: app/helpers/profile_helper.rb:30
+msgid "UK: England & Wales"
+msgstr "UK: Anglia & Wales"
+
+#: app/helpers/profile_helper.rb:31
 msgid "UK: Scotland"
-msgstr ""
+msgstr "UK: Skócia"
 
 #: app/views/user_mailer/signup_notification.html.erb:6
 msgid "Visit this url to activate your account"
-msgstr ""
+msgstr "Kattints erre a linkre az aktiváláshoz"
 
 #: app/views/layouts/main.html.erb:29
 msgid "Welcome"
-msgstr ""
+msgstr "Üdvözöllek"
 
 #: app/controllers/sessions_controller.rb:29
 msgid "You have been logged out."
-msgstr ""
+msgstr "Sikeresen kijelentkeztél."
 
-#: app/models/user_mailer.rb:18
+#: app/models/user_mailer.rb:17
 msgid "You have requested to change your password"
 msgstr ""
 
-#: app/models/user_mailer.rb:12
+#: app/models/user_mailer.rb:11
 msgid "Your account has been activated!"
-msgstr ""
+msgstr "A felhasználói fiókod aktiválva lett!"
 
 #: app/views/user_mailer/signup_notification.html.erb:1
 msgid "Your account has been created."
-msgstr ""
+msgstr "A felhasználói fiókod létrejött."
 
-#: app/models/user_mailer.rb:24
+#: app/models/user_mailer.rb:23
 msgid "Your password has been reset."
-msgstr ""
+msgstr "A jelszavad megváltozott."
 
-#: app/views/profile/edit.html.erb:42
+#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:44
 msgid "ZIP"
-msgstr ""
+msgstr "Irányítószám"
+
+#: app/views/user_mailer/activation.html.erb:1
+msgid "your account has been activated."
+msgstr "a felhasználó fiókod aktiválva lett."
+
