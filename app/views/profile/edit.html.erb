@@ -24,7 +24,9 @@
     <div class="form-item"><label for="city"><%=_('City')%></label><br/>
       <%= f.text_field :city %><hr/></div>
 
-    <div class="form-item"><label for="avatar"><%=_('Avatar')%></label><br/>
+    <div class="form-item">
+      <%= image_tag @user.avatar.url(:thumb) %><br/>
+      <label for="avatar"><%=_('Avatar')%></label><br/>
       <%= f.file_field :avatar %><hr/></div>
 
 

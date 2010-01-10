@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/controllers/users_controller.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/users/new.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/public/stylesheets/style.css</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/models/role.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/controllers/sessions_controller.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/sessions/new.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/db/migrate/20100104191140_create_users.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/models/user_mailer.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/models/user_observer.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/db/migrate/20100109131350_usercolumns.rb</file>
-    </open-files>
 </project-private>
