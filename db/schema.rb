@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100110182552) do
+ActiveRecord::Schema.define(:version => 20100110210241) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20100110182552) do
     t.integer  "forum_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "topics_count"
+    t.integer  "comments_count"
   end
 
   create_table "roles", :force => true do |t|
@@ -58,13 +60,14 @@ ActiveRecord::Schema.define(:version => 20100110182552) do
     t.string   "title"
     t.integer  "hits"
     t.integer  "sticky"
-    t.integer  "comment_count"
+    t.integer  "comments_count"
     t.boolean  "locked"
     t.datetime "replyed_at"
     t.integer  "replyed_by"
     t.integer  "last_comment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "body"
   end
 
   create_table "users", :force => true do |t|
@@ -94,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20100110182552) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.integer  "comments_count"
   end
 
 end

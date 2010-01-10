@@ -2,8 +2,12 @@
 <p class="description"> <%= @forum.description %> </p>
 
 <% @topics.each do |topic|%>
-<%= link_to h(topic.title), topics_path(topic), :class => "title" %>
-
+<%= link_to h(topic.title), topic_path(@forum, topic), :class => "title" %>
+<%= topic.comments_count %>
 <% end %>
+
+<ul class="links">
+  <li><%= link_to 'New topic', new_topic_path(@forum) %></li>
+</ul>
 
 <%= will_paginate @topics %>

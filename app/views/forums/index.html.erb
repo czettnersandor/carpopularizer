@@ -3,7 +3,7 @@
 <% @forums.each do |forum|%>
 <%= link_to h(forum.name), forum_path(forum), :class => "title" %>
 
-<p class="desc"><%= forum.description%>
+<p class="description"><%= forum.description%>
 </p>
 
 <% end %>

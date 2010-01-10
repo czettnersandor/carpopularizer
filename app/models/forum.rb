@@ -1,5 +1,5 @@
 class Forum < ActiveRecord::Base
-  has_many :topics, :order => 'sticky desc, replied_at desc', :dependent => :destroy do
+  has_many :topics, :order => 'sticky desc, replyed_at desc', :dependent => :destroy do
     def first
       @first_topic ||= find(:first)
     end
