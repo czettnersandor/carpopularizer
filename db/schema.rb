@@ -9,7 +9,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100109182727) do
+ActiveRecord::Schema.define(:version => 20100110171638) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "topic_id"
+    t.text     "body"
+    t.integer  "forum_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forums", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "last_topic_id"
+    t.integer  "forum_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name",       :null => false
@@ -33,6 +51,21 @@ ActiveRecord::Schema.define(:version => 20100109182727) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "topics", :force => true do |t|
+    t.integer  "forum_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.integer  "hits"
+    t.integer  "sticky"
+    t.integer  "comment_count"
+    t.boolean  "locked"
+    t.datetime "replied_at"
+    t.integer  "replyed_by"
+    t.integer  "last_comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login"
