@@ -1,7 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users, :collection => { :check_username => :get, :check_email => :get, :activate => :get }
-  map.resource :session, :collection => { :newpassword => :post }
+  map.resource :session
   map.resource :front
+  map.resources :comments
+  map.resource :password
   map.resources :profile, :collection => { :edit => :get }
 
   map.resources :forums do |forum|
@@ -14,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   # Administration
   map.namespace(:admin) do |admin|
     admin.root :controller => :front
-    admin.resources :front
+    admin.resource :front
     admin.resources :forums
     admin.resources :users
   end
@@ -63,8 +65,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.password '/password', :controller => 'sessions', :action => 'password'
   map.register '/register', :controller => 'users', :action => 'new'
+  map.forgot_password '/forgot_password', :controller => 'passwords', :action => 'new'
+  map.reset_password '/reset_password/:id', :controller => 'passwords', :action => 'edit'
   
   map.connect 'activate/:activation_code', :controller => 'users', :action => 'activate'
 

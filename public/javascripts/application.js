@@ -1,6 +1,25 @@
+jQuery.fn.addReplyMessage = function(id) {
+  replylink = $(this);
+  jQuery.ajax({
+    url:'/comments/'+id,
+    success: function(html){
+      replylink.append('<div id="reply-'+id+'" class="indent">'+html+'</div>');
+      replylink.children('.links').children('a.reply-to').hide();
+      replylink.children('.indent').children('.comment.reply').slideDown();
+    }
+  });
+}
+jQuery.fn.replyTo = function(id) {
+  $('#comment_reply_to').val(id);
+  $('#comment-form').slideDown();
+  $('#comment-form #comment_body').focus();
+}
+
 $(document).ready(function(){
 
   $("input#user_birth").mask("9999/99/99");
+
+
 
   $("form.user-register").validate({
     rules: {
@@ -47,7 +66,7 @@ $(document).ready(function(){
     }
   });
 
-    $("form.user-profile").validate({
+  $("form.user-profile").validate({
     rules: {
       'user[password]': {
         minlength: 5

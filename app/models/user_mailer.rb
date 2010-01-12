@@ -26,7 +26,7 @@ class UserMailer < ActionMailer::Base
   protected
     def setup_email(user)
       @recipients  = "#{user.email}"
-      @from        = 'admin@' + domain.split(":").first
+      @from        = 'admin@boxutca.com'
       @subject     = "[BOXUTCA] "
       @sent_on     = Time.now
       @body[:user] = user

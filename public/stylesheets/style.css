@@ -38,6 +38,11 @@ table td {
   text-align: left;
 }
 
+table td.num {
+  text-align: right;
+  padding-right: 10px;
+}
+
 .btn, input[type="submit"], input[type="button"] {
   -moz-background-clip:border;
   -moz-background-inline-policy:continuous;
@@ -85,4 +90,37 @@ label.error {
   clear: left;
   margin: 0;
   visibility: hidden;
+}
+
+/*
+* Comments
+*/
+
+.comment {
+  border: 1px solid #888888;
+  margin-bottom: 5px;
+}
+
+.comment .profile {
+  width: 120px;
+  display: block;
+  float: left;
+}
+
+.comment.reply {
+  display: none;
+}
+
+.comment .links {
+  float: right;
+}
+
+hr.clear {
+  display: block;
+  clear: left;
+  margin: 0;
+  visibility: hidden;
+}
+.comment .indent {
+  margin-left: 30px;
 }

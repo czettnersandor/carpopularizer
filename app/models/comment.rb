@@ -11,6 +11,6 @@ class Comment < ActiveRecord::Base
   end
 
   validates_presence_of :user_id, :body, :topic
-  attr_accessible :body
+  attr_accessible :body, :reply_to
 
 end

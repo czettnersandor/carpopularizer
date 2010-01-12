@@ -1,10 +1,28 @@
 <h1><%= @forum.name %></h1>
 <p class="description"> <%= @forum.description %> </p>
 
-<% @topics.each do |topic|%>
-<%= link_to h(topic.title), topic_path(@forum, topic), :class => "title" %>
-<%= topic.comments_count %>
-<% end %>
+<table id="topics">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Comments</th>
+      <th>Last comment</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic|%>
+      <tr>
+        <td>
+          <%= link_to h(topic.title), topic_path(@forum, topic), :class => "title" %>
+        </td>
+        <td class="num"><%= topic.comments_count %></td>
+        <td class="num"><%= topic.updated_at %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
 
 <ul class="links">
   <li><%= link_to 'New topic', new_topic_path(@forum) %></li>

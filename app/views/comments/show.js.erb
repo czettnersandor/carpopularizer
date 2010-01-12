@@ -1,0 +1,19 @@
+<div class="comment reply">
+  <div class="profile">
+    <%= image_tag @comment.user.avatar.url(:thumb) %>
+    <%= @comment.user.name %>
+    (<%= @comment.user.comments_count %>)
+  </div>
+
+  <div class="date"><%= @comment.created_at %></div>
+  <div class="body">
+    <%= @comment.body %>
+  </div>
+  <div class="links">
+    <%= link_to_function 'reply', "$('#comment_reply_to').replyTo("+@comment.id.to_s+")" %>
+    <%= link_to_function 'in reply to',
+      "$(this).parent().parent().addReplyMessage('"+@comment.reply_to.to_s+"')",
+      :class => "reply-to" if @comment.reply_to %>
+  </div>
+  <hr class="clear" />
+</div>

@@ -7,7 +7,10 @@
 
     <%= render :partial => "profile_element",
       :locals => { :header => _('Full name') , :var => @user.name } %>
-    
+
+    <%= render :partial => "profile_element",
+      :locals => { :header => _('Comments count') , :var => @user.comments_count } %>
+
     <%= render :partial => "profile_element",
       :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
 

@@ -6,26 +6,42 @@
 <h1><%= @topic.title %></h1>
 <p class="description"><%= @topic.body %></p>
 
-<div id="reply" class="editbox">
-  <div class="container">
-    <%= content_tag 'p', h(flash[:bad_reply]), :class => 'notice' if flash[:bad_reply] %>
-    <% form_for :comment, :url => comments_path(:forum_id => @forum, :topic_id => @topic) do |f| -%>
+<% if logged_in? %>
+  <div id="comment-form" class="editbox">
+    <div class="container">
+      <%= content_tag 'p', h(flash[:bad_reply]), :class => 'notice' if flash[:bad_reply] %>
+      <% form_for :comment, :url => comments_path(:forum_id => @forum, :topic_id => @topic) do |f| -%>
+        <%= f.hidden_field :reply_to %>
+        <%= f.text_area :body, :rows => 8 %>
 
-      <%= f.text_area :body, :rows => 8 %>
+        <%= submit_tag "Save Reply" %><span class="button_or">or <%= link_to_function 'cancel', "$('#reply').hide()" %></span>
 
-      <%= submit_tag "Save Reply" %><span class="button_or">or <%= link_to_function 'cancel', "$('reply').hide()" %></span>
-
-    <% end -%>
+      <% end -%>
+    </div>
   </div>
-</div>
+<% end %>
 
 <%= will_paginate @comments %>
 <% @comments.each do |comment| %>
 
-  <div class="comment">
-    <%= comment.body %>
-    <%= comment.user.name %>
-    <%= image_tag comment.user.avatar.url(:thumb) %>
+  <div class="comment" id="comment-<%= comment.id.to_s %>">
+    <div class="profile">
+      <%= image_tag comment.user.avatar.url(:thumb) %>
+      <%= comment.user.name %>
+      (<%= comment.user.comments_count %>)
+    </div>
+
+    <div class="date"><%= comment.created_at %></div>
+    <div class="body">
+      <%= comment.body %>
+    </div>
+    <div class="links">
+      <%= link_to_function 'reply', "$('#comment_reply_to').replyTo("+comment.id.to_s+")" %>
+      <%= link_to_function 'in reply to',
+        "$(this).parent().parent().addReplyMessage('"+comment.reply_to.to_s+"')",
+        :class => "reply-to" if comment.reply_to %>
+    </div>
+    <hr class="clear" />
   </div>
 
 <% end %>

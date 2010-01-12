@@ -18,7 +18,8 @@ class ForumsController < ApplicationController
         # keep track of when we last viewed this forum for activity indicators
         (session[:forums] ||= {})[@forum.id] = Time.now.utc if logged_in?
         (session[:forum_page] ||= Hash.new(1))[@forum.id] = params[:page].to_i if params[:page]
-        @topics = Topic.paginate :page => params[:page], :order => 'replyed_at DESC', :per_page => 10
+        @topics = Topic.paginate :page => params[:page], :order => 'replyed_at DESC', :per_page => 25,
+          :conditions => ['topics.forum_id = ?', params[:id]]
       end
       format.xml { render :xml => @forum.to_xml }
     end

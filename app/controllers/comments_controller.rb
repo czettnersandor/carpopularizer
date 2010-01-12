@@ -5,6 +5,10 @@ class CommentsController < ApplicationController
   def edit
   end
 
+  def show
+    @comment = Comment.find(params[:id])
+  end
+
   def create
     @topic = Topic.find_by_id_and_forum_id(params[:topic_id],params[:forum_id], :include => :forum)
     if @topic.locked?

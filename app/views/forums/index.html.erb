@@ -1,11 +1,31 @@
 <h1>Forums#index</h1>
 
-<% @forums.each do |forum|%>
-<%= link_to h(forum.name), forum_path(forum), :class => "title" %>
+<table id="forums">
+  <thead>
+    <tr>
+      <th>Forum</th>
+      <th>Topics</th>
+      <th>Comments</th>
+      <th>Last comment</th>
+    </tr>
+  </thead>
 
-<p class="description"><%= forum.description%>
-</p>
+  <tbody>
+    <% @forums.each do |forum|%>
+      <tr>
+        <td>
+          <%= link_to h(forum.name), forum_path(forum), :class => "title" %>
+          <p class="description"><%= forum.description%></p>
+        </td>
 
-<% end %>
+        <td class="num"><%= forum.topics_count %></td>
+        <td class="num"><%= forum.comments_count %></td>
+        <td class="num"><%= forum.updated_at %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+
+</table>
 
 <%= will_paginate @forums %>
