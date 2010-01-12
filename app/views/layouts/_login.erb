@@ -1,13 +1,13 @@
 <% form_tag session_path do -%>
-<div class="form-item"><label for="login"><%=_('Nickname')%></label><br/>
-<%= text_field_tag 'login' %><hr/></div>
+<div class="form-item text"><label for="login"><%=_('Nickname')%></label><br/>
+<%= text_field_tag 'login' %></div>
 
-<div class="form-item"><label for="password"><%=_('Password')%></label><br/>
-<%= password_field_tag 'password' %><hr/></div>
+<div class="form-item password"><label for="password"><%=_('Password')%></label><br/>
+<%= password_field_tag 'password' %></div>
 
-<div class="form-item">
+<div class="form-item checkbox">
 <%= check_box_tag 'remember_me' %><label for="remember_me"><%= _('Remember me') %></label>
-<hr/></div>
+</div>
 
-<div class="form-item"><%= submit_tag _('Log in') %><hr/></div>
+<div class="form-item submit"><%= submit_tag _('Log in') %><%= link_to(_("Register"), "/register", :class => 'register') %><hr/></div>
 <% end -%>

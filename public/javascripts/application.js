@@ -1,3 +1,14 @@
+var RecaptchaOptions = {
+  theme : 'clean',
+  lang : 'hu',
+  custom_translations : {
+    instructions_visual : "A fent látható két szó:",
+    refresh_btn : "Frissítés",
+    help_btn : "Segítség",
+    incorrect_try_again : "Hibás. Próbáld újra."
+  }
+};
+
 jQuery.fn.addReplyMessage = function(id) {
   replylink = $(this);
   jQuery.ajax({

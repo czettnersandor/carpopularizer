@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-10 14:36+0100\n"
+"POT-Creation-Date: 2010-01-10 22:35+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:56
+#: app/views/profile/index.html.erb:42 app/views/profile/edit.html.erb:56
 msgid "About Me"
 msgstr ""
 
-#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:47
+#: app/views/profile/index.html.erb:33 app/views/profile/edit.html.erb:47
 msgid "Address"
 msgstr ""
 
@@ -48,8 +48,12 @@ msgstr ""
 msgid "Belgium"
 msgstr ""
 
-#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:41
+#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:41
 msgid "Birth date"
+msgstr ""
+
+#: app/views/topics/_form.erb:6
+msgid "Body"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:9
@@ -68,20 +72,28 @@ msgstr ""
 msgid "Chile"
 msgstr ""
 
-#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:24
+#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:24
 msgid "City"
+msgstr ""
+
+#: app/views/profile/index.html.erb:12
+msgid "Comments count"
 msgstr ""
 
 #: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr ""
 
-#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:21
+#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:21
 msgid "Country"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:13
 msgid "Croatia"
+msgstr ""
+
+#: app/views/admin/forums/_form.erb:5
+msgid "Description"
 msgstr ""
 
 #: app/views/users/new.html.erb:6
@@ -96,6 +108,18 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
+#: app/views/sessions/new.html.erb:16
+msgid "Forgotten password?"
+msgstr ""
+
+#: app/views/admin/forums/_form.erb:2
+msgid "Forum name"
+msgstr ""
+
+#: app/views/admin/front/index.html.erb:4
+msgid "Forums"
+msgstr ""
+
 #: app/helpers/profile_helper.rb:16
 msgid "France"
 msgstr ""
@@ -104,7 +128,7 @@ msgstr ""
 msgid "Full name"
 msgstr ""
 
-#: app/views/profile/index.html.erb:15 app/views/profile/edit.html.erb:18
+#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:18
 msgid "Gender"
 msgstr ""
 
@@ -140,11 +164,11 @@ msgstr ""
 msgid "Korea"
 msgstr ""
 
-#: app/views/profile/index.html.erb:36 app/views/profile/edit.html.erb:53
+#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:53
 msgid "Languages spoken"
 msgstr ""
 
-#: app/views/sessions/new.html.erb:12
+#: app/views/layouts/_login.erb:12 app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr ""
 
@@ -173,14 +197,14 @@ msgid "Netherlands"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:3
-#: app/views/sessions/password.html.erb:2 app/views/sessions/new.html.erb:2
-#: app/views/users/new.html.erb:3
+#: app/views/layouts/_login.erb:2 app/views/sessions/password.html.erb:2
+#: app/views/sessions/new.html.erb:2 app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/profile/edit.html.erb:12 app/views/sessions/new.html.erb:5
-#: app/views/users/new.html.erb:9
+#: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
+#: app/views/sessions/new.html.erb:5 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
 
@@ -188,7 +212,7 @@ msgstr ""
 msgid "Password successfully updated."
 msgstr ""
 
-#: app/views/profile/index.html.erb:33
+#: app/views/profile/index.html.erb:36
 msgid "Phone"
 msgstr ""
 
@@ -208,15 +232,15 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: app/views/profile/index.html.erb:12
+#: app/views/profile/index.html.erb:15
 msgid "Registration time"
 msgstr ""
 
-#: app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:9 app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:59
+#: app/views/topics/new.html.erb:13 app/views/profile/edit.html.erb:59
 msgid "Save"
 msgstr ""
 
@@ -254,12 +278,20 @@ msgid ""
 "before logging in."
 msgstr ""
 
+#: app/views/topics/_form.erb:2
+msgid "Title"
+msgstr ""
+
 #: app/helpers/profile_helper.rb:30
 msgid "UK: England & Wales"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:31
 msgid "UK: Scotland"
+msgstr ""
+
+#: app/views/admin/front/index.html.erb:8
+msgid "Users"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:6
@@ -290,7 +322,7 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
-#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:44
+#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:44
 msgid "ZIP"
 msgstr ""
 

@@ -12,6 +12,7 @@
 <div class="form-item"><label for="password_confirmation"><%=_('Confirm Password')%></label><br/>
 <%= f.password_field :password_confirmation %><hr/></div>
 
+<%= recaptcha_tags %>
 <div class="form-item"><%= submit_tag _('Register') %><hr/></div>
 <% end -%>
 

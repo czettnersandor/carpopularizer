@@ -49,3 +49,6 @@ Rails::Initializer.run do |config|
 end
 
 FastGettext.add_text_domain 'app', :path => File.join(RAILS_ROOT, 'locale')
+# Recaptcha API keys
+ENV['RECAPTCHA_PUBLIC_KEY']  = '6LeJeAoAAAAAAN_yW0hMS1UWtDYUXy7h-eVuJHSo'
+ENV['RECAPTCHA_PRIVATE_KEY'] = '6LeJeAoAAAAAAEKBrcanvma8wSt12cV8EA6LutJp'

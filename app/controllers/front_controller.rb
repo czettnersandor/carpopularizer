@@ -4,7 +4,7 @@ class FrontController < ApplicationController
     if logged_in?
       @roles = current_user.roles  
     end
-    
+    @title = "Főoldal"
   end
 
 end

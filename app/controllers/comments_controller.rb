@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def index
   end
 
@@ -14,11 +15,11 @@ class CommentsController < ApplicationController
     if @topic.locked?
       respond_to do |format|
         format.html do
-          flash[:notice] = 'This topic is locked.'
+          flash[:notice] = _('This topic is locked.')
           redirect_to(topic_path(:forum_id => params[:forum_id], :id => params[:topic_id]))
         end
         format.xml do
-          render :text => 'This topic is locked.', :status => 400
+          render :text => _('This topic is locked.'), :status => 400
         end
       end
       return

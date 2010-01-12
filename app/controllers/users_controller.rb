@@ -10,8 +10,7 @@ class UsersController < ApplicationController
     # uncomment at your own risk
     # reset_session
     @user = User.new(params[:user])
-    @user.save!
-    if @user.errors.empty?
+    if verify_recaptcha(@user) && @user.save!
       # self.current_user = @user
       redirect_back_or_default('/')
       flash[:notice] = _("Thanks for signing up! Please check your email to activate your account before logging in.")

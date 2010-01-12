@@ -9,9 +9,10 @@ class ApplicationController < ActionController::Base
 
   layout "main"
 
+  protected
+
   def set_toppings
     # set variables which needed everywhere
-    @proba = "HELLO"
   end
 
   def set_gettext_locale
@@ -20,6 +21,4 @@ class ApplicationController < ActionController::Base
     super
   end
 
-  # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
 end

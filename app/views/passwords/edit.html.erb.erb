@@ -1,0 +1,11 @@
+
+<% form_tag "/passwords/update/"+params[:id] do %>
+
+  <div class="form-item"><label for="password"><%=_('Password')%></label><br/>
+    <%= password_field_tag :password %><hr/></div>
+
+  <div class="form-item"><label for="password_confirmation"><%=_('Confirm Password')%></label><br/>
+    <%= password_field_tag :password_confirmation %><hr/></div>
+
+  <%= submit_tag _("Reset Your Password") %>
+<% end %>

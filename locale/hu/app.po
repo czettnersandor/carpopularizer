@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-10 14:36+0100\n"
-"PO-Revision-Date: 2010-01-10 14:46+0100\n"
+"POT-Creation-Date: 2010-01-10 22:35+0100\n"
+"PO-Revision-Date: 2010-01-10 22:39+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:56
+#: app/views/profile/index.html.erb:42 app/views/profile/edit.html.erb:56
 msgid "About Me"
 msgstr "Magamról"
 
-#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:47
+#: app/views/profile/index.html.erb:33 app/views/profile/edit.html.erb:47
 msgid "Address"
 msgstr "Cím"
 
@@ -50,9 +50,13 @@ msgstr "Profil kép"
 msgid "Belgium"
 msgstr "Belgium"
 
-#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:41
+#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:41
 msgid "Birth date"
 msgstr "Születési dátum"
+
+#: app/views/topics/_form.erb:6
+msgid "Body"
+msgstr ""
 
 #: app/helpers/profile_helper.rb:9
 msgid "Brazil"
@@ -70,21 +74,29 @@ msgstr "Kanada"
 msgid "Chile"
 msgstr "Chile"
 
-#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:24
+#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:24
 msgid "City"
 msgstr "Város"
+
+#: app/views/profile/index.html.erb:12
+msgid "Comments count"
+msgstr "Hozzászólások száma"
 
 #: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
 
-#: app/views/profile/index.html.erb:21 app/views/profile/edit.html.erb:21
+#: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:21
 msgid "Country"
 msgstr "Ország"
 
 #: app/helpers/profile_helper.rb:13
 msgid "Croatia"
 msgstr "Horvátország"
+
+#: app/views/admin/forums/_form.erb:5
+msgid "Description"
+msgstr "Leírás"
 
 #: app/views/users/new.html.erb:6
 msgid "Email"
@@ -98,6 +110,18 @@ msgstr "Nő"
 msgid "Finland"
 msgstr "Finnország"
 
+#: app/views/sessions/new.html.erb:16
+msgid "Forgotten password?"
+msgstr "Elfelejtett jelszó?"
+
+#: app/views/admin/forums/_form.erb:2
+msgid "Forum name"
+msgstr "Fórum neve"
+
+#: app/views/admin/front/index.html.erb:4
+msgid "Forums"
+msgstr "Fórumok"
+
 #: app/helpers/profile_helper.rb:16
 msgid "France"
 msgstr "Franciaország"
@@ -106,7 +130,7 @@ msgstr "Franciaország"
 msgid "Full name"
 msgstr "Teljes név"
 
-#: app/views/profile/index.html.erb:15 app/views/profile/edit.html.erb:18
+#: app/views/profile/index.html.erb:18 app/views/profile/edit.html.erb:18
 msgid "Gender"
 msgstr "Nem"
 
@@ -142,11 +166,11 @@ msgstr "Japán"
 msgid "Korea"
 msgstr "Korea"
 
-#: app/views/profile/index.html.erb:36 app/views/profile/edit.html.erb:53
+#: app/views/profile/index.html.erb:39 app/views/profile/edit.html.erb:53
 msgid "Languages spoken"
 msgstr "Beszélt nyelvek"
 
-#: app/views/sessions/new.html.erb:12
+#: app/views/layouts/_login.erb:12 app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr "Bejelentkezés"
 
@@ -175,14 +199,14 @@ msgid "Netherlands"
 msgstr "Horvátország"
 
 #: app/views/user_mailer/signup_notification.html.erb:3
-#: app/views/sessions/password.html.erb:2 app/views/sessions/new.html.erb:2
-#: app/views/users/new.html.erb:3
+#: app/views/layouts/_login.erb:2 app/views/sessions/password.html.erb:2
+#: app/views/sessions/new.html.erb:2 app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr "Becenév"
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/profile/edit.html.erb:12 app/views/sessions/new.html.erb:5
-#: app/views/users/new.html.erb:9
+#: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
+#: app/views/sessions/new.html.erb:5 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr "Jelszó"
 
@@ -190,7 +214,7 @@ msgstr "Jelszó"
 msgid "Password successfully updated."
 msgstr "A jelszó sikeresen megváltozott."
 
-#: app/views/profile/index.html.erb:33
+#: app/views/profile/index.html.erb:36
 msgid "Phone"
 msgstr "Telefon"
 
@@ -210,15 +234,15 @@ msgstr "Lengyelország"
 msgid "Register"
 msgstr "Regisztráció"
 
-#: app/views/profile/index.html.erb:12
+#: app/views/profile/index.html.erb:15
 msgid "Registration time"
 msgstr "Regisztráció ideje"
 
-#: app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:9 app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr "Emlékezz rám"
 
-#: app/views/profile/edit.html.erb:59
+#: app/views/topics/new.html.erb:13 app/views/profile/edit.html.erb:59
 msgid "Save"
 msgstr "Mentés"
 
@@ -258,6 +282,10 @@ msgstr ""
 "Köszönjük a regisztrációt! Kérjük, ellenőrizd az email címedet a "
 "felhasználói fiók aktiválásához."
 
+#: app/views/topics/_form.erb:2
+msgid "Title"
+msgstr "Cím"
+
 #: app/helpers/profile_helper.rb:30
 msgid "UK: England & Wales"
 msgstr "UK: Anglia & Wales"
@@ -265,6 +293,10 @@ msgstr "UK: Anglia & Wales"
 #: app/helpers/profile_helper.rb:31
 msgid "UK: Scotland"
 msgstr "UK: Skócia"
+
+#: app/views/admin/front/index.html.erb:8
+msgid "Users"
+msgstr "Felhasználók"
 
 #: app/views/user_mailer/signup_notification.html.erb:6
 msgid "Visit this url to activate your account"
@@ -294,11 +326,20 @@ msgstr "A felhasználói fiókod létrejött."
 msgid "Your password has been reset."
 msgstr "A jelszavad megváltozott."
 
-#: app/views/profile/index.html.erb:27 app/views/profile/edit.html.erb:44
+#: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:44
 msgid "ZIP"
 msgstr "Irányítószám"
 
 #: app/views/user_mailer/activation.html.erb:1
 msgid "your account has been activated."
 msgstr "a felhasználó fiókod aktiválva lett."
+
+msgid "There were problems with the following fields"
+msgstr ""
+
+msgid "1 error prohibited this {{model}} from being saved"
+msgstr ""
+
+msgid "{{count}} errors prohibited this {{model}} from being saved"
+msgstr ""
 

@@ -3,7 +3,7 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Boxutca</title>
+    <title><%= @title %> | Boxutca</title>
     <%= stylesheet_link_tag("reset") %>
     <%= stylesheet_link_tag("960") %>
     <%= stylesheet_link_tag("text") %>
@@ -19,32 +19,41 @@
   <body>
     <div class="container_12">
       <div class="grid_12">
-        <div class="grid_3 alpha">
-          <% for name, locale in [['Magyar ?',:hu],['English ?',:en]] %>
-            <%=link_to(name,current_url(:locale=>locale))%>
+
+        <div id="langswitcher">
+          <% for name, locale in [['Magyar',:hu],['English',:en]]
+            localeactive = (I18n.locale == locale)? " active" : ""
+          %>
+            <%=link_to(name,current_url(:locale=>locale), :class => locale.to_s+localeactive)%>
           <% end %>
         </div>
-        <div class="grid_9 omega">
+
+        <a href="/" id="logo"></a>
+
+        <div id="loginblock">
           <% if logged_in? %>
             <%= _('Welcome')+" "+link_to(current_user.login, '/profile') %>
             <%= link_to(_("Logout"), "/logout") %>
           <% else %>
-            <%= link_to(_("Login"), "/login") %>
             <%= render :partial => "layouts/login" %>
           <% end %>
 
           <% if flash[:login_message] %>
             <%=flash[:login_message]%>
-          <%end%>  
+          <%end%>
         </div>
 
       </div>
-      <div class="grid_12">
+      <div class="grid_12" id="content-wrapper">
+        <div id="headcurve"></div>
         <% if flash[:notice] %>
           <%=flash[:notice]%>
         <%end%>
-        I18n Locale: <%=I18n.locale%> ---- Gettext Locale: <%=FastGettext.locale%>
+
+        <h1 class="title"><%= @title  %> </h1>
         <%= yield %>
+
+        <div id="footercurve"></div>
       </div>
     </div>
   </body>

@@ -43,6 +43,7 @@ doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
 doc\:plugins\:gettext_i18n_rails=Generate documentation for the gettext_i18n_rails plugin
 doc\:plugins\:jrails=Generate documentation for the jrails plugin
+doc\:plugins\:negative_captcha=Generate documentation for the negative_captcha plugin
 doc\:plugins\:paperclip=Generate documentation for the paperclip plugin
 doc\:plugins\:restful_authentication=Generate documentation for the restful_authentication plugin
 doc\:plugins\:will_paginate=Generate documentation for the will_paginate plugin

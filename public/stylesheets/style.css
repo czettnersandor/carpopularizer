@@ -1,23 +1,42 @@
 html {
   overflow-x:auto;
   overflow-y:scroll;
+  background-color: #dcdcdc;
+  background-image: url(../images/html.png);
+  background-position: center top;
+  background-repeat: repeat-y;
+  height: 100%;
 }
 
 body {
   color:black;
   font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
   font-size:13px;
+  background-color: #dcdcdc;
+  background-image: url(../images/sitebg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+a {
+  color: #369ed9;
+  text-decoration: none;
+}
+a:hover {
+  color: #369ed9;
+  text-decoration: underline;
+}
+
+input {
+  background:transparent url(../images/form-text.png) repeat-x scroll 0 0;
+  border-color:#727272 #929292 #929292;
+  border-style:solid;
+  border-width:1px;
 }
 
 input:focus {
   border:1px dotted black;
-}
-
-input {
-  border:1px solid black;
-  color: black;
-  background-color: white;
-  float: left;
 }
 
 input, textarea, select {
@@ -26,6 +45,81 @@ input, textarea, select {
   margin:0;
   padding:1px;
 }
+
+/*
+* Layout
+*/
+#content-wrapper {
+  background: #ffffff url(../images/content-wrapper.png);
+  margin:10px 0;
+  padding:0 10px;
+  position: relative;
+}
+#headcurve {
+  background: url(../images/headcurve.png);
+  height: 10px;
+  margin: -10px -10px 0 -10px;
+}
+#footercurve {
+  background: url(../images/footercurve.png);
+  height: 10px;
+  margin: 0 -10px -10px;
+}
+a#logo {
+  width: 267px;
+  height: 55px;
+  background: url(../images/logo.png);
+  display: block;
+  margin-top: 10px;
+}
+
+/*
+* Langswitcher
+*/
+
+#langswitcher {
+  display: block;
+  float: right;
+  margin-top: 10px;
+}
+#langswitcher a.active {
+  color: black;
+}
+
+/*
+* Login block
+*/
+#loginblock {
+  display: block;
+  float: right;
+  margin-top:20px;
+}
+#loginblock .form-item {
+  float: left;
+  margin-left: 10px;
+}
+#loginblock .form-item.text,
+#loginblock .form-item.password {
+  margin-top:-19px;
+}
+#loginblock .form-item.text input,
+#loginblock .form-item.password input {
+  width: 110px;
+}
+#loginblock .form-item.checkbox {
+  display: none;
+}
+#loginblock input[type="submit"] {
+  height: 20px;
+  padding: 0 10px 3px 10px;
+}
+#loginblock a.register {
+  margin-left: 10px;
+}
+
+/*
+* Table
+*/
 
 table th {
   vertical-align: top;
