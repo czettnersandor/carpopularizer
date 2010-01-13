@@ -74,6 +74,7 @@ input, textarea, select {
   background: url(../images/footercurve.png);
   height: 10px;
   margin: 0 -10px -10px;
+  clear: both;
 }
 a#logo {
   width: 267px;
@@ -139,8 +140,92 @@ a#logo {
   position: absolute;
   bottom: 0;
   right: 0;
-  cursor: pointer; cursor: hand;
+}
+#searchbar .form-item.text input {
+  display: block;
+  width: 164px;
+  height: 17px;
+  padding: 0;
+  border: 0;
+  margin: 6px 0 0 6px;
+  background: url(../images/searchinput.png);
+}
+#searchbar .form-item.select input {
+  display: block;
+  width: 164px;
+  height: 17px;
+  padding: 0;
+  border: 0;
+  margin: 6px 0 0 6px;
+  background: url(../images/searchinput.png) 0 -17px;
+}
+#searchbar input[type="submit"] {
+  height: 20px;
+  padding: 0 10px 3px 10px;
+  margin-left: 6px;
+}
+#searchbar .jquery-selectbox {
+  position: relative;
+  height: 17px;
+  width: 164px !important;
+  border: 0;
+  width: 100px;
+  z-index: 0;
+  float: left;
+  display: inline;
+  margin: 3px 0 5px 6px;
+  color: #444;
+  padding: 0;
+  background: url(../images/searchinput.png) 0 -17px;
+}
+#searchbar .jquery-selectbox.selecthover {
+  z-index: 700;
+}
+#searchbar .jquery-selectbox .jquery-selectbox-currentItem {
+  padding: 0px 0px 0px 3px;
+  white-space: nowrap;
+  display: block;
   overflow: hidden;
+}
+
+#searchbar .jquery-selectbox .jquery-selectbox-list {
+  display: none;
+  background: white;
+  position: absolute;
+  top: 17px;
+  left: 0px;
+  width: 164px !important;
+  height: 100px !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+}
+#searchbar .jquery-selectbox .jquery-selectbox-moreButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  float: right;
+  width: 164px;
+  height: 17px;
+  cursor: pointer;
+}
+#searchbar .jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
+}
+
+#searchbar .jquery-selectbox .jquery-selectbox-item.listelementhover {
+  background: #0a6091;
+  color: #ffffff;
+}
+#searchbar .jquery-selectbox .jquery-selectbox-item {
+  display: block;
+  background: #ffffff;
+  cursor: default;
+}
+
+/** ERROR classes **/
+#searchbar form .error .jquery-selectbox {
+  color: #d00;
+  border-color: #d00;
 }
 
 /*
@@ -171,8 +256,8 @@ a#logo {
   display: block;
   height: 47px;
   background: url(../images/menuitem-border.png) no-repeat top right;
-  font-size: 20px;
-  padding: 5px 10px 0;
+  font-size: 18px;
+  padding: 5px 15px 0;
   text-shadow: 1px 1px 1px #369fd9;
 }
 #menubar li {
@@ -265,9 +350,16 @@ label.error {
 * Comments
 */
 
+#comment-form {
+  display: none;
+}
+
 .comment {
-  border: 1px solid #888888;
-  margin-bottom: 5px;
+  -moz-border-radius: 5px;
+  background: transparent url(../images/lightblue-horiz.png) repeat-x scroll 0 0;
+  border: 1px solid #2487bb;
+  padding: 10px 10px 0;
+  margin-bottom: 10px;
 }
 
 .comment .profile {
@@ -291,5 +383,58 @@ hr.clear {
   visibility: hidden;
 }
 .comment .indent {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+/*
+* Profile
+*/
+
+#profile-left .lightblue {
+  background: url(../images/lightblue.png);
+  border: 1px solid #2487bb;
+  padding: 10px;
+  border-top: none;
+  border-right: none;
+}
+#profile-left .lightblue.first {
+  border-top: 1px solid #2487bb;
+  -moz-border-radius-topleft: 5px;
+  height: 100px;
+}
+#profile-left .lightblue hr {
+  color: #2487bb;
+  background-color: #2487bb;
+  border: 0;
+  margin: 0 -10px;
+  height: 1px;
+}
+#profile-left .lightblue.curve {
+  background: url(../images/lightblue-curve.png) no-repeat bottom left;
+}
+
+#profile-left .profilehead {
+  color: black;
+  font-weight: bold;
+}
+#profile-left .profiledata {
+  color: #2487bb;
+}
+
+#profile-right {
+  margin-left: -30px;
+  margin-right: -30px;
+  padding-left: 20px;
+  width: 720px;
+}
+#profile-right .orangebox {
+  background: url(../images/lightblue-horiz.png) repeat-x;
+  border: 1px solid #fa981b;
+  -moz-border-radius-topright: 5px;
+  padding: 10px;
+}
+
+#profile-left img.profile-thumb {
+  float: left;
+  margin-right: 10px;
 }

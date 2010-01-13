@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-10 22:35+0100\n"
+"POT-Creation-Date: 2010-01-13 11:10+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/controllers/passwords_controller.rb:14
+msgid "A password reset link has been sent to your email address."
+msgstr ""
 
 #: app/views/profile/index.html.erb:42 app/views/profile/edit.html.erb:56
 msgid "About Me"
@@ -68,6 +72,10 @@ msgstr ""
 msgid "Canada"
 msgstr ""
 
+#: app/views/layouts/_menu.erb:3
+msgid "Cars"
+msgstr ""
+
 #: app/helpers/profile_helper.rb:12
 msgid "Chile"
 msgstr ""
@@ -76,12 +84,21 @@ msgstr ""
 msgid "City"
 msgstr ""
 
+#: app/views/layouts/_menu.erb:4
+msgid "Clubs"
+msgstr ""
+
 #: app/views/profile/index.html.erb:12
 msgid "Comments count"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
+#: app/views/profile/edit.html.erb:15 app/views/passwords/edit.html.erb.erb:7
+#: app/views/users/new.html.erb:12
 msgid "Confirm Password"
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:17
+msgid "Could not find a user with that email address."
 msgstr ""
 
 #: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:21
@@ -108,8 +125,16 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
+#: app/views/passwords/new.html.erb.erb:1
+msgid "Forgot Password"
+msgstr ""
+
 #: app/views/sessions/new.html.erb:16
 msgid "Forgotten password?"
+msgstr ""
+
+#: app/views/layouts/_menu.erb:6
+msgid "Forum"
 msgstr ""
 
 #: app/views/admin/forums/_form.erb:2
@@ -140,11 +165,15 @@ msgstr ""
 msgid "Hungary"
 msgstr ""
 
+#: app/controllers/passwords_controller.rb:34
+msgid "Invalid Reset Code entered."
+msgstr ""
+
 #: app/controllers/users_controller.rb:54
 msgid "Invalid activation code"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:20
+#: app/controllers/sessions_controller.rb:21
 msgid "Invalid username or password"
 msgstr ""
 
@@ -172,15 +201,15 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:18
+#: app/controllers/sessions_controller.rb:19
 msgid "Logged in successfully"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:32
+#: app/controllers/sessions_controller.rb:8
 msgid "Login"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:30
+#: app/views/layouts/main.html.erb:36
 msgid "Logout"
 msgstr ""
 
@@ -196,16 +225,37 @@ msgstr ""
 msgid "Netherlands"
 msgstr ""
 
+#: app/views/layouts/_menu.erb:2
+msgid "News"
+msgstr ""
+
 #: app/views/user_mailer/signup_notification.html.erb:3
-#: app/views/layouts/_login.erb:2 app/views/sessions/password.html.erb:2
-#: app/views/sessions/new.html.erb:2 app/views/users/new.html.erb:3
+#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
+#: app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
 #: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
-#: app/views/sessions/new.html.erb:5 app/views/users/new.html.erb:9
+#: app/views/passwords/edit.html.erb.erb:4 app/views/sessions/new.html.erb:5
+#: app/views/users/new.html.erb:9
 msgid "Password"
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:48
+msgid "Password field cannot be blank."
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:67
+msgid "Password mismatch."
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:65
+msgid "Password not reset."
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:65
+msgid "Password reset."
 msgstr ""
 
 #: app/controllers/profile_controller.rb:18
@@ -228,7 +278,8 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
-#: app/views/users/new.html.erb:15
+#: app/controllers/users_controller.rb:4 app/views/layouts/_login.erb:12
+#: app/views/users/new.html.erb:16
 msgid "Register"
 msgstr ""
 
@@ -240,12 +291,20 @@ msgstr ""
 msgid "Remember me"
 msgstr ""
 
-#: app/views/topics/new.html.erb:13 app/views/profile/edit.html.erb:59
-msgid "Save"
+#: app/views/passwords/new.html.erb.erb:5
+msgid "Reset Password"
 msgstr ""
 
-#: app/views/sessions/password.html.erb:5
-msgid "Send new password"
+#: app/views/passwords/edit.html.erb.erb:10
+msgid "Reset Your Password"
+msgstr ""
+
+#: app/views/layouts/_menu.erb:5
+msgid "Ride Battle"
+msgstr ""
+
+#: app/views/topics/new.html.erb:13 app/views/profile/edit.html.erb:59
+msgid "Save"
 msgstr ""
 
 #: app/controllers/users_controller.rb:51
@@ -254,6 +313,13 @@ msgstr ""
 
 #: app/helpers/profile_helper.rb:25
 msgid "Slovenia"
+msgstr ""
+
+#: app/controllers/passwords_controller.rb:35
+#: app/controllers/passwords_controller.rb:74
+msgid ""
+"Sorry - That is an invalid password reset code. Please check your code and "
+"try again. (Perhaps your email client inserted a carriage return?)"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:26
@@ -278,6 +344,11 @@ msgid ""
 "before logging in."
 msgstr ""
 
+#: app/controllers/comments_controller.rb:18
+#: app/controllers/comments_controller.rb:22
+msgid "This topic is locked."
+msgstr ""
+
 #: app/views/topics/_form.erb:2
 msgid "Title"
 msgstr ""
@@ -298,11 +369,15 @@ msgstr ""
 msgid "Visit this url to activate your account"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:29
+#: app/views/layouts/main.html.erb:35
 msgid "Welcome"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:29
+#: app/views/passwords/new.html.erb.erb:3
+msgid "What is the email address used to create your account?"
+msgstr ""
+
+#: app/controllers/sessions_controller.rb:30
 msgid "You have been logged out."
 msgstr ""
 
@@ -318,12 +393,20 @@ msgstr ""
 msgid "Your account has been created."
 msgstr ""
 
+#: app/views/user_mailer/reset_password.html.erb.erb:1
+msgid "Your password has been reset"
+msgstr ""
+
 #: app/models/user_mailer.rb:23
 msgid "Your password has been reset."
 msgstr ""
 
 #: app/views/profile/index.html.erb:30 app/views/profile/edit.html.erb:44
 msgid "ZIP"
+msgstr ""
+
+#: app/views/user_mailer/forgot_password.html.erb.erb:1
+msgid "to reset your password, please visit"
 msgstr ""
 
 #: app/views/user_mailer/activation.html.erb:1

@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :collection => { :check_username => :get, :check_email => :get, :activate => :get }
   map.resource :session
   map.resource :front
+  map.resource :search
   map.resources :comments
   map.resource :password
   map.resources :profile, :collection => { :edit => :get }

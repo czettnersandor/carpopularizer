@@ -13,12 +13,13 @@
     <%= javascript_include_tag 'jrails' %>
     <%= javascript_include_tag 'jquery.validate' %>
     <%= javascript_include_tag 'jquery.maskedinput' %>
+    <%= javascript_include_tag 'jquery.selectbox' %>
     <%= javascript_include_tag 'application' %>
 
   </head>
   <body>
     <div class="container_12">
-      <div class="grid_12">
+      <div class="grid_12" id="header">
 
         <div id="langswitcher">
           <% for name, locale in [['Magyar',:hu],['English',:en]]
@@ -35,15 +36,19 @@
             <%= _('Welcome')+" "+link_to(current_user.login, '/profile') %>
             <%= link_to(_("Logout"), "/logout") %>
           <% else %>
-            <%= render :partial => "layouts/login" %>
+            <%= render :partial => 'layouts/login' %>
           <% end %>
-
-          <% if flash[:login_message] %>
-            <%=flash[:login_message]%>
-          <%end%>
         </div>
 
+        <div id="menubar">
+          <%= render :partial => 'layouts/menu' %>
+        </div>
+
+        <div id="searchbar">
+          <%= render :partial => 'layouts/searchblock' %>
+        </div>
       </div>
+
       <div class="grid_12" id="content-wrapper">
         <div id="headcurve"></div>
         <% if flash[:notice] %>
@@ -55,6 +60,7 @@
 
         <div id="footercurve"></div>
       </div>
+
     </div>
   </body>
 </html>

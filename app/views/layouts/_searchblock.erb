@@ -1,0 +1,10 @@
+<% form_tag search_path do -%>
+  <div class="form-item text"><%= text_field_tag 'q' %></div>
+  <div class="form-item select">
+    <%=  select_tag('searchwhat',
+      options_for_select({"Car"=>:car, "User"=>:user, "Club"=>:club, "Forum"=>:forum, "Ad"=>:ad}))
+    %>
+  </div>
+
+  <div class="form-item submit"><%= submit_tag _('Search') %></div>
+<% end -%>

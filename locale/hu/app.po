@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-10 22:35+0100\n"
-"PO-Revision-Date: 2010-01-10 22:39+0100\n"
+"POT-Creation-Date: 2010-01-13 11:10+0100\n"
+"PO-Revision-Date: 2010-01-13 11:15+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,10 @@ msgstr ""
 "X-Poedit-Country: HUNGARY\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
+
+#: app/controllers/passwords_controller.rb:14
+msgid "A password reset link has been sent to your email address."
+msgstr ""
 
 #: app/views/profile/index.html.erb:42 app/views/profile/edit.html.erb:56
 msgid "About Me"
@@ -70,6 +74,10 @@ msgstr "Bulgária"
 msgid "Canada"
 msgstr "Kanada"
 
+#: app/views/layouts/_menu.erb:3
+msgid "Cars"
+msgstr "Autók"
+
 #: app/helpers/profile_helper.rb:12
 msgid "Chile"
 msgstr "Chile"
@@ -78,13 +86,22 @@ msgstr "Chile"
 msgid "City"
 msgstr "Város"
 
+#: app/views/layouts/_menu.erb:4
+msgid "Clubs"
+msgstr "Klubok"
+
 #: app/views/profile/index.html.erb:12
 msgid "Comments count"
 msgstr "Hozzászólások száma"
 
-#: app/views/profile/edit.html.erb:15 app/views/users/new.html.erb:12
+#: app/views/profile/edit.html.erb:15 app/views/passwords/edit.html.erb.erb:7
+#: app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
+
+#: app/controllers/passwords_controller.rb:17
+msgid "Could not find a user with that email address."
+msgstr "Nem található felhasználó ezzel az email címmel"
 
 #: app/views/profile/index.html.erb:24 app/views/profile/edit.html.erb:21
 msgid "Country"
@@ -110,9 +127,17 @@ msgstr "Nő"
 msgid "Finland"
 msgstr "Finnország"
 
+#: app/views/passwords/new.html.erb.erb:1
+msgid "Forgot Password"
+msgstr "Elfelejtett jelszó"
+
 #: app/views/sessions/new.html.erb:16
 msgid "Forgotten password?"
 msgstr "Elfelejtett jelszó?"
+
+#: app/views/layouts/_menu.erb:6
+msgid "Forum"
+msgstr "Fórum"
 
 #: app/views/admin/forums/_form.erb:2
 msgid "Forum name"
@@ -142,11 +167,15 @@ msgstr "Németország"
 msgid "Hungary"
 msgstr "Magyarország"
 
+#: app/controllers/passwords_controller.rb:34
+msgid "Invalid Reset Code entered."
+msgstr "Érvénytelen helyreállító kód"
+
 #: app/controllers/users_controller.rb:54
 msgid "Invalid activation code"
 msgstr "Hibás ellenőrző kód"
 
-#: app/controllers/sessions_controller.rb:20
+#: app/controllers/sessions_controller.rb:21
 msgid "Invalid username or password"
 msgstr "Érvénytelen felhasználói név vagy jelszó"
 
@@ -174,15 +203,15 @@ msgstr "Beszélt nyelvek"
 msgid "Log in"
 msgstr "Bejelentkezés"
 
-#: app/controllers/sessions_controller.rb:18
+#: app/controllers/sessions_controller.rb:19
 msgid "Logged in successfully"
 msgstr "Sikeres bejelentkezés"
 
-#: app/views/layouts/main.html.erb:32
+#: app/controllers/sessions_controller.rb:8
 msgid "Login"
 msgstr "Bejelentkezés"
 
-#: app/views/layouts/main.html.erb:30
+#: app/views/layouts/main.html.erb:36
 msgid "Logout"
 msgstr "Kijelentkezés"
 
@@ -198,17 +227,38 @@ msgstr "Férfi"
 msgid "Netherlands"
 msgstr "Horvátország"
 
+#: app/views/layouts/_menu.erb:2
+msgid "News"
+msgstr "Hírek"
+
 #: app/views/user_mailer/signup_notification.html.erb:3
-#: app/views/layouts/_login.erb:2 app/views/sessions/password.html.erb:2
-#: app/views/sessions/new.html.erb:2 app/views/users/new.html.erb:3
+#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
+#: app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr "Becenév"
 
 #: app/views/user_mailer/signup_notification.html.erb:4
 #: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
-#: app/views/sessions/new.html.erb:5 app/views/users/new.html.erb:9
+#: app/views/passwords/edit.html.erb.erb:4 app/views/sessions/new.html.erb:5
+#: app/views/users/new.html.erb:9
 msgid "Password"
 msgstr "Jelszó"
+
+#: app/controllers/passwords_controller.rb:48
+msgid "Password field cannot be blank."
+msgstr "A jelszó mező nem lehet üres."
+
+#: app/controllers/passwords_controller.rb:67
+msgid "Password mismatch."
+msgstr "Jelszó nem egyezik"
+
+#: app/controllers/passwords_controller.rb:65
+msgid "Password not reset."
+msgstr "A jelszavad nem változott."
+
+#: app/controllers/passwords_controller.rb:65
+msgid "Password reset."
+msgstr "Jelszó újragenerálás"
 
 #: app/controllers/profile_controller.rb:18
 msgid "Password successfully updated."
@@ -230,7 +280,8 @@ msgstr "Kérjük, aktiváld az új felhasználói fiókodat"
 msgid "Poland"
 msgstr "Lengyelország"
 
-#: app/views/users/new.html.erb:15
+#: app/controllers/users_controller.rb:4 app/views/layouts/_login.erb:12
+#: app/views/users/new.html.erb:16
 msgid "Register"
 msgstr "Regisztráció"
 
@@ -242,13 +293,21 @@ msgstr "Regisztráció ideje"
 msgid "Remember me"
 msgstr "Emlékezz rám"
 
+#: app/views/passwords/new.html.erb.erb:5
+msgid "Reset Password"
+msgstr "Új jelszó kérése"
+
+#: app/views/passwords/edit.html.erb.erb:10
+msgid "Reset Your Password"
+msgstr "Adj meg új jelszót"
+
+#: app/views/layouts/_menu.erb:5
+msgid "Ride Battle"
+msgstr "Versenypálya"
+
 #: app/views/topics/new.html.erb:13 app/views/profile/edit.html.erb:59
 msgid "Save"
 msgstr "Mentés"
-
-#: app/views/sessions/password.html.erb:5
-msgid "Send new password"
-msgstr "Új jelszó küldése"
 
 #: app/controllers/users_controller.rb:51
 msgid "Signup complete!"
@@ -257,6 +316,13 @@ msgstr "Sikeres regisztráció!"
 #: app/helpers/profile_helper.rb:25
 msgid "Slovenia"
 msgstr "Szlovénia"
+
+#: app/controllers/passwords_controller.rb:35
+#: app/controllers/passwords_controller.rb:74
+msgid ""
+"Sorry - That is an invalid password reset code. Please check your code and "
+"try again. (Perhaps your email client inserted a carriage return?)"
+msgstr ""
 
 #: app/helpers/profile_helper.rb:26
 msgid "South Africa"
@@ -282,6 +348,11 @@ msgstr ""
 "Köszönjük a regisztrációt! Kérjük, ellenőrizd az email címedet a "
 "felhasználói fiók aktiválásához."
 
+#: app/controllers/comments_controller.rb:18
+#: app/controllers/comments_controller.rb:22
+msgid "This topic is locked."
+msgstr "Ez a téma zárolva lett."
+
 #: app/views/topics/_form.erb:2
 msgid "Title"
 msgstr "Cím"
@@ -302,11 +373,15 @@ msgstr "Felhasználók"
 msgid "Visit this url to activate your account"
 msgstr "Kattints erre a linkre az aktiváláshoz"
 
-#: app/views/layouts/main.html.erb:29
+#: app/views/layouts/main.html.erb:35
 msgid "Welcome"
 msgstr "Üdvözöllek"
 
-#: app/controllers/sessions_controller.rb:29
+#: app/views/passwords/new.html.erb.erb:3
+msgid "What is the email address used to create your account?"
+msgstr "Add meg azt az email címet, mellyel korábban regisztráltál."
+
+#: app/controllers/sessions_controller.rb:30
 msgid "You have been logged out."
 msgstr "Sikeresen kijelentkeztél."
 
@@ -322,6 +397,10 @@ msgstr "A felhasználói fiókod aktiválva lett!"
 msgid "Your account has been created."
 msgstr "A felhasználói fiókod létrejött."
 
+#: app/views/user_mailer/reset_password.html.erb.erb:1
+msgid "Your password has been reset"
+msgstr "A jelszavad megváltozott."
+
 #: app/models/user_mailer.rb:23
 msgid "Your password has been reset."
 msgstr "A jelszavad megváltozott."
@@ -330,16 +409,10 @@ msgstr "A jelszavad megváltozott."
 msgid "ZIP"
 msgstr "Irányítószám"
 
+#: app/views/user_mailer/forgot_password.html.erb.erb:1
+msgid "to reset your password, please visit"
+msgstr "A jelszó beállításához kattints ide:"
+
 #: app/views/user_mailer/activation.html.erb:1
 msgid "your account has been activated."
 msgstr "a felhasználó fiókod aktiválva lett."
-
-msgid "There were problems with the following fields"
-msgstr ""
-
-msgid "1 error prohibited this {{model}} from being saved"
-msgstr ""
-
-msgid "{{count}} errors prohibited this {{model}} from being saved"
-msgstr ""
-

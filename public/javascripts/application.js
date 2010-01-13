@@ -28,6 +28,8 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
 
+  $('select#searchwhat').selectbox();
+
   $('#menubar li').hover(
     function(){
       $(this).stop();
@@ -44,15 +46,10 @@ $(document).ready(function(){
     }
     );
 
-  $("#searchbar").click(function(){
+  $('#searchbar input').focus(function(){
     if ($("#searchbar").height() == 46) {
-      $(this).animate({
-        height: "70"
-      }, 500 );
-    }
-    else {
       $("#searchbar").animate({
-        height: "46"
+        height: "70"
       }, 500 );
     }
   });
