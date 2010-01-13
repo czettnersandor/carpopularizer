@@ -28,9 +28,38 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
 
+  $('#menubar li').hover(
+    function(){
+      $(this).stop();
+      $(this).animate(
+      {
+        height: "47",
+        "marginTop": "-8"
+      }, 500)
+    },
+    function(){
+      $(this).stop();
+      $(this).height(39);
+      $(this).css({"margin-top": "0"});
+    }
+    );
+
+  $("#searchbar").click(function(){
+    if ($("#searchbar").height() == 46) {
+      $(this).animate({
+        height: "70"
+      }, 500 );
+    }
+    else {
+      $("#searchbar").animate({
+        height: "46"
+      }, 500 );
+    }
+  });
+
+
+
   $("input#user_birth").mask("9999/99/99");
-
-
 
   $("form.user-register").validate({
     rules: {
