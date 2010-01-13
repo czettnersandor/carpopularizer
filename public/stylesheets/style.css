@@ -20,11 +20,11 @@ body {
 }
 
 a {
-  color: #369ed9;
+  color: #0a6091;
   text-decoration: none;
 }
 a:hover {
-  color: #369ed9;
+  color: #fa981b;
   text-decoration: underline;
 }
 
@@ -34,21 +34,31 @@ input {
   border-style:solid;
   border-width:1px;
 }
-
+input.error {
+  border-color:#920000 #aa0000 #aa0000;
+}
 input:focus {
   border:1px dotted black;
 }
+input.error:focus {
+  border-color:#ff0000;
+  background: white;
+}
 
 input, textarea, select {
-  font-family:inherit;
-  font-size:100%;
-  margin:0;
-  padding:1px;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 1px;
+  float: left;
 }
 
 /*
 * Layout
 */
+#header {
+  height: 120px;
+}
 #content-wrapper {
   background: #ffffff url(../images/content-wrapper.png);
   margin:10px 0;
@@ -71,6 +81,7 @@ a#logo {
   background: url(../images/logo.png);
   display: block;
   margin-top: 10px;
+  float: left;
 }
 
 /*
@@ -91,7 +102,7 @@ a#logo {
 */
 #loginblock {
   display: block;
-  float: right;
+  float: left;
   margin-top:20px;
 }
 #loginblock .form-item {
@@ -116,6 +127,70 @@ a#logo {
 #loginblock a.register {
   margin-left: 10px;
 }
+
+/*
+* Search bar
+*/
+#searchbar {
+  display: block;
+  width: 225px;
+  height: 46px;
+  background: #369ed9 url(../images/searchbar.png) no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer; cursor: hand;
+  overflow: hidden;
+}
+
+/*
+* Menu bar
+*/
+#menubar {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 39px;
+}
+#menubar ul {
+  display: block;
+  background: url(../images/menubg.png) repeat-x;
+  height: 39px;
+  margin: 0;
+  width: 715px;
+}
+#menubar li {
+  display: block;
+  float: left;
+  height: 39px;
+  margin: 0;
+  list-style: none;
+}
+#menubar li a {
+  display: block;
+  height: 47px;
+  background: url(../images/menuitem-border.png) no-repeat top right;
+  font-size: 20px;
+  padding: 5px 10px 0;
+  text-shadow: 1px 1px 1px #369fd9;
+}
+#menubar li {
+  background: url(../images/menuitem.png) no-repeat -4px 0px;
+}
+#menubar li.first {
+  background-position: top left;
+}
+#menubar li:hover {
+  background-position: 0px -39px;
+}
+#menubar li:hover a {
+  background-position: 100% -39px;
+}
+#menubar a:hover {
+  text-decoration: none;
+}
+
 
 /*
 * Table
@@ -146,7 +221,7 @@ table td.num {
   -moz-border-radius-topleft:4px;
   -moz-border-radius-topright:4px;
   -x-system-font:none;
-  background:#DDDDDD url(http://s.twimg.com/a/1262981812/images/buttons/bg-btn.gif) repeat-x scroll 0 0;
+  background:#DDDDDD url(../images/bg-btn.gif) repeat-x scroll 0 0;
   border-color:#DDDDDD #DDDDDD #CCCCCC;
   border-style:solid;
   border-width:1px;
