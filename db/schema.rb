@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100114102851) do
+ActiveRecord::Schema.define(:version => 20100114140809) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20100114102851) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rssreader_id"
+    t.integer  "hits"
   end
 
   add_index "rssnews", ["pub_date"], :name => "index_rssnews_on_pub_date"

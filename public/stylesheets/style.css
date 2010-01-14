@@ -261,7 +261,7 @@ a#logo {
   background: url(../images/menuitem-border.png) no-repeat top right;
   font-size: 18px;
   padding: 5px 15px 0;
-  text-shadow: 1px 1px 1px #369fd9;
+  text-shadow: 1px 1px 1px #ffffff;
 }
 #menubar li {
   background: url(../images/menuitem.png) no-repeat -4px 0px;
@@ -274,6 +274,7 @@ a#logo {
 }
 #menubar li:hover a {
   background-position: 100% -39px;
+  text-shadow: 1px 1px 1px #000000;
 }
 #menubar a:hover {
   text-decoration: none;

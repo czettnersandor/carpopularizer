@@ -1,3 +1,10 @@
+<%= @rssreader.url %>
+<ul>
+  <% @rssreader.rssnews.each do |rssnew| %>
 
+    <li><%= rssnew.title %></li>
+
+  <% end %>
+</ul>
 <%= link_to 'Edit', edit_rssreader_path(@rssreader) %> |
 <%= link_to 'Back', rssreaders_path %>

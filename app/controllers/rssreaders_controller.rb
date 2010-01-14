@@ -15,6 +15,7 @@ class RssreadersController < ApplicationController
   # GET /rssreaders/1.xml
   def show
     @rssreader = Rssreader.find(params[:id])
+    @title = @rssreader.name
 
     respond_to do |format|
       format.html # show.html.erb
