@@ -1,0 +1,12 @@
+<h1>Editing rssnew</h1>
+
+<% form_for(@rssnew) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @rssnew %> |
+<%= link_to 'Back', rssnews_path %>
