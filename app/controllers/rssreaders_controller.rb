@@ -1,4 +1,5 @@
 class RssreadersController < ApplicationController
+  before_filter :check_administrator_role, :except => [ :show ]
   # GET /rssreaders
   # GET /rssreaders.xml
   def index

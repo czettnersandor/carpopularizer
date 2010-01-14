@@ -1,8 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :rssnews
+
   map.resources :rssreaders
-
   map.resources :pages, :collection => { :parse_textile => :post }
-
   map.resources :users, :collection => { :check_username => :get, :check_email => :get, :activate => :get }
   map.resource :session
   map.resource :front

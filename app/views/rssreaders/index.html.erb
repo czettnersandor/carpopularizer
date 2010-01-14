@@ -6,6 +6,8 @@
 
 <% @rssreaders.each do |rssreader| %>
   <tr>
+    <td> <%= rssreader.name %>  </td>
+    <td> <%= rssreader.url %>  </td>
     <td><%= link_to 'Show', rssreader %></td>
     <td><%= link_to 'Edit', edit_rssreader_path(rssreader) %></td>
     <td><%= link_to 'Destroy', rssreader, :confirm => 'Are you sure?', :method => :delete %></td>
