@@ -1,4 +1,6 @@
 require 'digest/sha1'
+include GeoKit::Geocoders
+include GeoKit::Mappable
 class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   # Virtual attribute for the unencrypted password
@@ -22,6 +24,13 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation,
     :address, :birth, :name, :city, :nem, :zip, :country, :langs, :about, :phone, :avatar
+
+  acts_as_mappable :default_units => :kms,
+    :default_formula => :sphere,
+    :distance_field_name => :distance,
+    :lat_column_name => :lat,
+    :lng_column_name => :lng
+  before_validation :geocode_address
 
   def update_last_login
     self.last_login = Time.now.utc
@@ -142,6 +151,15 @@ class User < ActiveRecord::Base
 
   def make_password_reset_code
     self.password_reset_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+  end
+
+  private
+
+  def geocode_address
+    if city && address
+      coordinates = GoogleGeocoder.geocode(zip+' '+city+' '+address)
+      self.lat, self.lng = coordinates.lat,coordinates.lng if coordinates.success
+    end
   end
     
 end

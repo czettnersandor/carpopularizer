@@ -42,6 +42,7 @@ Rails::Initializer.run do |config|
   config.gem "gettext", :lib => false, :version => '>=2.1.0'
   config.gem "RedCloth", :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
+  config.gem "geokit"
 
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

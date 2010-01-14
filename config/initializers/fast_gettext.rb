@@ -1,1 +1,1 @@
-FastGettext.add_text_domain 'boxutca', :path => 'locale'
+FastGettext.add_text_domain 'app', :path => 'locale'

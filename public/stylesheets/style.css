@@ -481,6 +481,8 @@ hr.clear {
 }
 .news-item .description {
   clear: left;
+  height: 60px;
+  overflow: hidden;
 }
 .news-item .origin {
   float: right;

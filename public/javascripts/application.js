@@ -42,14 +42,24 @@ $(document).ready(function(){
     function(){
       $(this).stop();
       $(this).height(39);
-      $(this).css({"margin-top": "0"});
+      $(this).css({
+        "margin-top": "0"
+      });
     }
     );
 
-  $('#searchbar input').focus(function(){
-    if ($("#searchbar").height() == 46) {
+  $(document.body).click(function(event) {
+    var $target = $(event.target);
+    if ($target.parents("#searchbar").length){
+      $("#searchbar").stop();
       $("#searchbar").animate({
         height: "70"
+      }, 500 );
+    }
+    else {
+      $("#searchbar").stop();
+      $("#searchbar").animate({
+        height: "46"
       }, 500 );
     }
   });

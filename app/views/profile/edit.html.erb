@@ -27,7 +27,7 @@
     <div class="form-item">
       <%= image_tag @user.avatar.url(:thumb) %><br/>
       <label for="avatar"><%=_('Avatar')%></label><br/>
-      <%= f.file_field :avatar %><hr/></div>
+      <%= f.file_field :avatar, :size=>15 %><hr/></div>
 
 
   </div>

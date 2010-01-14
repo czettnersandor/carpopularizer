@@ -9,9 +9,9 @@
     <div class="profilehead"><%= _('Comments count') %></div>
     <div class="profiledata"><%=  @user.comments_count %></div>
     <div class="profilehead"><%= _('Registration time') %></div>
-    <div class="profiledata"><%=  @user.activated_at %></div>
+    <div class="profiledata"><%=  @user.activated_at.to_s(:short) %></div>
     <hr/>
-    <%= _('Last login') %>: <%= @user.last_login %>
+    <%= _('Last login') %>: <%= @user.last_login.to_s(:short) %>
   </div>
 </div>
 
@@ -59,6 +59,7 @@
 
       </tbody>
     </table>
+    <%= @map.div(:width => 698, :height => 300) if @map %>
   </div>
 </div>
 

@@ -15,6 +15,12 @@
     <%= javascript_include_tag 'jquery.maskedinput' %>
     <%= javascript_include_tag 'jquery.selectbox' %>
 
+    <% if @map %>
+      <%= GMap.header %>
+      <%= @map.to_html %>
+    <% end %>
+
+
     <% if (current_user && current_user.has_role?('admin')) %>
       <%= javascript_include_tag 'markitup/jquery.markitup' %>
       <%= javascript_include_tag "markitup/sets/textile/set" %>

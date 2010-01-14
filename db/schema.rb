@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100114140809) do
+ActiveRecord::Schema.define(:version => 20100114200212) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -131,6 +131,17 @@ ActiveRecord::Schema.define(:version => 20100114140809) do
     t.datetime "avatar_updated_at"
     t.integer  "comments_count"
     t.datetime "last_login"
+    t.integer  "usertype"
+    t.string   "lang"
+    t.string   "website"
+    t.text     "nyitvatartas"
+    t.text     "contact_person"
+    t.text     "contact_phone"
+    t.float    "lat"
+    t.float    "lng"
   end
+
+  add_index "users", ["lat", "lng"], :name => "index_users_on_lat_and_lng"
+  add_index "users", ["usertype"], :name => "index_users_on_type"
 
 end
