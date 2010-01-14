@@ -88,6 +88,13 @@ a#logo {
   float: left;
 }
 
+.lightblue-block {
+  background: url(../images/lightblue-horiz.png) repeat-x;
+  border: 1px solid #2487bb;
+  padding: 10px;
+  -moz-border-radius: 5px;
+}
+
 /*
 * Langswitcher
 */
@@ -359,11 +366,11 @@ label.error {
 
 }
 #comment-form:after {
-   content: ".";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 .comment {
@@ -457,4 +464,32 @@ hr.clear {
 
 .markItUpContainer textarea {
   float: none;
+}
+
+
+/*
+* News
+*/
+
+.news-item .title {
+  float: left;
+  clear: right;
+}
+.news-item .pub-date {
+  float: right;
+  color: gray;
+}
+.news-item .description {
+  clear: left;
+}
+.news-item .origin {
+  float: right;
+  font-weight: bold;
+  clear: both;
+}
+.news-item hr {
+  display: block;
+  clear: both;
+  margin: 0;
+  visibility: hidden;
 }

@@ -7,7 +7,7 @@
 <% @rssnews.each do |rssnew| %>
   <tr>
     <td><%= link_to 'Show', rssnew %></td>
-    <td><%= link_to 'Edit', edit_rssnew_path(rssnew) %></td>
+    <td><%= link_to 'Edit', edit_rssnews_path(rssnew) %></td>
     <td><%= link_to 'Destroy', rssnew, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
