@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   # GET /pages/new.xml
   def new
     @page = Page.new
-
+    @title = _('New page')
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @page }
@@ -37,6 +37,7 @@ class PagesController < ApplicationController
   # GET /pages/1/edit
   def edit
     @page = Page.find_by_permalink(params[:id])
+    @title = @page.title
   end
 
   # POST /pages

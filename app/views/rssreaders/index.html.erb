@@ -1,0 +1,18 @@
+<h1>Listing rssreaders</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @rssreaders.each do |rssreader| %>
+  <tr>
+    <td><%= link_to 'Show', rssreader %></td>
+    <td><%= link_to 'Edit', edit_rssreader_path(rssreader) %></td>
+    <td><%= link_to 'Destroy', rssreader, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New rssreader', new_rssreader_path %>

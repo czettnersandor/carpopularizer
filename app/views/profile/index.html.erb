@@ -11,7 +11,7 @@
     <div class="profilehead"><%= _('Registration time') %></div>
     <div class="profiledata"><%=  @user.activated_at %></div>
     <hr/>
-    <%= _('Last login') %>: <%= @user.activated_at %>
+    <%= _('Last login') %>: <%= @user.last_login %>
   </div>
 </div>
 
@@ -34,7 +34,7 @@
           :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
 
         <%= render :partial => "profile_element",
-          :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } %>
+          :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
 
         <%= render :partial => "profile_element",
           :locals => { :header => _('Country') , :var => @user.country } %>

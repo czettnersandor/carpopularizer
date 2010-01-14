@@ -1,0 +1,16 @@
+<h1>New rssreader</h1>
+
+<% form_for(@rssreader) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form-item"><label for="title"><%=_('Title')%></label><br/>
+    <%= f.text_field :name %><hr/></div>
+
+  <div class="form-item"><label for="permalink"><%=_('Permalink')%></label><br/>
+    <%= f.text_field :url %><hr/></div>
+
+  <div class="form-item"><%= submit_tag _('Save') %></div>
+
+<% end %>
+
+<%= link_to 'Back', rssreaders_path %>
