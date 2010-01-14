@@ -23,6 +23,11 @@ class User < ActiveRecord::Base
   attr_accessible :login, :email, :password, :password_confirmation,
     :address, :birth, :name, :city, :nem, :zip, :country, :langs, :about, :phone, :avatar
 
+  def update_last_login
+    self.last_login = Time.now.utc
+    save(false)
+  end
+  
   # Activates the user in the database.
   def activate
     @activated = true

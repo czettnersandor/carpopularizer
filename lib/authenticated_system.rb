@@ -128,6 +128,6 @@ module AuthenticatedSystem
   end
 
   def check_administrator_role
-    check_role('administrator')
+    check_role('admin')
   end
 end

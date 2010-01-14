@@ -76,6 +76,9 @@ input, textarea, select {
   margin: 0 -10px -10px;
   clear: both;
 }
+#footer-message {
+  text-align: center;
+}
 a#logo {
   width: 267px;
   height: 55px;
@@ -352,6 +355,14 @@ label.error {
 
 #comment-form {
   display: none;
+
+}
+#comment-form:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 .comment {
@@ -437,4 +448,12 @@ hr.clear {
 #profile-left img.profile-thumb {
   float: left;
   margin-right: 10px;
+}
+
+/*
+* Pages
+*/
+
+.markItUpContainer textarea {
+  float: none;
 }

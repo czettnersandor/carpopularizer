@@ -1,0 +1,21 @@
+<h1>Editing page</h1>
+
+<% form_for(@page) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form-item"><label for="title"><%=_('Title')%></label><br/>
+    <%= f.text_field :title %><hr/></div>
+
+  <div class="form-item"><label for="permalink"><%=_('Permalink')%></label><br/>
+    <%= f.text_field :permalink %><hr/></div>
+
+  <div class="form-item"><label for="body"><%=_('Body')%></label><br/>
+    <%= f.text_area :body %><hr/></div>
+
+  <p>
+  <div class="form-item"><%= submit_tag _('Save') %></div>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page %> |
+<%= link_to 'Back', pages_path %>

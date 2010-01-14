@@ -4,6 +4,7 @@
 RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
+require 'RedCloth'
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
@@ -39,7 +40,7 @@ Rails::Initializer.run do |config|
   config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
   config.gem "gettext", :lib => false, :version => '>=2.1.0'
-
+  config.gem "RedCloth", :lib => false, :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
 
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100111090306) do
+ActiveRecord::Schema.define(:version => 20100113230927) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -32,8 +32,19 @@ ActiveRecord::Schema.define(:version => 20100111090306) do
     t.integer  "comments_count"
   end
 
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.string   "permalink"
+    t.integer  "hits"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["permalink"], :name => "index_pages_on_short_url"
+
   create_table "roles", :force => true do |t|
-    t.string   "name",       :null => false
+    t.string   "rolename",   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -99,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20100111090306) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.integer  "comments_count"
+    t.datetime "last_login"
   end
 
 end
