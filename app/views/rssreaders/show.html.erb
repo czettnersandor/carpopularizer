@@ -1,10 +1,10 @@
 <%= @rssreader.url %>
-<ul>
-  <% @rssreader.rssnews.each do |rssnew| %>
 
-    <li><%= rssnew.title %></li>
+<div class="lightblue-block">
+  <%= render :partial => 'layouts/newslist', :locals => { :news => @rssreader.rssnews }  %>
+</div>
 
-  <% end %>
-</ul>
-<%= link_to 'Edit', edit_rssreader_path(@rssreader) %> |
-<%= link_to 'Back', rssreaders_path %>
+<% if (current_user && current_user.has_role?('admin')) %>
+  <%= link_to 'Edit', edit_rssreader_path(@rssreader) %> |
+  <%= link_to 'Back', rssreaders_path %>
+<% end -%>

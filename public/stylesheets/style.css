@@ -475,6 +475,12 @@ hr.clear {
   float: left;
   clear: right;
 }
+.news-item .title a {
+  /* padding-left: 20px; */
+}
+.news-item .title a:visited {
+  /* padding-left: 20px; */
+}
 .news-item .pub-date {
   float: right;
   color: gray;
@@ -488,6 +494,9 @@ hr.clear {
   float: right;
   font-weight: bold;
   clear: both;
+}
+.news-item .origin a {
+  color: black;
 }
 .news-item hr {
   display: block;

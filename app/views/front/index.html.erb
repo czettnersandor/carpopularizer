@@ -1,27 +1,11 @@
 <div class="grid_6 alpha">
   <div class="lightblue-block">
-    <% @news.each do |news| %>
-      <div class="news-item">
-        <div class="title"><%= link_to news.title, news %></div>
-        <div class="pub-date"><%= news.pub_date.to_s(:short) %></div>
-        <div class="description"><%= news.description %></div>
-        <div class="origin"><%= news.rssreader.name %></div>
-        <hr/>
-      </div>
-    <% end -%>
+    <%= render :partial => 'layouts/newslist', :locals => { :news => @news }  %>
   </div>
 </div>
 
 <div class="grid_6 omega">
   <div class="lightblue-block">
-    <% @news_by_hits.each do |news| %>
-      <div class="news-item">
-        <div class="title"><%= link_to news.title, news %></div>
-        <div class="pub-date"><%= news.pub_date.to_s(:short) %></div>
-        <div class="description"><%= news.description %></div>
-        <div class="origin"><%= news.rssreader.name %></div>
-        <hr/>
-      </div>
-    <% end -%>
+    <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits }  %>
   </div>
 </div>
