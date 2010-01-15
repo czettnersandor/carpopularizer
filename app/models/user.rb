@@ -3,9 +3,12 @@ include GeoKit::Geocoders
 include GeoKit::Mappable
 class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
+  has_many :friendships
+  has_many :friends, :through => :friendships
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
+  #Avatar image and thumbnails
   has_attached_file :avatar,
     :styles => { :medium => "300x300#",
     :thumb => "100x100#" }

@@ -1,4 +1,12 @@
 class UsersController < ApplicationController
+  before_filter :login_required, :only => [:index, :show]
+  def index
+    @users = User.find :all, :conditions => "activated_at IS NOT NULL", :conditions => {:enabled => 1}
+  end
+
+  def show
+    @user = User.find_by_id(params[:id])
+  end
 
   def new
     @title = _("Register")

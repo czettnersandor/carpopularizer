@@ -17,7 +17,8 @@ class ProfileController < ApplicationController
 
   def edit
     @user = current_user
-    render :template => "profile/edit-user"
+    render :template => "profile/edit-user" if @user.usertype == 0
+    render :template => "profile/edit-dealer" if @user.usertype == 1
   end
 
   def update

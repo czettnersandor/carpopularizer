@@ -28,7 +28,7 @@ a:hover {
   text-decoration: underline;
 }
 
-input {
+input, textarea, select {
   background:transparent url(../images/form-text.png) repeat-x scroll 0 0;
   border-color:#727272 #929292 #929292;
   border-style:solid;

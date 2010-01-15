@@ -17,6 +17,10 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
+  map.resources :users do |user|
+    user.resources :friends, :member => { :confirm => :get, :add => :post }
+  end
+
 
   # Administration
   map.namespace(:admin) do |admin|
