@@ -18,7 +18,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :users do |user|
-    user.resources :friends, :member => { :confirm => :get, :add => :post }
+    user.resources :friends
   end
 
 
