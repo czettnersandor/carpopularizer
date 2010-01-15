@@ -159,6 +159,7 @@ a#logo {
   float: left;
   display: inline;
   margin: 3px 0 2px 6px;
+  clear: both;
 }
 #searchbar .form-item.text input {
   display: block;
