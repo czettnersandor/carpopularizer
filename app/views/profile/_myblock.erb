@@ -1,0 +1,16 @@
+<div class="grid_3 alpha" id="profile-left">
+  <div class="lightblue first">
+    <%= image_tag user.avatar.url(:thumb), :class=>"profile-thumb" %>
+    <%= user.login %>
+  </div>
+  <div class="lightblue curve">
+    <div class="profilehead"><%= _('Full name') %></div>
+    <div class="profiledata"><%=  user.name %></div>
+    <div class="profilehead"><%= _('Comments count') %></div>
+    <div class="profiledata"><%=  user.comments_count %></div>
+    <div class="profilehead"><%= _('Registration time') %></div>
+    <div class="profiledata"><%=  user.activated_at.to_s(:short) %></div>
+    <hr/>
+    <%= _('Last login') %>: <%= user.last_login.to_s(:short) %>
+  </div>
+</div>

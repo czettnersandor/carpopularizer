@@ -1,0 +1,59 @@
+<%= render :partial => "profile/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <table class="block_table">
+      <tbody>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Full name') , :var => @user.name } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Comments count') , :var => @user.comments_count } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Country') , :var => @user.country } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('City') , :var => @user.city } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('ZIP') , :var => @user.zip } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Address') , :var => @user.address } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Phone') , :var => @user.phone } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
+
+        <%= render :partial => "profile/profile_element",
+          :locals => { :header => _('About Me') , :var => @user.about } %>
+
+      </tbody>
+    </table>
+
+    <% if logged_in? %>
+      <% unless @user == current_user || current_user.requested_friends.include?(@user) || current_user.friends.include?(@user) || current_user.pending_friends.include?(@user) %>
+        <% form_for(:friendship, :url => user_friends_path(:user_id => current_user.id, :friend_id => @user.id)) do |f| %>
+          <%= submit_tag "Add to My Friends" %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <%= @map.div(:width => 698, :height => 300) if @map %>
+    <hr class="clear" />
+  </div>
+</div>

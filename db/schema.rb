@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100115211405) do
+ActiveRecord::Schema.define(:version => 20100115225929) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(:version => 20100115211405) do
   end
 
   create_table "friendships", :force => true do |t|
-    t.integer  "user_id",                   :null => false
-    t.integer  "friend_id",                 :null => false
-    t.integer  "status",     :default => 0, :null => false
+    t.integer  "user_id",                     :null => false
+    t.integer  "friend_id",                   :null => false
+    t.string   "status",     :default => "0", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
