@@ -17,6 +17,7 @@ class ProfileController < ApplicationController
 
   def edit
     @user = current_user
+    render :template => "profile/edit-user"
   end
 
   def update

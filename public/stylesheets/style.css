@@ -467,6 +467,9 @@ hr.clear {
   float: left;
   margin-right: 10px;
 }
+table.profile-edit td {
+  width: 50%;
+}
 
 /*
 * Pages

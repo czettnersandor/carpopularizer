@@ -39,7 +39,7 @@ module ProfileHelper
     opt_list = ""
     COUNTRIES.each do |country|
       selected = selected_country == country[0] ? ' selected="true">' : '>'
-      opt_list += '<option value='+country[0]+selected+country[1]+'</option>'
+      opt_list += '<option value='+country[0]+selected+_(country[1])+'</option>'
     end
     return opt_list
   end
