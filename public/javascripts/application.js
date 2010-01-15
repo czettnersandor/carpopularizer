@@ -29,7 +29,7 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
 
-  $('select#searchwhat').selectbox();
+  // $('select#searchwhat').selectbox();
 
   $('#menubar li').hover(
     function(){

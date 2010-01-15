@@ -152,6 +152,14 @@ a#logo {
   position: relative;
   width: 225px;
 }
+#searchbar #searchwhat {
+  width: 164px;
+  height: 20px;
+  padding: 0;
+  float: left;
+  display: inline;
+  margin: 3px 0 2px 6px;
+}
 #searchbar .form-item.text input {
   display: block;
   width: 164px;
@@ -183,7 +191,6 @@ a#logo {
   height: 17px;
   width: 164px !important;
   border: 0;
-  width: 100px;
   z-index: 0;
   float: left;
   display: inline;
