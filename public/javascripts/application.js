@@ -35,15 +35,15 @@ $(document).ready(function(){
       $(this).stop();
       $(this).animate(
       {
-        height: "47",
-        "marginTop": "-8"
+        "marginTop": "0",
+        height: "47px"
       }, 500)
     },
     function(){
       $(this).stop();
       $(this).height(39);
       $(this).css({
-        "margin-top": "0"
+        "margin-top": "8px"
       });
     }
     );

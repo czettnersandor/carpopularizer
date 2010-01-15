@@ -246,22 +246,24 @@ a#logo {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 39px;
+  height: 47px;
 }
 #menubar ul {
   display: block;
-  background: url(../images/menubg.png) repeat-x;
-  height: 39px;
+  background: url(../images/menubg.png) repeat-x left bottom;
+  height: 47px;
   margin: 0;
   width: 715px;
-  position: relative;
+  position: absolute;
 }
 #menubar li {
   display: block;
+  position: relative;
   float: left;
   height: 39px;
-  margin: 0;
+  margin: 8px 0 0 0;
   list-style: none;
+  background: url(../images/menuitem.png) no-repeat -4px 0;
 }
 #menubar li a {
   display: block;
@@ -271,11 +273,8 @@ a#logo {
   padding: 5px 15px 0;
   text-shadow: 1px 1px 1px #ffffff;
 }
-#menubar li {
-  background: url(../images/menuitem.png) no-repeat -4px 0px;
-}
 #menubar li.first {
-  background-position: top left;
+  background-position: 0px 0px;
 }
 #menubar li:hover {
   background-position: 0px -39px;
