@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation,
-    :address, :birth, :name, :city, :nem, :zip, :country, :langs, :about, :phone, :avatar
+    :address, :birth, :name, :city, :nem, :zip, :country, :langs, :about, :phone, :avatar,
+    :website, :nyitvatartas, :contact_person, :contact_phone
 
   acts_as_mappable :default_units => :kms,
     :default_formula => :sphere,
@@ -56,7 +57,7 @@ class User < ActiveRecord::Base
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
-    u = find :first, :conditions => ['login = ? and activated_at IS NOT NULL', login] # need to get the salt
+    u = find :first, :conditions => ['email = ? and activated_at IS NOT NULL', login] # need to get the salt
     u && u.authenticated?(password) ? u : nil
   end
 
