@@ -1,12 +1,19 @@
 set :application, "boxutca"
-set :repository, "git@eperpalanta.hu:boxutca.git"
+set :repository, "ssh://eperpalanta.hu/home/git/repositories/boxutca.git"
+ssh_options[:paranoid] = false
+default_run_options[:pty] = true
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+role :web, "eperpalanta.hu"
+role :app, "eperpalanta.hu"
+role :db, "eperpalanta.hu", :primary => true
+set :deploy_to, "/var/customers/webs/eper/#{application}"
+
+set :user, "zoner"
+set :runner, "zoner"
+set :use_sudo, false
 set :deploy_via, :remote_cache
-role :web, "boxutca.eperpalanta.hu"
-role :app, "boxutca.eperpalanta.hu"
-role :db, "boxutca.eperpalanta.hu", :primary => true
-set :deploy_to, "/var/customers/eper/#{application}"
+
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
