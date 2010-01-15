@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-14 19:54+0100\n"
+"POT-Creation-Date: 2010-01-15 12:17+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: app/controllers/profile_controller.rb:20
+#: app/controllers/profile_controller.rb:31
 msgid "An error occured, your password was not changed."
 msgstr ""
 
@@ -118,6 +118,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
@@ -180,7 +181,7 @@ msgid "Invalid activation code"
 msgstr ""
 
 #: app/controllers/sessions_controller.rb:22
-msgid "Invalid username or password"
+msgid "Invalid email or password"
 msgstr ""
 
 #: app/helpers/profile_helper.rb:18
@@ -219,7 +220,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:46
+#: app/views/layouts/main.html.erb:52
 msgid "Logout"
 msgstr ""
 
@@ -248,7 +249,6 @@ msgid "News"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:3
-#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
 #: app/views/users/new.html.erb:3
 msgid "Nickname"
 msgstr ""
@@ -276,7 +276,7 @@ msgstr ""
 msgid "Password reset."
 msgstr ""
 
-#: app/controllers/profile_controller.rb:18
+#: app/controllers/profile_controller.rb:29
 msgid "Password successfully updated."
 msgstr ""
 
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Visit this url to activate your account"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:45
+#: app/views/layouts/main.html.erb:51
 msgid "Welcome"
 msgstr ""
 

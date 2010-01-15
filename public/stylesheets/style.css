@@ -254,6 +254,7 @@ a#logo {
   height: 39px;
   margin: 0;
   width: 715px;
+  position: relative;
 }
 #menubar li {
   display: block;
