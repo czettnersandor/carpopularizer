@@ -212,7 +212,7 @@ a#logo {
   height: 100px !important;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 #searchbar .jquery-selectbox .jquery-selectbox-moreButton {
   position: absolute;
