@@ -1,3 +1,4 @@
+var searchbarState = 0;
 var RecaptchaOptions = {
   theme : 'clean',
   lang : 'hu',
@@ -51,16 +52,30 @@ $(document).ready(function(){
   $(document.body).click(function(event) {
     var $target = $(event.target);
     if ($target.parents("#searchbar").length){
-      $("#searchbar").stop();
-      $("#searchbar").animate({
-        height: "70"
-      }, 500 );
+      if (searchbarState == 0) {
+        $("#searchbar").stop();
+        $("#searchbar").animate({
+          height: "70",
+          'marginTop': "50"
+        }, 500, "swing",
+        function(){
+          searchbarState = 1;
+          $("#searchbar .form-item.submit").fadeIn();
+        } );
+      }
     }
     else {
-      $("#searchbar").stop();
-      $("#searchbar").animate({
-        height: "46"
-      }, 500 );
+      if (searchbarState == 1) {
+        $("#searchbar").stop();
+        $("#searchbar").animate({
+          height: "46",
+          "marginTop": "74"
+        }, 500, "swing",
+        function(){
+          searchbarState = 0;
+          $("#searchbar .form-item.submit").hide();
+        } );
+      }
     }
   });
 
