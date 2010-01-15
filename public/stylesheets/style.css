@@ -180,7 +180,7 @@ a#logo {
 #searchbar .form-item.submit {
   display: none;
 }
-#searchbar input[type="submit"] {
+#searchbar .form-item.submit input {
   height: 20px;
   padding: 0 10px 3px 10px;
   margin-left: 6px;
