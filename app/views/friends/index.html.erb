@@ -1,11 +1,16 @@
-My Friends:
-<% unless @user == current_user %>
-  You do not have permission to access this page!
-<% else %>
-  Current Friends:
-  <%= render :partial => 'friends/friends' %>
-  Requested Friends:
-  <%= render :partial => 'friends/requested_friends' %>
-  Pending Friends:
-  <%= render :partial => 'friends/pending_friends' %>
-<% end %>
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+    <% unless @user == current_user %>
+      You do not have permission to access this page!
+    <% else %>
+      <h2>Current Friends</h2>
+      <%= render :partial => 'friends/friends' %>
+      <h2>Requested Friends</h2>
+      <%= render :partial => 'friends/requested_friends' %>
+      <h2>Pending Friends</h2>
+      <%= render :partial => 'friends/pending_friends' %>
+    <% end %>
+  </div>
+</div>

@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-15 12:17+0100\n"
-"PO-Revision-Date: 2010-01-16 12:31+0100\n"
+"POT-Creation-Date: 2010-01-16 21:52+0100\n"
+"PO-Revision-Date: 2010-01-16 21:54+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,39 +24,45 @@ msgstr ""
 "A jelszó újragenerálásához szükséges link el lett küldve a megadott email "
 "címre"
 
-#: app/views/profile/index.html.erb:58 app/views/profile/edit.html.erb:56
+#: app/views/users/edit-dealer.html.erb:64
+msgid "About"
+msgstr "Magamról"
+
+#: app/views/users/edit-user.html.erb:58 app/views/users/show.html.erb:43
 msgid "About Me"
 msgstr "Magamról"
 
-#: app/views/profile/index.html.erb:49 app/views/profile/edit.html.erb:47
+#: app/views/users/edit-user.html.erb:49
+#: app/views/users/edit-dealer.html.erb:49 app/views/users/show.html.erb:34
 msgid "Address"
 msgstr "Cím"
 
-#: app/controllers/profile_controller.rb:31
+#: app/controllers/users_controller.rb:34
 msgid "An error occured, your password was not changed."
 msgstr "Hiba történt, a jelszó nem lett lecserélve"
 
-#: app/helpers/profile_helper.rb:5
+#: app/helpers/users_helper.rb:5
 msgid "Argentina"
 msgstr "Argentína"
 
-#: app/helpers/profile_helper.rb:6
+#: app/helpers/users_helper.rb:6
 msgid "Australia"
 msgstr "Ausztrália"
 
-#: app/helpers/profile_helper.rb:7
+#: app/helpers/users_helper.rb:7
 msgid "Austria"
 msgstr "Ausztria"
 
-#: app/views/profile/edit.html.erb:29
+#: app/views/users/edit-user.html.erb:34
+#: app/views/users/edit-dealer.html.erb:34
 msgid "Avatar"
 msgstr "Profil kép"
 
-#: app/helpers/profile_helper.rb:8
+#: app/helpers/users_helper.rb:8
 msgid "Belgium"
 msgstr "Belgium"
 
-#: app/views/profile/index.html.erb:37 app/views/profile/edit.html.erb:41
+#: app/views/users/edit-user.html.erb:43 app/views/users/show.html.erb:22
 msgid "Birth date"
 msgstr "Születési dátum"
 
@@ -65,15 +71,19 @@ msgstr "Születési dátum"
 msgid "Body"
 msgstr "Törzs"
 
-#: app/helpers/profile_helper.rb:9
+#: app/views/users/_myblock.erb:19
+msgid "Box"
+msgstr "Box"
+
+#: app/helpers/users_helper.rb:9
 msgid "Brazil"
 msgstr "Brazília"
 
-#: app/helpers/profile_helper.rb:10
+#: app/helpers/users_helper.rb:10
 msgid "Bulgaria"
 msgstr "Bulgária"
 
-#: app/helpers/profile_helper.rb:11
+#: app/helpers/users_helper.rb:11
 msgid "Canada"
 msgstr "Kanada"
 
@@ -81,36 +91,47 @@ msgstr "Kanada"
 msgid "Cars"
 msgstr "Autók"
 
-#: app/helpers/profile_helper.rb:12
+#: app/helpers/users_helper.rb:12
 msgid "Chile"
 msgstr "Chile"
 
-#: app/views/profile/index.html.erb:43 app/views/profile/edit.html.erb:24
+#: app/views/users/edit-user.html.erb:29
+#: app/views/users/edit-dealer.html.erb:29 app/views/users/show.html.erb:28
 msgid "City"
 msgstr "Város"
 
-#: app/views/layouts/_menu.erb:4
+#: app/views/layouts/_menu.erb:4 app/views/users/_myblock.erb:21
 msgid "Clubs"
 msgstr "Klubok"
 
-#: app/views/profile/index.html.erb:9 app/views/profile/index.html.erb:28
+#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:9
 msgid "Comments count"
 msgstr "Hozzászólások száma"
 
-#: app/views/profile/edit.html.erb:15 app/views/passwords/edit.html.erb.erb:7
-#: app/views/users/new.html.erb:12
+#: app/views/passwords/edit.html.erb.erb:7
+#: app/views/users/edit-user.html.erb:20
+#: app/views/users/edit-dealer.html.erb:20 app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr "Jelszó ismét"
+
+#: app/views/users/edit-dealer.html.erb:58
+msgid "Contact person"
+msgstr "Kapcsolattartó személy"
+
+#: app/views/users/edit-dealer.html.erb:61
+msgid "Contact phone"
+msgstr "Kapcsolattartó telefonszáma "
 
 #: app/controllers/passwords_controller.rb:17
 msgid "Could not find a user with that email address."
 msgstr "Nem található felhasználó ezzel az email címmel"
 
-#: app/views/profile/index.html.erb:40 app/views/profile/edit.html.erb:21
+#: app/views/users/edit-user.html.erb:26
+#: app/views/users/edit-dealer.html.erb:26 app/views/users/show.html.erb:25
 msgid "Country"
 msgstr "Ország"
 
-#: app/helpers/profile_helper.rb:13
+#: app/helpers/users_helper.rb:13
 msgid "Croatia"
 msgstr "Horvátország"
 
@@ -122,16 +143,21 @@ msgstr "Kereskedő"
 msgid "Description"
 msgstr "Leírás"
 
-#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
+#: app/views/layouts/_login.erb:15 app/views/sessions/new.html.erb:2
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr "E-mail"
 
-#: app/helpers/profile_helper.rb:36 app/views/profile/edit.html.erb:19
+#: app/views/users/_myblock.erb:22
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: app/helpers/users_helper.rb:36 app/views/users/edit-user.html.erb:24
+#: app/views/users/edit-dealer.html.erb:24
 msgid "Female"
 msgstr "Nő"
 
-#: app/helpers/profile_helper.rb:15
+#: app/helpers/users_helper.rb:15
 msgid "Finland"
 msgstr "Finnország"
 
@@ -155,24 +181,34 @@ msgstr "Fórum neve"
 msgid "Forums"
 msgstr "Fórumok"
 
-#: app/helpers/profile_helper.rb:16
+#: app/helpers/users_helper.rb:16
 msgid "France"
 msgstr "Franciaország"
 
-#: app/views/profile/index.html.erb:7 app/views/profile/index.html.erb:25
-#: app/views/profile/edit.html.erb:38
+#: app/views/users/_myblock.erb:20
+msgid "Friends"
+msgstr "Ismerősök"
+
+#: app/views/users/edit-user.html.erb:40
+#: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
+#: app/views/users/_myblock.erb:7
 msgid "Full name"
 msgstr "Teljes név"
 
-#: app/views/profile/index.html.erb:34 app/views/profile/edit.html.erb:18
+#: app/views/users/_myblock.erb:24
+msgid "Gallery"
+msgstr "Képek"
+
+#: app/views/users/edit-user.html.erb:23
+#: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:19
 msgid "Gender"
 msgstr "Nem"
 
-#: app/helpers/profile_helper.rb:17
+#: app/helpers/users_helper.rb:17
 msgid "Germany"
 msgstr "Németország"
 
-#: app/helpers/profile_helper.rb:14
+#: app/helpers/users_helper.rb:14
 msgid "Hungary"
 msgstr "Magyarország"
 
@@ -180,7 +216,7 @@ msgstr "Magyarország"
 msgid "Invalid Reset Code entered."
 msgstr "Érvénytelen helyreállító kód"
 
-#: app/controllers/users_controller.rb:54
+#: app/controllers/users_controller.rb:96
 msgid "Invalid activation code"
 msgstr "Hibás ellenőrző kód"
 
@@ -188,31 +224,31 @@ msgstr "Hibás ellenőrző kód"
 msgid "Invalid email or password"
 msgstr "Érvénytelen e-mail cím vagy jelszó"
 
-#: app/helpers/profile_helper.rb:18
+#: app/helpers/users_helper.rb:18
 msgid "Israel"
 msgstr "Izrael"
 
-#: app/helpers/profile_helper.rb:19
+#: app/helpers/users_helper.rb:19
 msgid "Italy"
 msgstr "Olaszország"
 
-#: app/helpers/profile_helper.rb:20
+#: app/helpers/users_helper.rb:20
 msgid "Japan"
 msgstr "Japán"
 
-#: app/helpers/profile_helper.rb:21
+#: app/helpers/users_helper.rb:21
 msgid "Korea"
 msgstr "Korea"
 
-#: app/views/profile/index.html.erb:55 app/views/profile/edit.html.erb:53
+#: app/views/users/edit-user.html.erb:55 app/views/users/show.html.erb:40
 msgid "Languages spoken"
 msgstr "Beszélt nyelvek"
 
-#: app/views/profile/index.html.erb:14
+#: app/views/users/_myblock.erb:14
 msgid "Last login"
 msgstr "Utolsó bejelentkezés"
 
-#: app/views/layouts/_login.erb:12 app/views/sessions/new.html.erb:12
+#: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr "Bejelentkezés"
 
@@ -224,23 +260,24 @@ msgstr "Sikeres bejelentkezés"
 msgid "Login"
 msgstr "Bejelentkezés"
 
-#: app/views/layouts/main.html.erb:52
+#: app/views/layouts/_login.erb:7
 msgid "Logout"
 msgstr "Kijelentkezés"
 
-#: app/helpers/profile_helper.rb:22
+#: app/helpers/users_helper.rb:22
 msgid "Malaysia"
 msgstr "Malajzia"
 
-#: app/helpers/profile_helper.rb:35 app/views/profile/edit.html.erb:19
+#: app/helpers/users_helper.rb:35 app/views/users/edit-user.html.erb:24
+#: app/views/users/edit-dealer.html.erb:24
 msgid "Male"
 msgstr "Férfi"
 
-#: app/views/layouts/_menu.erb:8
+#: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
 msgid "Marketplace"
 msgstr "Hirdetések"
 
-#: app/helpers/profile_helper.rb:23
+#: app/helpers/users_helper.rb:23
 msgid "Netherlands"
 msgstr "Horvátország"
 
@@ -257,10 +294,14 @@ msgstr "Hírek"
 msgid "Nickname"
 msgstr "Felhasználónév"
 
+#: app/views/users/edit-dealer.html.erb:55
+msgid "Opening time"
+msgstr "Nyitvatartás"
+
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
-#: app/views/passwords/edit.html.erb.erb:4 app/views/sessions/new.html.erb:5
-#: app/views/users/new.html.erb:9
+#: app/views/layouts/_login.erb:18 app/views/passwords/edit.html.erb.erb:4
+#: app/views/sessions/new.html.erb:5 app/views/users/edit-user.html.erb:17
+#: app/views/users/edit-dealer.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr "Jelszó"
 
@@ -280,7 +321,7 @@ msgstr "A jelszavad nem változott."
 msgid "Password reset."
 msgstr "Jelszó újragenerálás"
 
-#: app/controllers/profile_controller.rb:29
+#: app/controllers/users_controller.rb:32
 msgid "Password successfully updated."
 msgstr "A jelszó sikeresen megváltozott."
 
@@ -289,11 +330,12 @@ msgstr "A jelszó sikeresen megváltozott."
 msgid "Permalink"
 msgstr "Hivatkozás"
 
-#: app/views/profile/index.html.erb:52
+#: app/views/users/show.html.erb:37
 msgid "Phone"
 msgstr "Telefon"
 
-#: app/views/profile/edit.html.erb:50
+#: app/views/users/edit-user.html.erb:52
+#: app/views/users/edit-dealer.html.erb:52
 msgid "Phone number"
 msgstr "Telefon-szám"
 
@@ -301,16 +343,16 @@ msgstr "Telefon-szám"
 msgid "Please activate your new account"
 msgstr "Kérjük, aktiváld az új felhasználói fiókodat"
 
-#: app/helpers/profile_helper.rb:24
+#: app/helpers/users_helper.rb:24
 msgid "Poland"
 msgstr "Lengyelország"
 
-#: app/controllers/users_controller.rb:4 app/views/layouts/_login.erb:12
+#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:25
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr "Regisztráció"
 
-#: app/views/profile/index.html.erb:11 app/views/profile/index.html.erb:31
+#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:11
 msgid "Registration time"
 msgstr "Regisztráció ideje"
 
@@ -318,7 +360,7 @@ msgstr "Regisztráció ideje"
 msgid "Registration type"
 msgstr "Regisztráció típusa"
 
-#: app/views/layouts/_login.erb:9 app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:22 app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr "Emlékezz rám"
 
@@ -330,13 +372,14 @@ msgstr "Új jelszó kérése"
 msgid "Reset Your Password"
 msgstr "Adj meg új jelszót"
 
-#: app/views/layouts/_menu.erb:5
+#: app/views/layouts/_menu.erb:5 app/views/users/_myblock.erb:23
 msgid "Ride Battle"
 msgstr "Versenypálya"
 
 #: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:12
 #: app/views/rssreaders/new.html.erb:12 app/views/pages/edit.html.erb:14
-#: app/views/pages/new.html.erb:14 app/views/profile/edit.html.erb:59
+#: app/views/pages/new.html.erb:14 app/views/users/edit-user.html.erb:61
+#: app/views/users/edit-dealer.html.erb:67
 msgid "Save"
 msgstr "Mentés"
 
@@ -344,11 +387,11 @@ msgstr "Mentés"
 msgid "Search"
 msgstr "Keresés"
 
-#: app/controllers/users_controller.rb:51
+#: app/controllers/users_controller.rb:93
 msgid "Signup complete!"
 msgstr "Sikeres regisztráció!"
 
-#: app/helpers/profile_helper.rb:25
+#: app/helpers/users_helper.rb:25
 msgid "Slovenia"
 msgstr "Szlovénia"
 
@@ -358,26 +401,26 @@ msgid ""
 "Sorry - That is an invalid password reset code. Please check your code and "
 "try again. (Perhaps your email client inserted a carriage return?)"
 msgstr ""
-"A jelszó újragenerálásához szükséges kód hibás. Elképzelhető, hogy az "
-"email kliens elválasztotta a hosszú URL-t egy soremeléssel."
+"A jelszó újragenerálásához szükséges kód hibás. Elképzelhető, hogy az email "
+"kliens elválasztotta a hosszú URL-t egy soremeléssel."
 
-#: app/helpers/profile_helper.rb:26
+#: app/helpers/users_helper.rb:26
 msgid "South Africa"
 msgstr "Dél Afrika"
 
-#: app/helpers/profile_helper.rb:27
+#: app/helpers/users_helper.rb:27
 msgid "Spain"
 msgstr "Spanyolország"
 
-#: app/helpers/profile_helper.rb:28
+#: app/helpers/users_helper.rb:28
 msgid "Sweden"
 msgstr "Svédország"
 
-#: app/helpers/profile_helper.rb:29
+#: app/helpers/users_helper.rb:29
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#: app/controllers/users_controller.rb:17
+#: app/controllers/users_controller.rb:59
 msgid ""
 "Thanks for signing up! Please check your email to activate your account "
 "before logging in."
@@ -396,11 +439,11 @@ msgstr "Ez a téma zárolva lett."
 msgid "Title"
 msgstr "Cím"
 
-#: app/helpers/profile_helper.rb:30
+#: app/helpers/users_helper.rb:30
 msgid "UK: England & Wales"
 msgstr "UK: Anglia & Wales"
 
-#: app/helpers/profile_helper.rb:31
+#: app/helpers/users_helper.rb:31
 msgid "UK: Scotland"
 msgstr "UK: Skócia"
 
@@ -408,7 +451,7 @@ msgstr "UK: Skócia"
 msgid "User"
 msgstr "Felhasználó"
 
-#: app/views/admin/front/index.html.erb:8
+#: app/views/layouts/_login.erb:6 app/views/admin/front/index.html.erb:8
 msgid "Users"
 msgstr "Felhasználók"
 
@@ -420,7 +463,11 @@ msgstr "Videók"
 msgid "Visit this url to activate your account"
 msgstr "Kattints erre a linkre az aktiváláshoz"
 
-#: app/views/layouts/main.html.erb:51
+#: app/views/users/edit-dealer.html.erb:43
+msgid "Website"
+msgstr "Honlap"
+
+#: app/views/layouts/_login.erb:3
 msgid "Welcome"
 msgstr "Üdvözöllek"
 
@@ -452,7 +499,8 @@ msgstr "A jelszavad megváltozott."
 msgid "Your password has been reset."
 msgstr "A jelszavad megváltozott."
 
-#: app/views/profile/index.html.erb:46 app/views/profile/edit.html.erb:44
+#: app/views/users/edit-user.html.erb:46
+#: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
 msgid "ZIP"
 msgstr "Irányítószám"
 
@@ -467,5 +515,4 @@ msgstr "A jelszó beállításához kattints ide:"
 #: app/views/user_mailer/activation.html.erb:1
 msgid "your account has been activated."
 msgstr "a felhasználó fiókod aktiválva lett."
-
 

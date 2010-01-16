@@ -6,10 +6,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-
+    @title = @user.login
     if @user.city && @user.address
       coordinates = GoogleGeocoder.geocode(@user.zip+' '+@user.city+' '+@user.address)
-
       @map = GMap.new("map")
       @map.center_zoom_init([coordinates.lat, coordinates.lng], 14)
       ianazones = GMarker.new([coordinates.lat, coordinates.lng])

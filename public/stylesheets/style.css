@@ -346,9 +346,6 @@ table td.num {
 }
 
 .btn, input[type="submit"], input[type="button"] {
-  -moz-background-clip:border;
-  -moz-background-inline-policy:continuous;
-  -moz-background-origin:padding;
   -moz-border-radius-bottomleft:4px;
   -moz-border-radius-bottomright:4px;
   -moz-border-radius-topleft:4px;
@@ -476,6 +473,34 @@ hr.clear {
 #profile-left .profiledata {
   color: #2487bb;
 }
+#profile-left .lightblue.usermenu {
+  background: url(../images/usermenu.png);
+  margin-top: 10px;
+  border: none;
+  height: 204px;
+  padding: 0;
+  position: relative;
+}
+#profile-left .lightblue.usermenu li {
+  display: block;
+  height: 29px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#profile-left .lightblue.usermenu li a {
+  display: block;
+  height: 29px;
+  font-size: 20px;
+  color: black;
+  padding: 0 10px;
+  text-align: right;
+}
+#profile-left .lightblue.usermenu li a:hover,
+#profile-left .lightblue.usermenu li a.active {
+  background: url(../images/usermenu.png);
+  text-decoration: none;
+}
 
 #profile-right {
   margin-left: -30px;
@@ -496,6 +521,11 @@ hr.clear {
 }
 table.profile-edit td {
   width: 50%;
+}
+
+.friends-list .item {
+  padding: 10px;
+  border: 1px solid #2487BB;
 }
 
 /*

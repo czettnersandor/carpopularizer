@@ -28,7 +28,11 @@ jQuery.fn.replyTo = function(id) {
 }
 
 $(document).ready(function(){
-
+  i = 0;
+  $('#profile-left .lightblue.usermenu li a').each( function(){
+    $(this).css('background-position', '-220px -'+i*29+'px');
+    i++
+  })
   $('select#searchwhat').selectbox();
 
   $('#menubar li').hover(

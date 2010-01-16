@@ -4,6 +4,13 @@ module ApplicationHelper
     url_for :only_path=>false, :overwrite_params=>params
   end
 
+  def menu_link(title, url, css_class = "")
+    if (url == url_for || url == url_for(:only_path=>false))
+      css_class += css_class=="" ? "active" : " active"
+    end
+    link_to title, url, :class => css_class
+  end
+
   def truncate_words(text, length = 5, end_string = ' …')
     words = text.split()
     words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')

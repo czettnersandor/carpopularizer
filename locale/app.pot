@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-15 12:17+0100\n"
+"POT-Creation-Date: 2010-01-16 21:52+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,39 +20,45 @@ msgstr ""
 msgid "A password reset link has been sent to your email address."
 msgstr ""
 
-#: app/views/profile/index.html.erb:58 app/views/profile/edit.html.erb:56
+#: app/views/users/edit-dealer.html.erb:64
+msgid "About"
+msgstr ""
+
+#: app/views/users/edit-user.html.erb:58 app/views/users/show.html.erb:43
 msgid "About Me"
 msgstr ""
 
-#: app/views/profile/index.html.erb:49 app/views/profile/edit.html.erb:47
+#: app/views/users/edit-user.html.erb:49
+#: app/views/users/edit-dealer.html.erb:49 app/views/users/show.html.erb:34
 msgid "Address"
 msgstr ""
 
-#: app/controllers/profile_controller.rb:31
+#: app/controllers/users_controller.rb:34
 msgid "An error occured, your password was not changed."
 msgstr ""
 
-#: app/helpers/profile_helper.rb:5
+#: app/helpers/users_helper.rb:5
 msgid "Argentina"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:6
+#: app/helpers/users_helper.rb:6
 msgid "Australia"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:7
+#: app/helpers/users_helper.rb:7
 msgid "Austria"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:29
+#: app/views/users/edit-user.html.erb:34
+#: app/views/users/edit-dealer.html.erb:34
 msgid "Avatar"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:8
+#: app/helpers/users_helper.rb:8
 msgid "Belgium"
 msgstr ""
 
-#: app/views/profile/index.html.erb:37 app/views/profile/edit.html.erb:41
+#: app/views/users/edit-user.html.erb:43 app/views/users/show.html.erb:22
 msgid "Birth date"
 msgstr ""
 
@@ -61,15 +67,19 @@ msgstr ""
 msgid "Body"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:9
+#: app/views/users/_myblock.erb:19
+msgid "Box"
+msgstr ""
+
+#: app/helpers/users_helper.rb:9
 msgid "Brazil"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:10
+#: app/helpers/users_helper.rb:10
 msgid "Bulgaria"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:11
+#: app/helpers/users_helper.rb:11
 msgid "Canada"
 msgstr ""
 
@@ -77,36 +87,47 @@ msgstr ""
 msgid "Cars"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:12
+#: app/helpers/users_helper.rb:12
 msgid "Chile"
 msgstr ""
 
-#: app/views/profile/index.html.erb:43 app/views/profile/edit.html.erb:24
+#: app/views/users/edit-user.html.erb:29
+#: app/views/users/edit-dealer.html.erb:29 app/views/users/show.html.erb:28
 msgid "City"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:4
+#: app/views/layouts/_menu.erb:4 app/views/users/_myblock.erb:21
 msgid "Clubs"
 msgstr ""
 
-#: app/views/profile/index.html.erb:9 app/views/profile/index.html.erb:28
+#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:9
 msgid "Comments count"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:15 app/views/passwords/edit.html.erb.erb:7
-#: app/views/users/new.html.erb:12
+#: app/views/passwords/edit.html.erb.erb:7
+#: app/views/users/edit-user.html.erb:20
+#: app/views/users/edit-dealer.html.erb:20 app/views/users/new.html.erb:12
 msgid "Confirm Password"
+msgstr ""
+
+#: app/views/users/edit-dealer.html.erb:58
+msgid "Contact person"
+msgstr ""
+
+#: app/views/users/edit-dealer.html.erb:61
+msgid "Contact phone"
 msgstr ""
 
 #: app/controllers/passwords_controller.rb:17
 msgid "Could not find a user with that email address."
 msgstr ""
 
-#: app/views/profile/index.html.erb:40 app/views/profile/edit.html.erb:21
+#: app/views/users/edit-user.html.erb:26
+#: app/views/users/edit-dealer.html.erb:26 app/views/users/show.html.erb:25
 msgid "Country"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:13
+#: app/helpers/users_helper.rb:13
 msgid "Croatia"
 msgstr ""
 
@@ -118,16 +139,21 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: app/views/layouts/_login.erb:2 app/views/sessions/new.html.erb:2
+#: app/views/layouts/_login.erb:15 app/views/sessions/new.html.erb:2
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:36 app/views/profile/edit.html.erb:19
+#: app/views/users/_myblock.erb:22
+msgid "Favorites"
+msgstr ""
+
+#: app/helpers/users_helper.rb:36 app/views/users/edit-user.html.erb:24
+#: app/views/users/edit-dealer.html.erb:24
 msgid "Female"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:15
+#: app/helpers/users_helper.rb:15
 msgid "Finland"
 msgstr ""
 
@@ -151,24 +177,34 @@ msgstr ""
 msgid "Forums"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:16
+#: app/helpers/users_helper.rb:16
 msgid "France"
 msgstr ""
 
-#: app/views/profile/index.html.erb:7 app/views/profile/index.html.erb:25
-#: app/views/profile/edit.html.erb:38
+#: app/views/users/_myblock.erb:20
+msgid "Friends"
+msgstr ""
+
+#: app/views/users/edit-user.html.erb:40
+#: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
+#: app/views/users/_myblock.erb:7
 msgid "Full name"
 msgstr ""
 
-#: app/views/profile/index.html.erb:34 app/views/profile/edit.html.erb:18
+#: app/views/users/_myblock.erb:24
+msgid "Gallery"
+msgstr ""
+
+#: app/views/users/edit-user.html.erb:23
+#: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:19
 msgid "Gender"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:17
+#: app/helpers/users_helper.rb:17
 msgid "Germany"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:14
+#: app/helpers/users_helper.rb:14
 msgid "Hungary"
 msgstr ""
 
@@ -176,7 +212,7 @@ msgstr ""
 msgid "Invalid Reset Code entered."
 msgstr ""
 
-#: app/controllers/users_controller.rb:54
+#: app/controllers/users_controller.rb:96
 msgid "Invalid activation code"
 msgstr ""
 
@@ -184,31 +220,31 @@ msgstr ""
 msgid "Invalid email or password"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:18
+#: app/helpers/users_helper.rb:18
 msgid "Israel"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:19
+#: app/helpers/users_helper.rb:19
 msgid "Italy"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:20
+#: app/helpers/users_helper.rb:20
 msgid "Japan"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:21
+#: app/helpers/users_helper.rb:21
 msgid "Korea"
 msgstr ""
 
-#: app/views/profile/index.html.erb:55 app/views/profile/edit.html.erb:53
+#: app/views/users/edit-user.html.erb:55 app/views/users/show.html.erb:40
 msgid "Languages spoken"
 msgstr ""
 
-#: app/views/profile/index.html.erb:14
+#: app/views/users/_myblock.erb:14
 msgid "Last login"
 msgstr ""
 
-#: app/views/layouts/_login.erb:12 app/views/sessions/new.html.erb:12
+#: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr ""
 
@@ -220,23 +256,24 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:52
+#: app/views/layouts/_login.erb:7
 msgid "Logout"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:22
+#: app/helpers/users_helper.rb:22
 msgid "Malaysia"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:35 app/views/profile/edit.html.erb:19
+#: app/helpers/users_helper.rb:35 app/views/users/edit-user.html.erb:24
+#: app/views/users/edit-dealer.html.erb:24
 msgid "Male"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:8
+#: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
 msgid "Marketplace"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:23
+#: app/helpers/users_helper.rb:23
 msgid "Netherlands"
 msgstr ""
 
@@ -253,10 +290,14 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
+#: app/views/users/edit-dealer.html.erb:55
+msgid "Opening time"
+msgstr ""
+
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:5 app/views/profile/edit.html.erb:12
-#: app/views/passwords/edit.html.erb.erb:4 app/views/sessions/new.html.erb:5
-#: app/views/users/new.html.erb:9
+#: app/views/layouts/_login.erb:18 app/views/passwords/edit.html.erb.erb:4
+#: app/views/sessions/new.html.erb:5 app/views/users/edit-user.html.erb:17
+#: app/views/users/edit-dealer.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
 
@@ -276,7 +317,7 @@ msgstr ""
 msgid "Password reset."
 msgstr ""
 
-#: app/controllers/profile_controller.rb:29
+#: app/controllers/users_controller.rb:32
 msgid "Password successfully updated."
 msgstr ""
 
@@ -285,11 +326,12 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: app/views/profile/index.html.erb:52
+#: app/views/users/show.html.erb:37
 msgid "Phone"
 msgstr ""
 
-#: app/views/profile/edit.html.erb:50
+#: app/views/users/edit-user.html.erb:52
+#: app/views/users/edit-dealer.html.erb:52
 msgid "Phone number"
 msgstr ""
 
@@ -297,16 +339,16 @@ msgstr ""
 msgid "Please activate your new account"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:24
+#: app/helpers/users_helper.rb:24
 msgid "Poland"
 msgstr ""
 
-#: app/controllers/users_controller.rb:4 app/views/layouts/_login.erb:12
+#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:25
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
 
-#: app/views/profile/index.html.erb:11 app/views/profile/index.html.erb:31
+#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:11
 msgid "Registration time"
 msgstr ""
 
@@ -314,7 +356,7 @@ msgstr ""
 msgid "Registration type"
 msgstr ""
 
-#: app/views/layouts/_login.erb:9 app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:22 app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr ""
 
@@ -326,13 +368,14 @@ msgstr ""
 msgid "Reset Your Password"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:5
+#: app/views/layouts/_menu.erb:5 app/views/users/_myblock.erb:23
 msgid "Ride Battle"
 msgstr ""
 
 #: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:12
 #: app/views/rssreaders/new.html.erb:12 app/views/pages/edit.html.erb:14
-#: app/views/pages/new.html.erb:14 app/views/profile/edit.html.erb:59
+#: app/views/pages/new.html.erb:14 app/views/users/edit-user.html.erb:61
+#: app/views/users/edit-dealer.html.erb:67
 msgid "Save"
 msgstr ""
 
@@ -340,11 +383,11 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: app/controllers/users_controller.rb:51
+#: app/controllers/users_controller.rb:93
 msgid "Signup complete!"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:25
+#: app/helpers/users_helper.rb:25
 msgid "Slovenia"
 msgstr ""
 
@@ -355,23 +398,23 @@ msgid ""
 "try again. (Perhaps your email client inserted a carriage return?)"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:26
+#: app/helpers/users_helper.rb:26
 msgid "South Africa"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:27
+#: app/helpers/users_helper.rb:27
 msgid "Spain"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:28
+#: app/helpers/users_helper.rb:28
 msgid "Sweden"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:29
+#: app/helpers/users_helper.rb:29
 msgid "Taiwan"
 msgstr ""
 
-#: app/controllers/users_controller.rb:17
+#: app/controllers/users_controller.rb:59
 msgid ""
 "Thanks for signing up! Please check your email to activate your account "
 "before logging in."
@@ -388,11 +431,11 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:30
+#: app/helpers/users_helper.rb:30
 msgid "UK: England & Wales"
 msgstr ""
 
-#: app/helpers/profile_helper.rb:31
+#: app/helpers/users_helper.rb:31
 msgid "UK: Scotland"
 msgstr ""
 
@@ -400,7 +443,7 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: app/views/admin/front/index.html.erb:8
+#: app/views/layouts/_login.erb:6 app/views/admin/front/index.html.erb:8
 msgid "Users"
 msgstr ""
 
@@ -412,7 +455,11 @@ msgstr ""
 msgid "Visit this url to activate your account"
 msgstr ""
 
-#: app/views/layouts/main.html.erb:51
+#: app/views/users/edit-dealer.html.erb:43
+msgid "Website"
+msgstr ""
+
+#: app/views/layouts/_login.erb:3
 msgid "Welcome"
 msgstr ""
 
@@ -444,7 +491,8 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
-#: app/views/profile/index.html.erb:46 app/views/profile/edit.html.erb:44
+#: app/views/users/edit-user.html.erb:46
+#: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
 msgid "ZIP"
 msgstr ""
 

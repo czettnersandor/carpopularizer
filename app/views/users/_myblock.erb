@@ -13,4 +13,17 @@
     <hr/>
     <%= _('Last login') %>: <%= user.last_login.to_s(:short) %>
   </div>
+
+  <div class="lightblue usermenu">
+    <ul>
+      <li><%= menu_link _("Box"), url_for(user) %></li>
+      <li><%= menu_link _("Friends"), user_friends_url(user) %></li>
+      <li><%= menu_link _("Clubs"), url_for(user)+"#" %></li>
+      <li><%= menu_link _("Favorites"), url_for(user)+"#" %></li>
+      <li><%= menu_link _("Ride Battle"), url_for(user)+"#" %></li>
+      <li><%= menu_link _("Gallery"), url_for(user)+"#" %></li>
+      <li><%= menu_link _("Marketplace"), url_for(user)+"#" %></li>
+    </ul>
+  </div>
+
 </div>

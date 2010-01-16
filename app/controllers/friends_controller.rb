@@ -3,6 +3,7 @@ class FriendsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
+    @title = _("#{@user.login}'s friends")
   end
 
   def show
