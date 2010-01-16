@@ -113,9 +113,13 @@ a#logo {
 */
 #loginblock {
   display: block;
-  margin-left: 700px;
+  margin: 10px 0 0 700px;
   height: 100px;
   width: 240px;
+}
+#loginblock .profile-thumb {
+  float: right;
+  margin-left: 10px;
 }
 #loginblock .form-item {
   float: left;
@@ -134,6 +138,32 @@ a#logo {
 }
 #loginblock a.register {
   margin-left: 10px;
+}
+#loginblock div.icons {
+  display: block;
+  clear: both;
+  width: 240px;
+  height: 40px;
+  text-align: right;
+}
+#loginblock div.icons a {
+  display: block;
+  float: left;
+  height: 40px;
+}
+#loginblock div.icons a.logout {
+  width: 40px;
+  background: url(../images/user.png) no-repeat 0 0;
+}
+#loginblock div.icons a.users {
+  width: 35px;
+  background: url(../images/user.png) no-repeat 0 -80px;
+}
+#loginblock div.icons a:hover {
+    /* for IE */
+  filter:alpha(opacity=80);
+  /* CSS3 standard */
+  opacity: 0.8;
 }
 
 /*

@@ -2,8 +2,11 @@
 
   <%= _('Welcome')+" "+link_to(current_user.login, current_user) %>
   <%= image_tag current_user.avatar.url(:thumb), :class=>"profile-thumb" %>
-  <%= link_to(_("Logout"), "/logout") %>
-
+  <div class="icons">
+    <%= link_to("", "/users", :class => "users", :title => _("Users")) %>
+    <%= link_to("", "/logout", :class => "logout", :title => _("Logout")) %>
+    
+  </div>
 
 <% else %>
 

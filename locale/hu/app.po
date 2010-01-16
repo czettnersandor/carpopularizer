@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "POT-Creation-Date: 2010-01-15 12:17+0100\n"
-"PO-Revision-Date: 2010-01-15 17:26+0100\n"
+"PO-Revision-Date: 2010-01-16 12:31+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -414,7 +414,7 @@ msgstr "Felhasználók"
 
 #: app/views/layouts/_menu.erb:7
 msgid "Videos"
-msgstr "Vidók"
+msgstr "Videók"
 
 #: app/views/user_mailer/signup_notification.html.erb:6
 msgid "Visit this url to activate your account"
