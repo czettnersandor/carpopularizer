@@ -13,7 +13,8 @@ class User < ActiveRecord::Base
   #Avatar image and thumbnails
   has_attached_file :avatar,
     :styles => { :medium => "300x300#",
-    :thumb => "100x100#" }
+    :thumb => "69x50#" },
+    :default_url => "/system/:attachment/missing_:style.png"
 
   validates_presence_of     :login, :email
   validates_presence_of     :password,                   :if => :password_required?

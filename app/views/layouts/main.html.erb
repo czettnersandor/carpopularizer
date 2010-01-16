@@ -40,19 +40,14 @@
           <% for name, locale in [['Magyar',:hu],['English',:en]]
             localeactive = (I18n.locale == locale)? " active" : ""
           %>
-            <%=link_to(name,current_url(:locale=>locale), :class => locale.to_s+localeactive)%>
+            <%# link_to(name,current_url(:locale=>locale), :class => locale.to_s+localeactive)%>
           <% end %>
         </div>
 
         <a href="/" id="logo"></a>
 
         <div id="loginblock">
-          <% if logged_in? %>
-            <%= _('Welcome')+" "+link_to(current_user.login, '/profile') %>
-            <%= link_to(_("Logout"), "/logout") %>
-          <% else %>
-            <%= render :partial => 'layouts/login' %>
-          <% end %>
+          <%= render :partial => 'layouts/login' %>
         </div>
 
         <div id="menubar">
@@ -76,7 +71,11 @@
         <div id="footercurve"></div>
       </div>
       <div class="grid_12" id="footer-message">
-        © 2009-<%= Time.now.year %> copyright Boxutca Kft. <%= link_to 'Impresszum', '/pages/impresszum' %>
+        © 2009-<%= Time.now.year %> copyright Boxutca Kft.
+        <%= link_to 'Impresszum', '/pages/impresszum' %> |
+        <%= link_to 'Médiaajánlat', '/pages/mediaajanlat' %> |
+        <%= link_to 'Szerzői jogok', '/pages/szerzoijogok' %>
+
       </div>
     </div>
   </body>

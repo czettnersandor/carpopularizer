@@ -57,7 +57,7 @@ input, textarea, select {
 * Layout
 */
 #header {
-  height: 120px;
+  height: 160px;
 }
 #content-wrapper {
   background: #ffffff url(../images/content-wrapper.png);
@@ -113,16 +113,13 @@ a#logo {
 */
 #loginblock {
   display: block;
-  float: left;
-  margin-top:20px;
+  margin-left: 700px;
+  height: 100px;
+  width: 240px;
 }
 #loginblock .form-item {
   float: left;
   margin-left: 10px;
-}
-#loginblock .form-item.text,
-#loginblock .form-item.password {
-  margin-top:-19px;
 }
 #loginblock .form-item.text input,
 #loginblock .form-item.password input {
@@ -147,9 +144,9 @@ a#logo {
   width: 225px;
   height: 46px;
   background: #369ed9 url(../images/searchbar.png) no-repeat;
-  margin-left: 715px;
-  margin-top: 74px;
-  position: relative;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   width: 225px;
 }
 #searchbar #searchwhat {
