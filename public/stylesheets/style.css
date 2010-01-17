@@ -431,7 +431,7 @@ label.error {
 
 hr.clear {
   display: block;
-  clear: left;
+  clear: both;
   margin: 0;
   visibility: hidden;
 }

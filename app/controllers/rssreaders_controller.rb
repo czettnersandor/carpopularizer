@@ -46,7 +46,7 @@ class RssreadersController < ApplicationController
 
     respond_to do |format|
       if @rssreader.save
-        flash[:notice] = 'Rssreader was successfully created.'
+        flash[:notice] = _('Rssreader was successfully created.')
         format.html { redirect_to(@rssreader) }
         format.xml  { render :xml => @rssreader, :status => :created, :location => @rssreader }
       else

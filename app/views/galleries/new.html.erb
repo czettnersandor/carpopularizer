@@ -1,0 +1,10 @@
+<% form_for(:gallery, :url => user_galleries_path(:user_id => @user.id)) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="form-item"><label for="title"><%=_('Title')%></label><br/>
+    <%= f.text_field :title %><hr/></div>
+  <div class="form-item"><%= submit_tag _('Save') %></div>
+
+<% end %>
+
+<%= link_to 'Back', user_galleries_url(@user) %>
