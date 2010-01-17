@@ -22,6 +22,11 @@ class UserMailer < ActionMailer::Base
     setup_email(user)
     @subject    += _('Your password has been reset.')
   end
+
+  def friend_request(user, request_by)
+    setup_email(user)
+    @subject    += _("#{request_by.login} has requested to be your friend")
+  end
   
   protected
     def setup_email(user)

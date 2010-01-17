@@ -18,7 +18,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by_id(params[:id])
-    render :template => "users/edit-user" if @user.usertype == 0
     render :template => "users/edit-dealer" if @user.usertype == 1
   end
 
