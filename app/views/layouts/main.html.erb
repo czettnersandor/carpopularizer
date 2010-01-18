@@ -8,18 +8,23 @@
     <%= stylesheet_link_tag("960") %>
     <%= stylesheet_link_tag("text") %>
     <%= stylesheet_link_tag("style") %>
+    <%= stylesheet_link_tag("jquery.lightbox") %>
     <%= javascript_include_tag 'jquery' %>
     <%= javascript_include_tag 'jquery-ui' %>
     <%= javascript_include_tag 'jrails' %>
     <%= javascript_include_tag 'jquery.validate' %>
     <%= javascript_include_tag 'jquery.maskedinput' %>
     <%= javascript_include_tag 'jquery.selectbox' %>
+    <%= javascript_include_tag 'swfobject' %>
+    <%= javascript_include_tag 'jquery.uploadify' %>
+    <%= javascript_include_tag 'jquery.lightbox' %>
+
+
 
     <% if @map %>
       <%= GMap.header %>
       <%= @map.to_html %>
     <% end -%>
-
 
     <% if (current_user && current_user.has_role?('admin')) %>
       <%= javascript_include_tag 'markitup/jquery.markitup' %>
@@ -65,7 +70,6 @@
           <%=flash[:notice]%>
         <%end%>
 
-        <h1 class="title"><%= @title  %> </h1>
         <%= yield %>
 
         <div id="footercurve"></div>

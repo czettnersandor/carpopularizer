@@ -15,6 +15,8 @@ class RssreadersController < ApplicationController
   # GET /rssreaders/1.xml
   def show
     @rssreader = Rssreader.find(params[:id])
+    @rssnews = Rssnews.paginate(:page => params[:page], :per_page => 25,
+      :conditions => ['rssreader_id = ?', params[:id]])
     @title = @rssreader.name
 
     respond_to do |format|

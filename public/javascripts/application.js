@@ -29,6 +29,37 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
   i = 0;
+
+  $('.gallery .image-admin a.edit').bind('click', function() {
+    editlink = $(this);
+    $.get($(this).attr('href'),
+      function(data){
+        editlink.parent().parent().find('.editform').html(data);
+        editlink.parent().parent().find('.editform').fadeIn();
+        //$('.gallery').append(data);
+      });
+    return false;
+  });
+
+  $('.gallery .image').hover(function(){
+    $(this).children('.image-admin').fadeIn(200);
+  }, function(){
+    $(this).children('.image-admin').fadeOut(200);
+  });
+
+  $('a.lightbox').lightBox({
+    overlayBgColor: '#FFF',
+    overlayOpacity: 0.6,
+    imageLoading: '/images/lightbox-ico-loading.gif',
+    imageBtnClose: '/images/lightbox-btn-close.gif',
+    imageBtnPrev: '/images/lightbox-btn-prev.gif',
+    imageBtnNext: '/images/lightbox-btn-next.gif',
+    containerResizeSpeed: 100,
+    txtImage: 'Image',
+    txtOf: '/'
+  });
+
+
   $('#profile-left .lightblue.usermenu li a').each( function(){
     $(this).css('background-position', '-220px -'+i*29+'px');
     i++

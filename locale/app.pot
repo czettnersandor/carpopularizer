@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-16 21:52+0100\n"
+"POT-Creation-Date: 2010-01-18 01:38+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,16 +24,16 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:58 app/views/users/show.html.erb:43
+#: app/views/users/show.html.erb:43 app/views/users/edit.html.erb:58
 msgid "About Me"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:49
 #: app/views/users/edit-dealer.html.erb:49 app/views/users/show.html.erb:34
+#: app/views/users/edit.html.erb:49
 msgid "Address"
 msgstr ""
 
-#: app/controllers/users_controller.rb:34
+#: app/controllers/users_controller.rb:33
 msgid "An error occured, your password was not changed."
 msgstr ""
 
@@ -49,8 +49,7 @@ msgstr ""
 msgid "Austria"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:34
-#: app/views/users/edit-dealer.html.erb:34
+#: app/views/users/edit-dealer.html.erb:34 app/views/users/edit.html.erb:34
 msgid "Avatar"
 msgstr ""
 
@@ -58,7 +57,7 @@ msgstr ""
 msgid "Belgium"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:43 app/views/users/show.html.erb:22
+#: app/views/users/show.html.erb:22 app/views/users/edit.html.erb:43
 msgid "Birth date"
 msgstr ""
 
@@ -91,8 +90,8 @@ msgstr ""
 msgid "Chile"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:29
 #: app/views/users/edit-dealer.html.erb:29 app/views/users/show.html.erb:28
+#: app/views/users/edit.html.erb:29
 msgid "City"
 msgstr ""
 
@@ -105,8 +104,8 @@ msgid "Comments count"
 msgstr ""
 
 #: app/views/passwords/edit.html.erb.erb:7
-#: app/views/users/edit-user.html.erb:20
-#: app/views/users/edit-dealer.html.erb:20 app/views/users/new.html.erb:12
+#: app/views/users/edit-dealer.html.erb:20 app/views/users/edit.html.erb:20
+#: app/views/users/new.html.erb:12
 msgid "Confirm Password"
 msgstr ""
 
@@ -122,8 +121,8 @@ msgstr ""
 msgid "Could not find a user with that email address."
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:26
 #: app/views/users/edit-dealer.html.erb:26 app/views/users/show.html.erb:25
+#: app/views/users/edit.html.erb:26
 msgid "Country"
 msgstr ""
 
@@ -148,8 +147,8 @@ msgstr ""
 msgid "Favorites"
 msgstr ""
 
-#: app/helpers/users_helper.rb:36 app/views/users/edit-user.html.erb:24
-#: app/views/users/edit-dealer.html.erb:24
+#: app/helpers/users_helper.rb:36 app/views/users/edit-dealer.html.erb:24
+#: app/views/users/edit.html.erb:24
 msgid "Female"
 msgstr ""
 
@@ -185,9 +184,8 @@ msgstr ""
 msgid "Friends"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:40
 #: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
-#: app/views/users/_myblock.erb:7
+#: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:7
 msgid "Full name"
 msgstr ""
 
@@ -195,8 +193,12 @@ msgstr ""
 msgid "Gallery"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:23
+#: app/controllers/galleries_controller.rb:27
+msgid "Gallery was successfully created."
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:19
+#: app/views/users/edit.html.erb:23
 msgid "Gender"
 msgstr ""
 
@@ -212,7 +214,7 @@ msgstr ""
 msgid "Invalid Reset Code entered."
 msgstr ""
 
-#: app/controllers/users_controller.rb:96
+#: app/controllers/users_controller.rb:95
 msgid "Invalid activation code"
 msgstr ""
 
@@ -236,7 +238,7 @@ msgstr ""
 msgid "Korea"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:55 app/views/users/show.html.erb:40
+#: app/views/users/show.html.erb:40 app/views/users/edit.html.erb:55
 msgid "Languages spoken"
 msgstr ""
 
@@ -264,8 +266,8 @@ msgstr ""
 msgid "Malaysia"
 msgstr ""
 
-#: app/helpers/users_helper.rb:35 app/views/users/edit-user.html.erb:24
-#: app/views/users/edit-dealer.html.erb:24
+#: app/helpers/users_helper.rb:35 app/views/users/edit-dealer.html.erb:24
+#: app/views/users/edit.html.erb:24
 msgid "Male"
 msgstr ""
 
@@ -296,8 +298,8 @@ msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
 #: app/views/layouts/_login.erb:18 app/views/passwords/edit.html.erb.erb:4
-#: app/views/sessions/new.html.erb:5 app/views/users/edit-user.html.erb:17
-#: app/views/users/edit-dealer.html.erb:17 app/views/users/new.html.erb:9
+#: app/views/sessions/new.html.erb:5 app/views/users/edit-dealer.html.erb:17
+#: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
 
@@ -317,7 +319,7 @@ msgstr ""
 msgid "Password reset."
 msgstr ""
 
-#: app/controllers/users_controller.rb:32
+#: app/controllers/users_controller.rb:31
 msgid "Password successfully updated."
 msgstr ""
 
@@ -330,8 +332,7 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:52
-#: app/views/users/edit-dealer.html.erb:52
+#: app/views/users/edit-dealer.html.erb:52 app/views/users/edit.html.erb:52
 msgid "Phone number"
 msgstr ""
 
@@ -339,11 +340,15 @@ msgstr ""
 msgid "Please activate your new account"
 msgstr ""
 
+#: app/views/user_mailer/friend_request.html.erb:2
+msgid "Please visit your profile to confirm:"
+msgstr ""
+
 #: app/helpers/users_helper.rb:24
 msgid "Poland"
 msgstr ""
 
-#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:25
+#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:25
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
@@ -372,10 +377,15 @@ msgstr ""
 msgid "Ride Battle"
 msgstr ""
 
+#: app/controllers/rssreaders_controller.rb:49
+msgid "Rssreader was successfully created."
+msgstr ""
+
 #: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:12
-#: app/views/rssreaders/new.html.erb:12 app/views/pages/edit.html.erb:14
-#: app/views/pages/new.html.erb:14 app/views/users/edit-user.html.erb:61
-#: app/views/users/edit-dealer.html.erb:67
+#: app/views/rssreaders/new.html.erb:12 app/views/images/new.html.erb:6
+#: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
+#: app/views/galleries/new.html.erb:6 app/views/users/edit-dealer.html.erb:67
+#: app/views/users/edit.html.erb:61
 msgid "Save"
 msgstr ""
 
@@ -383,7 +393,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: app/controllers/users_controller.rb:93
+#: app/controllers/users_controller.rb:92
 msgid "Signup complete!"
 msgstr ""
 
@@ -414,7 +424,7 @@ msgstr ""
 msgid "Taiwan"
 msgstr ""
 
-#: app/controllers/users_controller.rb:59
+#: app/controllers/users_controller.rb:58
 msgid ""
 "Thanks for signing up! Please check your email to activate your account "
 "before logging in."
@@ -427,7 +437,7 @@ msgstr ""
 
 #: app/views/topics/_form.erb:2 app/views/rssreaders/edit.html.erb:6
 #: app/views/rssreaders/new.html.erb:6 app/views/pages/edit.html.erb:4
-#: app/views/pages/new.html.erb:4
+#: app/views/pages/new.html.erb:4 app/views/galleries/new.html.erb:4
 msgid "Title"
 msgstr ""
 
@@ -491,8 +501,8 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
-#: app/views/users/edit-user.html.erb:46
 #: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
+#: app/views/users/edit.html.erb:46
 msgid "ZIP"
 msgstr ""
 

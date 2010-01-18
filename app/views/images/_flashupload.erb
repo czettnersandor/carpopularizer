@@ -1,21 +1,19 @@
 <%- session_key_name = ActionController::Base.session_options[:key] -%>
 
 <div id="fileQueue"></div>
-<div id="#uploadify">
-<% form_for @image, :url=>user_gallery_images_path(params[:user_id], params[:gallery_id]),
+<a href="javascript:jQuery('#uploadify').uploadifyClearQueue()">Cancel All Uploads</a>
+<div id="uploadify">
+<% form_for :image, :url=>user_gallery_images_path(params[:user_id], params[:id]),
   :html => { :multipart => true } do |f| %>
-  <%= f.file_field :image, :size=>15, :class=>"fileuploader" %>
-  <%= submit_tag _('Save') %>
+  <%= f.file_field :image, :size=>15, :class=>"fileuploader" %><br/>
 <% end %>
 </div>
-
-<a href="javascript:jQuery('#uploadify').uploadifyClearQueue()">Cancel All Uploads</a>
 
 <script type="text/javascript">// <![CDATA[
   $(document).ready(function() {
     $("input:file.fileuploader").uploadify({
       'uploader': '/flash/uploadify.swf',
-      'script': '<%= user_gallery_images_path(params[:user_id], params[:gallery_id]) %>',
+      'script': '<%= user_gallery_images_path(params[:user_id], params[:id]) %>',
       'scriptData'      : {
         "<%=session_key_name%>": "<%=u cookies[session_key_name]%>",
         "authenticity_token": encodeURIComponent('<%=u form_authenticity_token%>'),
@@ -30,13 +28,13 @@
       'multi': true,
       'auto': true,
       'fileDesc': 'Images (*.jpg; *.jpeg; *.JPG; *.git; *.png)',
-      'fileExt': '*.jpg; *.jpeg; *.JPG; *.git; *.png',
+      'fileExt': '*.jpg; *.jpeg; *.JPG; *.gif; *.png',
       'sizeLimit': 600000,
       'simUploadLimit': 1,
       'queueID': 'fileQueue',
-      //'buttonImg': '/images/button-fixed.png',
-      //'width': 120,
-      //'height': 24,
+      'buttonImg': '/images/image-upload.png',
+      'width': 80,
+      'height': 59,
       'cancelImg': '/images/cancel.png',
       'onComplete': function(event, data) { $.getScript(location.href) }, // We assume that we can refresh the list by doing a js get on the current page
       'displayData': 'speed'

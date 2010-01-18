@@ -1,8 +1,10 @@
 <%= @rssreader.url %>
 
 <div class="lightblue-block">
-  <%= render :partial => 'layouts/newslist', :locals => { :news => @rssreader.rssnews }  %>
+  <%= render :partial => 'layouts/newslist', :locals => { :news => @rssnews }  %>
 </div>
+
+<%= will_paginate @rssnews %>
 
 <% if (current_user && current_user.has_role?('admin')) %>
   <%= link_to 'Edit', edit_rssreader_path(@rssreader) %> |

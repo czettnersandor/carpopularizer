@@ -5,9 +5,11 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 require 'RedCloth'
-require 'mime/types'
 
 Rails::Initializer.run do |config|
+  #config.middleware.insert_before ActionController::Session::CookieStore,
+  #  "FlashSessionCookieMiddleware",
+  #  ActionController::Base.session_options[:key]
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -38,21 +40,21 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
 
-  config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
   config.gem "gettext", :lib => false, :version => '>=2.1.0'
+  config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
+  
   config.gem "RedCloth", :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem "geokit"
-  config.gem "mime-types"
-
+  config.gem 'mime-types', :lib => 'mime/types'
+  
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-  # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
-  # config.i18n.default_locale = :de
+  #config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+  config.i18n.default_locale = :hu
 end
 
-FastGettext.add_text_domain 'app', :path => File.join(RAILS_ROOT, 'locale')
 # Recaptcha API keys
 ENV['RECAPTCHA_PUBLIC_KEY']  = '6LeJeAoAAAAAAN_yW0hMS1UWtDYUXy7h-eVuJHSo'
 ENV['RECAPTCHA_PRIVATE_KEY'] = '6LeJeAoAAAAAAEKBrcanvma8wSt12cV8EA6LutJp'

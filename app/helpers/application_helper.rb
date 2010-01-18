@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def menu_link(title, url, css_class = "")
-    if (url == url_for || url == url_for(:only_path=>false))
+    if (url_for[0, url.length] == url || url_for(:only_path=>false)[0, url.length] == url)
       css_class += css_class=="" ? "active" : " active"
     end
     link_to title, url, :class => css_class

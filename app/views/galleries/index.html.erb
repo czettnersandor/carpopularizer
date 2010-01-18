@@ -1,0 +1,16 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <% @galleries.each do |gallery| %>
+      <%= link_to(gallery.title, user_gallery_path(@user, gallery)) %>
+    <% end %>
+
+    <% if @user == current_user %>
+      <%= link_to "New gallery", new_user_gallery_path(@user) %>
+    <% end %>
+
+
+  </div>
+</div>

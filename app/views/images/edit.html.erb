@@ -1,0 +1,4 @@
+<% form_for @image, :url=>user_gallery_image_path(@user, @gallery, @image) do |f| %>
+  <%= f.text_field :title %>
+  <%= submit_tag _('Save') %>
+<% end %>

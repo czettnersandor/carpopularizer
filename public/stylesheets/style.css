@@ -572,3 +572,71 @@ table.profile-edit td {
   margin: 0;
   visibility: hidden;
 }
+
+
+/*
+* Image gallery
+*/
+
+.gallery {
+  background: #ffffff url(../images/orange-horiz.png) repeat-x bottom;
+  border: 1px solid #fa981b;
+  padding: 0;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+.gallery-head {
+  height: 30px;
+  padding: 15px 0 0;
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  background: url(../images/gallery-head.png);
+}
+#uploadify {
+  display: block;
+  float: right;
+}
+
+.gallery .image {
+  width: 120px;
+  height: 120px;
+  display: block;
+  float: left;
+  background: url(../images/image.png);
+  margin: 4px 5px 4px 4px;
+  padding: 5px;
+  position: relative;
+}
+.gallery .image-admin {
+  position: absolute;
+  display: none;
+  height: 22px;
+  width: 54px;
+  background: url(../images/image-admin.png);
+  bottom: 25px;
+  left: 40px;
+}
+.gallery .image-admin a.edit,
+.gallery .image-admin a.destroy{
+  display: block;
+  float: left;
+  width: 27px;
+  height: 22px;
+}
+.gallery .image .description {
+  color: white;
+  font-size: 10px;
+  line-height: 11px;
+}
+.gallery .image .editform {
+  position: absolute;
+  display: none;
+  bottom: 0px;
+  right: 0;
+  padding: 5px;
+  background: white;
+}
+.gallery .image .editform #image_title {
+  width: 110px;
+}

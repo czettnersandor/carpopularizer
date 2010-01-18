@@ -2,7 +2,7 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
-    <% unless @user == current_user %>
+    <% unless current_user %>
       You do not have permission to access this page!
     <% else %>
       <h2>Current Friends</h2>

@@ -25,9 +25,9 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     if @user.update_attributes(params[:user])
       if ((params[:user][:password] == params[:user][:password_confirmation]) && !params[:user][:password_confirmation].blank?)
-        current_user.password_confirmation = params[:password_confirmation]
-        current_user.password = params[:password]
-        if current_user.save
+        @usser.password_confirmation = params[:password_confirmation]
+        @user.password = params[:password]
+        if @user.save
           flash[:notice] = _("Password successfully updated.")
         else
           flash[:error] = _("An error occured, your password was not changed.")

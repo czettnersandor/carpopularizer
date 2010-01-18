@@ -1,0 +1,48 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+    <div class="gallery-head"><h3><%= @title %></h3></div>
+    <div class="gallery">
+      <% @gallery.images.each do |image| %>
+        <div class="image" id="image_<%= image.id %>">
+          <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb"),
+            image.image.url(:full), :class => "lightbox")%>
+          <% if current_user == @user || current_user.has_role?('admin') %>
+            <div class="image-admin">
+              <%= link_to '',
+                edit_user_gallery_image_path(:user_id => @user, :gallery_id => @gallery, :id => image.id),
+                :class => "edit"%>
+
+              <%= link_to '',
+                user_gallery_image_path(:user_id => @user, :gallery_id => @gallery, :id => image.id),
+                :confirm => 'Are you sure?', :method => 'delete', :class => "edit" %>
+            </div>
+          <% end %>
+          <div class="description"><%= image.title %></div>
+          <div class="editform"></div>
+        </div>
+      <% end %>
+      <hr class="clear" />
+
+      <% if current_user == @user || current_user.has_role?('admin') %>
+  <%# link_to 'Upload new images', new_user_gallery_image_path(params[:user_id], params[:id]) %>
+        <%= render :partial => 'images/flashupload' %>
+      <% end %>
+      <hr class="clear" />
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function() {
+    AUTH_TOKEN=encodeURIComponent('<%=u form_authenticity_token%>');
+    $('.gallery').bind('sortupdate', function(event, ui) {
+      $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
+    });
+
+    $('.gallery').sortable({ items:'.image' });
+  });
+</script>
+
+
