@@ -22,9 +22,9 @@
 
 
       'fileDataName'  : 'image[image]',
-      'method' : 'get',
+      //'method' : 'get',
 
-      //'scriptAccess': 'always', // Incomment this, if for some reason it doesn't work
+      'scriptAccess': 'always', // Incomment this, if for some reason it doesn't work
       'multi': true,
       'auto': true,
       'fileDesc': 'Images (*.jpg; *.jpeg; *.JPG; *.git; *.png)',
@@ -35,7 +35,7 @@
       'buttonImg': '/images/image-upload.png',
       'width': 80,
       'height': 59,
-      'cancelImg': '/images/cancel.png',
+      'cancelImg': '/images/loading.png',
       'onComplete': function(event, data) { $.getScript(location.href) }, // We assume that we can refresh the list by doing a js get on the current page
       'displayData': 'speed'
     });

@@ -63,7 +63,8 @@ $(document).ready(function(){
     imageBtnClose: '/images/lightbox-btn-close.gif',
     imageBtnPrev: '/images/lightbox-btn-prev.gif',
     imageBtnNext: '/images/lightbox-btn-next.gif',
-    containerResizeSpeed: 100,
+    imageBlank: '/images/lightbox-blank.gif',
+    containerResizeSpeed: 50,
     txtImage: 'Image',
     txtOf: '/'
   });
