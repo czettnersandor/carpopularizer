@@ -35,8 +35,9 @@
       'buttonImg': '/images/image-upload.png',
       'width': 80,
       'height': 59,
-      'cancelImg': '/images/loading.png',
-      'onComplete': function(event, data) { $.getScript(location.href) }, // We assume that we can refresh the list by doing a js get on the current page
+      'cancelImg': '/images/loading.gif',
+      // TODO: AJAX!
+      'onComplete': function(event, data) { location.reload(); }, // We assume that we can refresh the list by doing a js get on the current page
       'displayData': 'speed'
     });
   });
