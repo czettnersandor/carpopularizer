@@ -165,6 +165,10 @@ div.pagination {
   width: 35px;
   background: url(../images/user.png) no-repeat 0 -80px;
 }
+#loginblock div.icons a.edit-profile {
+  width: 40px;
+  background: url(../images/user.png) no-repeat 0 -40px;
+}
 #loginblock div.icons a:hover {
     /* for IE */
   filter:alpha(opacity=80);

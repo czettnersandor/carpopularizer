@@ -39,7 +39,7 @@ jQuery.fn.replyTo = function(id) {
 $(document).ready(function(){
   i = 0;
 
-  $('.gallery .image-admin a.edit').bind('click', function() {
+  $('.gallery .image-admin a.edit').live('click', function() {
     editlink = $(this);
     $.get($(this).attr('href'),
       function(data){

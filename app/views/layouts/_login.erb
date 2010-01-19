@@ -4,7 +4,9 @@
   <%= image_tag current_user.avatar.url(:thumb), :class=>"profile-thumb" %>
   <div class="icons">
     <%= link_to("", "/users", :class => "users", :title => _("Users")) %>
+    <%= link_to("", edit_user_path(current_user), :class => "edit-profile", :title => _("Edit my profile")) %>
     <%= link_to("", "/logout", :class => "logout", :title => _("Logout")) %>
+    
     
   </div>
 
