@@ -1,11 +1,27 @@
 <div class="grid_6 alpha">
-  <div class="lightblue-block">
-    <%= render :partial => 'layouts/newslist', :locals => { :news => @news }  %>
+  <div class="lightblue-block" id="rss-list">
+    <div class="child">
+      <%= render :partial => 'layouts/newslist', :locals => { :news => @news }  %>
+      <%= will_paginate @news %>
+    </div>
   </div>
 </div>
 
 <div class="grid_6 omega">
-  <div class="lightblue-block">
-    <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits }  %>
+  <div class="lightblue-block" id="rss-list-by-hits">
+    <div class="child">
+      <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits }  %>
+      <%= will_paginate @news_by_hits, :param_name => :page_by_hits %>
+    </div>
   </div>
 </div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#rss-list .pagination a').ajaxLoad('#rss-list', '#rss-list .child');
+    $('#rss-list-by-hits .pagination a').ajaxLoad('#rss-list-by-hits', '#rss-list-by-hits .child'); 
+
+  });
+
+</script>

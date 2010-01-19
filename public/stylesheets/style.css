@@ -87,11 +87,17 @@ a#logo {
   margin-top: 10px;
   float: left;
 }
-
+div.pagination {
+  display: block;
+  background-color: #b6dcf1;
+  border: 1px solid #2487bb;
+  margin: 10px 0;
+  padding: 0 10px;
+}
 .lightblue-block {
   background: url(../images/lightblue-horiz.png) repeat-x;
   border: 1px solid #2487bb;
-  padding: 10px;
+  padding: 10px 10px 0;
   -moz-border-radius: 5px;
 }
 
@@ -313,12 +319,15 @@ a#logo {
 #menubar li.first {
   background-position: 0px 0px;
 }
-#menubar li:hover {
+#menubar li:hover,
+#menubar li.active {
   background-position: 0px -39px;
 }
-#menubar li:hover a {
+#menubar li:hover a,
+#menubar li.active a{
   background-position: 100% -39px;
   text-shadow: 1px 1px 1px #000000;
+  color: #fa981b;
 }
 #menubar a:hover {
   text-decoration: none;
@@ -540,7 +549,9 @@ table.profile-edit td {
 /*
 * News
 */
-
+.news-item {
+  margin-bottom: 5px;
+}
 .news-item .title {
   float: left;
   clear: right;

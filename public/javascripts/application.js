@@ -10,6 +10,15 @@ var RecaptchaOptions = {
   }
 };
 
+jQuery.fn.ajaxLoad = function(inner, child) {
+  this.live('click', function(){
+    height = $(inner).height()-20;
+    $(inner).html('<p style="padding-top:'+(height/2)+'px;height:'+(height-height/2)+'px;text-align:center;"><img src="/images/lightbox-ico-loading.gif"/></p>');
+    $(inner).load($(this).attr('href') + ' '+child);
+    return false;
+  });
+};
+
 jQuery.fn.addReplyMessage = function(id) {
   replylink = $(this);
   jQuery.ajax({
@@ -36,7 +45,7 @@ $(document).ready(function(){
       function(data){
         editlink.parent().parent().find('.editform').html(data);
         editlink.parent().parent().find('.editform').fadeIn();
-        //$('.gallery').append(data);
+      //$('.gallery').append(data);
       });
     return false;
   });

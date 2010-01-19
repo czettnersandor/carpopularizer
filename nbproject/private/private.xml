@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/galleries/show.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/public/javascripts/application.js</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/public/stylesheets/style.css</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/controllers/images_controller.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/images/edit.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/images/_flashupload.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/layouts/main.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/models/image.rb</file>
-    </open-files>
 </project-private>
