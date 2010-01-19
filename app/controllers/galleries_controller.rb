@@ -1,5 +1,4 @@
 class GalleriesController < ApplicationController
-  session :cookie_only => false, :only => :create
   def index
     @user = User.find(params[:user_id])
     @title = _("#{@user.login}'s galleries")
