@@ -5,7 +5,15 @@
         <div class="item">
           <% cssclass = (gallery.id.to_s == active_gallery_id) ? "active" : "" %>
           <%= link_to(image_tag(@firstimage.image.url(:thumb), :class=>"image-thumb"),
-            user_gallery_path(@user, gallery),
+            user_gallery_path(user, gallery),
+            :class => cssclass) %>
+          <div class="description"><%= gallery.title %></div>
+          <hr class="clear" />
+        </div>
+      <% elsif admin_or_current? user -%>
+        <div class="item">
+          <% cssclass = (gallery.id.to_s == active_gallery_id) ? "active" : "" %>
+          <%= link_to( _("Empty"), user_gallery_path(user, gallery),
             :class => cssclass) %>
           <div class="description"><%= gallery.title %></div>
           <hr class="clear" />

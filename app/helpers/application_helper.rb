@@ -1,5 +1,13 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def admin_or_current?(user)
+    if current_user
+      current_user == user || current_user.has_role?('admin')
+    else
+      false
+    end
+  end
+
   def current_url(params={})
     url_for :only_path=>false, :overwrite_params=>params
   end

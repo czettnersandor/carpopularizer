@@ -10,7 +10,7 @@
           <div class="image" id="image_<%= image.id %>">
             <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb"),
               image.image.url(:full), :class => "lightbox")%>
-            <% if current_user == @user || current_user.has_role?('admin') %>
+            <% if admin_or_current? @user %>
               <div class="image-admin">
                 <%= link_to '',
                   edit_user_gallery_image_path(:user_id => @user, :gallery_id => @gallery, :id => image.id),
@@ -27,7 +27,7 @@
         <% end %>
         <hr class="clear" />
 
-        <% if current_user == @user || current_user.has_role?('admin') %>
+        <% if admin_or_current? @user %>
   <%# link_to 'Upload new images', new_user_gallery_image_path(params[:user_id], params[:id]) %>
   <%# render :partial => 'images/flashupload' %>
           <%= render :partial => 'images/multiupload' %>
