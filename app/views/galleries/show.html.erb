@@ -2,6 +2,7 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
+    <%= render :partial => "galleries/scroller", :locals => { :user => @user, :active_gallery_id => params[:id] } %>
     <div class="gallery-head"><h3><%= @title %></h3></div>
     <div class="gallery">
       <div class="child">
@@ -30,6 +31,18 @@
   <%# link_to 'Upload new images', new_user_gallery_image_path(params[:user_id], params[:id]) %>
   <%# render :partial => 'images/flashupload' %>
           <%= render :partial => 'images/multiupload' %>
+
+          <script type="text/javascript">// <![CDATA[
+            $(document).ready(function() {
+              AUTH_TOKEN=encodeURIComponent('<%=u form_authenticity_token%>');
+              $('.gallery').bind('sortupdate', function(event, ui) {
+                $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
+                location.reload();
+              });
+
+              $('.gallery').sortable({ items:'.image', revert: true });
+            });
+          </script>
         <% end %>
         <hr class="clear" />
       </div>
@@ -37,16 +50,6 @@
   </div>
 </div>
 
-<script type="text/javascript">// <![CDATA[
-  $(document).ready(function() {
-    AUTH_TOKEN=encodeURIComponent('<%=u form_authenticity_token%>');
-    $('.gallery').bind('sortupdate', function(event, ui) {
-      $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
-      location.reload();
-    });
 
-    $('.gallery').sortable({ items:'.image', revert: true });
-  });
-</script>
 
 

@@ -30,9 +30,12 @@ a:hover {
 
 input, textarea, select {
   background:transparent url(../images/form-text.png) repeat-x scroll 0 0;
-  border-color:#727272 #929292 #929292;
+  border-color:#0090e3 #90cded #90cded;
   border-style:solid;
   border-width:1px;
+}
+textarea {
+  background: url(../images/lightblue-horiz.png) repeat-x;
 }
 input.error {
   border-color:#920000 #aa0000 #aa0000;
@@ -170,7 +173,7 @@ div.pagination {
   background: url(../images/user.png) no-repeat 0 -40px;
 }
 #loginblock div.icons a:hover {
-    /* for IE */
+  /* for IE */
   filter:alpha(opacity=80);
   /* CSS3 standard */
   opacity: 0.8;
@@ -607,6 +610,8 @@ table.profile-edit td {
   font-size: 18px;
   text-align: center;
   background: url(../images/gallery-head.png);
+  border-right: 1px solid #fa981b;
+  border-left: 1px solid #fa981b;
 }
 #uploadify,
 #multiupload {
@@ -665,4 +670,32 @@ table.profile-edit td {
 }
 .gallery .image .editform #image_title {
   width: 110px;
+}
+#gallery-scroller {
+  height: 140px;
+}
+#gallery-scroller .item {
+  display: block;
+  float: left;
+  position: relative;
+}
+#gallery-scroller a {
+  display: block;
+  height: 120px;
+  padding: 10px;
+  float: left;
+}
+#gallery-scroller a.active {
+  background: url(../images/gallery-active.png) repeat-x bottom;
+  border: 1px solid #fa981b;
+  border-bottom: 0;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+}
+#gallery-scroller .description {
+  position: absolute;
+  font-size: 10px;
+  line-height: 11px;
+  bottom: 10px;
+  left: 10px;
 }
