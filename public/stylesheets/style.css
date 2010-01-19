@@ -604,9 +604,20 @@ table.profile-edit td {
   text-align: center;
   background: url(../images/gallery-head.png);
 }
-#uploadify {
+#uploadify,
+#multiupload {
   display: block;
   float: right;
+}
+#multiupload {
+  display: none;
+}
+#toggle-upload {
+  display: block;
+  float: right;
+  background: url(../images/image-upload.png);
+  width: 80px;
+  height: 59px;
 }
 
 .gallery .image {

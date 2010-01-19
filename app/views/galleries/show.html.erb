@@ -27,7 +27,8 @@
 
       <% if current_user == @user || current_user.has_role?('admin') %>
   <%# link_to 'Upload new images', new_user_gallery_image_path(params[:user_id], params[:id]) %>
-        <%= render :partial => 'images/flashupload' %>
+        <%# render :partial => 'images/flashupload' %>
+        <%= render :partial => 'images/multiupload' %>
       <% end %>
       <hr class="clear" />
     </div>

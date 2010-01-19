@@ -9,25 +9,21 @@ class ImagesController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @gallery = Gallery.find(params[:gallery_id])
-    @image = Image.new(params[:image])
-    @image.gallery = @gallery
-    respond_to do |format|
-      if @image.save
-        flash[:notice] = 'Image was successfully uploaded.'
-        format.html {
-          # redirect_to(user_gallery_path(@user, @gallery))
-          render :text => "1"
-        }
-        format.js {
-          render :text => "1"
-        }
-        format.xml  { render :xml => @image, :status => :created, :location => @image }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @image.errors, :status => :unprocessable_entity }
-      end
+    
+    @images = params[:image].values.collect { |image|
+      newimage = Image.new(image)
+      newimage.gallery = @gallery
+      newimage
+    }
+
+    if @images.all?(&:valid?)
+      @images.each(&:save!)
+      redirect_to(user_gallery_path(@user, @gallery))
+    else
+      render :action => 'new'
     end
   end
+    
 
   def edit
     @user = User.find(params[:user_id])
