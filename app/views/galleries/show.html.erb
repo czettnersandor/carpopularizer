@@ -9,7 +9,7 @@
         <% @gallery.images.each do |image| %>
           <div class="image" id="image_<%= image.id %>">
             <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb"),
-              image.image.url(:full), :class => "lightbox")%>
+              image.image.url(:full), :class => "colorbox", :rel=>"gallery")%>
             <% if admin_or_current? @user %>
               <div class="image-admin">
                 <%= link_to '',
@@ -35,12 +35,13 @@
           <script type="text/javascript">// <![CDATA[
             $(document).ready(function() {
               AUTH_TOKEN=('<%=u form_authenticity_token%>');
-              $('.gallery').bind('sortupdate', function(event, ui) {
-                $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
-                location.reload();
-              });
-
-              $('.gallery').sortable({ items:'.image', revert: true });
+              $('.gallery').unselectable();
+              $('.gallery .child').sortable({ items:'.image', cursorAt: 'top',
+                update: function() {
+                  $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
+                  return false;
+                  // location.reload();
+                }});
             });
           </script>
         <% end %>

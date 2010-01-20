@@ -9,6 +9,32 @@ var RecaptchaOptions = {
     incorrect_try_again : "Hibás. Próbáld újra."
   }
 };
+(function($) {
+  $.fn.unselectable = function() {
+    return this.each(function() {
+
+      $(this)
+      .css('-moz-user-select', 'none')		// FF
+      .css('-khtml-user-select', 'none')		// Safari, Google Chrome
+      .css('user-select', 'none');			// CSS 3
+
+      if ($.browser.msie) {						// IE
+        $(this).each(function() {
+          this.ondrag = function() {
+            return false;
+          };
+        });
+        $(this).each(function() {
+          this.onselectstart = function() {
+            return (false);
+          };
+        });
+      } else if($.browser.opera) {
+        $(this).attr('unselectable', 'on');
+      }
+    });
+  };
+})(jQuery);
 
 jQuery.fn.ajaxLoad = function(inner, child) {
   this.live('click', function(){
@@ -56,18 +82,7 @@ $(document).ready(function(){
     $(this).children('.image-admin').fadeOut(200);
   });
 
-  $('a.lightbox').lightBox({
-    overlayBgColor: '#FFF',
-    overlayOpacity: 0.6,
-    imageLoading: '/images/lightbox-ico-loading.gif',
-    imageBtnClose: '/images/lightbox-btn-close.gif',
-    imageBtnPrev: '/images/lightbox-btn-prev.gif',
-    imageBtnNext: '/images/lightbox-btn-next.gif',
-    imageBlank: '/images/lightbox-blank.gif',
-    containerResizeSpeed: 50,
-    txtImage: 'Image',
-    txtOf: '/'
-  });
+  $('a.colorbox').colorbox({});
 
 
   $('#profile-left .lightblue.usermenu li a').each( function(){
