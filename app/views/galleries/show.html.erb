@@ -34,7 +34,7 @@
 
           <script type="text/javascript">// <![CDATA[
             $(document).ready(function() {
-              AUTH_TOKEN=encodeURIComponent('<%=u form_authenticity_token%>');
+              AUTH_TOKEN=('<%=u form_authenticity_token%>');
               $('.gallery').bind('sortupdate', function(event, ui) {
                 $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
                 location.reload();
