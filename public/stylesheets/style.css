@@ -34,6 +34,10 @@ input, textarea, select {
   border-style:solid;
   border-width:1px;
 }
+input.orange {
+  background:transparent url(../images/form-text-orange.png) repeat-x scroll 0 0;
+  border-color:#f6b235 #f8d38b #f8d38b;
+}
 textarea {
   background: url(../images/lightblue-horiz.png) repeat-x;
 }
@@ -143,28 +147,47 @@ div.pagination {
   margin: 10px 0 0 700px;
   height: 100px;
   width: 240px;
+  text-align: right;
+  background: url(../images/login-bar.png) no-repeat;
+}
+#loginblock label {
+  float: left;
+  width: 80px;
+  padding-right: 20px;
 }
 #loginblock .profile-thumb {
   float: right;
   margin-left: 10px;
 }
 #loginblock .form-item {
-  float: left;
+  float: right;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 #loginblock .form-item.text input,
 #loginblock .form-item.password input {
-  width: 110px;
+  width: 126px;
+  border: none;
+  background: transparent;
 }
 #loginblock .form-item.checkbox {
   display: none;
 }
 #loginblock input[type="submit"] {
+  float: right;
   height: 20px;
   padding: 0 10px 3px 10px;
 }
+#loginblock a.submit {
+  display: block;
+  float: right;
+  width: 54px;
+  height: 27px;
+  background: url("../images/login.png");
+}
 #loginblock a.register {
-  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
 }
 #loginblock div.icons {
   display: block;
@@ -195,6 +218,13 @@ div.pagination {
   filter:alpha(opacity=80);
   /* CSS3 standard */
   opacity: 0.8;
+}
+.login-message {
+  background: #ffffff url(../images/orange-horiz.png) repeat-x bottom;
+  border: 1px solid #fa981b;
+  padding: 0;
+  display: block;
+  clear: both;
 }
 
 /*

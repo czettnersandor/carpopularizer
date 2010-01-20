@@ -1,4 +1,5 @@
 class UserMailer < ActionMailer::Base
+
   def signup_notification(user)
     setup_email(user)
     @subject    += _('Please activate your new account')
@@ -29,12 +30,12 @@ class UserMailer < ActionMailer::Base
   end
   
   protected
-    def setup_email(user)
-      @hostname = request.host
-      @recipients  = "#{user.email}"
-      @from        = "admin@#{@hostname}"
-      @subject     = "[BOXUTCA] "
-      @sent_on     = Time.now
-      @body[:user] = user
-    end
+  def setup_email(user)
+    @hostname = "boxutca.eperpalanta.hu"
+    @recipients  = "#{user.email}"
+    @from        = "admin@#{@hostname}"
+    @subject     = "[BOXUTCA] "
+    @sent_on     = Time.now
+    @body[:user] = user
+  end
 end
