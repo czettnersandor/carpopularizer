@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100120093743) do
+ActiveRecord::Schema.define(:version => 20100120130858) do
 
   create_table "cars", :force => true do |t|
     t.integer  "genre"
@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(:version => 20100120093743) do
     t.datetime "updated_at"
     t.integer  "rssreader_id"
     t.integer  "hits"
+    t.string   "lang"
   end
 
   add_index "rssnews", ["pub_date"], :name => "index_rssnews_on_pub_date"
@@ -122,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20100120093743) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "lang"
   end
 
   create_table "sessions", :force => true do |t|

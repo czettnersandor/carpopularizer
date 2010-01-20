@@ -13,6 +13,7 @@ class Rssreader < ActiveRecord::Base
           newpost = Rssnews.new()
           newpost.title = rssfeed.title
           newpost.link = rssfeed.link
+          newpost.lang = feed.lang
           newpost.pub_date = rssfeed.pubDate.to_datetime
           newpost.description = rssfeed.description
           newpost.rssreader_id = feed.id
