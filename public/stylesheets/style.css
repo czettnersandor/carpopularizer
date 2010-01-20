@@ -148,6 +148,10 @@ div.pagination {
   height: 100px;
   width: 240px;
   text-align: right;
+}
+#loginblock form {
+  display: block;
+  height: 75px;
   background: url(../images/login-bar.png) no-repeat;
 }
 #loginblock label {
