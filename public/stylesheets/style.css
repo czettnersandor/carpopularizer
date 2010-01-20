@@ -277,7 +277,11 @@ div.pagination {
   padding: 0 10px 3px 10px;
   margin-left: 6px;
 }
-#searchbar .jquery-selectbox {
+
+/*
+* Jquery Selectbox
+*/
+.jquery-selectbox {
   position: relative;
   height: 17px;
   width: 164px !important;
@@ -290,17 +294,17 @@ div.pagination {
   padding: 0;
   background: url(../images/searchinput.png) 0 -17px;
 }
-#searchbar .jquery-selectbox.selecthover {
+.jquery-selectbox.selecthover {
   z-index: 700;
 }
-#searchbar .jquery-selectbox .jquery-selectbox-currentItem {
+.jquery-selectbox .jquery-selectbox-currentItem {
   padding: 0px 0px 0px 3px;
   white-space: nowrap;
   display: block;
   overflow: hidden;
 }
 
-#searchbar .jquery-selectbox .jquery-selectbox-list {
+.jquery-selectbox .jquery-selectbox-list {
   display: none;
   background: white;
   position: absolute;
@@ -312,7 +316,7 @@ div.pagination {
   overflow-y: auto;
   z-index: -1000;
 }
-#searchbar .jquery-selectbox .jquery-selectbox-moreButton {
+.jquery-selectbox .jquery-selectbox-moreButton {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -321,21 +325,19 @@ div.pagination {
   height: 17px;
   cursor: pointer;
 }
-#searchbar .jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
+.jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
 }
 
-#searchbar .jquery-selectbox .jquery-selectbox-item.listelementhover {
+.jquery-selectbox .jquery-selectbox-item.listelementhover {
   background: #0a6091;
   color: #ffffff;
 }
-#searchbar .jquery-selectbox .jquery-selectbox-item {
+.jquery-selectbox .jquery-selectbox-item {
   display: block;
   background: #ffffff;
   cursor: default;
 }
-
-/** ERROR classes **/
-#searchbar form .error .jquery-selectbox {
+form .error .jquery-selectbox {
   color: #d00;
   border-color: #d00;
 }
@@ -625,6 +627,7 @@ table.profile-edit td {
 .news-item .pub-date {
   float: right;
   color: gray;
+  padding-left: 10px;
 }
 .news-item .description {
   clear: left;
@@ -653,7 +656,10 @@ table.profile-edit td {
   height: 24px;
   background: url(../images/lang-icons.png) 0 0;
 }
-
+#rss-list-by-hits li a {
+  display: block;
+  height: 24px;
+}
 ul.ui-tabs-nav {
   margin: 0;
   position: absolute;
@@ -668,6 +674,7 @@ ul.ui-tabs-nav li {
   height: 24px;
   margin: 0;
   background: url(../images/tabs.png) no-repeat 0 -24px;
+  text-align: center;
 }
 ul.ui-tabs-nav li:hover,
 ul.ui-tabs-nav li.ui-tabs-selected {

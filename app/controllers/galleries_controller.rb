@@ -2,7 +2,8 @@ class GalleriesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @title = _("#{@user.login}'s galleries")
-    @galleries = Gallery.find_all_by_user_id(@user.id)
+    @galleries = Gallery.find_by_user_id(@user.id)
+    redirect_to user_gallery_path(@user, @galleries)
   end
 
   def show

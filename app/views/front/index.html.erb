@@ -24,9 +24,24 @@
 <div class="grid_6 omega">
   <div class="block-header"><h3><%= _("Most viewed") %></h3></div>
   <div class="lightblue-block" id="rss-list-by-hits">
-    <div class="child">
-      <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits }  %>
-      <%= will_paginate @news_by_hits, :param_name => :page_by_hits %>
+
+    <ul>
+      <li><a href="#tabs-hits-monthly" class="monthly"><%= _('Monthly') %></a></li>
+      <li><a href="#tabs-hits-daily" class="daily"><%= _('Daily') %></a></li>
+    </ul>
+
+    <div id="tabs-hits-monthly">
+      <div class="child">
+        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_monthly }  %>
+        <%= will_paginate @news_by_hits_monthly, :param_name => :page_by_hits %>
+      </div>
+    </div>
+
+    <div id="tabs-hits-daily">
+      <div class="child">
+        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_daily }  %>
+        <%= will_paginate @news_by_hits_daily, :param_name => :page_by_hits %>
+      </div>
     </div>
   </div>
 </div>
@@ -36,9 +51,11 @@
 
     $('#tabs-hu .pagination a').ajaxLoad('#tabs-hu', '#tabs-hu .child');
     $('#tabs-en .pagination a').ajaxLoad('#tabs-en', '#tabs-en .child');
-    $('#rss-list-by-hits .pagination a').ajaxLoad('#rss-list-by-hits', '#rss-list-by-hits .child');
+    $('#tabs-hits-monthly .pagination a').ajaxLoad('#tabs-hits-monthly', '#tabs-hits-monthly .child');
+    $('#tabs-hits-daily .pagination a').ajaxLoad('#tabs-hits-daily', '#tabs-hits-daily .child');
 
     $('#rss-list').tabs();
+    $('#rss-list-by-hits').tabs();
 
   });
 

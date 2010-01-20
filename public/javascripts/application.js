@@ -89,6 +89,9 @@ $(document).ready(function(){
     $(this).css('background-position', '-220px -'+i*29+'px');
     i++
   })
+
+  // $('select').selectbox();
+
   $('select#searchwhat').selectbox();
 
   $('#menubar li').hover(
