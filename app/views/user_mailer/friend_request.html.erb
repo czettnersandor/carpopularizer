@@ -1,4 +1,4 @@
-<%= _("#{request_by.login} has requested to be your friend") %>
+<%= _("%s has requested to be your friend") % @request_by.login %>
 <%= _("Please visit your profile to confirm:") %>
-<%= user_friends_url(@user) %>
+<%= @url %>
 

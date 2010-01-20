@@ -26,7 +26,10 @@ class UserMailer < ActionMailer::Base
 
   def friend_request(user, request_by)
     setup_email(user)
-    @subject    += _("%s has requested to be your friend") % request_by.login
+    @request_by = User.find(request_by)
+    @subject    += _("%s has requested to be your friend") % @request_by.login
+    @body[:url] = "http://#{@hostname}/users/#{user.id}/friends"
+    @body[:request_by] = @request_by
   end
   
   protected

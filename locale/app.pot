@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-20 10:25+0100\n"
+"POT-Creation-Date: 2010-01-20 18:38+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: app/models/user_mailer.rb:28
+#: app/models/user_mailer.rb:30
+#: app/views/user_mailer/friend_request.html.erb:1
 msgid "%s has requested to be your friend"
 msgstr ""
 
@@ -254,6 +255,10 @@ msgstr ""
 msgid "Korea"
 msgstr ""
 
+#: app/views/rssreaders/edit.html.erb:8 app/views/rssreaders/new.html.erb:8
+msgid "Language"
+msgstr ""
+
 #: app/views/users/show.html.erb:40 app/views/users/edit.html.erb:55
 msgid "Languages spoken"
 msgstr ""
@@ -262,7 +267,11 @@ msgstr ""
 msgid "Last login"
 msgstr ""
 
-#: app/views/layouts/_login.erb:26 app/views/sessions/new.html.erb:12
+#: app/views/front/index.html.erb:2
+msgid "Latest headlines"
+msgstr ""
+
+#: app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr ""
 
@@ -289,6 +298,10 @@ msgstr ""
 
 #: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
 msgid "Marketplace"
+msgstr ""
+
+#: app/views/front/index.html.erb:25
+msgid "Most viewed"
 msgstr ""
 
 #: app/views/layouts/_login.erb:6
@@ -343,7 +356,7 @@ msgstr ""
 msgid "Password successfully updated."
 msgstr ""
 
-#: app/views/rssreaders/edit.html.erb:9 app/views/pages/edit.html.erb:7
+#: app/views/rssreaders/edit.html.erb:11 app/views/pages/edit.html.erb:7
 #: app/views/pages/new.html.erb:7
 msgid "Permalink"
 msgstr ""
@@ -356,7 +369,7 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
-#: app/models/user_mailer.rb:4
+#: app/models/user_mailer.rb:5
 msgid "Please activate your new account"
 msgstr ""
 
@@ -401,8 +414,8 @@ msgstr ""
 msgid "Rssreader was successfully created."
 msgstr ""
 
-#: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:12
-#: app/views/rssreaders/new.html.erb:12 app/views/images/edit.html.erb:3
+#: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:14
+#: app/views/rssreaders/new.html.erb:14 app/views/images/edit.html.erb:3
 #: app/views/images/new.html.erb:8 app/views/images/_multiupload.erb:9
 #: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
 #: app/views/galleries/new.html.erb:6 app/views/users/edit-dealer.html.erb:67
@@ -502,11 +515,11 @@ msgstr ""
 msgid "You have been logged out."
 msgstr ""
 
-#: app/models/user_mailer.rb:17
+#: app/models/user_mailer.rb:18
 msgid "You have requested to change your password"
 msgstr ""
 
-#: app/models/user_mailer.rb:11
+#: app/models/user_mailer.rb:12
 msgid "Your account has been activated!"
 msgstr ""
 
@@ -518,7 +531,7 @@ msgstr ""
 msgid "Your password has been reset"
 msgstr ""
 
-#: app/models/user_mailer.rb:23
+#: app/models/user_mailer.rb:24
 msgid "Your password has been reset."
 msgstr ""
 

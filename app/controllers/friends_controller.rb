@@ -23,9 +23,10 @@ class FriendsController < ApplicationController
     @friendship1 = Friendship.create(params[:friendship1])
     @friendship2 = Friendship.create(params[:friendship2])
     if @friendship1.save && @friendship2.save
-      redirect_to user_friends_path(current_user)
+      UserMailer.deliver_friend_request(@friend, @user)
+      redirect_to user_friends_path(@user)
     else
-      redirect_to user_path(current_user)
+      redirect_to user_path(@friend)
     end
   end
 
