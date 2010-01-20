@@ -39,7 +39,6 @@
               $('.gallery .child').sortable({ items:'.image', cursorAt: 'top',
                 update: function() {
                   $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
-                  return false;
                   // location.reload();
                 }});
             });
