@@ -97,11 +97,27 @@ div.pagination {
   margin: 10px 0;
   padding: 0 10px;
 }
+
+/*
+* Blocks
+*/
 .lightblue-block {
   background: url(../images/lightblue-horiz.png) repeat-x;
   border: 1px solid #2487bb;
   padding: 10px 10px 0;
-  -moz-border-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+}
+h3.block-header {
+  background: url(../images/block-header.png) no-repeat;
+  margin: 0;
+  height: 23px;
+  font-size: 18px;
+  padding-left: 50px;
+  border: 1px solid #2487bb;
+  border-bottom: none;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
 }
 
 /*
@@ -564,10 +580,11 @@ table.profile-edit td {
   clear: right;
 }
 .news-item .title a {
-  /* padding-left: 20px; */
+  padding-left: 16px;
+  background: url(../images/icon-16.png) no-repeat 0 -16px;
 }
 .news-item .title a:visited {
-  /* padding-left: 20px; */
+  background: url(../images/icon-16.png) no-repeat 0 0;
 }
 .news-item .pub-date {
   float: right;
@@ -669,7 +686,7 @@ table.profile-edit td {
   background: white;
 }
 .gallery .image .editform #image_title {
-  width: 110px;
+  width: 115px;
 }
 #gallery-scroller {
   height: 140px;

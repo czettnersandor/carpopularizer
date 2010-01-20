@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  genre: 1
+  name: MyString
+  user_id: 1
+  kivitel: 1
+  evjarat: MyString
+  ccm: MyString
+  performance: MyString
+  fuel: 1
+  acceleration: 1.5
+  topspeed: 1
+  torque: 1.5
+  color: MyString
+
+two:
+  genre: 1
+  name: MyString
+  user_id: 1
+  kivitel: 1
+  evjarat: MyString
+  ccm: MyString
+  performance: MyString
+  fuel: 1
+  acceleration: 1.5
+  topspeed: 1
+  torque: 1.5
+  color: MyString

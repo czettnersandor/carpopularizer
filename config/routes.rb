@@ -22,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :galleries do |gallery|
       gallery.resources :images, :collection => { :sort => :put }
     end
+    user.resources :cars
   end
 
 
@@ -82,7 +83,6 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'users', :action => 'new'
   map.forgot_password '/forgot_password', :controller => 'passwords', :action => 'new'
   map.reset_password '/reset_password/:id', :controller => 'passwords', :action => 'edit'
-  
   map.connect 'activate/:activation_code', :controller => 'users', :action => 'activate'
 
 end

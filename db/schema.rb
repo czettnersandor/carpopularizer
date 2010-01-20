@@ -9,7 +9,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100118195109) do
+ActiveRecord::Schema.define(:version => 20100120093743) do
+
+  create_table "cars", :force => true do |t|
+    t.integer  "genre"
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "gallery_id"
+    t.integer  "make"
+    t.string   "age_grade"
+    t.string   "ccm"
+    t.string   "performance"
+    t.integer  "fuel"
+    t.float    "acceleration"
+    t.integer  "topspeed"
+    t.float    "torque"
+    t.string   "color"
+    t.integer  "ordinal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cars", ["user_id"], :name => "index_cars_on_user_id"
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -166,6 +187,7 @@ ActiveRecord::Schema.define(:version => 20100118195109) do
     t.text     "contact_phone"
     t.float    "lat"
     t.float    "lng"
+    t.integer  "maximum_cars"
   end
 
   add_index "users", ["lat", "lng"], :name => "index_users_on_lat_and_lng"

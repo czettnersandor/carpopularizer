@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-18 01:38+0100\n"
+"POT-Creation-Date: 2010-01-20 10:25+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/models/user_mailer.rb:28
+msgid "%s has requested to be your friend"
+msgstr ""
 
 #: app/controllers/passwords_controller.rb:14
 msgid "A password reset link has been sent to your email address."
@@ -35,6 +39,10 @@ msgstr ""
 
 #: app/controllers/users_controller.rb:33
 msgid "An error occured, your password was not changed."
+msgstr ""
+
+#: app/views/galleries/show.html.erb:21
+msgid "Are you sure?"
 msgstr ""
 
 #: app/helpers/users_helper.rb:5
@@ -138,9 +146,17 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: app/views/layouts/_login.erb:15 app/views/sessions/new.html.erb:2
+#: app/views/layouts/_login.erb:7
+msgid "Edit my profile"
+msgstr ""
+
+#: app/views/layouts/_login.erb:16 app/views/sessions/new.html.erb:2
 #: app/views/users/new.html.erb:6
 msgid "Email"
+msgstr ""
+
+#: app/views/galleries/_scroller.erb:16
+msgid "Empty"
 msgstr ""
 
 #: app/views/users/_myblock.erb:22
@@ -193,7 +209,7 @@ msgstr ""
 msgid "Gallery"
 msgstr ""
 
-#: app/controllers/galleries_controller.rb:27
+#: app/controllers/galleries_controller.rb:26
 msgid "Gallery was successfully created."
 msgstr ""
 
@@ -246,7 +262,7 @@ msgstr ""
 msgid "Last login"
 msgstr ""
 
-#: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:12
+#: app/views/layouts/_login.erb:26 app/views/sessions/new.html.erb:12
 msgid "Log in"
 msgstr ""
 
@@ -258,7 +274,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/views/layouts/_login.erb:7
+#: app/views/layouts/_login.erb:8
 msgid "Logout"
 msgstr ""
 
@@ -273,6 +289,10 @@ msgstr ""
 
 #: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
 msgid "Marketplace"
+msgstr ""
+
+#: app/views/layouts/_login.erb:6
+msgid "My friends"
 msgstr ""
 
 #: app/helpers/users_helper.rb:23
@@ -297,7 +317,7 @@ msgid "Opening time"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:18 app/views/passwords/edit.html.erb.erb:4
+#: app/views/layouts/_login.erb:19 app/views/passwords/edit.html.erb.erb:4
 #: app/views/sessions/new.html.erb:5 app/views/users/edit-dealer.html.erb:17
 #: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
@@ -348,7 +368,7 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
-#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:25
+#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:26
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
@@ -361,7 +381,7 @@ msgstr ""
 msgid "Registration type"
 msgstr ""
 
-#: app/views/layouts/_login.erb:22 app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:9
 msgid "Remember me"
 msgstr ""
 
@@ -377,12 +397,13 @@ msgstr ""
 msgid "Ride Battle"
 msgstr ""
 
-#: app/controllers/rssreaders_controller.rb:49
+#: app/controllers/rssreaders_controller.rb:51
 msgid "Rssreader was successfully created."
 msgstr ""
 
 #: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:12
-#: app/views/rssreaders/new.html.erb:12 app/views/images/new.html.erb:6
+#: app/views/rssreaders/new.html.erb:12 app/views/images/edit.html.erb:3
+#: app/views/images/new.html.erb:8 app/views/images/_multiupload.erb:9
 #: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
 #: app/views/galleries/new.html.erb:6 app/views/users/edit-dealer.html.erb:67
 #: app/views/users/edit.html.erb:61
@@ -453,7 +474,7 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: app/views/layouts/_login.erb:6 app/views/admin/front/index.html.erb:8
+#: app/views/admin/front/index.html.erb:8
 msgid "Users"
 msgstr ""
 

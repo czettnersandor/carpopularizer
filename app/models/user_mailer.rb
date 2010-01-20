@@ -25,12 +25,12 @@ class UserMailer < ActionMailer::Base
 
   def friend_request(user, request_by)
     setup_email(user)
-    @subject    += _("#{request_by.login} has requested to be your friend")
+    @subject    += _("%s has requested to be your friend") % request_by.login
   end
   
   protected
     def setup_email(user)
-      @hostname = self.request.host
+      @hostname = request.host
       @recipients  = "#{user.email}"
       @from        = "admin@#{@hostname}"
       @subject     = "[BOXUTCA] "
