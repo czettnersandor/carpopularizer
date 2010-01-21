@@ -748,7 +748,8 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   padding: 5px;
   position: relative;
 }
-.gallery .image-admin {
+.gallery .image-admin,
+.gallery-admin {
   position: absolute;
   display: none;
   height: 22px;
@@ -757,12 +758,24 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   bottom: 25px;
   left: 40px;
 }
+.gallery-admin {
+  display: block;
+  bottom: 31px;
+}
 .gallery .image-admin a.edit,
 .gallery .image-admin a.destroy{
   display: block;
   float: left;
-  width: 27px;
-  height: 22px;
+  width: 27px !important;
+  height: 22px !important;
+}
+.gallery-admin a.edit,
+.gallery-admin a.destroy{
+  display: block;
+  float: left;
+  width: 27px !important;
+  height: 22px !important;
+  padding: 0 !important;
 }
 .gallery .image .description {
   color: white;
@@ -790,6 +803,7 @@ ul.ui-tabs-nav li.ui-tabs-selected {
 }
 #gallery-scroller a {
   display: block;
+  width: 120px;
   height: 120px;
   padding: 10px;
   float: left;
@@ -802,6 +816,17 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px 5px;
   border-top-right-radius: 5px 5px;
+}
+#gallery-scroller .item-add {
+  width: 90px;
+  background: url(../images/add-folder.png) no-repeat 20px 20px;
+  display: block;
+  float: left;
+  position: relative;
+}
+#gallery-scroller .item-add a {
+  padding-top: 90px;
+  height: 40px;
 }
 #gallery-scroller .description {
   position: absolute;

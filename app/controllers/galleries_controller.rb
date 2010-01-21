@@ -18,6 +18,11 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new
   end
 
+  def edit
+    @user = User.find(params[:user_id])
+    @gallery = Gallery.find(params[:id])
+  end
+
   def create
     @user = User.find(params[:user_id])
     @gallery = Gallery.new(params[:gallery])
@@ -36,11 +41,18 @@ class GalleriesController < ApplicationController
   end
 
   def update
-
+    @user = User.find(params[:user_id])
+    @gallery = Gallery.find(params[:id])
+    @gallery.update_attributes(params[:gallery])
+    redirect_to(user_gallery_path(@user, @gallery))
   end
 
   def destroy
-    
+    @user = User.find(params[:user_id])
+    @gallery = Gallery.find(params[:id])
+    @gallery.images.each { |image| image.destroy }
+    @gallery.destroy
+    redirect_to(user_galleries_path(@user))
   end
 
 end

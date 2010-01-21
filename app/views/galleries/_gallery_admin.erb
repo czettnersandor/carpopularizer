@@ -1,0 +1,9 @@
+<div class="gallery-admin">
+  <%= link_to '',
+    edit_user_gallery_path(:user_id => user, :id => gallery),
+    :class => "edit"%>
+
+  <%= link_to '',
+    user_gallery_path(:user_id => user, :id => gallery),
+    :confirm => _('Are you sure?'), :method => 'delete', :class => "edit" %>
+</div>

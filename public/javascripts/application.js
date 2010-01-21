@@ -87,6 +87,12 @@ $(document).ready(function(){
     $(this).children('.image-admin').fadeOut(200);
   });
 
+  $('#gallery-scroller .item').hover(function(){
+    $(this).children('.image-admin').fadeIn(200);
+  }, function(){
+    $(this).children('.image-admin').fadeOut(200);
+  });
+
   $('a.colorbox').colorbox({});
 
 

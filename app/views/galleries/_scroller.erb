@@ -1,24 +1,41 @@
 <div id="gallery-scroller">
   <div class="child">
     <% user.galleries.each do |gallery|%>
+
       <% if  @firstimage = gallery.images.find(:first) %>
         <div class="item">
           <% cssclass = (gallery.id.to_s == active_gallery_id) ? "active" : "" %>
           <%= link_to(image_tag(@firstimage.image.url(:thumb), :class=>"image-thumb"),
             user_gallery_path(user, gallery),
             :class => cssclass) %>
+
+          <%= render :partial => "galleries/gallery_admin", :locals => {:gallery => gallery, :user => user} %>
+
           <div class="description"><%= gallery.title %></div>
           <hr class="clear" />
         </div>
+
       <% elsif admin_or_current? user -%>
         <div class="item">
           <% cssclass = (gallery.id.to_s == active_gallery_id) ? "active" : "" %>
           <%= link_to( _("Empty"), user_gallery_path(user, gallery),
             :class => cssclass) %>
+
+          <%= render :partial => "galleries/gallery_admin", :locals => {:gallery => gallery, :user => user} %>
+
           <div class="description"><%= gallery.title %></div>
           <hr class="clear" />
         </div>
       <% end -%>
+
     <% end -%>
+
+    <% if admin_or_current? user %>
+      <div class="item-add">
+        <%= link_to( _("New gallery"), new_user_gallery_path(user)) %>
+        <hr class="clear" />
+      </div>
+    <% end -%>
+
   </div>
 </div>
