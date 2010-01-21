@@ -30,9 +30,10 @@ class ImagesController < ApplicationController
     @gallery = Gallery.find(params[:gallery_id])
     @image = Image.find(params[:id])
     respond_to do |format|
-      format.html { redirect_to(user_gallery_path(params[:user_id], params[:gallery_id])) }
-      format.xml  { head :ok }
+      # format.html { redirect_to(user_gallery_path(params[:user_id], params[:gallery_id])) }
       format.js  { render :layout  => false }
+      format.xml  { head :ok }
+      
     end
   end
 

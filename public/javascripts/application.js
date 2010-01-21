@@ -1,4 +1,8 @@
 var searchbarState = 0;
+
+// Enables for all serialization
+jQuery.ajaxSettings.traditional = true;
+
 var RecaptchaOptions = {
   theme : 'clean',
   lang : 'hu',
@@ -47,18 +51,19 @@ jQuery.fn.ajaxLoad = function(inner, child) {
 
 jQuery.fn.addReplyMessage = function(id) {
   replylink = $(this);
+  commentDiv = $(this).parent();
   jQuery.ajax({
     url:'/comments/'+id,
     success: function(html){
-      replylink.append('<div id="reply-'+id+'" class="indent">'+html+'</div>');
-      replylink.children('.links').children('a.reply-to').hide();
-      replylink.children('.indent').children('.comment.reply').slideDown();
+      commentDiv.append('<div id="reply-'+id+'" class="indent">'+html+'</div>');
+      replylink.children('a.reply-to').hide();
+      commentDiv.children('.indent').children('.reply').show();
     }
   });
 }
 jQuery.fn.replyTo = function(id) {
   $('#comment_reply_to').val(id);
-  $('#comment-form').slideDown();
+  $('#comment-form').show();
   $('#comment-form #comment_body').focus();
 }
 

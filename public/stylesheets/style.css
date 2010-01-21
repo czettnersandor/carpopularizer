@@ -111,6 +111,8 @@ div.pagination {
   padding: 10px 10px 0;
   -moz-border-radius-bottomleft: 5px;
   -moz-border-radius-bottomright: 5px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
 }
 .block-header {
   background: url(../images/block-header.png) no-repeat;
@@ -121,6 +123,8 @@ div.pagination {
   border-bottom: none;
   -moz-border-radius-topleft: 5px;
   -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
 }
 .block-header h3 {
   font-size: 18px;
@@ -421,6 +425,10 @@ table td.num {
   -moz-border-radius-topleft:4px;
   -moz-border-radius-topright:4px;
   -x-system-font:none;
+  border-bottom-left-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  border-top-left-radius: 4px 4px;
+  border-top-right-radius: 4px 4px;
   background:#DDDDDD url(../images/bg-btn.gif) repeat-x scroll 0 0;
   border-color:#DDDDDD #DDDDDD #CCCCCC;
   border-style:solid;
@@ -479,6 +487,10 @@ label.error {
 
 .comment {
   -moz-border-radius: 5px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
   background: transparent url(../images/lightblue-horiz.png) repeat-x scroll 0 0;
   border: 1px solid #2487bb;
   padding: 10px 10px 0;
@@ -523,6 +535,7 @@ hr.clear {
 #profile-left .lightblue.first {
   border-top: 1px solid #2487bb;
   -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px 5px;
   height: 100px;
 }
 #profile-left .lightblue hr {
@@ -582,6 +595,7 @@ hr.clear {
   background: url(../images/lightblue-horiz.png) repeat-x;
   border: 1px solid #fa981b;
   -moz-border-radius-topright: 5px;
+  border-top-right-radius: 5px 5px;
   padding: 10px;
 }
 
@@ -695,6 +709,8 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   padding: 0;
   -moz-border-radius-bottomleft: 5px;
   -moz-border-radius-bottomright: 5px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
 }
 .gallery-head {
   height: 30px;
@@ -784,6 +800,8 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   border-bottom: 0;
   -moz-border-radius-topleft: 5px;
   -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
 }
 #gallery-scroller .description {
   position: absolute;

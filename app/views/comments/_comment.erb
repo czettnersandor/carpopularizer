@@ -11,6 +11,6 @@
   <div class="links">
     <%= link_to_function 'reply', "$('#comment_reply_to').replyTo("+comment.id.to_s+")" %>
     <%= link_to_function 'in reply to',
-      "$(this).parent().parent().addReplyMessage('"+comment.reply_to.to_s+"')",
+      "$(this).parentsUntil('.comment').addReplyMessage('"+comment.reply_to.to_s+"')",
       :class => "reply-to" if comment.reply_to %>
   </div>
