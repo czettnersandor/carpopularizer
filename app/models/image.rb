@@ -2,8 +2,11 @@ class Image < ActiveRecord::Base
   belongs_to :gallery
   validates_presence_of     :image
   has_attached_file :image,
-    :styles => { :full => "800x600>",
-    :thumb => "120x100#" }
+    :styles => {
+    :full => "800x600>",
+    :thumb => "120x100#",
+    :car => "265x200#"
+  }
   attr_accessible :title, :image
   default_scope :order => 'ordinal ASC'
   

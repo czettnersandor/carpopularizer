@@ -9,14 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100120130858) do
+ActiveRecord::Schema.define(:version => 20100121210045) do
 
   create_table "cars", :force => true do |t|
-    t.integer  "genre"
+    t.string   "genre"
     t.string   "name"
     t.integer  "user_id"
     t.integer  "gallery_id"
-    t.integer  "make"
+    t.string   "make"
     t.string   "age_grade"
     t.string   "ccm"
     t.string   "performance"
