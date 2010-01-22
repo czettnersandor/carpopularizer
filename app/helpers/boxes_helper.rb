@@ -1,4 +1,6 @@
 module BoxesHelper
+  FastGettext.add_text_domain 'app', :path => File.join(RAILS_ROOT, 'locale')
+  FastGettext.text_domain = 'app'
   MAKES = [
     _("Cabriolet"),
     _("Coupe"),
