@@ -8,8 +8,9 @@
           <%= link_to(image_tag(@firstimage.image.url(:thumb), :class=>"image-thumb"),
             user_gallery_path(user, gallery),
             :class => cssclass) %>
-
+          <% if admin_or_current? user %>
           <%= render :partial => "galleries/gallery_admin", :locals => {:gallery => gallery, :user => user} %>
+          <% end -%>
 
           <div class="description"><%= gallery.title %></div>
           <hr class="clear" />

@@ -22,7 +22,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :galleries do |gallery|
       gallery.resources :images, :collection => { :sort => :put }
     end
-    user.resources :cars
+    user.resources :boxes
   end
 
 

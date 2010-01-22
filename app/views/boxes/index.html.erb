@@ -1,0 +1,16 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <% @cars.each do |car| %>
+      <%= link_to(car.name, user_box_path(@user, car)) %>
+    <% end %>
+
+    <% if @user == current_user %>
+      <%= link_to "New car", new_user_box_path(@user) %>
+    <% end %>
+
+
+  </div>
+</div>

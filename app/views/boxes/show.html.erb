@@ -1,0 +1,18 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <div id="car-gallery">
+      <div id = "car-photo">
+      </div>
+
+      <h3 id="car-title">
+        <%= image_tag('/images/genres/32/'+@car.genre) %>
+        <%= genre(@car.genre)+" "+@car.name %>
+      </h3>
+    </div>
+
+
+  </div>
+</div>
