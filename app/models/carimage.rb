@@ -1,7 +1,8 @@
 class Carimage < ActiveRecord::Base
   belongs_to :car
   validates_presence_of     :image
-  has_attached_file :image,
+  has_attached_file :image, :path => ":rails_root/public/system/carimages/:id/:style/:basename.:extension",
+    :url  => "/system/carimages/:id/:style/:basename.:extension",
     :styles => {
     :full => "800x600>",
     :thumb => "120x100#",
