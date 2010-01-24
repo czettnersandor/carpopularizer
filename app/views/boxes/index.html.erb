@@ -4,7 +4,9 @@
   <div class="orangebox">
 
     <% @cars.each do |car| %>
-      <%= link_to(car.name, user_box_path(@user, car)) %>
+
+      <%= render :partial => "listitem", :locals => {:car => car, :user => @user} %>
+
     <% end %>
 
     <% if @user == current_user %>

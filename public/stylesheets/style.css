@@ -496,22 +496,36 @@ label.error {
   clear: both;
 }
 
-.comment {
-  -moz-border-radius: 5px;
+.comment,
+.listitem {
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
   border-bottom-left-radius: 5px 5px;
   border-bottom-right-radius: 5px 5px;
-  border-top-left-radius: 5px 5px;
-  border-top-right-radius: 5px 5px;
   background: transparent url(../images/lightblue-horiz.png) repeat-x scroll 0 0;
   border: 1px solid #2487bb;
   padding: 10px 10px 0;
   margin-bottom: 10px;
+  position: relative;
 }
-
-.comment .profile {
-  width: 120px;
+.comment .list-header,
+.listitem .list-header{
+  background: white;
+  height: 18px;
+  display: block;
+  margin: -10px -10px 0 -10px;
+}
+.comment .list-header img,
+.listitem .list-header img {
+  float: left;
+}
+.comment .profile-data,
+.listitem .profile-data{
+  width: 130px;
   display: block;
   float: left;
+  border-right: 1px solid #2487bb;
+  margin-right: 10px;
 }
 
 .comment.reply {
