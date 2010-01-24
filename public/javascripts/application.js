@@ -1,7 +1,11 @@
 var searchbarState = 0;
 
 // Enables for all serialization
-jQuery.ajaxSettings.traditional = true;
+// jQuery.ajaxSettings.traditional = true;
+
+jQuery.ajaxSetup({
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
 
 var RecaptchaOptions = {
   theme : 'clean',
@@ -69,29 +73,6 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
   i = 0;
-
-  $('.gallery .image-admin a.edit').live('click', function() {
-    editlink = $(this);
-    $.get($(this).attr('href'),
-      function(data){
-        editlink.parent().parent().find('.editform').html(data);
-        editlink.parent().parent().find('.editform').fadeIn();
-      //$('.gallery').append(data);
-      });
-    return false;
-  });
-
-  $('.gallery .image').hover(function(){
-    $(this).children('.image-admin').fadeIn(200);
-  }, function(){
-    $(this).children('.image-admin').fadeOut(200);
-  });
-
-  $('#gallery-scroller .item').hover(function(){
-    $(this).children('.image-admin').fadeIn(200);
-  }, function(){
-    $(this).children('.image-admin').fadeOut(200);
-  });
 
   $('a.colorbox').colorbox({});
 

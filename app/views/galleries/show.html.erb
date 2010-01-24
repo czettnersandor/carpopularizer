@@ -35,8 +35,33 @@
           <script type="text/javascript">// <![CDATA[
             $(document).ready(function() {
               AUTH_TOKEN=('<%=u form_authenticity_token%>');
+
+              $('.gallery .image-admin a.edit').live('click', function() {
+                editlink = $(this);
+                $.get($(this).attr('href'),
+                function(data){
+                  editlink.parent().parent().find('.editform').html(data);
+                  editlink.parent().parent().find('.editform').fadeIn();
+                  //$('.gallery').append(data);
+                });
+                return false;
+              });
+
+              $('.gallery .image').hover(function(){
+                $(this).children('.image-admin').fadeIn(200);
+              }, function(){
+                $(this).children('.image-admin').fadeOut(200);
+              });
+
+              $('#gallery-scroller .item').hover(function(){
+                $(this).children('.gallery-admin').fadeIn(200);
+              }, function(){
+                $(this).children('.gallery-admin').fadeOut(200);
+              });
+
+
               $('.gallery').unselectable();
-              $('.gallery .child').sortable({ items:'.image', cursorAt: 'top',
+              $('.gallery .child').sortable({ items:'.image',
                 update: function() {
                   $.post('<%= user_gallery_images_path(:user_id => @user.id, :gallery_id => @gallery.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
                   // location.reload();

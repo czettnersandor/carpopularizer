@@ -16,6 +16,7 @@ class FrontController < ApplicationController
       format.html # index.html.erb
       format.js  { render :layout => false }
     end
+    
   end
 
 end

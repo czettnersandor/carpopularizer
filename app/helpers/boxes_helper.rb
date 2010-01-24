@@ -140,6 +140,7 @@ module BoxesHelper
     ["_0121_acura.png","Acura"],
     ["_0122_abarth.png","Abarth"]
   ]
+  
   def genrelist(selected_genre='_0006_volkswagen.png')
     opt_list = ""
     GENRES.reverse.each do |genre|

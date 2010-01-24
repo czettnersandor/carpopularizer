@@ -5,14 +5,112 @@
 
     <div id="car-gallery">
       <div id = "car-photo">
+        <%= image_tag(@car.carimages.first.image.url(:car)) if @car.carimages.first %>
       </div>
 
       <h3 id="car-title">
         <%= image_tag('/images/genres/32/'+@car.genre) %>
         <%= genre(@car.genre)+" "+@car.name %>
       </h3>
+
+      <div class="block-header fix">
+        <h4 id="car-gallery-title">Gallery</h4>
+        <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "add-image") if admin_or_current? @user %>
+      </div>
+      <div id="car-gallery-box">
+        <div class="inner">
+          <% @car.carimages.each do |image| %>
+            <div class="item" id="item_<%= image.id %>">
+              <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb"),
+                image.image.url(:full), :class => "colorbox", :rel=>"gallery")%>
+              <% if admin_or_current? @user %>
+                <div class="image-admin">
+                  <%= link_to '',
+                    edit_user_box_carimage_path(:user_id => @user, :box_id => @car, :id => image.id),
+                    :class => "edit"%>
+
+                  <%= link_to '',
+                    user_box_carimage_path(:user_id => @user, :box_id => @car, :id => image.id),
+                    :confirm => _('Are you sure?'), :method => 'delete', :class => "edit" %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
 
+    <div id="auto-adatok-tabs">
 
+      <ul>
+        <li><a href="#data"> <%= _("Data") %> </a></li>
+        <li><a href="#exterior"> <%= _("Exterior") %> </a></li>
+        <li><a href="#interior"> <%= _("Interior") %> </a></li>
+        <li><a href="#engine"> <%= _("Engine") %> </a></li>
+        <li><a href="#audio"> <%= _("Audio") %> </a></li>
+      </ul>
+
+      <div id="data">
+      </div>
+
+      <div id="exterior">
+      </div>
+
+      <div id="interior">
+      </div>
+
+      <div id="engine">
+      </div>
+
+      <div id="audio">
+      </div>
+
+    </div>
+
+    <div id="car-description">
+      <div class="block-header fix small"><h3><%= _("Description") %></h3></div>
+      <div class="inner">
+        <%= @car.description %>
+      </div>
+    </div>
+
+    <div id="car-equipment">
+      <div class="block-header fix small"><h3><%= _("Equipment") %></h3></div>
+      <div class="inner">
+        Icon | Icon | Icon | Icon |
+      </div>
+    </div>
+
+    <hr class="clear" />
   </div>
 </div>
+
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#auto-adatok-tabs').tabs();
+    $('a.add-image').colorbox();
+
+  });
+
+<% if admin_or_current? @user %>
+
+    $('.image-admin a.edit').colorbox();
+    $('#car-gallery-box .item').hover(function(){
+      $(this).children('.image-admin').fadeIn(200);
+    }, function(){
+      $(this).children('.image-admin').fadeOut(200);
+    });
+
+    AUTH_TOKEN=('<%=u form_authenticity_token%>');
+    $('#car-gallery-box').unselectable();
+    $('#car-gallery-box .inner').sortable({ items:'.item',
+      update: function() {
+        $.post('<%= user_box_carimages_path(:user_id => @user.id, :box_id => @car.id) %>/sort', '_method=put&authenticity_token='+AUTH_TOKEN+'&'+$(this).sortable('serialize'));
+        // location.reload();
+      }});
+
+<% end %>
+
+</script>

@@ -1,0 +1,3 @@
+<% form_for(@car, :url => user_box_path(@user, @car)) do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>

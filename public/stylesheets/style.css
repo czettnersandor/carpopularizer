@@ -126,6 +126,17 @@ div.pagination {
   border-top-left-radius: 5px 5px;
   border-top-right-radius: 5px 5px;
 }
+.block-header.fix {
+  border-bottom: 1px solid #2487bb;;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.block-header.small {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 25px;
+}
 .block-header h3 {
   font-size: 18px;
 }
@@ -674,13 +685,13 @@ table.profile-edit td {
   display: block;
   height: 20px;
 }
-ul.ui-tabs-nav {
+.newsblock ul.ui-tabs-nav {
   margin: 0;
   position: absolute;
   top: 12px;
   right: 20px;
 }
-ul.ui-tabs-nav li {
+.newsblock ul.ui-tabs-nav li {
   display: block;
   float: left;
   list-style: none;
@@ -696,8 +707,8 @@ ul.ui-tabs-nav li {
   border-top-right-radius: 3px 3px;
   text-align: center;
 }
-ul.ui-tabs-nav li:hover,
-ul.ui-tabs-nav li.ui-tabs-selected {
+.newsblock ul.ui-tabs-nav li:hover,
+.newsblock ul.ui-tabs-nav li.ui-tabs-selected {
   background: url("../images/lightblue-horiz.png") repeat-x 0 0;
   border: 1px solid #2487BB;
   border-bottom: 0;
@@ -708,8 +719,8 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   height: 24px;
   margin: 0 0 0 3px;
 }
-ul.ui-tabs-nav li:hover a,
-ul.ui-tabs-nav li.ui-tabs-selected a {
+.newsblock ul.ui-tabs-nav li:hover a,
+.newsblock ul.ui-tabs-nav li.ui-tabs-selected a {
   height: 24px !important;
 }
 .ui-tabs .ui-tabs-hide {
@@ -777,11 +788,11 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   left: 40px;
 }
 .gallery-admin {
-  display: block;
+  display: none;
   bottom: 31px;
 }
-.gallery .image-admin a.edit,
-.gallery .image-admin a.destroy{
+.image-admin a.edit,
+.image-admin a.destroy{
   display: block;
   float: left;
   width: 27px !important;
@@ -852,4 +863,144 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   line-height: 11px;
   bottom: 10px;
   left: 10px;
+}
+
+
+/*
+* Car datasheets
+*/
+h3#car-title {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+h3#car-title img {
+  float: left;
+}
+h4#car-gallery-title {
+  margin-bottom: 0;
+  float: left;
+}
+#car-gallery .block-header.fix {
+  border-right: 0;
+  margin-left: 275px;
+}
+#car-photo {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 229px;
+  background: url(../images/car-photo.png);
+}
+#car-photo img {
+  margin: 5px;
+}
+#car-gallery {
+  display: block;
+  position: relative;
+  border: 1px solid #2487bb;
+  height: 229px;
+}
+#car-gallery-box {
+  display: block;
+  position: relative;
+  float: left;
+  height: 162px;
+  width: 421px;
+}
+#car-gallery-box .item {
+  display: block;
+  float: left;
+  height: 100px;
+  width: 120px;
+  padding: 4px;
+  position: relative;
+}
+a.add-image {
+  height: 30px;
+  width: 35px;
+  display: block;
+  float: right;
+  padding: 3px 3px 2px;
+  background: url(../images/image-add.png) no-repeat 3px 3px;
+}
+#car-gallery-box .inner{
+  height: 142px;
+  width: 401;
+  padding: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+}
+#car-gallery-box .image-admin {
+  position: absolute;
+  display: none;
+  height: 22px;
+  width: 54px;
+  background: url(../images/image-admin.png);
+  bottom: 4px;
+  left: 40px;
+}
+#auto-adatok-tabs {
+  height: 270px;
+  width: 275px;
+  display: block;
+  float: left;
+  background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
+  border: 1px solid #dddddd;
+  margin: 10px 0 0 0;
+  -moz-border-radius: 5px;
+  border-radius: 5px 5px;
+}
+#auto-adatok-tabs ul.ui-tabs-nav {
+  position: relative;
+  right: 0;
+  top: 0;
+  margin-left: 10px;
+}
+#auto-adatok-tabs ul.ui-tabs-nav li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0 5px 0 0;
+  background: transparent;
+  border: none;
+  width: auto;
+}
+#auto-adatok-tabs ul.ui-tabs-nav li a {
+  text-transform: uppercase;
+  font-size: 11px;
+}
+#auto-adatok-tabs ul.ui-tabs-nav li a:hover,
+#auto-adatok-tabs ul.ui-tabs-nav li.ui-tabs-selected a {
+  color: black;
+}
+#car-description {
+  height: 200px;
+  width: 409px;
+  display: block;
+  float: left;
+  background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
+  border: 1px solid #2487bb;
+  margin: 10px 0 0 10px;
+  -moz-border-radius: 5px;
+  border-radius: 5px 5px;
+}
+#car-description .inner{
+  height: 154px;
+  width: 389px;
+  padding: 10px;
+  overflow: auto;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+}
+#car-equipment {
+  height: 58px;
+  width: 409px;
+  display: block;
+  float: left;
+  background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
+  border: 1px solid #2487bb;
+  margin: 10px 0 0 10px;
+  -moz-border-radius: 5px;
+  border-radius: 5px 5px;
 }

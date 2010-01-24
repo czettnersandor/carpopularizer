@@ -1,0 +1,13 @@
+<h1>Képfeltöltés</h1>
+<div id="multiupload" style="display: block">
+  <% form_for :image, :url=>user_box_carimages_path(params[:user_id], params[:box_id]),
+    :html => { :multipart => true } do |f| %>
+
+    <% (1..5).each do |i| -%>
+      <%= f.file_field :image, :size=>15, :class=>"fileuploader", :index => i %><br/>
+    <% end -%>
+
+    <%= submit_tag _('Save') %>
+  <% end %>
+</div>
+

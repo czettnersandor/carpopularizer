@@ -9,13 +9,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100121210045) do
+ActiveRecord::Schema.define(:version => 20100124123135) do
+
+  create_table "carimages", :force => true do |t|
+    t.integer  "car_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "title"
+    t.integer  "ordinal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cars", :force => true do |t|
     t.string   "genre"
     t.string   "name"
     t.integer  "user_id"
-    t.integer  "gallery_id"
     t.string   "make"
     t.string   "age_grade"
     t.string   "ccm"
@@ -28,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20100121210045) do
     t.integer  "ordinal"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   add_index "cars", ["user_id"], :name => "index_cars_on_user_id"
