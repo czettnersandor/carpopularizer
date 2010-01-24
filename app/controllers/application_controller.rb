@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     include FastGettext::Translation 
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  before_filter :set_toppings, :set_gettext_locale
+  before_filter :set_toppings, :set_gettext_locale, :correct_safari_and_ie_accept_headers
   include AuthenticatedSystem
 
   layout "main"
@@ -19,6 +19,12 @@ class ApplicationController < ActionController::Base
     FastGettext.text_domain = 'app'
     FastGettext.available_locales = ['en','hu'] #all you want to allow
     super
+  end
+
+  
+
+  def correct_safari_and_ie_accept_headers
+    request.accepts.sort!{ |x, y| y.to_s == 'text/javascript' ? 1 : -1 } if request.xhr?
   end
 
 end

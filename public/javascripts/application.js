@@ -4,8 +4,12 @@ var searchbarState = 0;
 // jQuery.ajaxSettings.traditional = true;
 
 jQuery.ajaxSetup({
-  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
-})
+  'beforeSend': function(xhr) {
+    // First unset it, then set (which otherwise appends)
+    xhr.setRequestHeader("Accept", "");
+    xhr.setRequestHeader("Accept", "text/javascript");
+    }
+});
 
 var RecaptchaOptions = {
   theme : 'clean',
