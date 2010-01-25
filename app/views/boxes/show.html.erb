@@ -51,15 +51,32 @@
       </ul>
 
       <div id="data">
+        <label><%= _('Make') %></label>
+        <span class="data"><%= @car.make %></span>
+
+        <label><%= _('Age grade') %></label>
+        <span class="data"><%= @car.age_grade %></span>
       </div>
 
       <div id="exterior">
+        <label><%= _('Color') %></label>
+        <span class="data"><%= @car.color %></span>
       </div>
 
       <div id="interior">
       </div>
 
       <div id="engine">
+        <label><%= _('Performance') %></label>
+        <span class="data"><%= @car.performance %></span>
+        <label><%= _('Fuel') %></label>
+        <span class="data"><%= @car.fuel %></span>
+        <label><%= _('Acceleration') %></label>
+        <span class="data"><%= @car.acceleration %></span>
+        <label><%= _('Top speed') %></label>
+        <span class="data"><%= @car.topspeed %></span>
+        <label><%= _('Torque') %></label>
+        <span class="data"><%= @car.torque %></span>
       </div>
 
       <div id="audio">

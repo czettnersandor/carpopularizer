@@ -5,7 +5,7 @@
 
     <% @cars.each do |car| %>
 
-      <%= render :partial => "listitem", :locals => {:car => car, :user => @user} %>
+      <%= render :partial => "carlistitem", :locals => {:car => car, :user => @user} %>
 
     <% end %>
 

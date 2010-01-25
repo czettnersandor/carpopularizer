@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100124123135) do
+ActiveRecord::Schema.define(:version => 20100125173217) do
+
+  create_table "carcomments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "car_id"
+    t.text     "body"
+    t.integer  "reply_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "carimages", :force => true do |t|
     t.integer  "car_id"

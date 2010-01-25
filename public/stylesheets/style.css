@@ -955,8 +955,8 @@ a.add-image {
   left: 40px;
 }
 #auto-adatok-tabs {
-  height: 270px;
-  width: 275px;
+  height: 250px;
+  width: 255px;
   display: block;
   float: left;
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
@@ -964,12 +964,24 @@ a.add-image {
   margin: 10px 0 0 0;
   -moz-border-radius: 5px;
   border-radius: 5px 5px;
+  padding: 10px;
+}
+#auto-adatok-tabs label {
+  font-weight: bold;
+  margin-right: 5px;
+  width: 100px;
+  display: block;
+  float: left;
+  clear: left;
+}
+#auto-adatok-tabs span.data {
+  float: left;
 }
 #auto-adatok-tabs ul.ui-tabs-nav {
   position: relative;
   right: 0;
   top: 0;
-  margin-left: 10px;
+  padding-bottom: 20px;
 }
 #auto-adatok-tabs ul.ui-tabs-nav li {
   display: block;

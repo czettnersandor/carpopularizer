@@ -3,4 +3,5 @@ class Car < ActiveRecord::Base
   attr_accessible :genre, :name, :user_id, :gallery_id, :make, :age_grade, :ccm, :performance,
       :fuel, :acceleration, :topspeed, :torque, :color, :description
   has_many :carimages
+  has_many :comments
 end

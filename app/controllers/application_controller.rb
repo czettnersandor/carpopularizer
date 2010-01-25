@@ -21,8 +21,6 @@ class ApplicationController < ActionController::Base
     super
   end
 
-  
-
   def correct_safari_and_ie_accept_headers
     request.accepts.sort!{ |x, y| y.to_s == 'text/javascript' ? 1 : -1 } if request.xhr?
   end

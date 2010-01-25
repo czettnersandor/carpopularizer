@@ -2,11 +2,10 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
-    <% unless current_user %>
-      You do not have permission to access this page!
-    <% else %>
-      <h2>Current Friends</h2>
-      <%= render :partial => 'friends/friends' %>
+    <h2>Current Friends</h2>
+    <%= render :partial => 'friends/friends' %>
+
+    <% if admin_or_current? @user %>
       <h2>Requested Friends</h2>
       <%= render :partial => 'friends/requested_friends' %>
       <h2>Pending Friends</h2>
