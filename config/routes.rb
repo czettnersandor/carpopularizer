@@ -8,6 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :front
   map.resource :search
   map.resources :comments
+  map.resources :cars
   map.resources :carcomments
   map.resource :password
   map.resources :profile, :collection => { :edit => :get }
