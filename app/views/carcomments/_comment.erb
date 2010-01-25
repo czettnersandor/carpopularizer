@@ -1,0 +1,19 @@
+<div class="list-header">
+  <%= link_to comment.user.login, comment.user %>
+  (<%= comment.user.comments_count %>)
+  <span class="date"><%= comment.created_at %></span>
+</div>
+
+<div class="profile-data">
+  <%= image_tag comment.user.avatar.url(:thumb) %>
+</div>
+
+<div class="body">
+  <%= comment.body %>
+</div>
+<div class="links">
+  <%= link_to_function 'reply', "$('#comment_reply_to').replyTo("+comment.id.to_s+")" %>
+  <%= link_to_function 'in reply to',
+    "$(this).parentsUntil('.comment').addCarReplyMessage('"+comment.reply_to.to_s+"')",
+    :class => "reply-to" if comment.reply_to %>
+</div>
