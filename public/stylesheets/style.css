@@ -1035,6 +1035,11 @@ a.add-image {
   -moz-border-radius: 5px;
   border-radius: 5px 5px;
 }
+#car-comments {
+  clear:both;
+  display: block;
+  padding-top: 10px;
+}
 #car-comments .comment {
   border-color: #FA981B;
 }
