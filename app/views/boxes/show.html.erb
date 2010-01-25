@@ -114,6 +114,18 @@
           </div>
         </div>
       <% end %>
+
+      <%= will_paginate @comments %>
+      <% @comments.each do |comment| %>
+
+        <div class="comment" id="comment-<%= comment.id.to_s %>">
+          <%= render :partial => "carcomments/comment", :locals => {:comment => comment} %>
+          <hr class="clear" />
+        </div>
+
+      <% end %>
+
+      <%= will_paginate @comments %>
     </div>
 
     <hr class="clear" />

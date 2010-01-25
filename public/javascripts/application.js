@@ -69,6 +69,20 @@ jQuery.fn.addReplyMessage = function(id) {
     }
   });
 }
+
+jQuery.fn.addCarReplyMessage = function(id) {
+  replylink = $(this);
+  commentDiv = $(this).parent();
+  jQuery.ajax({
+    url:'/carcomments/'+id,
+    success: function(html){
+      commentDiv.append('<div id="reply-'+id+'" class="indent">'+html+'</div>');
+      replylink.children('a.reply-to').hide();
+      commentDiv.children('.indent').children('.reply').show();
+    }
+  });
+}
+
 jQuery.fn.replyTo = function(id) {
   $('#comment_reply_to').val(id);
   $('#comment-form').show();

@@ -9,6 +9,7 @@ class BoxesController < ApplicationController
 
   def show
     @title = @user.login+" » "+@car.name
+    @comments = Carcomment.paginate(:page => params[:page], :per_page => 25, :order => 'carcomments.created_at DESC', :include => :user, :conditions => ['carcomments.car_id = ?', @car.id])
   end
 
   def new
@@ -65,7 +66,7 @@ class BoxesController < ApplicationController
         format.html { redirect_to(user_box_path(@user, @car)) }
         format.xml  { render :xml => @car, :status => :created, :location => @car }
       else
-        format.html { render :action => "new" }
+        format.html { }
         format.xml  { render :xml => @car.errors, :status => :unprocessable_entity }
       end
     end

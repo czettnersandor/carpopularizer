@@ -1,8 +1,12 @@
-  <div class="profile-data">
-    <%= image_tag comment.user.avatar.url(:thumb) %>
-    <%= link_to comment.user.login, comment.user %>
-    (<%= comment.user.comments_count %>)
-  </div>
+<div class="list-header">
+  <%= link_to comment.user.login, comment.user %>
+  (<%= comment.user.comments_count %>)
+  <span class="date"><%= comment.created_at %></span>
+</div>
+
+<div class="profile-data">
+  <%= image_tag comment.user.avatar.url(:thumb) %>
+</div>
 
   <div class="date"><%= comment.created_at %></div>
   <div class="body">

@@ -514,10 +514,15 @@ label.error {
   height: 18px;
   display: block;
   margin: -10px -10px 0 -10px;
+  padding: 0 10px 0 10px;
 }
 .comment .list-header img,
 .listitem .list-header img {
   float: left;
+}
+.comment .list-header span.date,
+.listitem .list-header span.date {
+  float: right;
 }
 .comment .profile-data,
 .listitem .profile-data{
@@ -1029,4 +1034,7 @@ a.add-image {
   margin: 10px 0 0 10px;
   -moz-border-radius: 5px;
   border-radius: 5px 5px;
+}
+#car-comments .comment {
+  border-color: #FA981B;
 }
