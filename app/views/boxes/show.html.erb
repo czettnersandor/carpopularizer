@@ -98,6 +98,24 @@
       </div>
     </div>
 
+    <div id="car-comments">
+      <% if logged_in? %>
+        <%= link_to_function _('new comment'), "$('#comment-form').show()" %>
+        <div id="comment-form" class="editbox">
+          <div class="container">
+            <%= content_tag 'p', h(flash[:bad_reply]), :class => 'notice' if flash[:bad_reply] %>
+            <% form_for(:comment, :url => user_box_path(@user, @car)+'/addcomment') do |f| -%>
+              <%= f.hidden_field :reply_to %>
+              <%= f.text_area :body, :rows => 8 %>
+
+              <%= submit_tag "Save Reply" %><span class="button_or">or <%= link_to_function 'cancel', "$('#comment-form').hide()" %></span>
+
+            <% end -%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
     <hr class="clear" />
   </div>
 </div>

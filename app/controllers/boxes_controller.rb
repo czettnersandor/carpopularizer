@@ -56,6 +56,21 @@ class BoxesController < ApplicationController
   def destroy
   end
 
+  def addcomment
+    @comment = Carcomment.new(params[:comment])
+    @comment.user_id = @user.id
+    @comment.car_id = @car.id
+    respond_to do |format|
+      if @comment.save
+        format.html { redirect_to(user_box_path(@user, @car)) }
+        format.xml  { render :xml => @car, :status => :created, :location => @car }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @car.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
   protected
   def preloaders
     @user = User.find(params[:user_id])

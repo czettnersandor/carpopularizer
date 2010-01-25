@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :friendships, :dependent => :destroy
   has_many :galleries
   has_many :cars
+  has_many :comments
+  has_many :carcomments
   
   # Virtual attribute for the unencrypted password
   attr_accessor :password
