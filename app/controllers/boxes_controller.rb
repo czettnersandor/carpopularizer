@@ -59,7 +59,7 @@ class BoxesController < ApplicationController
 
   def addcomment
     @comment = Carcomment.new(params[:comment])
-    @comment.user_id = @user.id
+    @comment.user_id = current_user.id
     @comment.car_id = @car.id
     respond_to do |format|
       if @comment.save
