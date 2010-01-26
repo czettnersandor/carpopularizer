@@ -1,3 +1,5 @@
+<%= render :partial => "searchform" %>
+
 <% @cars.each do |car| %>
 
   <%= render :partial => "carlistitem", :locals => {:car => car, :user => car.user} %>

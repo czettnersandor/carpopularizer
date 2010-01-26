@@ -141,8 +141,8 @@ module BoxesHelper
     ["_0122_abarth.png","Abarth"]
   ]
   
-  def genrelist(selected_genre='_0006_volkswagen.png')
-    opt_list = ""
+  def genrelist(selected_genre='')
+    opt_list = '<option value="">'+_('-- Empty --')+'</option>'
     GENRES.reverse.each do |genre|
       selected = selected_genre == genre[0] ? ' selected="true">' : '>'
       opt_list += '<option value='+genre[0]+selected+genre[1]+'</option>'
@@ -158,8 +158,8 @@ module BoxesHelper
     end
   end
 
-  def makelist(selected_make='Cabriolet')
-    opt_list = ""
+  def makelist(selected_make='')
+    opt_list = '<option value="">'+_('-- Empty --')+'</option>'
     MAKES.each do |m|
       selected = selected_make == m ? ' selected="true">' : '>'
       opt_list += '<option value='+m+selected+ _(m) +'</option>'

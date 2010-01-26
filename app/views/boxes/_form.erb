@@ -1,13 +1,13 @@
 <%= f.error_messages %>
 
 <div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
-  <%= f.select :genre, genrelist %><hr/></div>
+  <%= f.select :genre, genrelist(@car.genre) %><hr/></div>
 
 <div class="form-item"><label for="name"><%=_('Type')%></label><br/>
   <%= f.text_field :name %><hr/></div>
 
 <div class="form-item"><label for="make"><%=_('Make')%></label><br/>
-  <%= f.select :make, makelist %><hr/></div>
+  <%= f.select :make, makelist(@car.make) %><hr/></div>
 
 <div class="form-item"><label for="age_grade"><%=_('Age-grade')%></label><br/>
   <%= f.text_field :age_grade %><hr/></div>
