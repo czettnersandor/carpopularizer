@@ -1,0 +1,6 @@
+<div class="child">
+
+  <%= render :partial => 'layouts/newslist', :locals => { :news => @news }  %>
+  <%= will_paginate @news, :param_name => :page %>
+
+</div>
