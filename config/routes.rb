@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :pages, :collection => { :parse_textile => :post }
   map.resources :users, :collection => { :check_username => :get, :check_email => :get, :activate => :get }
   map.resource :session
-  map.resource :front
+  map.resource :front, :collection => { :monthly_en => :get, :daily_en => :get }
   map.resource :search
   map.resources :comments
   map.resources :cars
@@ -69,7 +69,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "front"
+  map.root :controller => "fronts"
 
   # See how all your routes lay out with "rake routes"
 

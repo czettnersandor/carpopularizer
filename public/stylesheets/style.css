@@ -27,6 +27,9 @@ a:hover {
   color: #fa981b;
   text-decoration: underline;
 }
+a:focus {
+  outline: none;
+}
 
 input, textarea, select {
   background:transparent url(../images/form-text.png) repeat-x scroll 0 0;
@@ -118,7 +121,7 @@ div.pagination {
   background: url(../images/block-header.png) no-repeat;
   margin: 0;
   height: 35px;
-  padding-left: 50px;
+  padding-left: 70px;
   border: 1px solid #2487bb;
   border-bottom: none;
   -moz-border-radius-topleft: 5px;
@@ -138,7 +141,8 @@ div.pagination {
   height: 25px;
 }
 .block-header h3 {
-  font-size: 18px;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 /*
@@ -395,6 +399,12 @@ form .error .jquery-selectbox {
 #menubar li.first {
   background-position: 0px 0px;
 }
+#menubar li.orange a {
+  color: #ffffff;
+}
+#menubar li.orange a {
+  color: #fa981b;
+}
 #menubar li:hover,
 #menubar li.active {
   background-position: 0px -39px;
@@ -613,6 +623,8 @@ hr.clear {
 #profile-left .lightblue.usermenu li a.active {
   background: url(../images/usermenu.png);
   text-decoration: none;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #fa981b;
 }
 
 #profile-right {
@@ -704,6 +716,21 @@ table.profile-edit td {
   display: block;
   height: 20px;
 }
+#rss-list-by-hits li.daily-en {
+  width: 30px;
+  margin-left: -3px;
+}
+#rss-list-by-hits li.daily-en a {
+  background: url(../images/lang-icons.png) -16px 0;
+}
+#rss-list-by-hits li {
+  width: 90px;
+}
+#rss-list-by-hits a.daily,
+#rss-list-by-hits a.monthly {
+  background: url(../images/lang-icons.png) 41px -24px no-repeat;
+  padding-right: 30px;
+}
 .newsblock ul.ui-tabs-nav {
   margin: 0;
   position: absolute;
@@ -716,7 +743,7 @@ table.profile-edit td {
   list-style: none;
   width: 62px;
   height: 20px;
-  margin: 4px 0 0 3px;
+  margin: 3px 0 0 3px;
   /* background: url(../images/tabs.png) no-repeat 0 -24px; */
   border: 1px solid #aaaaaa;
   border-bottom: 0;
@@ -725,6 +752,7 @@ table.profile-edit td {
   border-top-left-radius: 3px 3px;
   border-top-right-radius: 3px 3px;
   text-align: center;
+  background: white;
 }
 .newsblock ul.ui-tabs-nav li:hover,
 .newsblock ul.ui-tabs-nav li.ui-tabs-selected {
