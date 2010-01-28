@@ -26,16 +26,22 @@
   <div class="lightblue-block newsblock" id="rss-list-by-hits">
 
     <ul>
-      <li><a href="#tabs-hits-monthly" class="monthly"><%= _('Monthly') %></a></li>
-      <li class="daily-en"><a href="/front/monthly_en" title="monthly english"></a></li>
-      <li><a href="#tabs-hits-daily" class="daily"><%= _('Daily') %></a></li>
-      <li class="daily-en"><a href="/front/daily_en" title="daily english"></a></li>
+      <li><a href="#tabs-hits-monthly" class="monthly"><%= _('Month') %></a></li>
+      <li><a href="#tabs-hits-weekly" class="weekly"><%= _('Week') %></a></li>
+      <li><a href="#tabs-hits-daily" class="daily"><%= _('Day') %></a></li>
     </ul>
 
     <div id="tabs-hits-monthly">
       <div class="child">
         <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_monthly }  %>
         <%= will_paginate @news_by_hits_monthly, :param_name => :page_by_hits %>
+      </div>
+    </div>
+
+    <div id="tabs-hits-weekly">
+      <div class="child">
+        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_weekly }  %>
+        <%= will_paginate @news_by_hits_weekly, :param_name => :page_by_hits %>
       </div>
     </div>
 
@@ -58,6 +64,19 @@
       </div>
     </div>
     
+  </div>
+</div>
+
+<div class="grid_12 alpha omega" id="aggregators">
+  <div class="hu">
+    <% @rssreaders_hu.each do |rssreader| %>
+      <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
+    <% end -%>
+  </div>
+  <div class="en">
+    <% @rssreaders_en.each do |rssreader| %>
+      <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
+    <% end -%>
   </div>
 </div>
 

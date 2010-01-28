@@ -11,12 +11,12 @@
       <h3 id="car-title">
         <%= image_tag('/images/genres/32/'+@car.genre) %>
         <%= genre(@car.genre)+" "+@car.name %>
+        <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "add-image") if admin_or_current? @user %>
       </h3>
 
-      <div class="block-header fix">
-        <h4 id="car-gallery-title">Gallery</h4>
-        <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "add-image") if admin_or_current? @user %>
-      </div>
+      
+      
+      
       <div id="car-gallery-box">
         <div class="inner">
           <% @car.carimages.each do |image| %>

@@ -9,8 +9,13 @@ class FrontsController < ApplicationController
     # @news_by_hits = Rssnews.find :all, :order=>"hits DESC", :limit=>5
     @news_by_hits_monthly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
       :order=>"hits DESC", :conditions => ["lang = ?", "hu"]
+    @news_by_hits_weekly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-7.days]
     @news_by_hits_daily = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
       :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-24.hours]
+
+    @rssreaders_hu = Rssreader.find_all_by_lang 'hu'
+    @rssreaders_en = Rssreader.find_all_by_lang 'en'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +34,15 @@ class FrontsController < ApplicationController
   end
 
   def daily_en
+    @news = Rssnews.paginate :page => params[:page], :per_page => 5,
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-24.hours]
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js  { render :layout => false, :action => :ajaxnews }
+    end
+  end
+
+  def weekly_en
     @news = Rssnews.paginate :page => params[:page], :per_page => 5,
       :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-24.hours]
     respond_to do |format|

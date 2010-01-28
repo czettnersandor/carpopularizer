@@ -253,6 +253,38 @@ div.pagination {
   display: block;
   clear: both;
 }
+#loginblock ul.usermenu {
+  float: left;
+  list-style: none;
+}
+#loginblock ul.usermenu li.username {
+  padding-right: 16px;
+  background: url(../images/dropdown.png) no-repeat right;
+}
+#loginblock ul.usermenu li ul {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #2487bb;;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#loginblock ul.usermenu li ul li {
+  margin: 0;
+  width: 100px;
+}
+#loginblock ul.usermenu li ul li a {
+  display: block;
+}
+#loginblock ul.usermenu li:hover ul,
+#menu li.sfhover ul {
+  left: auto;
+  display: block;
+  z-index: 1;
+}
 
 /*
 * Search bar
@@ -677,9 +709,11 @@ table.profile-edit td {
   float: left;
   clear: right;
 }
-.news-item .title a {
+.news-item .title a,
+#aggregators .rssreader {
   padding-left: 16px;
   background: url(../images/icon-16.png) no-repeat 0 -16px;
+  margin-right: 10px;
 }
 .news-item .title a:visited {
   background: url(../images/icon-16.png) no-repeat 0 0;
@@ -706,6 +740,21 @@ table.profile-edit td {
   margin: 0;
   visibility: hidden;
 }
+
+#aggregators {
+  margin-top: 20px;
+}
+#aggregators .hu {
+  padding-left: 40px;
+  margin-bottom: 20px;
+  background: url(../images/lang-icons.png) -18px -27px no-repeat;
+}
+#aggregators .en {
+  padding-left: 40px;
+  margin-bottom: 20px;
+  background: url(../images/lang-icons.png) -18px -3px no-repeat;
+}
+
 #rss-list li a.hu {
   display: block;
   height: 20px;
@@ -719,21 +768,6 @@ table.profile-edit td {
 #rss-list-by-hits li a {
   display: block;
   height: 20px;
-}
-#rss-list-by-hits li.daily-en {
-  width: 30px;
-  margin-left: -3px;
-}
-#rss-list-by-hits li.daily-en a {
-  background: url(../images/lang-icons.png) -16px 0;
-}
-#rss-list-by-hits li {
-  width: 90px;
-}
-#rss-list-by-hits a.daily,
-#rss-list-by-hits a.monthly {
-  background: url(../images/lang-icons.png) 41px -24px no-repeat;
-  padding-right: 30px;
 }
 .newsblock ul.ui-tabs-nav {
   margin: 0;
@@ -927,14 +961,6 @@ h3#car-title {
 h3#car-title img {
   float: left;
 }
-h4#car-gallery-title {
-  margin-bottom: 0;
-  float: left;
-}
-#car-gallery .block-header.fix {
-  border-right: 0;
-  margin-left: 275px;
-}
 #car-photo {
   display: block;
   float: left;
@@ -953,10 +979,11 @@ h4#car-gallery-title {
 }
 #car-gallery-box {
   display: block;
-  position: relative;
+  position: abolute;
   float: left;
-  height: 162px;
+  height: 194px;
   width: 421px;
+  bottom: 0;
 }
 #car-gallery-box .item {
   display: block;
@@ -975,7 +1002,7 @@ a.add-image {
   background: url(../images/image-add.png) no-repeat 3px 3px;
 }
 #car-gallery-box .inner{
-  height: 142px;
+  height: 174px;
   width: 401;
   padding: 10px;
   overflow: auto;
