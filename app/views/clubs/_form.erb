@@ -1,0 +1,19 @@
+<%= f.error_messages %>
+
+<div class="form-item"><label for="name"><%=_('Name')%></label><br/>
+  <%= f.text_field :name %><hr/></div>
+
+<div class="form-item"><label for="short_description"><%=_('Short description')%></label><br/>
+  <%= f.text_field :short_description %><hr/></div>
+
+<div class="form-item"><label for="description"><%=_('Description')%></label><br/>
+  <%= f.text_area :description %><hr/></div>
+
+<div class="form-item">
+  <%= image_tag @club.logo.url(:thumb) %><br/>
+  <label for="logo"><%=_('Logo')%></label><br/>
+  <%= f.file_field :logo, :size=>15 %><hr/></div>
+
+<p>
+<div class="form-item"><%= submit_tag _('Save') %></div>
+</p>

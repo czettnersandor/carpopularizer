@@ -25,4 +25,34 @@ class ApplicationController < ActionController::Base
     request.accepts.sort!{ |x, y| y.to_s == 'text/javascript' ? 1 : -1 } if request.xhr?
   end
 
+  def gen_conditions(parameters, model)
+    conds = []
+    condvals = []
+    columns = model.column_names
+    parameters.each do |k, v|
+      ks = k.to_s
+      if columns.include? ks
+
+        col = model.columns_hash[ks]
+        case col.type
+        when :string
+          conds << " #{k} like ? "
+          condvals << "%#{v}%"
+        when :integer
+          if v != ""
+            conds << " #{k} = ? "
+            condvals << v.to_i
+          end
+        when :float
+          if v != ""
+            conds << " #{k} = ? "
+            condvals << v == v.to_f
+          end
+        end
+
+      end
+    end
+    return [conds.join(' and '), *condvals]
+  end
+
 end

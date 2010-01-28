@@ -143,6 +143,10 @@ div.pagination {
 .block-header h3 {
   font-size: 15px;
   margin-top: 5px;
+  margin-bottom: 0;
+}
+.block-header.small h3 {
+  margin-top: 0;
 }
 
 /*

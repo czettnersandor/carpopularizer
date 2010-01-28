@@ -1,0 +1,11 @@
+<% form_tag(clubs_path, :method => "get") do %>
+
+  <div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
+    <%= select_tag :genre, genrelist(params[:genre]) %><hr/></div>
+
+  <div class="form-item"><label for="name"><%=_('Name')%></label><br/>
+    <%= text_field_tag :name, params[:name] %><hr/></div>
+
+  <%= submit_tag(_("Search"), :name => nil) %>
+<% end %>
+<hr class="clear" />

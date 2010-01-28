@@ -1,0 +1,10 @@
+<%= render :partial => "searchform" %>
+
+<% @clubs.each do |club| %>
+
+  <%= render :partial => "clublistitem", :locals => {:club => club} %>
+
+<% end %>
+
+<%= link_to _('New club'), new_club_path %>
+

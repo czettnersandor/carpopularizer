@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
+  map.resources :clubs
   map.resources :rssnews
   map.resources :rssreaders
   map.resources :pages, :collection => { :parse_textile => :post }
