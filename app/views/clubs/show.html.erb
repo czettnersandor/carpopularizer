@@ -1,6 +1,45 @@
-<%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
-%>
+<div id ="club-header">
+  <div id="club-logo">
+    <%= image_tag(@club.logo.url(:club)) %>
+  </div>
+  <h3 id="club-title">
+    <%= @club.name %>
+  </h3>
+  <div id="club-description">
+    <%= @club.description %>
+  </div>
+</div>
 
-<%= @club.name %>
+<div id="club-tabs">
+  <ul class="wide-tabs">
+    <li><a href="#intro"><%= _("Introduction") %></a></li>
+    <li><a href="#shoutbox"><%= _("Shoutbox") %></a></li>
+    <li><a href="#members"><%= _("Members") %></a></li>
+    <li><a href="#meetings"><%= _("Meetings") %></a></li>
+  </ul>
+
+  <div id="intro">
+
+  </div>
+
+  <div id="shoutbox">
+
+  </div>
+
+  <div id="members">
+
+  </div>
+
+  <div id="meetings">
+
+  </div>
+
+</div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#club-tabs').tabs();
+
+  });
+</script>

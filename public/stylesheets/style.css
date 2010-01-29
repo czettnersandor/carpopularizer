@@ -16,7 +16,7 @@ body {
   background-image: url(../images/sitebg.png);
   background-position: center top;
   background-repeat: no-repeat;
-  height: 1020px;
+  height: 627px;
 }
 
 a {
@@ -1131,4 +1131,42 @@ a.add-image {
 }
 #car-comments .comment {
   border-color: #FA981B;
+}
+
+/*
+* Club
+*/
+#club-header {
+  border: 1px solid #fa981b;
+  display: block;
+  height: 229px;
+  position: relative;
+}
+#club-logo {
+  display: block;
+  float: left;
+  background: url(../images/club-logo.png);
+  width: 275px;
+  height: 229px;
+  border-right: 1px solid #fa981b;
+}
+#club-logo img {
+  margin: 5px 0 0 5px;
+}
+h3#club-title {
+  display: block;
+  height: 24px;
+  padding: 0 0 0 295px;
+  margin: 0;
+  font-size: 18px;
+  background: #fbc978 url(../images/club-title.png) no-repeat 275px;
+  border-bottom: 1px solid #fa981b;
+}
+#club-description {
+  padding: 10px 10px 10px 295px;
+}
+#club-tabs {
+  margin-top: 20px;
+  background: url("../images/lightblue-horiz-bottom.png") repeat-x bottom transparent;
+  border: 1px solid #2487bb;
 }

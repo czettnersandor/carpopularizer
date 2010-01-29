@@ -7,15 +7,20 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
+    @title = @club.name
   end
 
   def new
     @club = Club.new
   end
 
+  def edit
+    @club = Club.find(params[:id])
+  end
+
   def create
     @club = Club.new(params[:club])
-
+    @club.user = current_user
     respond_to do |format|
       if @club.save
         flash[:notice] = _('Club was successfully created.')
@@ -30,7 +35,18 @@ class ClubsController < ApplicationController
   end
 
   def update
+    @club = Club.find(params[:id])
 
+    respond_to do |format|
+      if @club.update_attributes(params[:club])
+        flash[:notice] = _('Club was successfully updated.')
+        format.html { redirect_to(@club) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @club.errors, :status => :unprocessable_entity }
+      end
+    end
   end
 
   def destroy

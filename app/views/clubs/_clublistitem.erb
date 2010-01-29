@@ -3,7 +3,7 @@
     <%= link_to(club.name, club) %>
   </div>
   <div class="profile-data">
-    <%# link_to(image_tag(car.carimages.first.image.url(:thumb)), user_box_path(car.user, car)) if car.carimages.first %>
+    <%= link_to(image_tag(club.logo.url(:thumb)), club_path(club)) if club.logo %>
   </div>
   <div class="description">
     <%= shorten(club.description) %>
