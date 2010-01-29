@@ -24,46 +24,72 @@
 <div class="grid_6 omega">
   <div class="block-header"><h3><%= _("Most viewed") %></h3></div>
   <div class="lightblue-block newsblock" id="rss-list-by-hits">
-
     <ul>
-      <li><a href="#tabs-hits-monthly" class="monthly"><%= _('Month') %></a></li>
-      <li><a href="#tabs-hits-weekly" class="weekly"><%= _('Week') %></a></li>
-      <li><a href="#tabs-hits-daily" class="daily"><%= _('Day') %></a></li>
+      <li><a href="#tabs-hits-hu" class="hu"></a></li>
+      <li><a href="#tabs-hits-en" class="en"></a></li>
     </ul>
 
-    <div id="tabs-hits-monthly">
-      <div class="child">
-        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_monthly }  %>
-        <%= will_paginate @news_by_hits_monthly, :param_name => :page_by_hits %>
+    <div id="tabs-hits-hu" class="innertab">
+
+
+      <ul>
+        <li><a href="#tabs-hits-hu-monthly" class="monthly"><%= _('Month') %></a></li>
+        <li><a href="#tabs-hits-hu-weekly" class="weekly"><%= _('Week') %></a></li>
+        <li><a href="#tabs-hits-hu-daily" class="daily"><%= _('Day') %></a></li>
+      </ul>
+
+      <div id="tabs-hits-hu-monthly">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_monthly }  %>
+          <%= will_paginate @news_by_hits_monthly, :param_name => :page_by_hits %>
+        </div>
       </div>
+      <div id="tabs-hits-hu-weekly">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_weekly }  %>
+          <%= will_paginate @news_by_hits_weekly, :param_name => :page_by_hits %>
+        </div>
+      </div>
+      <div id="tabs-hits-hu-daily">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_daily }  %>
+          <%= will_paginate @news_by_hits_daily, :param_name => :page_by_hits %>
+        </div>
+      </div>
+
+
     </div>
 
-    <div id="tabs-hits-weekly">
-      <div class="child">
-        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_weekly }  %>
-        <%= will_paginate @news_by_hits_weekly, :param_name => :page_by_hits %>
+
+    <div id="tabs-hits-en" class="innertab">
+
+      <ul>
+        <li><a href="#tabs-hits-en-monthly" class="monthly"><%= _('Month') %></a></li>
+        <li><a href="#tabs-hits-en-weekly" class="weekly"><%= _('Week') %></a></li>
+        <li><a href="#tabs-hits-en-daily" class="daily"><%= _('Day') %></a></li>
+      </ul>
+
+      <div id="tabs-hits-en-monthly">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_en_monthly }  %>
+          <%= will_paginate @news_by_hits_en_monthly, :param_name => :page_by_hits %>
+        </div>
       </div>
+      <div id="tabs-hits-en-weekly">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_en_weekly }  %>
+          <%= will_paginate @news_by_hits_en_weekly, :param_name => :page_by_hits %>
+        </div>
+      </div>
+      <div id="tabs-hits-en-daily">
+        <div class="child">
+          <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_en_daily }  %>
+          <%= will_paginate @news_by_hits_en_daily, :param_name => :page_by_hits %>
+        </div>
+      </div>
+
     </div>
 
-    <div id="monthly_english">
-      <div class="child">
-
-      </div>
-    </div>
-
-    <div id="tabs-hits-daily">
-      <div class="child">
-        <%= render :partial => 'layouts/newslist', :locals => { :news => @news_by_hits_daily }  %>
-        <%= will_paginate @news_by_hits_daily, :param_name => :page_by_hits %>
-      </div>
-    </div>
-
-    <div id="daily_english">
-      <div class="child">
-
-      </div>
-    </div>
-    
   </div>
 </div>
 
@@ -85,13 +111,19 @@
 
     $('#tabs-hu .pagination a').ajaxLoad('#tabs-hu', '#tabs-hu .child');
     $('#tabs-en .pagination a').ajaxLoad('#tabs-en', '#tabs-en .child');
-    $('#tabs-hits-monthly .pagination a').ajaxLoad('#tabs-hits-monthly', '#tabs-hits-monthly .child');
-    $('#tabs-hits-daily .pagination a').ajaxLoad('#tabs-hits-daily', '#tabs-hits-daily .child');
-    $('#monthly_english .pagination a').ajaxLoad('#monthly_english', '.child');
-    $('#daily_english .pagination a').ajaxLoad('#daily_english', '.child');
+
+    $('#tabs-hits-hu-monthly .pagination a').ajaxLoad('#tabs-hits-hu-monthly', '#tabs-hits-hu-monthly .child');
+    $('#tabs-hits-hu-weekly .pagination a').ajaxLoad('#tabs-hits-hu-weekly', '#tabs-hits-hu-weekly .child');
+    $('#tabs-hits-hu-daily .pagination a').ajaxLoad('#tabs-hits-hu-daily', '#tabs-hits-hu-daily .child');
+
+    $('#tabs-hits-en-monthly .pagination a').ajaxLoad('#tabs-hits-en-monthly', '#tabs-hits-en-monthly .child');
+    $('#tabs-hits-en-weekly .pagination a').ajaxLoad('#tabs-hits-en-weekly', '#tabs-hits-en-weekly .child');
+    $('#tabs-hits-en-daily .pagination a').ajaxLoad('#tabs-hits-en-daily', '#tabs-hits-en-daily .child');
 
     $('#rss-list').tabs({remote:true});
     $('#rss-list-by-hits').tabs({remote:true});
+    $('#rss-list-by-hits #tabs-hits-hu').tabs({remote:true});
+    $('#rss-list-by-hits #tabs-hits-en').tabs({remote:true});
 
   });
 

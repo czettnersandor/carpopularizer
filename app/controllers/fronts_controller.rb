@@ -14,6 +14,13 @@ class FrontsController < ApplicationController
     @news_by_hits_daily = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
       :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-24.hours]
 
+    @news_by_hits_en_monthly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
+      :order=>"hits DESC", :conditions => ["lang = ?", "en"]
+    @news_by_hits_en_weekly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-7.days]
+    @news_by_hits_en_daily = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-24.hours]
+
     @rssreaders_hu = Rssreader.find_all_by_lang 'hu'
     @rssreaders_en = Rssreader.find_all_by_lang 'en'
 
