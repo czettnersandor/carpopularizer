@@ -8,6 +8,7 @@ class ClubsController < ApplicationController
 
   def show
     @title = @club.name
+    @shouts = Shout.all_shouts(@club.id)
   end
 
   # Add current_user to club through memberships

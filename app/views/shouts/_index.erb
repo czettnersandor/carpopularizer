@@ -1,0 +1,6 @@
+<% shouts.each do |shout| %>
+  <div class="shoutbox-item">
+    <hr/>
+    <%= link_to(shout.user.login, user_path(shout.user), :title => shout.created_at) %>: <%= shout.message %>
+  </div>
+<% end %>

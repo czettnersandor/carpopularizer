@@ -7,45 +7,55 @@
   </h3>
   <div id="club-description">
     <%= @club.description %>
+
+    <%= render :partial => "layouts/share", :locals => {:url => CGI::escape(request.url)} %>
+
   </div>
 </div>
 
-<div id="club-tabs">
-  <ul class="wide-tabs">
-    <li><a href="#intro"><%= _("Introduction") %></a></li>
-    <li><a href="#shoutbox"><%= _("Shoutbox") %></a></li>
-    <li><a href="#members"><%= _("Members") %></a></li>
-    <li><a href="#meetings"><%= _("Meetings") %></a></li>
-  </ul>
+<div class="club-tabs-wrapper">
+  <div id="club-tabs">
+    <ul class="wide-tabs">
+      <li><a href="#intro"><%= _("Introduction") %></a></li>
+      <li><a href="#shoutbox"><%= _("Shoutbox") %></a></li>
+      <li><a href="#members"><%= _("Members") %></a></li>
+      <li><a href="#meetings"><%= _("Meetings") %></a></li>
+    </ul>
 
-  <div id="intro">
-
-  </div>
-
-  <div id="shoutbox">
-
-  </div>
-
-  <div id="members">
-
-    <div class="membergroup">
-      <h3 class="membergroup"><%= _("Current members") %></h3>
-      <% @club.members.each do |member| %>
-        <%= render :partial => 'member', :locals => {:u => member} %>
-      <% end %>
-      <h3 class="membergroup"><%= _("Pending members") %></h3>
-      <% @club.pending_members.each do |member| %>
-        <%= render :partial => 'pending_member', :locals => {:u => member} %>
-      <% end %>
+    <div id="intro">
+      IDE Mi jön?
     </div>
 
-    <%= link_to(_('Member request'), add_user_club_path(@club)) %>
+    <div id="shoutbox">
+
+      <%= render :partial => "shouts/form", :locals => { :club => @club, :user => current_user } if current_user %>
+
+      <%= render :partial => "shouts/index", :locals => { :shouts => @shouts } %>
+
+    </div>
+
+    <div id="members">
+
+      <div class="membergroup">
+        <h3 class="membergroup"><%= _("Current members") %></h3>
+        <% @club.members.each do |member| %>
+          <%= render :partial => 'member', :locals => {:u => member} %>
+        <% end %>
+        <h3 class="membergroup"><%= _("Pending members") %></h3>
+        <% @club.pending_members.each do |member| %>
+          <%= render :partial => 'pending_member', :locals => {:u => member} %>
+        <% end %>
+      </div>
+
+      <%= link_to(_('Member request'), add_user_club_path(@club)) %>
+    </div>
+
+    <div id="meetings">
+
+    </div>
+
+    <hr class="clear"/>
   </div>
-
-  <div id="meetings">
-
-  </div>
-
 </div>
 
 <script type="text/javascript">// <![CDATA[

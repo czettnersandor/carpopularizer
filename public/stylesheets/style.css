@@ -123,6 +123,54 @@ div.pagination {
 }
 
 /*
+* Tabs
+*/
+ul.ui-tabs-nav {
+  margin: 0;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+ul.ui-tabs-nav li {
+  display: block;
+  float: left;
+  list-style: none;
+  height: 20px;
+  margin: 3px 0 0 3px;
+  /* background: url(../images/tabs.png) no-repeat 0 -24px; */
+  border: 1px solid #aaaaaa;
+  border-bottom: 0;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px 3px;
+  border-top-right-radius: 3px 3px;
+  text-align: center;
+  background: white;
+}
+ul.ui-tabs-nav li a {
+  display: block;
+  height: 20px;
+  padding: 0 10px;
+}
+ul.ui-tabs-nav li:hover,
+ul.ui-tabs-nav li.ui-tabs-selected {
+  background: url("../images/lightblue-horiz.png") repeat-x 0 0;
+  border: 1px solid #2487BB;
+  border-bottom: 0;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px 3px;
+  border-top-right-radius: 3px 3px;
+  height: 24px;
+  margin: 0 0 0 3px;
+}
+ul.ui-tabs-nav li:hover a,
+ul.ui-tabs-nav li.ui-tabs-selected a {
+  height: 24px !important;
+}
+
+
+/*
 * Blocks
 */
 .lightblue-block {
@@ -783,44 +831,16 @@ table.profile-edit td {
   display: block;
   height: 20px;
 }
-.newsblock ul.ui-tabs-nav {
-  margin: 0;
-  position: absolute;
-  top: 12px;
-  right: 20px;
-}
+
 .newsblock ul.ui-tabs-nav li {
-  display: block;
-  float: left;
-  list-style: none;
-  width: 62px;
-  height: 20px;
-  margin: 3px 0 0 3px;
-  /* background: url(../images/tabs.png) no-repeat 0 -24px; */
-  border: 1px solid #aaaaaa;
-  border-bottom: 0;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
-  text-align: center;
-  background: white;
+  padding: 0;
+  width: 64px;
 }
 .newsblock ul.ui-tabs-nav li:hover,
 .newsblock ul.ui-tabs-nav li.ui-tabs-selected {
-  background: url("../images/lightblue-horiz.png") repeat-x 0 0;
-  border: 1px solid #2487BB;
-  border-bottom: 0;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
-  height: 24px;
-  margin: 0 0 0 3px;
 }
 .newsblock ul.ui-tabs-nav li:hover a,
 .newsblock ul.ui-tabs-nav li.ui-tabs-selected a {
-  height: 24px !important;
 }
 
 
@@ -1026,7 +1046,6 @@ h3#car-title img {
 }
 #car-gallery-box {
   display: block;
-  position: abolute;
   float: left;
   height: 194px;
   width: 421px;
@@ -1182,8 +1201,53 @@ h3#club-title {
 #club-description {
   padding: 10px 10px 10px 295px;
 }
-#club-tabs {
+.club-tabs-wrapper {
+  position: relative;
+  display: block;
+  padding-top: 36px;
   margin-top: 20px;
+}
+#club-tabs {
+  padding: 10px;
   background: url("../images/lightblue-horiz-bottom.png") repeat-x bottom transparent;
   border: 1px solid #2487bb;
+}
+.shoutbox-item {
+  clear: both;
+}
+.kozossegi a {
+  background:url("../images/social_small_bg.gif") no-repeat scroll 0 0 transparent;
+  display:block;
+  float:left;
+  height:20px;
+  margin-right:10px;
+  padding:4px 0 0 4px;
+  width:20px;
+}
+.kozossegi a:hover {
+  background:url("../images/social_small_bg.gif") no-repeat scroll 0 -24px transparent;
+}
+.kozossegi a .iwiw {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -4px 0 transparent;
+}
+.kozossegi a .facebook {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -27px 0 transparent;
+}
+.kozossegi a .delicious {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -50px 0 transparent;
+}
+.kozossegi a .digg {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -73px 0 transparent;
+}
+.kozossegi a .stumbleupon {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -96px 0 transparent;
+}
+.kozossegi a .tumblr {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -119px 0 transparent;
+}
+.kozossegi a .twitter {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -142px 0 transparent;
+}
+.kozossegi a .myspace {
+  background:url("../images/social_small_icons.gif") no-repeat scroll -165px 0 transparent;
 }

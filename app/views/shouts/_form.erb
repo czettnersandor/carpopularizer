@@ -1,0 +1,7 @@
+<% form_for(Shout.new, :url => club_shouts_path(:club_id => club.id, :user_id => user.id)) do |form| %>
+
+<div class="form-item"><label for="message"><%=_('Your message')%></label><br/>
+<%= form.text_field :message %><hr/></div>
+<div class="form-item"><%= submit_tag _('Send') %></div>
+
+<% end %>
