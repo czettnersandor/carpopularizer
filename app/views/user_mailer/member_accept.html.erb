@@ -1,4 +1,4 @@
-<%= N_("%{@user.login}, your membership to %{@club.name} accepted") %>
+<%= N_("%s, your membership to %s accepted") % [@user.login, @club.name] %>
 <%= _("You can visit your new club:") %>
 
   <%= @url %>
