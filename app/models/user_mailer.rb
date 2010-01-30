@@ -31,6 +31,29 @@ class UserMailer < ActionMailer::Base
     @body[:url] = "http://#{@hostname}/users/#{user.id}/friends"
     @body[:request_by] = @request_by
   end
+
+  def member_request(user, club)
+    setup_email(club.user)
+    @subject    += _("%s has requested to be a member of your club") % user.login
+    @body[:url] = club_path(club)
+    @body[:user] = user
+  end
+
+  def member_accept(user, club)
+    setup_email(user)
+    @subject    += N_("%{user.login}, your membership to %{club.name} accepted")
+    @body[:url] = club_path(club)
+    @body[:user] = user
+    @body[:club] = club
+  end
+
+  def member_destroy(user, club)
+    setup_email(user)
+    @subject    += N_("%{user.login}, your membership to %{club.name} deleted")
+    @body[:url] = club_path(club)
+    @body[:user] = user
+    @body[:club] = club
+  end
   
   protected
   def setup_email(user)

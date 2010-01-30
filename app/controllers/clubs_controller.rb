@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+  before_filter :preload_club, :except => [:new, :create, :index]
 
   def index
     @clubs = Club.paginate(:page => params[:page], :per_page => 25, :order => 'created_at DESC',
@@ -6,8 +7,49 @@ class ClubsController < ApplicationController
   end
 
   def show
-    @club = Club.find(params[:id])
     @title = @club.name
+  end
+
+  # Add current_user to club through memberships
+  def add_user
+    @user = current_user
+    params[:membership] = {:club_id => @club.id, :user_id => @user.id, :status => 'pending'}
+    @membership = Membership.new(params[:membership])
+    if @membership.save
+      flash[:notice] = _('Your membership recorded. The Club admin can accept your request. Please be patient.')
+      UserMailer.deliver_member_request(@user, @club)
+      redirect_to club_path(@club)
+    else
+      flash[:notice] = _('You are not allowed to be a member of this club')
+      redirect_to club_path(@club)
+    end
+  end
+
+  def accept_member
+    @user = User.find(params[:user_id])
+    @membership = Membership.find_by_club_id_and_user_id(@club.id, @user.id)
+    @membership.status = "accepted"
+    if @membership.save
+      flash[:notice] = _('Membership accepted')
+      UserMailer.deliver_member_accept(@user, @club)
+      redirect_to club_path(@club)
+    else
+      flash[:notice] = _('Cannot accept membership')
+      redirect_to club_path(@club)
+    end
+  end
+
+  def remove_member
+    @user = User.find(params[:user_id])
+    @membership = Membership.find_by_club_id_and_user_id(@club.id, @user.id)
+    if @membership.destroy
+      flash[:notice] = _('Membership deleted')
+      UserMailer.deliver_member_destroy(@user, @club)
+      redirect_to club_path(@club)
+    else
+      flash[:notice] = _('Cannot remove member')
+      redirect_to club_path(@club)
+    end
   end
 
   def new
@@ -15,7 +57,6 @@ class ClubsController < ApplicationController
   end
 
   def edit
-    @club = Club.find(params[:id])
   end
 
   def create
@@ -35,8 +76,6 @@ class ClubsController < ApplicationController
   end
 
   def update
-    @club = Club.find(params[:id])
-
     respond_to do |format|
       if @club.update_attributes(params[:club])
         flash[:notice] = _('Club was successfully updated.')
@@ -50,7 +89,17 @@ class ClubsController < ApplicationController
   end
 
   def destroy
+    @club.destroy
+    respond_to do |format|
+      format.html { redirect_to(clubs_url) }
+      format.xml  { head :ok }
+    end
+  end
 
+  protected
+  
+  def preload_club
+    @club = Club.find(params[:id])
   end
 
 end

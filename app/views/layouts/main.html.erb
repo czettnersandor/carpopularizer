@@ -45,7 +45,7 @@
           <% for name, locale in [['Magyar',:hu],['English',:en]]
             localeactive = (I18n.locale == locale)? " active" : ""
           %>
-            <%# link_to(name,current_url(:locale=>locale), :class => locale.to_s+localeactive)%>
+  <%# link_to(name,current_url(:locale=>locale), :class => locale.to_s+localeactive)%>
           <% end %>
         </div>
 
@@ -67,7 +67,9 @@
       <div class="grid_12" id="content-wrapper">
         <div id="headcurve"></div>
         <% if flash[:notice] %>
-          <%=flash[:notice]%>
+          <div class="flashnotice">
+            <%=flash[:notice]%>
+          </div>
         <%end%>
 
         <%= yield %>

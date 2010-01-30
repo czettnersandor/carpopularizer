@@ -1,7 +1,8 @@
 class Club < ActiveRecord::Base
   belongs_to :user, :foreign_key => :owner_id
-  has_many :members, :through => :memberships, :conditions => "status = 'accepted'"
-  has_many :pending_members, :through => :memberships, :conditions => "status = 'pending'"
+  has_many :memberships
+  has_many :members, :through => :memberships, :conditions => "status = 'accepted'", :source => 'user'
+  has_many :pending_members, :through => :memberships, :conditions => "status = 'pending'", :source => 'user'
 
   has_attached_file :logo,
     :styles => {

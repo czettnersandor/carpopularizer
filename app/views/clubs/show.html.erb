@@ -28,6 +28,18 @@
 
   <div id="members">
 
+    <div class="membergroup">
+      <h3 class="membergroup"><%= _("Current members") %></h3>
+      <% @club.members.each do |member| %>
+        <%= render :partial => 'member', :locals => {:u => member} %>
+      <% end %>
+      <h3 class="membergroup"><%= _("Pending members") %></h3>
+      <% @club.pending_members.each do |member| %>
+        <%= render :partial => 'pending_member', :locals => {:u => member} %>
+      <% end %>
+    </div>
+
+    <%= link_to(_('Member request'), add_user_club_path(@club)) %>
   </div>
 
   <div id="meetings">

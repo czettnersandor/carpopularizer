@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :clubs
+  map.resources :clubs, :member => { :add_user => :get, :accept_member => :get, :remove_member => :get }
   map.resources :rssnews
   map.resources :rssreaders
   map.resources :pages, :collection => { :parse_textile => :post }
