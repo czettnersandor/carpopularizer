@@ -1,0 +1,8 @@
+<div class="item">
+  <%= image_tag u.avatar.url(:thumb), :class=>"profile-thumb" %>
+  <%= link_to u.login, user_path(u.id) %>
+  Since <%= u.created_at.to_s(:long) %>
+  <% if logged_in? && @user = current_user %>
+    <%= link_to '[Remove]', remove_member_club_path(:user_id => current_user), :confirm => _('Are you sure?') %>
+  <% end %>
+</div>
