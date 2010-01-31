@@ -726,9 +726,8 @@ hr.clear {
 }
 
 #profile-right {
-  margin-left: -30px;
+  margin-left: -10px;
   margin-right: -30px;
-  padding-left: 20px;
   width: 720px;
 }
 #profile-right .orangebox {
@@ -1109,7 +1108,13 @@ a.image-edits.edit {
   margin: 10px 0 0 0;
   -moz-border-radius: 5px;
   border-radius: 5px 5px;
-  padding: 10px;
+  padding: 10px 0 0 10px;
+}
+#auto-adatok-tabs .ui-tabs-panel {
+  clear: both;
+  height:226px;
+  overflow-x:hidden;
+  overflow-y:auto;
 }
 #auto-adatok-tabs label {
   font-weight: bold;
@@ -1323,5 +1328,5 @@ h3#club-title {
   -moz-border-radius: 5px;
   background: url("../images/lightblue-horiz.png") repeat-x scroll 0 0 transparent;
   border: 1px solid #2487BB;
-  padding: 10px 10px 0;
+  padding: 10px;
 }

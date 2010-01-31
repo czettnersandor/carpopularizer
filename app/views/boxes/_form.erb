@@ -28,11 +28,17 @@
     </div>
 
     <div id="interior">
+      <div class="form-item"><label for="interior"><%=_('Interior')%></label><br/>
+        <%= f.text_area :interior %><hr/></div>
     </div>
 
     <div id="exterior">
       <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
         <%= f.text_field :color %><hr/></div>
+
+      <div class="form-item"><label for="exterior"><%=_('Exterior')%></label><br/>
+        <%= f.text_area :exterior %><hr/></div>
+
     </div>
 
     <div id="engine">
@@ -54,9 +60,14 @@
 
       <div class="form-item"><label for="torque"><%=_('Torque')%></label><br/>
         <%= f.text_field :torque %><hr/></div>
+
+      <div class="form-item"><label for="engine"><%=_('Engine')%></label><br/>
+        <%= f.text_area :engine %><hr/></div>
     </div>
 
     <div id="audio">
+      <div class="form-item"><label for="audio"><%=_('Audio')%></label><br/>
+        <%= f.text_area :audio %><hr/></div>
     </div>
 
   </div>

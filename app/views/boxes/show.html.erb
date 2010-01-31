@@ -57,17 +57,23 @@
       <div id="data">
         <label><%= _('Make') %></label>
         <span class="data"><%= @car.make %></span>
-
         <label><%= _('Age grade') %></label>
         <span class="data"><%= @car.age_grade %></span>
+        <hr class="clear"/>
       </div>
 
       <div id="exterior">
         <label><%= _('Color') %></label>
         <span class="data"><%= @car.color %></span>
+        <label><%= _('Exterior') %></label>
+        <span class="data"><%= @car.exterior %></span>
+        <hr class="clear"/>
       </div>
 
       <div id="interior">
+        <label><%= _('Interior') %></label>
+        <span class="data"><%= @car.interior %></span>
+        <hr class="clear"/>
       </div>
 
       <div id="engine">
@@ -81,9 +87,15 @@
         <span class="data"><%= @car.topspeed %></span>
         <label><%= _('Torque') %></label>
         <span class="data"><%= @car.torque %></span>
+        <label><%= _('Engine') %></label>
+        <span class="data"><%= @car.engine %></span>
+        <hr class="clear"/>
       </div>
 
       <div id="audio">
+        <label><%= _('Audio') %></label>
+        <span class="data"><%= @car.audio %></span>
+        <hr class="clear"/>
       </div>
 
     </div>

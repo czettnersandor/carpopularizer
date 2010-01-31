@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100131103511) do
+ActiveRecord::Schema.define(:version => 20100131153826) do
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(:version => 20100131103511) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.text     "interior"
+    t.text     "exterior"
+    t.text     "engine"
+    t.text     "audio"
   end
 
   add_index "cars", ["user_id"], :name => "index_cars_on_user_id"
@@ -123,6 +127,7 @@ ActiveRecord::Schema.define(:version => 20100131103511) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "club_id"
   end
 
   create_table "memberships", :force => true do |t|
