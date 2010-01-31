@@ -55,7 +55,7 @@ class CarimagesController < ApplicationController
     @image = Carimage.find(params[:id])
 
     respond_to do |format|
-      if @image.update_attributes(params[:image])
+      if @image.update_attributes(params[:carimage])
         flash[:notice] = 'Image was successfully updated.'
         format.html { redirect_to(user_box_path(@image.car.user_id, @image.car_id)) }
         format.xml  { head :ok }

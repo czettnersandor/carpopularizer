@@ -939,6 +939,15 @@ table.profile-edit td {
   bottom: 25px;
   left: 40px;
 }
+.image-admin .arrowcross {
+  display: block;
+  position: absolute;
+  top: -78px;
+  left: -36px;
+  width: 28px;
+  height: 29px;
+  background: url('../images/arrowcross.png');
+}
 .gallery-admin {
   display: none;
   bottom: 31px;
@@ -1059,13 +1068,19 @@ h3#car-title img {
   padding: 4px;
   position: relative;
 }
-a.add-image {
+a.image-edits {
   height: 30px;
   width: 35px;
   display: block;
   float: right;
-  padding: 3px 3px 2px;
-  background: url(../images/image-add.png) no-repeat 3px 3px;
+  margin: 3px 3px 2px;
+  background: url(../images/image-edits.png) no-repeat 0 0;
+}
+a.image-edits.add {
+  background: url(../images/image-edits.png) no-repeat 0 0;
+}
+a.image-edits.edit {
+  background: url(../images/image-edits.png) no-repeat 0 -30px;
 }
 #car-gallery-box .inner{
   height: 174px;
@@ -1125,6 +1140,7 @@ a.add-image {
 #auto-adatok-tabs ul.ui-tabs-nav li a {
   text-transform: uppercase;
   font-size: 11px;
+  padding: 0;
 }
 #auto-adatok-tabs ul.ui-tabs-nav li a:hover,
 #auto-adatok-tabs ul.ui-tabs-nav li.ui-tabs-selected a {
@@ -1191,11 +1207,11 @@ a.add-image {
 }
 h3#club-title {
   display: block;
-  height: 24px;
+  height: 35px;
   padding: 0 0 0 295px;
   margin: 0;
   font-size: 18px;
-  background: #fbc978 url(../images/club-title.png) no-repeat 275px;
+  background: #fbc978 url(../images/club-title.png) repeat-y 275px;
   border-bottom: 1px solid #fa981b;
 }
 #club-description {
@@ -1211,6 +1227,50 @@ h3#club-title {
   padding: 10px;
   background: url("../images/lightblue-horiz-bottom.png") repeat-x bottom transparent;
   border: 1px solid #2487bb;
+}
+#club-tabs ul.ui-tabs-nav {
+  margin: 0;
+  position: absolute;
+  top: 2px;
+  right: 20px;
+}
+#club-tabs li {
+  height: 30px;
+}
+#club-tabs a {
+  height: 30px;
+  padding-left: 35px;
+}
+#club-tabs li:hover,
+#club-tabs li.ui-tabs-selected {
+  background: url("../images/lightblue-horiz.png") repeat-x 0 0;
+  border: 1px solid #2487BB;
+  border-bottom: 0;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px 3px;
+  border-top-right-radius: 3px 3px;
+  height: 34px;
+  margin: 0 0 0 3px;
+}
+#club-tabs li:hover a,
+#club-tabs li.ui-tabs-selected a {
+  height: 34px !important;
+}
+#club-tabs a.intro {
+  background: url(../images/club-icons.png);
+}
+#club-tabs a.intro {
+  background: url(../images/club-icons.png) no-repeat 0 0;
+}
+#club-tabs a.shoutbox {
+  background: url(../images/club-icons.png) no-repeat 0 -30px;
+}
+#club-tabs a.members {
+  background: url(../images/club-icons.png) no-repeat 0 -60px;
+}
+#club-tabs a.meetings {
+  background: url(../images/club-icons.png) no-repeat 0 -90px;
 }
 .shoutbox-item {
   clear: both;
@@ -1250,4 +1310,18 @@ h3#club-title {
 }
 .kozossegi a .myspace {
   background:url("../images/social_small_icons.gif") no-repeat scroll -165px 0 transparent;
+}
+
+/*
+* Form tabs
+*/
+#form-wrapper {
+  position: relative;
+  padding-top: 36px;
+}
+#form-wrapper .form-tabs {
+  -moz-border-radius: 5px;
+  background: url("../images/lightblue-horiz.png") repeat-x scroll 0 0 transparent;
+  border: 1px solid #2487BB;
+  padding: 10px 10px 0;
 }

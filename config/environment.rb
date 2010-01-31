@@ -42,8 +42,8 @@ Rails::Initializer.run do |config|
 
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
   config.gem "gettext", :lib => false, :version => '>=2.1.0'
+  #config.gem "gettext", :lib => 'gettext', :version => '>=2.1.0'
   config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
-  
   config.gem "RedCloth", :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem "geokit"
@@ -58,3 +58,4 @@ end
 # Recaptcha API keys
 ENV['RECAPTCHA_PUBLIC_KEY']  = '6LeJeAoAAAAAAN_yW0hMS1UWtDYUXy7h-eVuJHSo'
 ENV['RECAPTCHA_PRIVATE_KEY'] = '6LeJeAoAAAAAAEKBrcanvma8wSt12cV8EA6LutJp'
+FastGettext.text_domain = 'app'

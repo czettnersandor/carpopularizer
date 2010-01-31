@@ -12,6 +12,9 @@
               image.image.url(:full), :class => "colorbox", :rel=>"gallery")%>
             <% if admin_or_current? @user %>
               <div class="image-admin">
+
+                <div class="arrowcross"></div>
+
                 <%= link_to '',
                   edit_user_gallery_image_path(:user_id => @user, :gallery_id => @gallery, :id => image.id),
                   :class => "edit"%>

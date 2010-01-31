@@ -39,6 +39,7 @@ class BoxesController < ApplicationController
   end
 
   def edit
+    @title = _("Edit car")+" » "+@car.name
   end
 
   def update

@@ -3,6 +3,9 @@
     <%= image_tag(@club.logo.url(:club)) %>
   </div>
   <h3 id="club-title">
+    <% if admin_or_current? @user %>
+      <%= link_to("",edit_club_path(@club), :class => "image-edits edit")%>
+    <% end %>
     <%= @club.name %>
   </h3>
   <div id="club-description">
@@ -16,10 +19,10 @@
 <div class="club-tabs-wrapper">
   <div id="club-tabs">
     <ul class="wide-tabs">
-      <li><a href="#intro"><%= _("Introduction") %></a></li>
-      <li><a href="#shoutbox"><%= _("Shoutbox") %></a></li>
-      <li><a href="#members"><%= _("Members") %></a></li>
-      <li><a href="#meetings"><%= _("Meetings") %></a></li>
+      <li><a href="#intro" class="intro"><%= _("Introduction") %></a></li>
+      <li><a href="#shoutbox" class="shoutbox"><%= _("Shoutbox") %></a></li>
+      <li><a href="#members" class="members"><%= _("Members") %></a></li>
+      <li><a href="#meetings" class="meetings"><%= _("Meetings") %></a></li>
     </ul>
 
     <div id="intro">

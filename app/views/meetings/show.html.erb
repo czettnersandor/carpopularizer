@@ -1,0 +1,33 @@
+<p>
+  <b>Title:</b>
+  <%=h @meeting.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @meeting.description %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%=h @meeting.startdate %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @meeting.country %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @meeting.city %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @meeting.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', meetings_path %>

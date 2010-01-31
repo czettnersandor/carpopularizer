@@ -8,6 +8,7 @@ class ClubsController < ApplicationController
 
   def show
     @title = @club.name
+    @user = @club.user
     @shouts = Shout.all_shouts(@club.id)
   end
 

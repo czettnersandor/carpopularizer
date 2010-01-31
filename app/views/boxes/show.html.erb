@@ -11,20 +11,24 @@
       <h3 id="car-title">
         <%= image_tag('/images/genres/32/'+@car.genre) %>
         <%= genre(@car.genre)+" "+@car.name %>
-        <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "add-image") if admin_or_current? @user %>
+        <% if admin_or_current? @user %>
+          <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "image-edits add")%>
+          <%= link_to("",edit_user_box_path(@user, @car), :class => "image-edits edit")%>
+        <% end %>
       </h3>
 
-      
-      
-      
+
+
+
       <div id="car-gallery-box">
         <div class="inner">
           <% @car.carimages.each do |image| %>
             <div class="item" id="item_<%= image.id %>">
-              <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb"),
+              <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb", :title => image.title),
                 image.image.url(:full), :class => "colorbox", :rel=>"gallery")%>
               <% if admin_or_current? @user %>
                 <div class="image-admin">
+                  <div class="arrowcross"></div>
                   <%= link_to '',
                     edit_user_box_carimage_path(:user_id => @user, :box_id => @car, :id => image.id),
                     :class => "edit"%>
@@ -137,7 +141,7 @@
   $(document).ready(function(){
 
     $('#auto-adatok-tabs').tabs();
-    $('a.add-image').colorbox();
+    $('a.image-edits.add').colorbox();
 
   });
 

@@ -1,41 +1,78 @@
 <%= f.error_messages %>
 
-<div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
-  <%= f.select :genre, genrelist(@car.genre) %><hr/></div>
+<div id="form-wrapper">
+  <div class="form-tabs">
+    <ul>
+      <li><a href="#data"><%= _("Data") %></a></li>
+      <li><a href="#interior"><%= _("Interior") %></a></li>
+      <li><a href="#exterior"><%= _("Exterior") %></a></li>
+      <li><a href="#engine"><%= _("Engine") %></a></li>
+      <li><a href="#audio"><%= _("Audio") %></a></li>
+    </ul>
 
-<div class="form-item"><label for="name"><%=_('Type')%></label><br/>
-  <%= f.text_field :name %><hr/></div>
+    <div id="data">
+      <div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
+        <%= f.select :genre, genrelist(@car.genre) %><hr/></div>
 
-<div class="form-item"><label for="make"><%=_('Make')%></label><br/>
-  <%= f.select :make, makelist(@car.make) %><hr/></div>
+      <div class="form-item"><label for="name"><%=_('Type')%></label><br/>
+        <%= f.text_field :name %><hr/></div>
 
-<div class="form-item"><label for="age_grade"><%=_('Age-grade')%></label><br/>
-  <%= f.text_field :age_grade %><hr/></div>
+      <div class="form-item"><label for="make"><%=_('Make')%></label><br/>
+        <%= f.select :make, makelist(@car.make) %><hr/></div>
 
-<div class="form-item"><label for="ccm"><%=_('ccm')%></label><br/>
-  <%= f.text_field :ccm %><hr/></div>
+      <div class="form-item"><label for="age_grade"><%=_('Age-grade')%></label><br/>
+        <%= f.text_field :age_grade %><hr/></div>
 
-<div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
-  <%= f.text_field :performance %><hr/></div>
+      <div class="form-item"><label for="description"><%=_('Description')%></label><br/>
+        <%= f.text_area :description %><hr/></div>
+    </div>
 
-<div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
-  <%= f.text_field :fuel %><hr/></div>
+    <div id="interior">
+    </div>
 
-<div class="form-item"><label for="acceleration"><%=_('Acceleration')%></label><br/>
-  <%= f.text_field :acceleration %><hr/></div>
+    <div id="exterior">
+      <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
+        <%= f.text_field :color %><hr/></div>
+    </div>
 
-<div class="form-item"><label for="topspeed"><%=_('Top speed')%></label><br/>
-  <%= f.text_field :topspeed %><hr/></div>
+    <div id="engine">
 
-<div class="form-item"><label for="torque"><%=_('Torque')%></label><br/>
-  <%= f.text_field :torque %><hr/></div>
+      <div class="form-item"><label for="ccm"><%=_('ccm')%></label><br/>
+        <%= f.text_field :ccm %><hr/></div>
 
-<div class="form-item"><label for="color"><%=_('Color')%></label><br/>
-  <%= f.text_field :color %><hr/></div>
+      <div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
+        <%= f.text_field :performance %><hr/></div>
 
-<div class="form-item"><label for="description"><%=_('Description')%></label><br/>
-  <%= f.text_area :description %><hr/></div>
+      <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
+        <%= f.text_field :fuel %><hr/></div>
+
+      <div class="form-item"><label for="acceleration"><%=_('Acceleration')%></label><br/>
+        <%= f.text_field :acceleration %><hr/></div>
+
+      <div class="form-item"><label for="topspeed"><%=_('Top speed')%></label><br/>
+        <%= f.text_field :topspeed %><hr/></div>
+
+      <div class="form-item"><label for="torque"><%=_('Torque')%></label><br/>
+        <%= f.text_field :torque %><hr/></div>
+    </div>
+
+    <div id="audio">
+    </div>
+
+  </div>
+</div>
 
 <p>
 <div class="form-item"><%= submit_tag _('Save') %></div>
 </p>
+<hr class="clear">
+
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('.form-tabs').tabs();
+
+  });
+
+</script>
