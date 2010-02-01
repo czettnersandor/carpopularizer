@@ -22,7 +22,7 @@
       <li><a href="#intro" class="intro"><%= _("Introduction") %></a></li>
       <li><a href="#shoutbox" class="shoutbox"><%= _("Shoutbox") %></a></li>
       <li><a href="#members" class="members"><%= _("Members") %></a></li>
-      <li><a href="#meetings" class="meetings"><%= _("Meetings") %></a></li>
+      <li><a href="<%= club_meetings_path @club %>" class="meetings" title="meetings"><%= _("Meetings") %></a></li>
     </ul>
 
     <div id="intro">
@@ -64,7 +64,7 @@
 <script type="text/javascript">// <![CDATA[
   $(document).ready(function(){
 
-    $('#club-tabs').tabs();
+    $('#club-tabs').tabs({ cache: true });
 
   });
 </script>

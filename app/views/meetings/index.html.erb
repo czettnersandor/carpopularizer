@@ -13,14 +13,14 @@
 <% @meetings.each do |meeting| %>
   <tr>
     <td><%=h meeting.title %></td>
-    <td><%=h meeting.description %></td>
+    <td><%=h shorten(meeting.description) %></td>
     <td><%=h meeting.startdate %></td>
     <td><%=h meeting.country %></td>
     <td><%=h meeting.city %></td>
     <td><%=h meeting.address %></td>
-    <td><%= link_to 'Show', meeting %></td>
-    <td><%= link_to 'Edit', edit_club_meeting_path(meeting) %></td>
-    <td><%= link_to 'Destroy', meeting, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', club_meeting_path(meeting.club, meeting) %></td>
+    <td><%= link_to 'Edit', edit_club_meeting_path(meeting.club, meeting) %></td>
+    <td><%= link_to 'Destroy', club_meeting_path(meeting.club, meeting), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

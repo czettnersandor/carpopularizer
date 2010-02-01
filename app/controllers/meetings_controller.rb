@@ -6,6 +6,7 @@ class MeetingsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js { render :layout => false } # index.html.erb
       format.xml  { render :xml => @meetings }
     end
   end
@@ -14,7 +15,7 @@ class MeetingsController < ApplicationController
   # GET /meetings/1.xml
   def show
     @meeting = Meeting.find(params[:id])
-
+    @club = Club.find params[:club_id]
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @meeting }
@@ -41,11 +42,12 @@ class MeetingsController < ApplicationController
   # POST /meetings.xml
   def create
     @meeting = Meeting.new(params[:meeting])
-
+    @club = Club.find params[:club_id]
+    @meeting.club_id = @club.id
     respond_to do |format|
       if @meeting.save
         flash[:notice] = 'Meeting was successfully created.'
-        format.html { redirect_to(@meeting) }
+        format.html { redirect_to(club_meeting_path(@club, @meeting)) }
         format.xml  { render :xml => @meeting, :status => :created, :location => @meeting }
       else
         format.html { render :action => "new" }
