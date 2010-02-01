@@ -3,33 +3,33 @@
 <% form_for(@meeting, :url => new_club_meeting_path(params[:club_id],@meeting)) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :startdate %><br />
-    <%= f.datetime_select :startdate %>
-  </p>
-  <p>
-    <%= f.label :country %><br />
-    <%= f.text_field :country %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+  <div class="form-item">
+    <%= f.label :title, _("Title") %><br />
+    <%= f.text_field :title %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.label :description, _("Description") %><br />
+    <%= f.text_area :description %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.label :startdate, _("Starting date") %><br />
+    <%= f.text_field :startdate, :class => "datetime" %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.label :country, _("Country") %><br />
+    <%= f.text_field :country %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.label :city, _("City") %><br />
+    <%= f.text_field :city %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.label :address, _("Address") %><br />
+    <%= f.text_field :address %><hr/>
+  </div>
+  <div class="form-item">
+    <%= f.submit _('Create') %><hr/>
+  </div>
 <% end %>
 
 <%= link_to 'Back', club_meetings_path %>
