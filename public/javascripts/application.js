@@ -157,7 +157,9 @@ $(document).ready(function(){
 
   $("input#user_birth").mask("9999/99/99");
   $("input.date").mask("9999/99/99");
-  $("input.datetime").mask("9999/99/99 99:99");
+  // $("input.datetime").mask("9999/99/99 99:99");
+  $("input.datetime").datepicker();
+
 
   $("form.user-register").validate({
     rules: {
