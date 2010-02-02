@@ -33,13 +33,9 @@
     <div class="form-item submit">
       <%= link_to_function "", "$(this).parent().parent().submit()", :class => 'submit' %>
     </div>
-  <%= link_to(_("Register"), "/register", :class => 'register') %>
+  <div class="register">
+    <%= link_to(_("Lost password"), "/forgot_password") %> | <%= link_to(_("Register"), "/register") %>
+  </div>
   <% end -%>
-  <% if flash[:login_message] %>
-    <div class="login-message">
-      <%=flash[:login_message]%>
-    </div>
-  <%end%>
-
 
 <% end %>

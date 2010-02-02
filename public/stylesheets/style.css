@@ -104,13 +104,11 @@ div.pagination {
   margin: 10px 0;
   padding: 0 10px;
 }
-.flashnotice {
+.message {
   display: block;
   clear: both;
   padding: 20px;
   margin: 0 0 20px 0;
-  background: #ff9999;
-  border: 1px solid #ff0000;
   -moz-border-radius-bottomleft:4px;
   -moz-border-radius-bottomright:4px;
   -moz-border-radius-topleft:4px;
@@ -120,6 +118,14 @@ div.pagination {
   border-bottom-right-radius: 4px 4px;
   border-top-left-radius: 4px 4px;
   border-top-right-radius: 4px 4px;
+}
+.flashnotice {
+  background: #99ff99;
+  border: 1px solid #00ff00;
+}
+.login-message {
+  background: #ffffff url(../images/orange-horiz.png) repeat-x bottom;
+  border: 1px solid #fa981b;
 }
 
 /*
@@ -285,7 +291,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   height: 27px;
   background: url("../images/login.png");
 }
-#loginblock a.register {
+#loginblock div.register {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -319,13 +325,6 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   filter:alpha(opacity=80);
   /* CSS3 standard */
   opacity: 0.8;
-}
-.login-message {
-  background: #ffffff url(../images/orange-horiz.png) repeat-x bottom;
-  border: 1px solid #fa981b;
-  padding: 0;
-  display: block;
-  clear: both;
 }
 #loginblock ul.usermenu {
   float: left;
