@@ -95,6 +95,7 @@ $(document).ready(function(){
 
   $('a.colorbox').colorbox({});
 
+  $("#loginblock label").inFieldLabels();
 
   $('#profile-left .lightblue.usermenu li a').each( function(){
     $(this).css('background-position', '-220px -'+i*29+'px');

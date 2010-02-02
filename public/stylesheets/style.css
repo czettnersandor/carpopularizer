@@ -232,33 +232,41 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 */
 #loginblock {
   display: block;
-  margin: 10px 0 0 700px;
-  height: 100px;
-  width: 240px;
+  margin: 10px 0 0 640px;
+  height: 75px;
+  width: 300px;
   text-align: right;
+  position: relative;
 }
 #loginblock form {
   display: block;
-  height: 75px;
+  height: 50px;
   background: url(../images/login-bar.png) no-repeat;
 }
 #loginblock label {
-  float: left;
-  width: 80px;
-  padding-right: 20px;
+  position:absolute; top:0; left:0
 }
 #loginblock .profile-thumb {
   float: right;
   margin-left: 10px;
 }
 #loginblock .form-item {
-  float: right;
-  margin-left: 10px;
+  float: left;
+  height: 20px;
+  margin-left: 40px;
   margin-bottom: 5px;
+  position: relative;
+}
+#loginblock .form-item.submit {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 54px;
 }
 #loginblock .form-item.text input,
 #loginblock .form-item.password input {
-  width: 126px;
+  width: 190px;
   border: none;
   background: transparent;
 }
@@ -278,8 +286,9 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   background: url("../images/login.png");
 }
 #loginblock a.register {
-  margin-right: 10px;
-  float: left;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 #loginblock div.icons {
   display: block;
