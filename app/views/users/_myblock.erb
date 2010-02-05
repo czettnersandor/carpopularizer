@@ -2,6 +2,11 @@
   <div class="lightblue first">
     <%= image_tag user.avatar.url(:thumb), :class=>"profile-thumb" %>
     <%= user.login %>
+    <div class="usergenres">
+      <% user.cars.each do |car| %>
+        <%= link_to image_tag('/images/genres/32/'+car.genre), user_box_path(user, car) %>
+      <% end %>
+    </div>
   </div>
   <div class="lightblue curve">
     <div class="profilehead"><%= _('Full name') %></div>

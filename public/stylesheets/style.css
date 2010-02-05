@@ -90,8 +90,8 @@ input, textarea, select {
   text-align: center;
 }
 a#logo {
-  width: 267px;
-  height: 55px;
+  width: 206px;
+  height: 57px;
   background: url(../images/logo.png);
   display: block;
   margin-top: 10px;
@@ -745,7 +745,13 @@ hr.clear {
   border-top-right-radius: 5px 5px;
   padding: 10px;
 }
-
+#profile-left .usergenres {
+  display: block;
+  float: right;
+  height: 100px;
+  width: 32px;
+  overflow-y: auto;
+}
 #profile-left img.profile-thumb {
   float: left;
   margin-right: 10px;
@@ -1090,9 +1096,9 @@ a.image-edits.edit {
   background: url(../images/image-edits.png) no-repeat 0 -30px;
 }
 #car-gallery-box .inner{
-  height: 174px;
+  height: 194px;
   width: 401;
-  padding: 10px;
+  padding: 0 10px;
   overflow: auto;
   overflow-x: hidden;
   -ms-overflow-x: hidden;
@@ -1161,7 +1167,7 @@ a.image-edits.edit {
 }
 #car-description {
   height: 200px;
-  width: 409px;
+  width: 419px;
   display: block;
   float: left;
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
@@ -1172,7 +1178,7 @@ a.image-edits.edit {
 }
 #car-description .inner{
   height: 154px;
-  width: 389px;
+  width: 399px;
   padding: 10px;
   overflow: auto;
   overflow-x: hidden;
@@ -1180,7 +1186,7 @@ a.image-edits.edit {
 }
 #car-equipment {
   height: 58px;
-  width: 409px;
+  width: 419px;
   display: block;
   float: left;
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
