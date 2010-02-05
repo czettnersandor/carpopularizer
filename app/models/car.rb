@@ -6,5 +6,7 @@ class Car < ActiveRecord::Base
   has_many :carimages
   has_many :carcomments
   default_scope :order => 'ordinal ASC'
+
+  ajaxful_rateable :stars => 10
   
 end

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100131153826) do
+ActiveRecord::Schema.define(:version => 20100205135108) do
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -148,6 +148,19 @@ ActiveRecord::Schema.define(:version => 20100131153826) do
   end
 
   add_index "pages", ["permalink"], :name => "index_pages_on_short_url"
+
+  create_table "rates", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.integer  "stars"
+    t.string   "dimension"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rates", ["rateable_id"], :name => "index_rates_on_rateable_id"
+  add_index "rates", ["user_id"], :name => "index_rates_on_user_id"
 
   create_table "roles", :force => true do |t|
     t.string   "rolename",   :null => false

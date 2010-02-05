@@ -31,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :galleries do |gallery|
       gallery.resources :images, :collection => { :sort => :put }
     end
-    user.resources :boxes, :as => 'box', :member => { :addcomment => :post } do |box|
+    user.resources :boxes, :as => 'box', :member => { :addcomment => :post, :rate => :post } do |box|
       box.resources :carimages, :as => 'images', :collection => { :sort => :put }
     end
   end

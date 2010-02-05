@@ -59,6 +59,8 @@
         <span class="data"><%= @car.make %></span>
         <label><%= _('Age grade') %></label>
         <span class="data"><%= @car.age_grade %></span>
+        <label><%= _('Data') %></label>
+        <%= @car.description %>
         <hr class="clear"/>
       </div>
 
@@ -103,7 +105,7 @@
     <div id="car-description">
       <div class="block-header fix small"><h3><%= _("Description") %></h3></div>
       <div class="inner">
-        <%= @car.description %>
+        <%= ratings_for @car, :remote_options => {:url => rate_user_box_path(@user, @car)} %>
       </div>
     </div>
 

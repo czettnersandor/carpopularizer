@@ -1597,3 +1597,11 @@ h3#club-title {
 .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
 .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/*
+* Ajaxful rating
+*/
+.ajaxful-rating-wrapper li {
+  margin: 0;
+}

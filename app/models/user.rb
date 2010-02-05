@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   has_many :cars
   has_many :comments
   has_many :carcomments
+  has_many :rates # ajaxful-rating
   
   # Virtual attribute for the unencrypted password
   attr_accessor :password

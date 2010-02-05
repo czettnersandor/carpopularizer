@@ -75,6 +75,17 @@ class BoxesController < ApplicationController
     end
   end
 
+  def rate
+    @car.rate(params[:stars], current_user, params[:dimension])
+    id = "ajaxful-rating-#{!params[:dimension].blank? ? "#{params[:dimension]}-" : ''}article-#{@car.id}"
+    render :update do |page|
+      page.replace_html id, ratings_for(@car, :wrap => false,
+        :remote_options => {:url => rate_user_box_path(@user, @car)})
+      # page.visual_effect :highlight, id
+    end
+  end
+
+
   protected
   def preloaders
     @user = User.find(params[:user_id])
