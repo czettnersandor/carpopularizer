@@ -109,9 +109,9 @@
           <%= ratings_for @car, :remote_options => {:url => rate_user_box_path(@user, @car)} %>
         </div>
         <div class="combat">
-          <% if current_user %>
-
-            <% end %>
+          <% if current_user && current_user != @car.user %>
+            ...
+          <% end %>
         </div>
       </div>
     </div>
