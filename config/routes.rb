@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :combats
   map.resources :battles
   
   map.resources :clubs, :member => { :add_user => :get, :accept_member => :get, :remove_member => :get } do |club|
@@ -34,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
     end
     user.resources :boxes, :as => 'box', :member => { :addcomment => :post, :rate => :post } do |box|
       box.resources :carimages, :as => 'images', :collection => { :sort => :put }
+      box.resources :combats
     end
   end
 
