@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  challenger_id: 1
+  invited_id: 1
+  status: MyString
+  message: MyString
+  challenger_rate: 1
+  invited_rate: 1
+  winner_id: 1
+
+two:
+  challenger_id: 1
+  invited_id: 1
+  status: MyString
+  message: MyString
+  challenger_rate: 1
+  invited_rate: 1
+  winner_id: 1

@@ -4,7 +4,7 @@
     <%= user.login %>
     <div class="usergenres">
       <% user.cars.each do |car| %>
-        <%= link_to image_tag('/images/genres/32/'+car.genre), user_box_path(user, car) %>
+        <%= link_to image_tag('/images/genres/32/'+car.genre), user_box_path(user, car), :title => car.name %>
       <% end %>
     </div>
   </div>

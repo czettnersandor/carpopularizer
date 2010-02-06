@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100205135108) do
+ActiveRecord::Schema.define(:version => 20100206095913) do
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(:version => 20100205135108) do
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.datetime "logo_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "combats", :force => true do |t|
+    t.integer  "challenger_id"
+    t.integer  "invited_id"
+    t.string   "status"
+    t.string   "message"
+    t.integer  "challenger_rate"
+    t.integer  "invited_rate"
+    t.integer  "winner_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
