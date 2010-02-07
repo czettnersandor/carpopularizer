@@ -12,5 +12,9 @@ class Car < ActiveRecord::Base
   def invitable?
     not Combat.find_by_challenger_id(self.id) || Combat.find_by_invited_id(self.id)
   end
+
+  def all_combats
+    Combat.find_all_by_challenger_id(id) + Combat.find_all_by_invited_id(id)
+  end
   
 end

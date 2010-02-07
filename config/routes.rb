@@ -28,6 +28,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users do |user|
     user.resources :friends
+    user.resources :battles
     user.resources :galleries do |gallery|
       gallery.resources :images, :collection => { :sort => :put }
     end

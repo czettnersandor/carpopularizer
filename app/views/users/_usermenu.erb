@@ -2,6 +2,6 @@
 <li><%= menu_link _("Friends"), user_friends_url(user) %></li>
 <li><%= menu_link _("Clubs"), url_for(user)+"#" %></li>
 <li><%= menu_link _("Favorites"), url_for(user)+"#" %></li>
-<li><%= menu_link _("Ride Battle"), url_for(user)+"#" %></li>
+<li><%= menu_link _("Ride Battle"), user_battles_url(user) %></li>
 <li><%= menu_link _("Gallery"), user_galleries_url(user) %></li>
 <li><%= menu_link _("Marketplace"), url_for(user)+"#" %></li>
