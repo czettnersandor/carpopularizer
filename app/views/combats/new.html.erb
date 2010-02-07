@@ -1,0 +1,13 @@
+<%= render :partial => "cars/carlistitem", :locals => {:car => @car} %>
+
+<% form_for(@combat, :url => user_box_combats_path(:user_id => @user.id, :box_id => @car.id)) do |form| %>
+
+<div class="form-item"><label for="message"><%=_('Select your car')%></label><br/>
+<%= form.select :challenger_id, options_for_select(@mycars) %><hr/></div>
+
+<div class="form-item"><label for="message"><%=_('Your message')%></label><br/>
+<%= form.text_field :message %><hr/></div>
+<hr class="clear" />
+<div class="form-item"><%= submit_tag _('Invite to combat') %></div>
+
+<% end %>

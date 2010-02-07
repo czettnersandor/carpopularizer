@@ -8,5 +8,9 @@ class Car < ActiveRecord::Base
   default_scope :order => 'ordinal ASC'
 
   ajaxful_rateable :stars => 10
+
+  def invitable?
+    not Combat.find_by_challenger_id(self.id) || Combat.find_by_invited_id(self.id)
+  end
   
 end
