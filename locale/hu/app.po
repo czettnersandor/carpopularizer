@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-20 18:38+0100\n"
-"PO-Revision-Date: 2010-01-20 18:12+0100\n"
+"POT-Creation-Date: 2010-02-08 10:16+0100\n"
+"PO-Revision-Date: 2010-02-08 10:29+0100\n"
 "Last-Translator: Ifj. Czettner Sándor <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,10 +18,43 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Lokalize 1.0\n"
 
+#: app/models/user_mailer.rb:37
+#: app/views/user_mailer/member_request.html.erb:1
+msgid "%s has requested to be a member of your club"
+msgstr "%s felvételét kérte egy klubodba"
+
 #: app/models/user_mailer.rb:30
 #: app/views/user_mailer/friend_request.html.erb:1
 msgid "%s has requested to be your friend"
 msgstr "%s ismerősöd szeretne lenni"
+
+#: app/controllers/clubs_controller.rb:17
+msgid "%s » club memberships"
+msgstr "%s » klub tagságok"
+
+#: app/controllers/galleries_controller.rb:4
+msgid "%s's galleries"
+msgstr "%s galériái"
+
+#: app/models/user_mailer.rb:60
+msgid "%s, your car was challenged to a combat"
+msgstr "%s, az autódat párbajra hívták"
+
+#: app/models/user_mailer.rb:44 app/views/user_mailer/member_accept.html.erb:1
+msgid "%s, your membership to %s accepted"
+msgstr "%s, a tagságod %s klubba el lett fogadva"
+
+#: app/models/user_mailer.rb:52
+msgid "%s, your membership to %s deleted"
+msgstr "%s, a tagságod %s klubba törölték"
+
+#: app/views/user_mailer/member_destroy.html.erb:1
+msgid "%s, your membership to %s deleted by the club owner"
+msgstr "%s, a tagságod %s klubba törölte a klub adminisztrátora"
+
+#: app/helpers/boxes_helper.rb:145 app/helpers/boxes_helper.rb:162
+msgid "-- Empty --"
+msgstr "-- Üres --"
 
 #: app/controllers/passwords_controller.rb:14
 msgid "A password reset link has been sent to your email address."
@@ -37,22 +70,40 @@ msgstr "Magamról"
 msgid "About Me"
 msgstr "Magamról"
 
-#: app/views/users/edit-dealer.html.erb:49 app/views/users/show.html.erb:34
-#: app/views/users/edit.html.erb:49
+#: app/views/boxes/show.html.erb:86 app/views/boxes/_form.erb:55
+msgid "Acceleration"
+msgstr "Gyorsulás"
+
+#: app/views/meetings/new.html.erb:27 app/views/users/edit-dealer.html.erb:49
+#: app/views/users/show.html.erb:34 app/views/users/edit.html.erb:49
 msgid "Address"
 msgstr "Cím"
+
+#: app/views/boxes/show.html.erb:60
+msgid "Age grade"
+msgstr "Évjárat"
+
+#: app/views/boxes/_form.erb:23
+msgid "Age-grade"
+msgstr "Évjárat"
 
 #: app/controllers/users_controller.rb:33
 msgid "An error occured, your password was not changed."
 msgstr "Hiba történt, a jelszó nem lett lecserélve"
 
-#: app/views/galleries/show.html.erb:21
+#: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
+#: app/views/galleries/_gallery_admin.erb:8 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr "Biztosan?"
 
 #: app/helpers/users_helper.rb:5
 msgid "Argentina"
 msgstr "Argentína"
+
+#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:98
+#: app/views/boxes/_form.erb:10 app/views/boxes/_form.erb:69
+msgid "Audio"
+msgstr "Audio"
 
 #: app/helpers/users_helper.rb:6
 msgid "Australia"
@@ -65,6 +116,10 @@ msgstr "Ausztria"
 #: app/views/users/edit-dealer.html.erb:34 app/views/users/edit.html.erb:34
 msgid "Avatar"
 msgstr "Profil kép"
+
+#: app/views/galleries/edit.html.erb:10 app/views/galleries/new.html.erb:10
+msgid "Back"
+msgstr "Vissza"
 
 #: app/helpers/users_helper.rb:8
 msgid "Belgium"
@@ -79,7 +134,7 @@ msgstr "Születési dátum"
 msgid "Body"
 msgstr "Törzs"
 
-#: app/views/users/_myblock.erb:19
+#: app/views/users/_usermenu.erb:1
 msgid "Box"
 msgstr "Box"
 
@@ -91,9 +146,29 @@ msgstr "Brazília"
 msgid "Bulgaria"
 msgstr "Bulgária"
 
+#: app/helpers/boxes_helper.rb:5
+msgid "Cabriolet"
+msgstr "Kabrió"
+
 #: app/helpers/users_helper.rb:11
 msgid "Canada"
 msgstr "Kanada"
+
+#: app/controllers/clubs_controller.rb:51
+msgid "Cannot accept membership"
+msgstr "A tagság nem fogadható el"
+
+#: app/controllers/clubs_controller.rb:64
+msgid "Cannot remove member"
+msgstr "A tagság nem törölhető"
+
+#: app/controllers/boxes_controller.rb:33
+msgid "Car was successfully created."
+msgstr "Az autó sikeresen létrejött."
+
+#: app/controllers/boxes_controller.rb:50
+msgid "Car was successfully updated."
+msgstr "Az autó módosítva lett."
 
 #: app/views/layouts/_menu.erb:3
 msgid "Cars"
@@ -103,16 +178,32 @@ msgstr "Autók"
 msgid "Chile"
 msgstr "Chile"
 
-#: app/views/users/edit-dealer.html.erb:29 app/views/users/show.html.erb:28
-#: app/views/users/edit.html.erb:29
+#: app/views/meetings/new.html.erb:23 app/views/users/edit-dealer.html.erb:29
+#: app/views/users/show.html.erb:28 app/views/users/edit.html.erb:29
 msgid "City"
 msgstr "Város"
 
-#: app/views/layouts/_menu.erb:4 app/views/users/_myblock.erb:21
+#: app/controllers/clubs_controller.rb:81
+msgid "Club was successfully created."
+msgstr "A klub sikeresen létrejött."
+
+#: app/controllers/clubs_controller.rb:95
+msgid "Club was successfully updated."
+msgstr "A klub frissítve lett."
+
+#: app/views/layouts/_menu.erb:4 app/views/users/_usermenu.erb:3
 msgid "Clubs"
 msgstr "Klubok"
 
-#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:9
+#: app/views/boxes/show.html.erb:68 app/views/boxes/_form.erb:36
+msgid "Color"
+msgstr "Szín"
+
+#: app/views/battles/_show_pair.erb:34
+msgid "Combat starts at 5 AM..."
+msgstr "A párbaj reggel 5-kor kezdődik"
+
+#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:14
 msgid "Comments count"
 msgstr "Hozzászólások száma"
 
@@ -134,37 +225,81 @@ msgstr "Kapcsolattartó telefonszáma "
 msgid "Could not find a user with that email address."
 msgstr "Nem található felhasználó ezzel az email címmel"
 
-#: app/views/users/edit-dealer.html.erb:26 app/views/users/show.html.erb:25
-#: app/views/users/edit.html.erb:26
+#: app/views/meetings/new.html.erb:19 app/views/users/edit-dealer.html.erb:26
+#: app/views/users/show.html.erb:25 app/views/users/edit.html.erb:26
 msgid "Country"
 msgstr "Ország"
+
+#: app/helpers/boxes_helper.rb:6
+msgid "Coupe"
+msgstr "Kupé"
+
+#: app/views/meetings/new.html.erb:31
+msgid "Create"
+msgstr "Létrehozás"
 
 #: app/helpers/users_helper.rb:13
 msgid "Croatia"
 msgstr "Horvátország"
 
+#: app/views/clubs/show.html.erb:43
+msgid "Current members"
+msgstr "Jelenleg tagok"
+
+#: app/views/boxes/show.html.erb:50 app/views/boxes/_form.erb:6
+msgid "Data"
+msgstr "Adatok"
+
+#: app/views/fronts/index.html.erb:38 app/views/fronts/index.html.erb:69
+msgid "Day"
+msgstr "Nap"
+
 #: app/views/users/new.html.erb:18
 msgid "Dealer"
 msgstr "Kereskedő"
 
+#: app/views/boxes/show.html.erb:62 app/views/boxes/_form.erb:26
+#: app/views/meetings/new.html.erb:11 app/views/clubs/_form.erb:9
 #: app/views/admin/forums/_form.erb:5
 msgid "Description"
 msgstr "Leírás"
 
-#: app/views/layouts/_login.erb:7
+#: app/controllers/boxes_controller.rb:44
+msgid "Edit car"
+msgstr "Autó szerkesztése"
+
+#: app/views/layouts/_login.erb:14
 msgid "Edit my profile"
 msgstr "Saját profil szerkesztése"
 
-#: app/views/layouts/_login.erb:16 app/views/sessions/new.html.erb:2
+#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:7
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr "E-mail"
 
-#: app/views/galleries/_scroller.erb:16
+#: app/views/galleries/_scroller.erb:22
 msgid "Empty"
 msgstr "Üres"
 
-#: app/views/users/_myblock.erb:22
+#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:92
+#: app/views/boxes/_form.erb:9 app/views/boxes/_form.erb:64
+msgid "Engine"
+msgstr "Motor"
+
+#: app/views/boxes/show.html.erb:120
+msgid "Equipment"
+msgstr "Felszereltség"
+
+#: app/helpers/boxes_helper.rb:9
+msgid "Estate-car"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:51 app/views/boxes/show.html.erb:70
+#: app/views/boxes/_form.erb:8 app/views/boxes/_form.erb:39
+msgid "Exterior"
+msgstr "Külső"
+
+#: app/views/users/_usermenu.erb:4
 msgid "Favorites"
 msgstr "Kedvencek"
 
@@ -181,7 +316,7 @@ msgstr "Finnország"
 msgid "Forgot Password"
 msgstr "Elfelejtett jelszó"
 
-#: app/views/sessions/new.html.erb:16
+#: app/views/sessions/new.html.erb:21
 msgid "Forgotten password?"
 msgstr "Elfelejtett jelszó?"
 
@@ -201,20 +336,24 @@ msgstr "Fórumok"
 msgid "France"
 msgstr "Franciaország"
 
-#: app/views/users/_myblock.erb:20
+#: app/views/users/_usermenu.erb:2
 msgid "Friends"
 msgstr "Ismerősök"
 
+#: app/views/boxes/show.html.erb:84 app/views/boxes/_form.erb:52
+msgid "Fuel"
+msgstr "Üzemanyag"
+
 #: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
-#: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:7
+#: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:12
 msgid "Full name"
 msgstr "Teljes név"
 
-#: app/views/users/_myblock.erb:24
+#: app/views/users/_usermenu.erb:6
 msgid "Gallery"
 msgstr "Képek"
 
-#: app/controllers/galleries_controller.rb:26
+#: app/controllers/galleries_controller.rb:33
 msgid "Gallery was successfully created."
 msgstr "A galéria sikeresen létrejött."
 
@@ -223,13 +362,35 @@ msgstr "A galéria sikeresen létrejött."
 msgid "Gender"
 msgstr "Nem"
 
+#: app/views/boxes/_form.erb:14 app/views/clubs/_searchform.erb:3
+#: app/views/cars/_searchform.erb:3
+msgid "Genre"
+msgstr "Márka"
+
 #: app/helpers/users_helper.rb:17
 msgid "Germany"
 msgstr "Németország"
 
+#: app/helpers/boxes_helper.rb:15
+msgid "Hatchback"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:8
+msgid "Hot Rod"
+msgstr ""
+
 #: app/helpers/users_helper.rb:14
 msgid "Hungary"
 msgstr "Magyarország"
+
+#: app/views/boxes/show.html.erb:52 app/views/boxes/show.html.erb:76
+#: app/views/boxes/_form.erb:7 app/views/boxes/_form.erb:31
+msgid "Interior"
+msgstr "Belső"
+
+#: app/views/clubs/show.html.erb:22
+msgid "Introduction"
+msgstr "Bemutatás"
 
 #: app/controllers/passwords_controller.rb:34
 msgid "Invalid Reset Code entered."
@@ -242,6 +403,14 @@ msgstr "Hibás ellenőrző kód"
 #: app/controllers/sessions_controller.rb:22
 msgid "Invalid email or password"
 msgstr "Érvénytelen e-mail cím vagy jelszó"
+
+#: app/controllers/combats_controller.rb:4
+msgid "Invite to a combat"
+msgstr "Párbajra hívás"
+
+#: app/views/combats/new.html.erb:11
+msgid "Invite to combat"
+msgstr "Párbajra hívás"
 
 #: app/helpers/users_helper.rb:18
 msgid "Israel"
@@ -267,15 +436,15 @@ msgstr "Nyelv"
 msgid "Languages spoken"
 msgstr "Beszélt nyelvek"
 
-#: app/views/users/_myblock.erb:14
+#: app/views/users/_myblock.erb:19
 msgid "Last login"
 msgstr "Utolsó bejelentkezés"
 
-#: app/views/front/index.html.erb:2
+#: app/views/fronts/index.html.erb:2
 msgid "Latest headlines"
 msgstr "Legfrissebb hírek"
 
-#: app/views/sessions/new.html.erb:12
+#: app/views/sessions/new.html.erb:17
 msgid "Log in"
 msgstr "Bejelentkezés"
 
@@ -287,9 +456,22 @@ msgstr "Sikeres bejelentkezés"
 msgid "Login"
 msgstr "Bejelentkezés"
 
-#: app/views/layouts/_login.erb:8
+#: app/views/clubs/_form.erb:14
+msgid "Logo"
+msgstr "Logo"
+
+#: app/views/layouts/_login.erb:15
 msgid "Logout"
 msgstr "Kijelentkezés"
+
+#: app/views/layouts/_login.erb:37
+msgid "Lost password"
+msgstr "Elveszett jelszó"
+
+#: app/views/boxes/show.html.erb:58 app/views/boxes/_form.erb:20
+#: app/views/cars/_searchform.erb:6
+msgid "Make"
+msgstr "Kivitel"
 
 #: app/helpers/users_helper.rb:22
 msgid "Malaysia"
@@ -300,27 +482,71 @@ msgstr "Malajzia"
 msgid "Male"
 msgstr "Férfi"
 
-#: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
+#: app/views/layouts/_menu.erb:8 app/views/users/_usermenu.erb:7
 msgid "Marketplace"
 msgstr "Hirdetések"
 
-#: app/views/front/index.html.erb:25
-msgid "Most viewed"
+#: app/views/clubs/show.html.erb:25
+msgid "Meetings"
+msgstr "Találkozók"
+
+#: app/views/clubs/show.html.erb:53
+msgid "Member request"
+msgstr "Tagságra vár"
+
+#: app/views/clubs/show.html.erb:24
+msgid "Members"
+msgstr "Tagok"
+
+#: app/controllers/clubs_controller.rb:47
+msgid "Membership accepted"
+msgstr "Tagság elfogadva"
+
+#: app/controllers/clubs_controller.rb:60
+msgid "Membership deleted"
+msgstr "Tagság törölve"
+
+#: app/helpers/boxes_helper.rb:10
+msgid "Minibus"
 msgstr ""
 
-#: app/views/layouts/_login.erb:6
+#: app/views/fronts/index.html.erb:36 app/views/fronts/index.html.erb:67
+msgid "Month"
+msgstr "Hónap"
+
+#: app/views/fronts/index.html.erb:25
+msgid "Most viewed"
+msgstr "Legtöbbet látogatott"
+
+#: app/views/layouts/_login.erb:13
 msgid "My friends"
 msgstr "Ismerősök"
+
+#: app/views/clubs/_searchform.erb:6 app/views/clubs/_form.erb:3
+msgid "Name"
+msgstr "Név"
 
 #: app/helpers/users_helper.rb:23
 msgid "Netherlands"
 msgstr "Horvátország"
 
+#: app/controllers/boxes_controller.rb:20
+msgid "New car"
+msgstr "Új autó"
+
+#: app/views/clubs/index.html.erb:9
+msgid "New club"
+msgstr "Új klub"
+
+#: app/views/galleries/_scroller.erb:36
+msgid "New gallery"
+msgstr "Új galéria"
+
 #: app/controllers/pages_controller.rb:30
 msgid "New page"
 msgstr "Új oldal"
 
-#: app/controllers/front_controller.rb:4 app/views/layouts/_menu.erb:2
+#: app/controllers/fronts_controller.rb:4 app/views/layouts/_menu.erb:2
 msgid "News"
 msgstr "Hírek"
 
@@ -329,13 +555,21 @@ msgstr "Hírek"
 msgid "Nickname"
 msgstr "Felhasználónév"
 
+#: app/helpers/boxes_helper.rb:14
+msgid "Off-road"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:16
+msgid "Old-timer"
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:55
 msgid "Opening time"
 msgstr "Nyitvatartás"
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:19 app/views/passwords/edit.html.erb.erb:4
-#: app/views/sessions/new.html.erb:5 app/views/users/edit-dealer.html.erb:17
+#: app/views/layouts/_login.erb:26 app/views/passwords/edit.html.erb.erb:4
+#: app/views/sessions/new.html.erb:10 app/views/users/edit-dealer.html.erb:17
 #: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr "Jelszó"
@@ -360,6 +594,14 @@ msgstr "Jelszó újragenerálás"
 msgid "Password successfully updated."
 msgstr "A jelszó sikeresen megváltozott."
 
+#: app/views/clubs/show.html.erb:47
+msgid "Pending members"
+msgstr "Tagságra vár"
+
+#: app/views/boxes/show.html.erb:82 app/views/boxes/_form.erb:49
+msgid "Performance"
+msgstr "Teljesítmény"
+
 #: app/views/rssreaders/edit.html.erb:11 app/views/pages/edit.html.erb:7
 #: app/views/pages/new.html.erb:7
 msgid "Permalink"
@@ -373,9 +615,17 @@ msgstr "Telefon"
 msgid "Phone number"
 msgstr "Telefon-szám"
 
+#: app/helpers/boxes_helper.rb:12
+msgid "Pickup"
+msgstr ""
+
 #: app/models/user_mailer.rb:5
 msgid "Please activate your new account"
 msgstr "Kérjük, aktiváld az új felhasználói fiókodat"
+
+#: app/views/user_mailer/member_request.html.erb:2
+msgid "Please visit your club page to confirm:"
+msgstr "Kérjük, látogasd meg a klub oldalát az elfogadáshoz:"
 
 #: app/views/user_mailer/friend_request.html.erb:2
 msgid "Please visit your profile to confirm:"
@@ -385,12 +635,16 @@ msgstr "Elfogadáshoz lépj be a profil oldaladra:"
 msgid "Poland"
 msgstr "Lengyelország"
 
-#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:26
+#: app/views/boxes/show.html.erb:106
+msgid "Rating"
+msgstr "Értékelés"
+
+#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:37
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr "Regisztráció"
 
-#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:11
+#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:16
 msgid "Registration time"
 msgstr "Regisztráció ideje"
 
@@ -398,7 +652,7 @@ msgstr "Regisztráció ideje"
 msgid "Registration type"
 msgstr "Regisztráció típusa"
 
-#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:30 app/views/sessions/new.html.erb:14
 msgid "Remember me"
 msgstr "Emlékezz rám"
 
@@ -410,26 +664,54 @@ msgstr "Új jelszó kérése"
 msgid "Reset Your Password"
 msgstr "Adj meg új jelszót"
 
-#: app/views/layouts/_menu.erb:5 app/views/users/_myblock.erb:23
+#: app/views/layouts/_menu.erb:5 app/views/users/_usermenu.erb:5
 msgid "Ride Battle"
 msgstr "Versenypálya"
+
+#: app/controllers/battles_controller.rb:13
+msgid "Ride Battles"
+msgstr "Versenyek"
 
 #: app/controllers/rssreaders_controller.rb:51
 msgid "Rssreader was successfully created."
 msgstr "Az Rss olvasó sikeresen létrejött."
 
-#: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:14
-#: app/views/rssreaders/new.html.erb:14 app/views/images/edit.html.erb:3
+#: app/views/boxes/_form.erb:77 app/views/topics/new.html.erb:13
+#: app/views/rssreaders/edit.html.erb:14 app/views/rssreaders/new.html.erb:14
+#: app/views/carimages/edit.html.erb:4 app/views/carimages/new.html.erb:10
+#: app/views/carimages/_multiupload.erb:9 app/views/images/edit.html.erb:3
 #: app/views/images/new.html.erb:8 app/views/images/_multiupload.erb:9
 #: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
-#: app/views/galleries/new.html.erb:6 app/views/users/edit-dealer.html.erb:67
+#: app/views/galleries/edit.html.erb:6 app/views/galleries/new.html.erb:6
+#: app/views/clubs/_form.erb:18 app/views/users/edit-dealer.html.erb:67
 #: app/views/users/edit.html.erb:61
 msgid "Save"
 msgstr "Mentés"
 
-#: app/views/layouts/_searchblock.erb:9
+#: app/views/layouts/_searchblock.erb:9 app/views/clubs/_searchform.erb:9
+#: app/views/cars/_searchform.erb:10
 msgid "Search"
 msgstr "Keresés"
+
+#: app/helpers/boxes_helper.rb:11
+msgid "Sedan"
+msgstr "Szedán"
+
+#: app/views/combats/new.html.erb:5
+msgid "Select your car"
+msgstr "Válaszd ki az autódat"
+
+#: app/views/shouts/_form.erb:5
+msgid "Send"
+msgstr "Küld"
+
+#: app/views/clubs/_form.erb:6
+msgid "Short description"
+msgstr "Rövid leírás"
+
+#: app/views/clubs/show.html.erb:23
+msgid "Shoutbox"
+msgstr "Üzenőfal"
 
 #: app/controllers/users_controller.rb:92
 msgid "Signup complete!"
@@ -456,6 +738,14 @@ msgstr "Dél Afrika"
 msgid "Spain"
 msgstr "Spanyolország"
 
+#: app/helpers/boxes_helper.rb:13
+msgid "Sport"
+msgstr ""
+
+#: app/views/meetings/new.html.erb:15
+msgid "Starting date"
+msgstr "Indulás dátuma"
+
 #: app/helpers/users_helper.rb:28
 msgid "Sweden"
 msgstr "Svédország"
@@ -479,9 +769,26 @@ msgstr "Ez a téma zárolva lett."
 
 #: app/views/topics/_form.erb:2 app/views/rssreaders/edit.html.erb:6
 #: app/views/rssreaders/new.html.erb:6 app/views/pages/edit.html.erb:4
-#: app/views/pages/new.html.erb:4 app/views/galleries/new.html.erb:4
+#: app/views/pages/new.html.erb:4 app/views/meetings/new.html.erb:7
+#: app/views/galleries/edit.html.erb:4 app/views/galleries/new.html.erb:4
 msgid "Title"
 msgstr "Cím"
+
+#: app/views/user_mailer/combat_notify.html.erb:5
+msgid "To check the details of this battle, follow the link below:"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:88 app/views/boxes/_form.erb:58
+msgid "Top speed"
+msgstr "Végsebesség"
+
+#: app/views/boxes/show.html.erb:90 app/views/boxes/_form.erb:61
+msgid "Torque"
+msgstr "Nyomaték"
+
+#: app/views/boxes/_form.erb:17
+msgid "Type"
+msgstr "Típus"
 
 #: app/helpers/users_helper.rb:30
 msgid "UK: England & Wales"
@@ -499,6 +806,10 @@ msgstr "Felhasználó"
 msgid "Users"
 msgstr "Felhasználók"
 
+#: app/helpers/boxes_helper.rb:7
+msgid "Van"
+msgstr ""
+
 #: app/views/layouts/_menu.erb:7
 msgid "Videos"
 msgstr "Videók"
@@ -511,6 +822,10 @@ msgstr "Kattints erre a linkre az aktiváláshoz"
 msgid "Website"
 msgstr "Honlap"
 
+#: app/views/fronts/index.html.erb:37 app/views/fronts/index.html.erb:68
+msgid "Week"
+msgstr "Hét"
+
 #: app/views/layouts/_login.erb:3
 msgid "Welcome"
 msgstr "Üdvözöllek"
@@ -518,6 +833,18 @@ msgstr "Üdvözöllek"
 #: app/views/passwords/new.html.erb.erb:3
 msgid "What is the email address used to create your account?"
 msgstr "Add meg azt az email címet, mellyel korábban regisztráltál."
+
+#: app/controllers/clubs_controller.rb:37
+msgid "You are not allowed to be a member of this club"
+msgstr "Ennek a klubnak nem lehetsz tagja"
+
+#: app/views/user_mailer/member_destroy.html.erb:2
+msgid "You are not listed in member list of this club:"
+msgstr "Ennek a klubnak nem vagy a taglistáján:"
+
+#: app/views/user_mailer/member_accept.html.erb:2
+msgid "You can visit your new club:"
+msgstr "Meglátogathatod az új klubod:"
 
 #: app/controllers/sessions_controller.rb:31
 msgid "You have been logged out."
@@ -535,6 +862,22 @@ msgstr "A felhasználói fiókod aktiválva lett!"
 msgid "Your account has been created."
 msgstr "A felhasználói fiókod létrejött."
 
+#: app/controllers/combats_controller.rb:21
+msgid "Your invitation has done."
+msgstr "A kihívásod kész."
+
+#: app/controllers/clubs_controller.rb:33
+msgid ""
+"Your membership recorded. The Club admin can accept your request. Please be "
+"patient."
+msgstr ""
+"A tagság kérelmed rögzítve lett. A klub adminisztrátora hamarosan elfogadja."
+" Kérjük, légy türelemmel."
+
+#: app/views/shouts/_form.erb:3 app/views/combats/new.html.erb:8
+msgid "Your message"
+msgstr "Üzeneted"
+
 #: app/views/user_mailer/reset_password.html.erb.erb:1
 msgid "Your password has been reset"
 msgstr "A jelszavad megváltozott."
@@ -543,12 +886,20 @@ msgstr "A jelszavad megváltozott."
 msgid "Your password has been reset."
 msgstr "A jelszavad megváltozott."
 
+#: app/controllers/combats_controller.rb:27
+msgid "Your selected car is already in a combat."
+msgstr "A kiválasztott autód már párbajban van."
+
 #: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
 #: app/views/users/edit.html.erb:46
 msgid "ZIP"
 msgstr "Irányítószám"
 
-#: app/views/topics/show.html.erb:10
+#: app/views/boxes/_form.erb:46
+msgid "ccm"
+msgstr "lökettérfogat"
+
+#: app/views/boxes/show.html.erb:128 app/views/topics/show.html.erb:10
 msgid "new comment"
 msgstr "új hozzászólás"
 
@@ -559,3 +910,4 @@ msgstr "A jelszó beállításához kattints ide:"
 #: app/views/user_mailer/activation.html.erb:1
 msgid "your account has been activated."
 msgstr "a felhasználó fiókod aktiválva lett."
+

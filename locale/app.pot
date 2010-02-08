@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-01-20 18:38+0100\n"
+"POT-Creation-Date: 2010-02-08 10:16+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,9 +16,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
+#: app/models/user_mailer.rb:37
+#: app/views/user_mailer/member_request.html.erb:1
+msgid "%s has requested to be a member of your club"
+msgstr ""
+
 #: app/models/user_mailer.rb:30
 #: app/views/user_mailer/friend_request.html.erb:1
 msgid "%s has requested to be your friend"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:17
+msgid "%s » club memberships"
+msgstr ""
+
+#: app/controllers/galleries_controller.rb:4
+msgid "%s's galleries"
+msgstr ""
+
+#: app/models/user_mailer.rb:60
+msgid "%s, your car was challenged to a combat"
+msgstr ""
+
+#: app/models/user_mailer.rb:44 app/views/user_mailer/member_accept.html.erb:1
+msgid "%s, your membership to %s accepted"
+msgstr ""
+
+#: app/models/user_mailer.rb:52
+msgid "%s, your membership to %s deleted"
+msgstr ""
+
+#: app/views/user_mailer/member_destroy.html.erb:1
+msgid "%s, your membership to %s deleted by the club owner"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:145 app/helpers/boxes_helper.rb:162
+msgid "-- Empty --"
 msgstr ""
 
 #: app/controllers/passwords_controller.rb:14
@@ -33,21 +66,39 @@ msgstr ""
 msgid "About Me"
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:49 app/views/users/show.html.erb:34
-#: app/views/users/edit.html.erb:49
+#: app/views/boxes/show.html.erb:86 app/views/boxes/_form.erb:55
+msgid "Acceleration"
+msgstr ""
+
+#: app/views/meetings/new.html.erb:27 app/views/users/edit-dealer.html.erb:49
+#: app/views/users/show.html.erb:34 app/views/users/edit.html.erb:49
 msgid "Address"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:60
+msgid "Age grade"
+msgstr ""
+
+#: app/views/boxes/_form.erb:23
+msgid "Age-grade"
 msgstr ""
 
 #: app/controllers/users_controller.rb:33
 msgid "An error occured, your password was not changed."
 msgstr ""
 
-#: app/views/galleries/show.html.erb:21
+#: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
+#: app/views/galleries/_gallery_admin.erb:8 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr ""
 
 #: app/helpers/users_helper.rb:5
 msgid "Argentina"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:98
+#: app/views/boxes/_form.erb:10 app/views/boxes/_form.erb:69
+msgid "Audio"
 msgstr ""
 
 #: app/helpers/users_helper.rb:6
@@ -60,6 +111,10 @@ msgstr ""
 
 #: app/views/users/edit-dealer.html.erb:34 app/views/users/edit.html.erb:34
 msgid "Avatar"
+msgstr ""
+
+#: app/views/galleries/edit.html.erb:10 app/views/galleries/new.html.erb:10
+msgid "Back"
 msgstr ""
 
 #: app/helpers/users_helper.rb:8
@@ -75,7 +130,7 @@ msgstr ""
 msgid "Body"
 msgstr ""
 
-#: app/views/users/_myblock.erb:19
+#: app/views/users/_usermenu.erb:1
 msgid "Box"
 msgstr ""
 
@@ -87,8 +142,28 @@ msgstr ""
 msgid "Bulgaria"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:5
+msgid "Cabriolet"
+msgstr ""
+
 #: app/helpers/users_helper.rb:11
 msgid "Canada"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:51
+msgid "Cannot accept membership"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:64
+msgid "Cannot remove member"
+msgstr ""
+
+#: app/controllers/boxes_controller.rb:33
+msgid "Car was successfully created."
+msgstr ""
+
+#: app/controllers/boxes_controller.rb:50
+msgid "Car was successfully updated."
 msgstr ""
 
 #: app/views/layouts/_menu.erb:3
@@ -99,16 +174,32 @@ msgstr ""
 msgid "Chile"
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:29 app/views/users/show.html.erb:28
-#: app/views/users/edit.html.erb:29
+#: app/views/meetings/new.html.erb:23 app/views/users/edit-dealer.html.erb:29
+#: app/views/users/show.html.erb:28 app/views/users/edit.html.erb:29
 msgid "City"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:4 app/views/users/_myblock.erb:21
+#: app/controllers/clubs_controller.rb:81
+msgid "Club was successfully created."
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:95
+msgid "Club was successfully updated."
+msgstr ""
+
+#: app/views/layouts/_menu.erb:4 app/views/users/_usermenu.erb:3
 msgid "Clubs"
 msgstr ""
 
-#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:9
+#: app/views/boxes/show.html.erb:68 app/views/boxes/_form.erb:36
+msgid "Color"
+msgstr ""
+
+#: app/views/battles/_show_pair.erb:34
+msgid "Combat starts at 5 AM..."
+msgstr ""
+
+#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:14
 msgid "Comments count"
 msgstr ""
 
@@ -130,37 +221,81 @@ msgstr ""
 msgid "Could not find a user with that email address."
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:26 app/views/users/show.html.erb:25
-#: app/views/users/edit.html.erb:26
+#: app/views/meetings/new.html.erb:19 app/views/users/edit-dealer.html.erb:26
+#: app/views/users/show.html.erb:25 app/views/users/edit.html.erb:26
 msgid "Country"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:6
+msgid "Coupe"
+msgstr ""
+
+#: app/views/meetings/new.html.erb:31
+msgid "Create"
 msgstr ""
 
 #: app/helpers/users_helper.rb:13
 msgid "Croatia"
 msgstr ""
 
+#: app/views/clubs/show.html.erb:43
+msgid "Current members"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:50 app/views/boxes/_form.erb:6
+msgid "Data"
+msgstr ""
+
+#: app/views/fronts/index.html.erb:38 app/views/fronts/index.html.erb:69
+msgid "Day"
+msgstr ""
+
 #: app/views/users/new.html.erb:18
 msgid "Dealer"
 msgstr ""
 
+#: app/views/boxes/show.html.erb:62 app/views/boxes/_form.erb:26
+#: app/views/meetings/new.html.erb:11 app/views/clubs/_form.erb:9
 #: app/views/admin/forums/_form.erb:5
 msgid "Description"
 msgstr ""
 
-#: app/views/layouts/_login.erb:7
+#: app/controllers/boxes_controller.rb:44
+msgid "Edit car"
+msgstr ""
+
+#: app/views/layouts/_login.erb:14
 msgid "Edit my profile"
 msgstr ""
 
-#: app/views/layouts/_login.erb:16 app/views/sessions/new.html.erb:2
+#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:7
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
 
-#: app/views/galleries/_scroller.erb:16
+#: app/views/galleries/_scroller.erb:22
 msgid "Empty"
 msgstr ""
 
-#: app/views/users/_myblock.erb:22
+#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:92
+#: app/views/boxes/_form.erb:9 app/views/boxes/_form.erb:64
+msgid "Engine"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:120
+msgid "Equipment"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:9
+msgid "Estate-car"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:51 app/views/boxes/show.html.erb:70
+#: app/views/boxes/_form.erb:8 app/views/boxes/_form.erb:39
+msgid "Exterior"
+msgstr ""
+
+#: app/views/users/_usermenu.erb:4
 msgid "Favorites"
 msgstr ""
 
@@ -177,7 +312,7 @@ msgstr ""
 msgid "Forgot Password"
 msgstr ""
 
-#: app/views/sessions/new.html.erb:16
+#: app/views/sessions/new.html.erb:21
 msgid "Forgotten password?"
 msgstr ""
 
@@ -197,20 +332,24 @@ msgstr ""
 msgid "France"
 msgstr ""
 
-#: app/views/users/_myblock.erb:20
+#: app/views/users/_usermenu.erb:2
 msgid "Friends"
 msgstr ""
 
+#: app/views/boxes/show.html.erb:84 app/views/boxes/_form.erb:52
+msgid "Fuel"
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
-#: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:7
+#: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:12
 msgid "Full name"
 msgstr ""
 
-#: app/views/users/_myblock.erb:24
+#: app/views/users/_usermenu.erb:6
 msgid "Gallery"
 msgstr ""
 
-#: app/controllers/galleries_controller.rb:26
+#: app/controllers/galleries_controller.rb:33
 msgid "Gallery was successfully created."
 msgstr ""
 
@@ -219,12 +358,34 @@ msgstr ""
 msgid "Gender"
 msgstr ""
 
+#: app/views/boxes/_form.erb:14 app/views/clubs/_searchform.erb:3
+#: app/views/cars/_searchform.erb:3
+msgid "Genre"
+msgstr ""
+
 #: app/helpers/users_helper.rb:17
 msgid "Germany"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:15
+msgid "Hatchback"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:8
+msgid "Hot Rod"
+msgstr ""
+
 #: app/helpers/users_helper.rb:14
 msgid "Hungary"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:52 app/views/boxes/show.html.erb:76
+#: app/views/boxes/_form.erb:7 app/views/boxes/_form.erb:31
+msgid "Interior"
+msgstr ""
+
+#: app/views/clubs/show.html.erb:22
+msgid "Introduction"
 msgstr ""
 
 #: app/controllers/passwords_controller.rb:34
@@ -237,6 +398,14 @@ msgstr ""
 
 #: app/controllers/sessions_controller.rb:22
 msgid "Invalid email or password"
+msgstr ""
+
+#: app/controllers/combats_controller.rb:4
+msgid "Invite to a combat"
+msgstr ""
+
+#: app/views/combats/new.html.erb:11
+msgid "Invite to combat"
 msgstr ""
 
 #: app/helpers/users_helper.rb:18
@@ -263,15 +432,15 @@ msgstr ""
 msgid "Languages spoken"
 msgstr ""
 
-#: app/views/users/_myblock.erb:14
+#: app/views/users/_myblock.erb:19
 msgid "Last login"
 msgstr ""
 
-#: app/views/front/index.html.erb:2
+#: app/views/fronts/index.html.erb:2
 msgid "Latest headlines"
 msgstr ""
 
-#: app/views/sessions/new.html.erb:12
+#: app/views/sessions/new.html.erb:17
 msgid "Log in"
 msgstr ""
 
@@ -283,8 +452,21 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/views/layouts/_login.erb:8
+#: app/views/clubs/_form.erb:14
+msgid "Logo"
+msgstr ""
+
+#: app/views/layouts/_login.erb:15
 msgid "Logout"
+msgstr ""
+
+#: app/views/layouts/_login.erb:37
+msgid "Lost password"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:58 app/views/boxes/_form.erb:20
+#: app/views/cars/_searchform.erb:6
+msgid "Make"
 msgstr ""
 
 #: app/helpers/users_helper.rb:22
@@ -296,27 +478,71 @@ msgstr ""
 msgid "Male"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:8 app/views/users/_myblock.erb:25
+#: app/views/layouts/_menu.erb:8 app/views/users/_usermenu.erb:7
 msgid "Marketplace"
 msgstr ""
 
-#: app/views/front/index.html.erb:25
+#: app/views/clubs/show.html.erb:25
+msgid "Meetings"
+msgstr ""
+
+#: app/views/clubs/show.html.erb:53
+msgid "Member request"
+msgstr ""
+
+#: app/views/clubs/show.html.erb:24
+msgid "Members"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:47
+msgid "Membership accepted"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:60
+msgid "Membership deleted"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:10
+msgid "Minibus"
+msgstr ""
+
+#: app/views/fronts/index.html.erb:36 app/views/fronts/index.html.erb:67
+msgid "Month"
+msgstr ""
+
+#: app/views/fronts/index.html.erb:25
 msgid "Most viewed"
 msgstr ""
 
-#: app/views/layouts/_login.erb:6
+#: app/views/layouts/_login.erb:13
 msgid "My friends"
+msgstr ""
+
+#: app/views/clubs/_searchform.erb:6 app/views/clubs/_form.erb:3
+msgid "Name"
 msgstr ""
 
 #: app/helpers/users_helper.rb:23
 msgid "Netherlands"
 msgstr ""
 
+#: app/controllers/boxes_controller.rb:20
+msgid "New car"
+msgstr ""
+
+#: app/views/clubs/index.html.erb:9
+msgid "New club"
+msgstr ""
+
+#: app/views/galleries/_scroller.erb:36
+msgid "New gallery"
+msgstr ""
+
 #: app/controllers/pages_controller.rb:30
 msgid "New page"
 msgstr ""
 
-#: app/controllers/front_controller.rb:4 app/views/layouts/_menu.erb:2
+#: app/controllers/fronts_controller.rb:4 app/views/layouts/_menu.erb:2
 msgid "News"
 msgstr ""
 
@@ -325,13 +551,21 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:14
+msgid "Off-road"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:16
+msgid "Old-timer"
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:55
 msgid "Opening time"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:19 app/views/passwords/edit.html.erb.erb:4
-#: app/views/sessions/new.html.erb:5 app/views/users/edit-dealer.html.erb:17
+#: app/views/layouts/_login.erb:26 app/views/passwords/edit.html.erb.erb:4
+#: app/views/sessions/new.html.erb:10 app/views/users/edit-dealer.html.erb:17
 #: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
@@ -356,6 +590,14 @@ msgstr ""
 msgid "Password successfully updated."
 msgstr ""
 
+#: app/views/clubs/show.html.erb:47
+msgid "Pending members"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:82 app/views/boxes/_form.erb:49
+msgid "Performance"
+msgstr ""
+
 #: app/views/rssreaders/edit.html.erb:11 app/views/pages/edit.html.erb:7
 #: app/views/pages/new.html.erb:7
 msgid "Permalink"
@@ -369,8 +611,16 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:12
+msgid "Pickup"
+msgstr ""
+
 #: app/models/user_mailer.rb:5
 msgid "Please activate your new account"
+msgstr ""
+
+#: app/views/user_mailer/member_request.html.erb:2
+msgid "Please visit your club page to confirm:"
 msgstr ""
 
 #: app/views/user_mailer/friend_request.html.erb:2
@@ -381,12 +631,16 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
-#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:26
+#: app/views/boxes/show.html.erb:106
+msgid "Rating"
+msgstr ""
+
+#: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:37
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
 
-#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:11
+#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:16
 msgid "Registration time"
 msgstr ""
 
@@ -394,7 +648,7 @@ msgstr ""
 msgid "Registration type"
 msgstr ""
 
-#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:9
+#: app/views/layouts/_login.erb:30 app/views/sessions/new.html.erb:14
 msgid "Remember me"
 msgstr ""
 
@@ -406,25 +660,53 @@ msgstr ""
 msgid "Reset Your Password"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:5 app/views/users/_myblock.erb:23
+#: app/views/layouts/_menu.erb:5 app/views/users/_usermenu.erb:5
 msgid "Ride Battle"
+msgstr ""
+
+#: app/controllers/battles_controller.rb:13
+msgid "Ride Battles"
 msgstr ""
 
 #: app/controllers/rssreaders_controller.rb:51
 msgid "Rssreader was successfully created."
 msgstr ""
 
-#: app/views/topics/new.html.erb:13 app/views/rssreaders/edit.html.erb:14
-#: app/views/rssreaders/new.html.erb:14 app/views/images/edit.html.erb:3
+#: app/views/boxes/_form.erb:77 app/views/topics/new.html.erb:13
+#: app/views/rssreaders/edit.html.erb:14 app/views/rssreaders/new.html.erb:14
+#: app/views/carimages/edit.html.erb:4 app/views/carimages/new.html.erb:10
+#: app/views/carimages/_multiupload.erb:9 app/views/images/edit.html.erb:3
 #: app/views/images/new.html.erb:8 app/views/images/_multiupload.erb:9
 #: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
-#: app/views/galleries/new.html.erb:6 app/views/users/edit-dealer.html.erb:67
+#: app/views/galleries/edit.html.erb:6 app/views/galleries/new.html.erb:6
+#: app/views/clubs/_form.erb:18 app/views/users/edit-dealer.html.erb:67
 #: app/views/users/edit.html.erb:61
 msgid "Save"
 msgstr ""
 
-#: app/views/layouts/_searchblock.erb:9
+#: app/views/layouts/_searchblock.erb:9 app/views/clubs/_searchform.erb:9
+#: app/views/cars/_searchform.erb:10
 msgid "Search"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:11
+msgid "Sedan"
+msgstr ""
+
+#: app/views/combats/new.html.erb:5
+msgid "Select your car"
+msgstr ""
+
+#: app/views/shouts/_form.erb:5
+msgid "Send"
+msgstr ""
+
+#: app/views/clubs/_form.erb:6
+msgid "Short description"
+msgstr ""
+
+#: app/views/clubs/show.html.erb:23
+msgid "Shoutbox"
 msgstr ""
 
 #: app/controllers/users_controller.rb:92
@@ -450,6 +732,14 @@ msgstr ""
 msgid "Spain"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:13
+msgid "Sport"
+msgstr ""
+
+#: app/views/meetings/new.html.erb:15
+msgid "Starting date"
+msgstr ""
+
 #: app/helpers/users_helper.rb:28
 msgid "Sweden"
 msgstr ""
@@ -471,8 +761,25 @@ msgstr ""
 
 #: app/views/topics/_form.erb:2 app/views/rssreaders/edit.html.erb:6
 #: app/views/rssreaders/new.html.erb:6 app/views/pages/edit.html.erb:4
-#: app/views/pages/new.html.erb:4 app/views/galleries/new.html.erb:4
+#: app/views/pages/new.html.erb:4 app/views/meetings/new.html.erb:7
+#: app/views/galleries/edit.html.erb:4 app/views/galleries/new.html.erb:4
 msgid "Title"
+msgstr ""
+
+#: app/views/user_mailer/combat_notify.html.erb:5
+msgid "To check the details of this battle, follow the link below:"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:88 app/views/boxes/_form.erb:58
+msgid "Top speed"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:90 app/views/boxes/_form.erb:61
+msgid "Torque"
+msgstr ""
+
+#: app/views/boxes/_form.erb:17
+msgid "Type"
 msgstr ""
 
 #: app/helpers/users_helper.rb:30
@@ -491,6 +798,10 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:7
+msgid "Van"
+msgstr ""
+
 #: app/views/layouts/_menu.erb:7
 msgid "Videos"
 msgstr ""
@@ -503,12 +814,28 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
+#: app/views/fronts/index.html.erb:37 app/views/fronts/index.html.erb:68
+msgid "Week"
+msgstr ""
+
 #: app/views/layouts/_login.erb:3
 msgid "Welcome"
 msgstr ""
 
 #: app/views/passwords/new.html.erb.erb:3
 msgid "What is the email address used to create your account?"
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:37
+msgid "You are not allowed to be a member of this club"
+msgstr ""
+
+#: app/views/user_mailer/member_destroy.html.erb:2
+msgid "You are not listed in member list of this club:"
+msgstr ""
+
+#: app/views/user_mailer/member_accept.html.erb:2
+msgid "You can visit your new club:"
 msgstr ""
 
 #: app/controllers/sessions_controller.rb:31
@@ -527,6 +854,20 @@ msgstr ""
 msgid "Your account has been created."
 msgstr ""
 
+#: app/controllers/combats_controller.rb:21
+msgid "Your invitation has done."
+msgstr ""
+
+#: app/controllers/clubs_controller.rb:33
+msgid ""
+"Your membership recorded. The Club admin can accept your request. Please be "
+"patient."
+msgstr ""
+
+#: app/views/shouts/_form.erb:3 app/views/combats/new.html.erb:8
+msgid "Your message"
+msgstr ""
+
 #: app/views/user_mailer/reset_password.html.erb.erb:1
 msgid "Your password has been reset"
 msgstr ""
@@ -535,12 +876,20 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
+#: app/controllers/combats_controller.rb:27
+msgid "Your selected car is already in a combat."
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
 #: app/views/users/edit.html.erb:46
 msgid "ZIP"
 msgstr ""
 
-#: app/views/topics/show.html.erb:10
+#: app/views/boxes/_form.erb:46
+msgid "ccm"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:128 app/views/topics/show.html.erb:10
 msgid "new comment"
 msgstr ""
 
