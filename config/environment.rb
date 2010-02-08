@@ -41,13 +41,14 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
 
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
-  config.gem "gettext", :lib => false, :version => '>=2.1.0'
+  config.gem 'gettext', :lib => false, :version => '>=2.1.0'
   #config.gem "gettext", :lib => 'gettext', :version => '>=2.1.0'
-  config.gem "grosser-fast_gettext", :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
-  config.gem "RedCloth", :version => '>=4.2.2'
+  config.gem 'grosser-fast_gettext', :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
+  config.gem 'RedCloth', :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
-  config.gem "geokit"
+  config.gem 'geokit'
   config.gem 'mime-types', :lib => 'mime/types'
+  config.gem 'youtube', :version => '>=0.8.6'
   
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.

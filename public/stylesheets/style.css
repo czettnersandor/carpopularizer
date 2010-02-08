@@ -109,15 +109,8 @@ div.pagination {
   clear: both;
   padding: 20px;
   margin: 0 0 20px 0;
-  -moz-border-radius-bottomleft:4px;
-  -moz-border-radius-bottomright:4px;
-  -moz-border-radius-topleft:4px;
-  -moz-border-radius-topright:4px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   -x-system-font:none;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
 }
 .flashnotice {
   background: #99ff99;
@@ -146,10 +139,7 @@ ul.ui-tabs-nav li {
   /* background: url(../images/tabs.png) no-repeat 0 -24px; */
   border: 1px solid #aaaaaa;
   border-bottom: 0;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
   text-align: center;
   background: white;
 }
@@ -163,10 +153,7 @@ ul.ui-tabs-nav li.ui-tabs-selected {
   background: url("../images/lightblue-horiz.png") repeat-x 0 0;
   border: 1px solid #2487BB;
   border-bottom: 0;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
   height: 24px;
   margin: 0 0 0 3px;
 }
@@ -183,10 +170,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   background: url(../images/lightblue-horiz.png) repeat-x;
   border: 1px solid #2487bb;
   padding: 10px 10px 0;
-  -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-bottom-left-radius: 5px 5px;
-  border-bottom-right-radius: 5px 5px;
+  -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 .block-header {
   background: url(../images/block-header.png) no-repeat;
@@ -195,10 +179,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   padding-left: 70px;
   border: 1px solid #2487bb;
   border-bottom: none;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px 5px;
-  border-top-right-radius: 5px 5px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
 }
 .block-header.fix {
   border-bottom: 1px solid #2487bb;;
@@ -342,8 +323,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   list-style: none;
   background: white;
   border: 1px solid #2487bb;;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
 }
 #loginblock ul.usermenu li ul li {
   margin: 0;
@@ -547,15 +527,7 @@ table td.num {
 }
 
 .btn, input[type="submit"], input[type="button"] {
-  -moz-border-radius-bottomleft:4px;
-  -moz-border-radius-bottomright:4px;
-  -moz-border-radius-topleft:4px;
-  -moz-border-radius-topright:4px;
-  -x-system-font:none;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   background:#DDDDDD url(../images/bg-btn.gif) repeat-x scroll 0 0;
   border-color:#DDDDDD #DDDDDD #CCCCCC;
   border-style:solid;
@@ -614,10 +586,7 @@ label.error {
 
 .comment,
 .listitem {
-  -moz-border-radius-bottomleft:5px;
-  -moz-border-radius-bottomright:5px;
-  border-bottom-left-radius: 5px 5px;
-  border-bottom-right-radius: 5px 5px;
+  -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
   background: transparent url(../images/lightblue-horiz.png) repeat-x scroll 0 0;
   border: 1px solid #2487bb;
   padding: 10px 10px 0;
@@ -680,8 +649,7 @@ hr.clear {
 }
 #profile-left .lightblue.first {
   border-top: 1px solid #2487bb;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px 5px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px;
   height: 100px;
 }
 #profile-left .lightblue hr {
@@ -741,8 +709,7 @@ hr.clear {
 #profile-right .orangebox {
   background: url(../images/lightblue-horiz.png) repeat-x;
   border: 1px solid #fa981b;
-  -moz-border-radius-topright: 5px;
-  border-top-right-radius: 5px 5px;
+  -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px;
   padding: 10px;
 }
 #profile-left .usergenres {
@@ -901,10 +868,7 @@ table.profile-edit td {
   background: #ffffff url(../images/orange-horiz.png) repeat-x bottom;
   border: 1px solid #fa981b;
   padding: 0;
-  -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-bottom-left-radius: 5px 5px;
-  border-bottom-right-radius: 5px 5px;
+  -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;
 }
 .gallery-head {
   height: 30px;
@@ -1015,10 +979,7 @@ table.profile-edit td {
   background: url(../images/gallery-active.png) repeat-x bottom;
   border: 1px solid #fa981b;
   border-bottom: 0;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px 5px;
-  border-top-right-radius: 5px 5px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
 }
 #gallery-scroller .item-add {
   width: 90px;
@@ -1120,8 +1081,7 @@ a.image-edits.edit {
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
   border: 1px solid #dddddd;
   margin: 10px 0 0 0;
-  -moz-border-radius: 5px;
-  border-radius: 5px 5px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   padding: 10px 0 0 10px;
 }
 #auto-adatok-tabs .ui-tabs-panel {
@@ -1173,8 +1133,7 @@ a.image-edits.edit {
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
   border: 1px solid #2487bb;
   margin: 10px 0 0 10px;
-  -moz-border-radius: 5px;
-  border-radius: 5px 5px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #car-description .inner{
   height: 154px;
@@ -1192,8 +1151,7 @@ a.image-edits.edit {
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
   border: 1px solid #2487bb;
   margin: 10px 0 0 10px;
-  -moz-border-radius: 5px;
-  border-radius: 5px 5px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #car-comments {
   clear:both;
@@ -1265,10 +1223,7 @@ h3#club-title {
   background: url("../images/lightblue-horiz.png") repeat-x 0 0;
   border: 1px solid #2487BB;
   border-bottom: 0;
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  border-top-left-radius: 3px 3px;
-  border-top-right-radius: 3px 3px;
+  -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
   height: 34px;
   margin: 0 0 0 3px;
 }
@@ -1339,7 +1294,7 @@ h3#club-title {
   padding-top: 36px;
 }
 #form-wrapper .form-tabs {
-  -moz-border-radius: 5px;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   background: url("../images/lightblue-horiz.png") repeat-x scroll 0 0 transparent;
   border: 1px solid #2487BB;
   padding: 10px;
