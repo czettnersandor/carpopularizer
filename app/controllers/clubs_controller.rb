@@ -2,8 +2,20 @@ class ClubsController < ApplicationController
   before_filter :preload_club, :except => [:new, :create, :index]
 
   def index
-    @clubs = Club.paginate(:page => params[:page], :per_page => 25, :order => 'created_at DESC',
-      :conditions => gen_conditions(params, Club))
+    if params[:user_id]
+      user_index
+    else
+      @clubs = Club.paginate(:page => params[:page], :per_page => 25, :order => 'created_at DESC',
+        :conditions => gen_conditions(params, Club))
+    end
+    
+  end
+
+  def user_index
+    @user = User.find(params[:user_id])
+    @clubs = @user.clubs
+    @title = _("%s » club memberships") % @user.login
+    render "user_index"
   end
 
   def show

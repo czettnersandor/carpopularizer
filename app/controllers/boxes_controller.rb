@@ -88,8 +88,9 @@ class BoxesController < ApplicationController
 
   protected
   def preloaders
-    @user = User.find(params[:user_id])
     @car = Car.find(params[:id])
+    @user = @car.user
+    
   end
 
 end

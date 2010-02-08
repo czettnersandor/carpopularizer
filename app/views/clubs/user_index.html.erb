@@ -1,0 +1,16 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <h1><%= @title %></h1>
+
+    <% @clubs.each do |club| %>
+
+      <%= render :partial => "clublistitem", :locals => {:club => club} %>
+
+    <% end %>
+
+    <hr class="clear" />
+  </div>
+</div>

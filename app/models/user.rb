@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :requested_friends, :through => :friendships, :source => :friend, :conditions => "status = 'requested'", :order => "friendships.created_at"
   has_many :pending_friends, :through => :friendships, :source => :friend, :conditions => "status = 'pending'", :order => "friendships.created_at"
   has_many :friendships, :dependent => :destroy
-
+  has_many :memberships
   has_many :clubs, :through => :memberships, :conditions => "status = 'accepted'"
   has_many :requested_clubs, :through => :memberships, :conditions => "status = 'pending'"
   has_many :galleries

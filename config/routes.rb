@@ -27,6 +27,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :users do |user|
+    user.resources :clubs
     user.resources :friends
     user.resources :battles
     user.resources :galleries do |gallery|
