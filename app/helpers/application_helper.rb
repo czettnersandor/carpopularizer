@@ -13,14 +13,15 @@ module ApplicationHelper
   end
 
   def menu_link(title, url, css_class = "")
-    if (url_for[0, url.length] == url || url_for(:only_path=>false)[0, url.length] == url)
+    url2 = request.url
+    if (request.url[0, url.length] == url || url_for(:only_path=>false)[0, url.length] == url)
       css_class += css_class=="" ? "active" : " active"
     end
     link_to title, url, :class => css_class
   end
 
   def menu_list(title, url, css_class = "")
-    if ((url_for[0, url.length] == url || url_for(:only_path=>false)[0, url.length] == url) && url != "/")
+    if (request.url[0, url.length] == url && url != "/")
       css_class += css_class=="" ? "active" : " active"
     end
     if (url == "/" && (url == url_for(:only_path=>false) || url_for == url))

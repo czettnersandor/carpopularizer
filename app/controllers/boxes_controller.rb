@@ -8,7 +8,7 @@ class BoxesController < ApplicationController
   end
 
   def show
-    @title = @user.login+" » "+@car.name
+    @title = @user.login+" » "+@template.genre(@car.genre)+" "+@car.name
     @comments = Carcomment.paginate(:page => params[:page], :per_page => 25,
       :order => 'carcomments.created_at DESC', :include => :user,
       :conditions => ['carcomments.car_id = ?', @car.id])

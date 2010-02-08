@@ -1,0 +1,7 @@
+<%= @car1.user.login %>,
+<%= @car2.user.login %> has challenged your <%= genre(@car1.genre) %> <%= @car1.name %> with his/her <%= genre(@car2.genre) %> <%= @car2.name %>.
+The beginning of the battle: 5am.
+
+<%= _("To check the details of this battle, follow the link below:") %>
+<%= user_battles_path car1.user %>
+

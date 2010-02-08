@@ -1605,3 +1605,43 @@ h3#club-title {
 .ajaxful-rating-wrapper li {
   margin: 0;
 }
+
+.listitem.pair {
+  display: block;
+  float: left;
+  clear: left;
+  width: 550px;
+  height: 100px;
+  background: url(../images/listitem-pairs.png);
+  padding: 0;
+}
+.listitem.pair.even {
+  background-position: 0 -100px;
+}
+.listitem.pair .challenger,
+.listitem.pair .invited{
+  display: block;
+  float: left;
+  width: 275px;
+}
+.listitem.pair .details {
+  display: block;
+  height: 100px;
+  width: 155px;
+  float: left;
+  text-align: center;
+}
+.listitem.pair .image {
+  display: block;
+  height: 100px;
+  width: 120px;
+  float: left;
+}
+.pairstatus {
+  display: block;
+  width: 146px;
+  float: left;
+  clear: right;
+  text-align: center;
+  padding: 10px 0;
+}

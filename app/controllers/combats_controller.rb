@@ -17,6 +17,7 @@ class CombatsController < ApplicationController
     @combat.status = "pending"
     respond_to do |format|
       if @invitercar.invitable? && @combat.save
+        
         flash[:notice] = _('Your invitation has done.')
         format.html { redirect_to(current_user) }
         format.xml  { render :xml => @combatr, :status => :created, :location => @combat }

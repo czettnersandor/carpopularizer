@@ -41,7 +41,7 @@ class UserMailer < ActionMailer::Base
 
   def member_accept(user, club)
     setup_email(user)
-    @subject    += N_("%s, your membership to %s accepted") % [user.login, club.name]
+    @subject    += _("%s, your membership to %s accepted") % [user.login, club.name]
     @body[:url] = "http://#{@hostname}"+club_path(club)
     @body[:user] = user
     @body[:club] = club
@@ -49,10 +49,17 @@ class UserMailer < ActionMailer::Base
 
   def member_destroy(user, club)
     setup_email(user)
-    @subject    += N_("%s, your membership to %s deleted") % [user.login, club.name]
+    @subject    += _("%s, your membership to %s deleted") % [user.login, club.name]
     @body[:url] = "http://#{@hostname}"+club_path(club)
     @body[:user] = user
     @body[:club] = club
+  end
+
+  def combat_notify(car1, car2)
+    setup_email(car1.user)
+    @subject += _("%s, your car was challenged to a combat")
+    @body[:car1] = car1
+    @body[:car2] = car2
   end
   
   protected
