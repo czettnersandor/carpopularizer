@@ -2,5 +2,5 @@
 
 <%= render(:partial => "battles/show_pair", :locals => {:combat => @last}) if @last %>
 <hr class="clear" />
-<%= render :partial => "vote_pair", :locals => {:combat => @combat} %>
+<%= render :partial => "vote_pair", :locals => {:combat => @combat} if @combat %>
 

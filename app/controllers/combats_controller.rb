@@ -2,17 +2,10 @@ class CombatsController < ApplicationController
 
   def index
     @title = _("Combat vote")
-    #@combat = Combat.find(:first, :joins => :combat_votes,
-    #    :conditions => ["combats.status = 'active' AND combat_votes.combat_id = ''"])
-    # @combat = Combat.find(:first, :joins => "LEFT OUTER JOIN combat_votes ON combats.id = combat_votes.combat_id")
-    # :conditions => ["combat_votes.topic_id is null"]
-
-    @last = Combat.find(:first,
+    @last = Combat.find(:last,
       :conditions => ["id IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
-
     @combat = Combat.find(:first,
       :conditions => ["id NOT IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
-
   end
 
   def new
@@ -47,6 +40,12 @@ class CombatsController < ApplicationController
         format.xml  { render :xml => @combat.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  def vote
+    @combat = Combat.find params[:id]
+    @combat.vote_for(params[:car], current_user.id)
+    redirect_to combats_path
   end
 
   protected
