@@ -1,0 +1,17 @@
+<div class="vote-pair lightblue-block">
+  <div class="challenger">
+    <div class="car-photo">
+      <%= link_to(image_tag(combat.challenger.carimages.first.image.url(:car)),
+        user_box_path(combat.challenger.user, combat.challenger)) if combat.challenger.carimages.first %>
+    </div>
+  </div>
+
+  <div class="invited">    
+    <div class="car-photo">
+      <%= link_to(image_tag(combat.invited.carimages.first.image.url(:car)),
+        user_box_path(combat.invited.user, combat.invited)) if combat.invited.carimages.first %>
+    </div>
+  </div>
+
+  <hr class="clear" />
+</div>

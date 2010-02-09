@@ -1,9 +1,18 @@
 class CombatsController < ApplicationController
 
   def index
-    @title = _("Combats")
-    @combats = Combat.paginate :page => params[:page], :per_page => 25,
-      :order=>"created_at DESC", :conditions => ["status = ?", "active"]
+    @title = _("Combat vote")
+    #@combat = Combat.find(:first, :joins => :combat_votes,
+    #    :conditions => ["combats.status = 'active' AND combat_votes.combat_id = ''"])
+    # @combat = Combat.find(:first, :joins => "LEFT OUTER JOIN combat_votes ON combats.id = combat_votes.combat_id")
+    # :conditions => ["combat_votes.topic_id is null"]
+
+    @last = Combat.find(:first,
+      :conditions => ["id IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
+
+    @combat = Combat.find(:first,
+      :conditions => ["id NOT IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
+
   end
 
   def new
@@ -26,7 +35,7 @@ class CombatsController < ApplicationController
         
         flash[:notice] = _('Your invitation has done.')
         format.html { redirect_to(current_user) }
-        format.xml  { render :xml => @combatr, :status => :created, :location => @combat }
+        format.xml  { render :xml => @combat, :status => :created, :location => @combat }
       else
         format.html {
           if not @invitercar.invitable?
@@ -34,7 +43,7 @@ class CombatsController < ApplicationController
             @mycars = load_my_cars
           end
           render :action => "new"
-          }
+        }
         format.xml  { render :xml => @combat.errors, :status => :unprocessable_entity }
       end
     end

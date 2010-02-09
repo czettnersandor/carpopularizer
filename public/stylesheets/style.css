@@ -1624,7 +1624,7 @@ h3#club-title {
   text-decoration: none;
 }
 #battles-main a.node:hover {
-  text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
+  text-shadow: 0 0 5px #000000, 0 0 7px #000000;
 }
 #battles-main .node-description {
   width: 33%;
@@ -1633,4 +1633,28 @@ h3#club-title {
 }
 #battles-main .node-description p {
   padding: 20px;
+}
+
+/*
+* Vote pairs
+*/
+.vote-pair {
+  position: relative;
+}
+.vote-pair .challenger,
+.vote-pair .invited{
+  display: block;
+  float: left;
+  width: 345px;
+}
+.vote-pair .car-photo {
+  display: block;
+  float: left;
+  width: 275px;
+  height: 229px;
+  background: url(../images/car-photo.png);
+}
+
+.vote-pair .car-photo img {
+  margin: 5px;
 }

@@ -35,7 +35,7 @@ case combat.status
   when "pending"
     _("Combat starts at 5 AM...")
   when "active"
-    render (:partial => "combats/rate", :locals => {:combat => combat})
+    render(:partial => "combats/rate", :locals => {:combat => combat})
 end
 %>
 
