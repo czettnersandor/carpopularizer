@@ -3,13 +3,13 @@
   <div class="challenger">
     <div class="image">
       <%= link_to(image_tag(combat.challenger.carimages.first.image.url(:thumb)),
-        user_box_path(combat.challenger.user, combat.challenger)) if combat.challenger.carimages.first %>
+user_box_path(combat.challenger.user, combat.challenger)) if combat.challenger.carimages.first %>
     </div>
     <div class="details">
       <%= genre(combat.challenger.genre) %> <%= combat.challenger.name %><br/>
       (<%= combat.challenger.age_grade %>)<br/>
       <%= image_tag('/images/genres/'+combat.challenger.genre) %><br/>
-<%#   link_to combat.challenger.user.login, combat.challenger.user %>
+      <%#   link_to combat.challenger.user.login, combat.challenger.user %>
     </div>
   </div>
 
@@ -18,10 +18,11 @@
       <%= genre(combat.invited.genre) %> <%= combat.invited.name %><br/>
       (<%= combat.invited.age_grade %>)<br/>
       <%= image_tag('/images/genres/'+combat.invited.genre) %><br/>
-<%#   link_to combat.invited.user.login, combat.invited.user %>
+      <%#   link_to combat.invited.user.login, combat.invited.user %>
     </div>
     <div class="image">
-      <%= link_to(image_tag(combat.invited.carimages.first.image.url(:thumb)), user_box_path(combat.invited.user, combat.invited)) if combat.invited.carimages.first %>
+      <%= link_to(image_tag(combat.invited.carimages.first.image.url(:thumb)),
+user_box_path(combat.invited.user, combat.invited)) if combat.invited.carimages.first %>
     </div>
   </div>
 
@@ -29,9 +30,13 @@
 
 <div class="pairstatus">
 
-  <% case combat.status
-  when "pending" %>
-    <%= _("Combat starts at 5 AM...") %>
-  <% end %>
+<%=
+case combat.status
+  when "pending"
+    _("Combat starts at 5 AM...")
+  when "active"
+    render (:partial => "combats/rate", :locals => {:combat => combat})
+end
+%>
 
 </div>

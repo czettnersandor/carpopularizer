@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-02-08 10:16+0100\n"
+"POT-Creation-Date: 2010-02-09 19:06+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,8 +195,12 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: app/views/battles/_show_pair.erb:34
+#: app/views/battles/_show_pair.erb:36
 msgid "Combat starts at 5 AM..."
+msgstr ""
+
+#: app/controllers/combats_controller.rb:4 app/views/battles/index.html.erb:6
+msgid "Combats"
 msgstr ""
 
 #: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:14
@@ -371,6 +375,13 @@ msgstr ""
 msgid "Hatchback"
 msgstr ""
 
+#: app/views/battles/index.html.erb:23
+msgid ""
+"Highway to the ultimate glory! This is an elimination race. Votes are "
+"evaluated on a daily basis. The number of participants is limited. Races are "
+"usually held by categories, makes, types or design."
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:8
 msgid "Hot Rod"
 msgstr ""
@@ -400,7 +411,7 @@ msgstr ""
 msgid "Invalid email or password"
 msgstr ""
 
-#: app/controllers/combats_controller.rb:4
+#: app/controllers/combats_controller.rb:10
 msgid "Invite to a combat"
 msgstr ""
 
@@ -631,8 +642,22 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
+#: app/views/battles/index.html.erb:5
+msgid "Races"
+msgstr ""
+
 #: app/views/boxes/show.html.erb:106
 msgid "Rating"
+msgstr ""
+
+#: app/views/battles/index.html.erb:17
+msgid ""
+"Real prestige fights! You can find the list of cars that have been "
+"challenged for a battle. You can challenge another car and prove that your "
+"car is the coolest ride in town. There are no categories in this "
+"competition. Accepting a challenge is automatic, you have no choice. If you "
+"are challenged, you must take the battle. Enter the world of Ride Battles "
+"and vote now!"
 msgstr ""
 
 #: app/controllers/users_controller.rb:45 app/views/layouts/_login.erb:37
@@ -664,7 +689,7 @@ msgstr ""
 msgid "Ride Battle"
 msgstr ""
 
-#: app/controllers/battles_controller.rb:13
+#: app/controllers/battles_controller.rb:15
 msgid "Ride Battles"
 msgstr ""
 
@@ -778,6 +803,10 @@ msgstr ""
 msgid "Torque"
 msgstr ""
 
+#: app/views/battles/index.html.erb:7
+msgid "Tournaments"
+msgstr ""
+
 #: app/views/boxes/_form.erb:17
 msgid "Type"
 msgstr ""
@@ -826,6 +855,14 @@ msgstr ""
 msgid "What is the email address used to create your account?"
 msgstr ""
 
+#: app/views/battles/index.html.erb:11
+msgid ""
+"Who is the king of each category? All of the cars are participating in this "
+"race. Pairs are coming up randomly. Every vote  counts! Cars receive their "
+"trophies according to the result they achieve in this ongoing competition. "
+"Enter the ring, choose a category and decide who has the hottest ride!"
+msgstr ""
+
 #: app/controllers/clubs_controller.rb:37
 msgid "You are not allowed to be a member of this club"
 msgstr ""
@@ -854,7 +891,7 @@ msgstr ""
 msgid "Your account has been created."
 msgstr ""
 
-#: app/controllers/combats_controller.rb:21
+#: app/controllers/combats_controller.rb:27
 msgid "Your invitation has done."
 msgstr ""
 
@@ -876,7 +913,7 @@ msgstr ""
 msgid "Your password has been reset."
 msgstr ""
 
-#: app/controllers/combats_controller.rb:27
+#: app/controllers/combats_controller.rb:33
 msgid "Your selected car is already in a combat."
 msgstr ""
 

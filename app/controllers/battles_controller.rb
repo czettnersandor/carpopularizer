@@ -1,9 +1,11 @@
 class BattlesController < ApplicationController
-  def index
 
+  def index
     # called from user's profile
     if params[:user_id]
       user_index
+    else
+      @title = "Choose battle type!"
     end
 
   end

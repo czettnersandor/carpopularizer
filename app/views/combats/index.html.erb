@@ -1,0 +1,5 @@
+<h1><%= @title %></h1>
+
+<% @combats.each do |combat| %>
+  <%= render :partial => "battles/show_pair", :locals => {:combat => combat} %>
+<% end %>

@@ -5,6 +5,8 @@ class Car < ActiveRecord::Base
     :exterior, :engine, :audio
   has_many :carimages
   has_many :carcomments
+  has_many :combat_votes, :foreign_key => :voted_car
+
   default_scope :order => 'ordinal ASC'
 
   ajaxful_rateable :stars => 10

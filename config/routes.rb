@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :battles
+  map.resources :combats
   
   map.resources :clubs, :member => { :add_user => :get, :accept_member => :get, :remove_member => :get } do |club|
     club.resources :shouts

@@ -1,5 +1,11 @@
 class CombatsController < ApplicationController
 
+  def index
+    @title = _("Combats")
+    @combats = Combat.paginate :page => params[:page], :per_page => 25,
+      :order=>"created_at DESC", :conditions => ["status = ?", "active"]
+  end
+
   def new
     @title = _("Invite to a combat")
     @car = Car.find(params[:box_id])

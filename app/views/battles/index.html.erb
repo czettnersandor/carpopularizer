@@ -1,1 +1,27 @@
+<h1><%= @title %></h1>
 
+<div id="battles-main">
+
+  <%= link_to _("Races"), combats_path, :class => 'node races' %>
+  <%= link_to _("Combats"), combats_path, :class => 'node combat' %>
+  <%= link_to _("Tournaments"), combats_path, :class => 'node tournament' %>
+
+  <div class="node-description">
+    <p>
+      <%= _("Who is the king of each category? All of the cars are participating in this race. Pairs are coming up randomly. Every vote  counts! Cars receive their trophies according to the result they achieve in this ongoing competition. Enter the ring, choose a category and decide who has the hottest ride!") %>
+    </p>
+  </div>
+
+  <div class="node-description">
+    <p>
+      <%= _("Real prestige fights! You can find the list of cars that have been challenged for a battle. You can challenge another car and prove that your car is the coolest ride in town. There are no categories in this competition. Accepting a challenge is automatic, you have no choice. If you are challenged, you must take the battle. Enter the world of Ride Battles and vote now!") %>
+    </p>
+  </div>
+
+  <div class="node-description">
+    <p>
+      <%= _("Highway to the ultimate glory! This is an elimination race. Votes are evaluated on a daily basis. The number of participants is limited. Races are usually held by categories, makes, types or design.") %>
+    </p>
+  </div>
+
+</div>

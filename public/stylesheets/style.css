@@ -1600,3 +1600,37 @@ h3#club-title {
   text-align: center;
   padding: 10px 0;
 }
+
+/*
+* Battles main page
+*/
+#battles-main {
+  width: 897px;
+  height: 319px;
+  display: block;
+  margin: auto;
+  background: url(../images/battles.png);
+  position: relative;
+}
+#battles-main a.node {
+  width: 33%;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 250px 0 0;
+  font-size: 40px;
+  color: white;
+  text-shadow: 0 0 5px #000000;
+  text-decoration: none;
+}
+#battles-main a.node:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 5px #ffffff;
+}
+#battles-main .node-description {
+  width: 33%;
+  display: block;
+  float: left;
+}
+#battles-main .node-description p {
+  padding: 20px;
+}

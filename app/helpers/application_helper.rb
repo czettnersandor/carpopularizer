@@ -1,5 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+
   def admin_or_current?(user)
     if current_user
       current_user == user || current_user.has_role?('admin')
@@ -21,13 +22,12 @@ module ApplicationHelper
   end
 
   def menu_list(title, url, css_class = "")
-    if (request.url[0, url.length] == url && url != "/")
+    if (url_for[0, url.length] == url && url != "/")
       css_class += css_class=="" ? "active" : " active"
     end
     if (url == "/" && (url == url_for(:only_path=>false) || url_for == url))
       css_class += css_class=="" ? "active" : " active"
-    end
-    
+    end    
     '<li class="'+css_class+'">'+link_to(title, url)+'</li>'
   end
 
@@ -46,6 +46,5 @@ module ApplicationHelper
       string
     end
   end
-
 
 end
