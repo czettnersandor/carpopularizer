@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  before_filter :login_required, :except => [:index, :show]
   before_filter :find_forum_and_topic, :except => :index
 
   def index
@@ -9,6 +10,7 @@ class TopicsController < ApplicationController
   end
 
   def show
+    @title = @topic.title
     respond_to do |format|
       format.html do
         # see notes in application.rb on how this works

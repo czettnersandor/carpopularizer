@@ -1561,7 +1561,7 @@ h3#club-title {
   margin: 0;
 }
 
-.listitem.pair {
+/* .listitem.pair {
   display: block;
   float: left;
   clear: left;
@@ -1572,19 +1572,12 @@ h3#club-title {
 }
 .listitem.pair.even {
   background-position: 0 -100px;
-}
+} */
 .listitem.pair .challenger,
 .listitem.pair .invited{
   display: block;
   float: left;
-  width: 275px;
-}
-.listitem.pair .details {
-  display: block;
-  height: 100px;
-  width: 155px;
-  float: left;
-  text-align: center;
+  width: 40%;
 }
 .listitem.pair .image {
   display: block;
@@ -1594,7 +1587,7 @@ h3#club-title {
 }
 .pairstatus {
   display: block;
-  width: 146px;
+  width: 20%;
   float: left;
   clear: right;
   text-align: center;

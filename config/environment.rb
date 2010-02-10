@@ -34,7 +34,7 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
-  config.active_record.observers = :user_observer
+  config.active_record.observers = :user_observer, :combat_observer
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
@@ -42,17 +42,12 @@ Rails::Initializer.run do |config|
 
   #only used for mo/po file generation in development, !do not load(:lib=>false)! since it will only eat 7mb ram
   config.gem 'gettext', :lib => false, :version => '>=2.1.0'
-  #config.gem "gettext", :lib => 'gettext', :version => '>=2.1.0'
   config.gem 'grosser-fast_gettext', :lib => 'fast_gettext', :version => '~>0.4.9', :source=>"http://gems.github.com/"
   config.gem 'RedCloth', :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem 'geokit'
   config.gem 'mime-types', :lib => 'mime/types'
   config.gem 'youtube', :version => '>=0.8.6'
-  
-
-  # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-  #config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = :hu
 end
 
