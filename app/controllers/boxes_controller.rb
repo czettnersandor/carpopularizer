@@ -1,6 +1,7 @@
 class BoxesController < ApplicationController
 
   before_filter :preloaders, :except => [:index, :new, :create]
+  before_filter :login_required, :except => [ :index, :show ]
 
   def index
     @user = User.find(params[:user_id])

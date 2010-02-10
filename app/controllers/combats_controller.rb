@@ -1,5 +1,7 @@
 class CombatsController < ApplicationController
 
+  before_filter :login_required
+
   def index
     @title = _("Combat vote")
     @last = Combat.find(:last,
