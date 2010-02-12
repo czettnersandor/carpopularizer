@@ -1,0 +1,64 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+    <div class="club-tabs-wrapper">
+      <div id="message-tabs">
+        <ul>
+          <li><a href="#received"><%= _("Received") %></a></li>
+          <li><a href="#sent"><%= _("Sent") %></a></li>
+          <!-- <li><a href="#trash"><%= _("Trash") %></a></li> -->
+        </ul>
+
+        <div id="received" class="message-list">
+          <% @received.each do |message| %>
+            <div class="user-message <%= message.status %>">
+              <div class="sender">
+                <span class="icon"></span>
+                <%= message.sender.login %>
+              </div>
+              <div class="teaser">
+                <%= link_to shorten(message.body, 150), user_message_path(@user, message) %>
+              </div>
+              <div class="created_at">
+                <%= message.created_at.to_s(:short) %>
+              </div>
+            </div>
+          <%  end %>
+        </div>
+
+        <div id="sent" class="message-list">
+          <% @sent.each do |message| %>
+            <div class="user-message <%= message.status %>">
+              <div class="sender">
+                <span class="icon"></span>
+                <%= message.user.login %>
+              </div>
+              <div class="teaser">
+                <%= link_to shorten(message.body, 150), user_message_path(@user, message) %>
+              </div>
+              <div class="created_at">
+                <%= message.created_at.to_s(:short) %>
+              </div>
+            </div>
+          <%  end %>
+
+        </div>
+
+        <div id="trash" class="message-list">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#message-tabs').tabs({ cache: true });
+
+  });
+</script>

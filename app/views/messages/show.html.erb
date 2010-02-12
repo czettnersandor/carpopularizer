@@ -1,0 +1,9 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <%= RedCloth.new(@message.body).to_html %>
+
+  </div>
+</div>

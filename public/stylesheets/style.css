@@ -304,6 +304,10 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   width: 40px;
   background: url(../images/user.png) no-repeat 0 -40px;
 }
+#loginblock div.icons a.messages {
+  width: 40px;
+  background: url(../images/user.png) no-repeat 0 -160px;
+}
 #loginblock div.icons a:hover {
   /* for IE */
   filter:alpha(opacity=80);
@@ -1211,7 +1215,8 @@ h3#club-title {
   padding-top: 36px;
   margin-top: 20px;
 }
-#club-tabs {
+#club-tabs,
+#message-tabs {
   padding: 10px;
   background: url("../images/lightblue-horiz-bottom.png") repeat-x bottom transparent;
   border: 1px solid #2487bb;
@@ -1661,4 +1666,37 @@ h3#club-title {
 
 .vote-pair .car-photo img {
   margin: 5px;
+}
+
+/*
+* Messages
+*/
+.message-list div.user-message {
+  display: block;
+  height: 20px;
+  position: relative;
+}
+.message-list div.user-message .sender {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.message-list div.user-message .teaser {
+  display: block;
+  float: left;
+  width: 60%;
+}
+.message-list div.user-message .created_at {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.message-list div.user-message .icon {
+  background: url(../images/email-icons.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+.message-list div.user-message.new .icon {
+  background-position: -20px 0;
 }

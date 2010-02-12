@@ -16,6 +16,8 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :carcomments
   has_many :rates # ajaxful-rating
+  has_many :messages
+  has_many :messages_sent, :class_name => "Message", :foreign_key => :sender_id
   
   # Virtual attribute for the unencrypted password
   attr_accessor :password

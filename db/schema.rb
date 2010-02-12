@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100209173415) do
+ActiveRecord::Schema.define(:version => 20100211112757) do
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -154,6 +154,15 @@ ActiveRecord::Schema.define(:version => 20100209173415) do
     t.integer  "club_id"
     t.integer  "user_id"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "sender_id"
+    t.string   "status"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

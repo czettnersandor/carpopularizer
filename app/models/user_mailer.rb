@@ -57,7 +57,7 @@ class UserMailer < ActionMailer::Base
 
   def combat_notify(combat)
     setup_email(combat.invited.user)
-    @subject += _("%s, your car was challenged to a combat")
+    @subject += _("%s, your car was challenged to a combat") % combat.invited.user.login
     @body[:car1] = combat.invited
     @body[:car2] = combat.challenger
   end

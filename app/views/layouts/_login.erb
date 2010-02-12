@@ -10,10 +10,10 @@
   <%= link_to(image_tag(current_user.avatar.url(:thumb), :class=>"profile-thumb"), current_user) %>
 
   <div class="icons">
+    <%= link_to("", user_messages_url(current_user), :class => "messages", :title => _("Messages")) %>
     <%= link_to("", user_friends_url(current_user), :class => "users", :title => _("My friends")) %>
     <%= link_to("", edit_user_path(current_user), :class => "edit-profile", :title => _("Edit my profile")) %>
     <%= link_to("", "/logout", :class => "logout", :title => _("Logout")) %>
-
   </div>
 
 <% else %>
