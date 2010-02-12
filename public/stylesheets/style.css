@@ -67,7 +67,7 @@ input, textarea, select {
 * Layout
 */
 #header {
-  height: 160px;
+  height: 120px;
 }
 #content-wrapper {
   background: #ffffff url(../images/content-wrapper.png);
@@ -222,9 +222,9 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 */
 #loginblock {
   display: block;
-  margin: 10px 0 0 640px;
-  height: 75px;
-  width: 300px;
+  margin: 10px 0 0 620px;
+  height: 65px;
+  width: 320px;
   text-align: right;
   position: relative;
 }
@@ -282,10 +282,10 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 }
 #loginblock div.icons {
   display: block;
-  clear: both;
   width: 240px;
   height: 40px;
   text-align: right;
+  float: left;
 }
 #loginblock div.icons a {
   display: block;
@@ -317,6 +317,9 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 #loginblock ul.usermenu {
   float: left;
   list-style: none;
+  text-align: right;
+  width: 240px;
+  margin: 0;
 }
 #loginblock ul.usermenu li.username {
   padding-right: 16px;
@@ -331,6 +334,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   background: white;
   border: 1px solid #2487bb;;
   -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+  right: 80px;
 }
 #loginblock ul.usermenu li ul li {
   margin: 0;
@@ -343,7 +347,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 #menu li.sfhover ul {
   left: auto;
   display: block;
-  z-index: 1;
+  z-index: 701;
 }
 
 /*
@@ -1699,4 +1703,12 @@ h3#club-title {
 }
 .message-list div.user-message.new .icon {
   background-position: -20px 0;
+}
+.message-header {
+  display: block;
+  margin-bottom: 1px;
+  background: url(../images/)
+}
+.message-header label {
+  font-weight: bold;
 }

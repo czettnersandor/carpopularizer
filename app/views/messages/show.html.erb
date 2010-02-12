@@ -3,6 +3,10 @@
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
 
+    <div class="message-header"><label><%= _("Sender") %></label> <%= link_to @message.sender.login, @message.sender %></div>
+    <div class="message-header"><label><%= _("Recipient") %></label> <%= link_to @message.user.login, @message.user %></div>
+    <div class="message-header"><label><%= _("Date") %></label> <%= @message.created_at.to_s(:short) %></div>
+
     <%= RedCloth.new(@message.body).to_html %>
 
   </div>

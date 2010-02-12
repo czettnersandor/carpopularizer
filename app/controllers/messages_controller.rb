@@ -3,11 +3,14 @@ class MessagesController < ApplicationController
     @user = User.find params[:user_id], :include => [:messages]
     @received = @user.messages
     @sent = @user.messages_sent
+    @title = _("Messages")
   end
 
   def show
     @message = Message.find(params[:id])
+    @message.visit(current_user)
     @user = @message.user
+    @title = _("Messages")
   end
 
   def new
