@@ -104,6 +104,9 @@ div.pagination {
   margin: 10px 0;
   padding: 0 10px;
 }
+div.pagination .current {
+  font-weight: bold;
+}
 .message {
   display: block;
   clear: both;
@@ -996,7 +999,14 @@ table.profile-edit td {
   position: absolute;
   font-size: 10px;
   line-height: 11px;
-  bottom: 10px;
+  bottom: 20px;
+  left: 10px;
+}
+#gallery-scroller .created {
+  position: absolute;
+  font-size: 10px;
+  line-height: 11px;
+  bottom: 5px;
   left: 10px;
 }
 
@@ -1028,9 +1038,10 @@ h3#car-title img {
   height: 229px;
 }
 #car-gallery-box {
+  border-top: 1px solid #2487bb;
   display: block;
   float: left;
-  height: 194px;
+  height: 193px;
   width: 421px;
   bottom: 0;
 }
