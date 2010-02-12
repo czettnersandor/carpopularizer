@@ -95,12 +95,16 @@ $(document).ready(function(){
 
   $('a.colorbox').colorbox({});
 
+  $('.flashnotice').click(function(){
+    $(this).hide(500);
+  });
+
   $("#loginblock label").inFieldLabels();
 
   $('#profile-left .lightblue.usermenu li a').each( function(){
     $(this).css('background-position', '-220px -'+i*29+'px');
     i++
-  })
+  });
 
   // $('select').selectbox();
 

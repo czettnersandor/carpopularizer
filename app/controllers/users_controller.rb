@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.city && @user.address
       coordinates = GoogleGeocoder.geocode(@user.zip+' '+@user.city+' '+@user.address)
       @map = GMap.new("map")
+      @map.control_init(:large_map => true,:map_type => true)
       @map.center_zoom_init([coordinates.lat, coordinates.lng], 14)
       ianazones = GMarker.new([coordinates.lat, coordinates.lng])
       @map.overlay_init(ianazones)
