@@ -2,6 +2,7 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
+    <h1><%= @title %></h1>
     <div class="club-tabs-wrapper">
       <div id="message-tabs">
         <ul>
@@ -18,7 +19,7 @@
                 <%= message.sender.login %>
               </div>
               <div class="teaser">
-                <%= link_to shorten(message.body, 150), user_message_path(@user, message) %>
+                <%= link_to shorten(message.body, 50), user_message_path(@user, message) %>
               </div>
               <div class="created_at">
                 <%= message.created_at.to_s(:short) %>
@@ -35,7 +36,7 @@
                 <%= message.user.login %>
               </div>
               <div class="teaser">
-                <%= link_to shorten(message.body, 150), user_message_path(@user, message) %>
+                <%= link_to shorten(message.body, 50), user_message_path(@user, message) %>
               </div>
               <div class="created_at">
                 <%= message.created_at.to_s(:short) %>

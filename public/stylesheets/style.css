@@ -1349,6 +1349,7 @@ h3#club-title {
 .ui-widget-content a { color: #333333; }
 .ui-datepicker .ui-widget-header { border: 1px solid #e78f08; background: #fa981b; color: #ffffff; font-weight: bold; }
 .ui-widget-header a { color: #ffffff; }
+.ui-helper-hidden-accessible {display: none;}
 
 /* Corner radius */
 .ui-datepicker .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; }
@@ -1581,18 +1582,6 @@ h3#club-title {
   margin: 0;
 }
 
-/* .listitem.pair {
-  display: block;
-  float: left;
-  clear: left;
-  width: 550px;
-  height: 100px;
-  background: url(../images/listitem-pairs.png);
-  padding: 0;
-}
-.listitem.pair.even {
-  background-position: 0 -100px;
-} */
 .listitem.pair .challenger,
 .listitem.pair .invited{
   display: block;
@@ -1707,7 +1696,8 @@ h3#club-title {
 .message-header {
   display: block;
   margin-bottom: 1px;
-  background: url(../images/)
+  padding: 0 5px;
+  background: #a0d7f3;
 }
 .message-header label {
   font-weight: bold;
