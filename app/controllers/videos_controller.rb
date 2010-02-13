@@ -14,7 +14,7 @@ class VideosController < ApplicationController
   # GET /videos/1.xml
   def show
     @video = Video.find(params[:id])
-
+    @video.hit!
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @video }

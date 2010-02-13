@@ -11,7 +11,9 @@
 
 <% @videos.each do |video| %>
   <tr>
-    <td><%=h video.url %></td>
+    <td>
+      <%= image_tag "http://img.youtube.com/vi/"+video.video_id+"/2.jpg", :with=>120, :height=>90 %>
+    </td>
     <td><%=h video.title %></td>
     <td><%=h video.body %></td>
     <td><%=h video.user_id %></td>

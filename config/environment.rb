@@ -46,6 +46,7 @@ Rails::Initializer.run do |config|
   config.gem 'RedCloth', :version => '>=4.2.2'
   config.gem 'paperclip', :source => 'http://gemcutter.org'
   config.gem 'geokit'
+  config.gem 'hpricot'
   config.gem 'mime-types', :lib => 'mime/types'
   config.gem 'youtube', :version => '>=0.8.6'
   config.i18n.default_locale = :hu

@@ -3,6 +3,15 @@
   <%=h @video.url %>
 </p>
 
+<div class="youtube_video">
+  <object width="425" height="355">
+    <param name="movie" value="http://www.youtube.com/v/<%= @video.video_id %>&hl=en"></param>
+    <param name="wmode" value="transparent"></param>
+    <embed src="http://www.youtube.com/v/<%= @video.video_id %>&hl=en" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed>
+  </object>
+</div>
+
+
 <p>
   <b>Title:</b>
   <%=h @video.title %>
@@ -12,17 +21,6 @@
   <b>Body:</b>
   <%=h @video.body %>
 </p>
-
-<p>
-  <b>User id:</b>
-  <%=h @video.user_id %>
-</p>
-
-<p>
-  <b>Hits:</b>
-  <%=h @video.hits %>
-</p>
-
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
