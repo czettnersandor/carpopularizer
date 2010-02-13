@@ -110,13 +110,13 @@ div.pagination .current {
 .message {
   display: block;
   clear: both;
-  padding: 20px;
-  margin: 0 0 20px 0;
+  padding: 20px 20px 20px 25px;
+  margin: 0 0 10px 0;
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   -x-system-font:none;
 }
 .flashnotice {
-  background: #99ff99;
+  background: #99ff99 url(../images/exclamation.png) no-repeat 5px 22px;
   border: 1px solid #00ff00;
 }
 .login-message {

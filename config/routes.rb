@@ -50,6 +50,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resource :front
     admin.resources :forums
     admin.resources :users
+    admin.resources :videos
   end
   # The priority is based upon order of creation: first created -> highest priority.
 

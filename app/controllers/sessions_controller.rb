@@ -6,6 +6,15 @@ class SessionsController < ApplicationController
   # render new.rhtml
   def new
     @title = _("Login")
+    respond_to do |format|
+      format.html {}
+      format.js do
+        @message = _("You have to log in to be able to access here... Not yet a member? "+@template.link_to(_("Register now!"), new_user_path))
+        session[:return_to] = params[:redirect]
+        render :layout => false
+      end
+    end
+    
   end
 
   def create

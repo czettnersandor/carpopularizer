@@ -79,6 +79,10 @@ module AuthenticatedSystem
     session[:return_to] = request.request_uri
   end
 
+  def store_referer
+    session[:refer_to] = request.env["HTTP_REFERER"]
+  end
+
   # Redirect to the URI stored by the most recent store_location call or
   # to the passed default.
   def redirect_back_or_default(default)

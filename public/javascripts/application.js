@@ -8,7 +8,7 @@ jQuery.ajaxSetup({
     // First unset it, then set (which otherwise appends)
     xhr.setRequestHeader("Accept", "");
     xhr.setRequestHeader("Accept", "text/javascript");
-    }
+  }
 });
 
 var RecaptchaOptions = {
@@ -95,11 +95,18 @@ $(document).ready(function(){
 
   $('a.colorbox').colorbox({});
 
-  $('.flashnotice').click(function(){
-    $(this).hide(500);
+  $('body.not-logged-in a.login-required').colorbox({
+    href:function(){
+      var url = $(this).attr('href');
+      return '/login?redirect='+url;
+    }
   });
 
-  $("#loginblock label").inFieldLabels();
+$('.flashnotice').click(function(){
+  $(this).hide(500);
+});
+
+$("#loginblock label").inFieldLabels();
 
   $('#profile-left .lightblue.usermenu li a').each( function(){
     $(this).css('background-position', '-220px -'+i*29+'px');
@@ -163,7 +170,10 @@ $(document).ready(function(){
   $("input#user_birth").mask("9999/99/99");
   $("input.date").mask("9999/99/99");
   // $("input.datetime").mask("9999/99/99 99:99");
-  $("input.datepicker").datepicker({ appendText: '(yyyy-mm-dd)', dateFormat: 'yy-mm-dd' });
+  $("input.datepicker").datepicker({
+    appendText: '(yyyy-mm-dd)',
+    dateFormat: 'yy-mm-dd'
+  });
 
 
   $("form.user-register").validate({

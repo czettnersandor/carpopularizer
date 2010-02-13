@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_toppings
-    # set variables which needed everywhere
+    @bodyclass = ""
+    @bodyclass += " not-logged-in" if not logged_in?
   end
 
   def set_gettext_locale

@@ -3,6 +3,14 @@
     <%=flash[:login_message]%>
   </div>
 <%end%>
+
+<% if @message %>
+  <div class="message flashnotice">
+    <%= @message %>
+  </div>
+<%end%>
+
+
 <% form_tag session_path do -%>
   <div class="form-item"><label for="login"><%=_('Email')%></label><br/>
     <%= text_field_tag 'login' %><hr/></div>
