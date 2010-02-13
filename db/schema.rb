@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100213093504) do
+ActiveRecord::Schema.define(:version => 20100213170422) do
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20100213093504) do
     t.text     "exterior"
     t.text     "engine"
     t.text     "audio"
+    t.decimal  "rating_average", :precision => 6, :scale => 2, :default => 0.0
   end
 
   add_index "cars", ["user_id"], :name => "index_cars_on_user_id"

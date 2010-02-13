@@ -9,7 +9,7 @@ class Car < ActiveRecord::Base
 
   default_scope :order => 'ordinal ASC'
 
-  ajaxful_rateable :stars => 10
+  ajaxful_rateable :stars => 10, :cache_column => :rating_average
 
   def invitable?
     not Combat.find_by_challenger_id(self.id) || Combat.find_by_invited_id(self.id)
@@ -17,6 +17,10 @@ class Car < ActiveRecord::Base
 
   def all_combats
     Combat.find_all_by_challenger_id(id) + Combat.find_all_by_invited_id(id)
+  end
+
+  def self.top5 # Class method
+    find(:all, :order => "rating_average DESC", :limit => 5)
   end
   
 end
