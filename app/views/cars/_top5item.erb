@@ -1,0 +1,14 @@
+<div class="listitem">
+  <div class="list-header">
+    <%= image_tag('/images/genres/16/'+car.genre) %>
+    <%= link_to(genre(car.genre)+" "+car.name, user_box_path(car.user, car)) %>
+  </div>
+  <div class="profile-data">
+    <%= link_to(image_tag(car.carimages.first.image.url(:thumb)), user_box_path(car.user, car)) if car.carimages.first %>
+  </div>
+  <div class="profile-rate">
+    <%= car.rating_average %>
+  </div>
+
+  <hr class="clear" />
+</div>
