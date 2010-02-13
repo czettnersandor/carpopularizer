@@ -1,6 +1,5 @@
 <div class="listitem">
   <div class="list-header">
-    <%= image_tag('/images/genres/16/'+car.genre) %>
     <%= link_to(genre(car.genre)+" "+car.name, user_box_path(car.user, car)) %>
   </div>
   <div class="profile-data">
@@ -8,6 +7,7 @@
   </div>
   <div class="profile-rate">
     <%= car.rating_average %>
+    <%= image_tag('/images/genres/32/'+car.genre) %>
   </div>
 
   <hr class="clear" />
