@@ -15,7 +15,7 @@ class RssnewsController < ApplicationController
   def show
     @rssnew = Rssnews.find(params[:id])
     @rssnew.hit!
-    redirect_to @rssnew.link
+    redirect_norel @rssnew.link
   end
 
   # GET /rssnews/new

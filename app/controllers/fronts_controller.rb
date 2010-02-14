@@ -3,22 +3,28 @@ class FrontsController < ApplicationController
   def index
     @title = _("News")
     
-    @news_hu = Rssnews.paginate :page => params[:page], :per_page => 5, :conditions => ["lang = ?", "hu"]
-    @news_en = Rssnews.paginate :page => params[:page], :per_page => 5, :conditions => ["lang = ?", "en"]
+    @news_hu = Rssnews.paginate :page => params[:page], :per_page => 5,
+      :conditions => ["lang = ?", "hu"], :include => [:rssreader]
+    @news_en = Rssnews.paginate :page => params[:page], :per_page => 5,
+      :conditions => ["lang = ?", "en"], :include => [:rssreader]
     
     @news_by_hits_monthly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ?", "hu"]
+      :order=>"hits DESC", :conditions => ["lang = ?", "hu"], :include => [:rssreader]
     @news_by_hits_weekly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-7.days]
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-7.days],
+      :include => [:rssreader]
     @news_by_hits_daily = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-24.hours]
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "hu", Time.now-24.hours],
+      :include => [:rssreader]
 
     @news_by_hits_en_monthly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ?", "en"]
+      :order=>"hits DESC", :conditions => ["lang = ?", "en"], :include => [:rssreader]
     @news_by_hits_en_weekly = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-7.days]
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-7.days],
+      :include => [:rssreader]
     @news_by_hits_en_daily = Rssnews.paginate :page => params[:page_by_hits], :per_page => 5,
-      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-24.hours]
+      :order=>"hits DESC", :conditions => ["lang = ? AND pub_date > ?", "en", Time.now-24.hours],
+      :include => [:rssreader]
 
     @rssreaders_hu = Rssreader.find_all_by_lang 'hu'
     @rssreaders_en = Rssreader.find_all_by_lang 'en'

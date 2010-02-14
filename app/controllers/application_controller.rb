@@ -9,6 +9,11 @@ class ApplicationController < ActionController::Base
 
   layout "main"
 
+  def redirect_norel(red_url)
+    @red_url = red_url
+    render :layout => "redirect"
+  end
+
   protected
 
   def set_toppings

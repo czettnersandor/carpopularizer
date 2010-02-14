@@ -20,7 +20,7 @@ class Car < ActiveRecord::Base
   end
 
   def self.top5 # Class method
-    find(:all, :order => "rating_average DESC", :limit => 5)
+    find(:all, :order => "rating_average DESC", :limit => 5, :include => [:carimages, :user])
   end
   
 end
