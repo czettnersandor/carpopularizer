@@ -11,6 +11,7 @@
       <h3 id="car-title">
         <%= image_tag('/images/genres/32/'+@car.genre) %>
         <%= genre(@car.genre)+" "+@car.name %>
+        <%= link_to("",user_box_path(@user, @car), :class => "image-edits for-sale") if @car.for_sale %>
         <% if admin_or_current? @user %>
           <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "image-edits add")%>
           <%= link_to("",edit_user_box_path(@user, @car), :class => "image-edits edit")%>
@@ -124,11 +125,13 @@
         <div class="win-wrapper">
 
           <div class="tournament-win">
+            <%= _("Tournament") %><br/>
             nyert-vesztett<br/>
             <%= @car.tournament_win.to_s+"/"+@car.tournament_lost.to_s %>
           </div>
 
           <div class="combat-win">
+            <%= _("Combat") %><br/>
             nyert-vesztett<br/>
             <%= @car.combat_win.to_s+"/"+@car.combat_lost.to_s %>
           </div>

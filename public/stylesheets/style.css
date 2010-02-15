@@ -1087,6 +1087,9 @@ a.image-edits.add {
 a.image-edits.edit {
   background: url(../images/image-edits.png) no-repeat 0 -30px;
 }
+a.image-edits.for-sale {
+  background: url(../images/image-edits.png) no-repeat 0 -60px;
+}
 #car-gallery-box .inner{
   height: 194px;
   width: 401;
