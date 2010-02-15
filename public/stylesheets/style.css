@@ -1168,11 +1168,51 @@ a.image-edits.edit {
 }
 #car-description .inner{
   height: 154px;
-  width: 399px;
-  padding: 10px;
+  width: 419px;
+  padding: 0;
   overflow: auto;
   overflow-x: hidden;
   -ms-overflow-x: hidden;
+}
+#car-description .rating {
+  padding: 10px 0 0 30px;
+  display: block;
+  width: 304px;
+  height: 70px;
+  float: left;
+  text-align: center;
+}
+#car-description .rated {
+  display: block;
+  width: 75px;
+  height: 100px;
+  background: url(../images/car-photo.png);
+  padding: 5px 5px 0 5px;
+  float: left;
+  text-align: center;
+}
+#car-description .win-wrapper {
+  display: block;
+  height: 30px;
+  width: 419px;
+  border-top: 1px solid #2487bb;
+  margin-top: 105px;
+  position: absolute;
+}
+#car-description .win-wrapper .tournament-win,
+#car-description .win-wrapper .combat-win {
+  text-align: center;
+  display: block;
+  float: left;
+  width: 50%;
+  height: 63px;
+  padding: 5px 0 0;
+}
+#car-description .win-wrapper .tournament-win {
+  background:  #f0f1f1 url(../images/cup.png) no-repeat 10px 0;
+}
+#car-description .win-wrapper .combat-win {
+  background: #ffffff;
 }
 #car-equipment {
   height: 58px;
