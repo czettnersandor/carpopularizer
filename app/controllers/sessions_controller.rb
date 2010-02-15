@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
     respond_to do |format|
       format.html {}
       format.js do
-        @message = _("You have to log in to be able to access here... Not yet a member? "+@template.link_to(_("Register now!"), new_user_path))
+        @message = _("You have to log in to be able to access here... Not yet a member?")+
+          " "+@template.link_to(_("Register now!"), new_user_path)
         session[:return_to] = params[:redirect]
         render :layout => false
       end
@@ -22,7 +23,8 @@ class SessionsController < ApplicationController
     if logged_in?
       if params[:remember_me] == "1"
         current_user.remember_me unless current_user.remember_token?
-        cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
+        cookies[:auth_token] = { :value => self.current_user.remember_token,
+          :expires => self.current_user.remember_token_expires_at }
       end
       current_user.update_last_login
       redirect_back_or_default('/')
