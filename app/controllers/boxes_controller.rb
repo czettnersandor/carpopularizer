@@ -4,8 +4,8 @@ class BoxesController < ApplicationController
   before_filter :login_required, :except => [ :index, :show ]
 
   def index
-    @user = User.find(params[:user_id])
-    @cars = Car.find_all_by_user_id(params[:user_id])
+    @user = User.find(params[:user_id], :include => "cars")
+    @cars = @user.cars
   end
 
   def show
@@ -30,7 +30,7 @@ class BoxesController < ApplicationController
     @car = Car.new(params[:car])
     @car.user = @user
     respond_to do |format|
-      if @car.save
+      if @user.cars.count >= 3 && @car.save
         flash[:notice] = _('Car was successfully created.')
         format.html { redirect_to(user_box_path(@user, @car)) }
         format.xml  { render :xml => @car, :status => :created, :location => @car }

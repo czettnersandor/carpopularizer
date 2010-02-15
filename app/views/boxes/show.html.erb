@@ -5,7 +5,7 @@
 
     <div id="car-gallery">
       <div id = "car-photo">
-        <%= image_tag(@car.carimages.first.image.url(:car)) if @car.carimages.first %>
+        <%= image_tag(@car.carimages.first.image.url(:car)) if @user == current_user && @car.carimages.first %>
       </div>
 
       <h3 id="car-title">

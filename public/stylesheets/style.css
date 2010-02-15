@@ -738,7 +738,7 @@ hr.clear {
   display: block;
   float: right;
   height: 100px;
-  width: 32px;
+  width: 35px;
   overflow-y: auto;
 }
 #profile-left img.profile-thumb {
@@ -1073,7 +1073,8 @@ h3#car-title img {
   padding: 4px;
   position: relative;
 }
-a.image-edits {
+a.image-edits,
+a.new-car {
   height: 30px;
   width: 35px;
   display: block;
@@ -1089,6 +1090,10 @@ a.image-edits.edit {
 }
 a.image-edits.for-sale {
   background: url(../images/image-edits.png) no-repeat 0 -60px;
+}
+a.new-car {
+  background: url(../images/image-edits.png) no-repeat 0 -90px;
+  margin: 0;
 }
 #car-gallery-box .inner{
   height: 194px;
