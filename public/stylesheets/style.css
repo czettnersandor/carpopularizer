@@ -847,10 +847,12 @@ table.profile-edit td {
 
 
 .newsblock .innertab ul.ui-tabs-nav {
+  width: 186px;
   margin: -10px 3px 20px 20px;
   position: relative;
   clear: right;
   height: 24px;
+  border: 1px solid #2487BB;
 }
 .newsblock .innertab ul.ui-tabs-nav li {
   display: block;
@@ -864,14 +866,18 @@ table.profile-edit td {
   border-bottom: 0;
   background: transparent;
 }
+.newsblock .innertab ul.ui-tabs-nav li a {
+  background: #b6dcf1;
+  height: 24px !important;
+}
 .newsblock .innertab ul.ui-tabs-nav li:hover,
-.newsblock .innertab ul.ui-tabs-nav li.ui-tabs-selected {
-  background: url(../images/blur.png);
+.newsblock .innertab ul.ui-tabs-nav li.ui-tabs-selected {  
   border: none;
   margin: 0;
 }
 .newsblock .innertab ul.ui-tabs-nav li:hover a,
 .newsblock .innertab ul.ui-tabs-nav li.ui-tabs-selected a {
+  background: #ffffff;
   height: auto;
   color: black;
 }
