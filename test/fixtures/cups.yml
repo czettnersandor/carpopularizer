@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  car_id: 1
+  style: MyString
+  description: MyString
+  opponent_car_id: 1
+
+two:
+  user_id: 1
+  car_id: 1
+  style: MyString
+  description: MyString
+  opponent_car_id: 1

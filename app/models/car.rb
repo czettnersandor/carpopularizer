@@ -6,6 +6,7 @@ class Car < ActiveRecord::Base
   has_many :carimages
   has_many :carcomments
   has_many :combat_votes, :foreign_key => :voted_car
+  has_many :cups
 
   default_scope :order => 'ordinal ASC'
 
