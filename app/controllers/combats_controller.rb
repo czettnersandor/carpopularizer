@@ -5,9 +5,9 @@ class CombatsController < ApplicationController
   def index
     @title = _("Combat vote")
     @last = Combat.find(:last,
-      :conditions => ["id IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
+      :conditions => ["status = 'active' AND id IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
     @combat = Combat.find(:first,
-      :conditions => ["id NOT IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
+      :conditions => ["status = 'active' AND id NOT IN (SELECT combat_id FROM combat_votes WHERE user_id = ?)", current_user.id])
   end
 
   def new

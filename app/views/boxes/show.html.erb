@@ -5,7 +5,7 @@
 
     <div id="car-gallery">
       <div id = "car-photo">
-        <%= image_tag(@car.carimages.first.image.url(:car)) if @user == current_user && @car.carimages.first %>
+        <%= image_tag(@car.carimages.first.image.url(:car)) if @car.carimages.first %>
       </div>
 
       <h3 id="car-title">
@@ -127,13 +127,19 @@
           <div class="tournament-win">
             <%= _("Tournament") %><br/>
             nyert-vesztett<br/>
-            <%= @car.tournament_win.to_s+"/"+@car.tournament_lost.to_s %>
+            <%= @car.tournament_win.to_i.to_s+"/"+@car.tournament_lost.to_i.to_s %>
           </div>
 
           <div class="combat-win">
             <%= _("Combat") %><br/>
             nyert-vesztett<br/>
-            <%= @car.combat_win.to_s+"/"+@car.combat_lost.to_s %>
+            <%= @car.combat_win.to_i.to_s+"/"+@car.combat_lost.to_i.to_s %>
+          </div>
+
+          <div class="cups">
+            <% @car.cups.each do |cup| %>
+              <div class="cup <%= cup.style %>" title="<%= _(cup.style) %> - <%= cup.description %>"></div>
+            <% end %>
           </div>
         </div>
 

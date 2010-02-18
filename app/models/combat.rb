@@ -17,7 +17,33 @@ class Combat < ActiveRecord::Base
     if self.invited_id == car_id.to_i
       self.increment!("invited_rate")
     end
+  end
 
+  def close_combat!
+    self.combat_votes.destroy_all
+    newcup = Cup.new
+    if self.challenger_rate.to_i > self.invited_rate.to_i
+      self.challenger.increment!("combat_win")
+      self.invited.increment!("combat_lost")
+      self.winner_id = self.challenger_id
+      newcup.car_id = self.challenger_id
+      newcup.opponent_car_id = self.invited_id
+      newcup.description = "wins a combat against"
+      newcup.user_id = self.challenger.user_id
+      newcup.style = "medium"
+    else
+      self.invited.increment!("combat_win")
+      self.challenger.increment!("combat_lost")
+      self.winner_id = self.invited_id
+      newcup.car_id = self.invited_id
+      newcup.opponent_car_id = self.challenger_id
+      newcup.description = "wins a combat against"
+      newcup.user_id = self.invited.user_id
+      newcup.style = "medium"
+    end
+    self.status = "done"
+    self.save
+    newcup.save
   end
 
 end

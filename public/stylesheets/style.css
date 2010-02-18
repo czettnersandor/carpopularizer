@@ -1171,7 +1171,7 @@ a.new-car {
   color: black;
 }
 #car-description {
-  height: 200px;
+  height: 250px;
   width: 419px;
   display: block;
   float: left;
@@ -1181,7 +1181,7 @@ a.new-car {
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #car-description .inner{
-  height: 154px;
+  height: 204px;
   width: 419px;
   padding: 0;
   overflow: auto;
@@ -1227,6 +1227,19 @@ a.new-car {
 }
 #car-description .win-wrapper .combat-win {
   background: #ffffff;
+}
+#car-description .cups {
+  display: block;
+  clear: both;
+  height: 50px;
+  border-top: 1px solid #2487bb;
+}
+#car-description .cups .cup {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 50px;
+  background: url(../images/cups.png) 0 -450px;
 }
 #car-equipment {
   height: 58px;

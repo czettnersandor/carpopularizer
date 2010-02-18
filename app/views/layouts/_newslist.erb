@@ -1,6 +1,6 @@
 <% news.each do |news_item| %>
   <div class="news-item">
-    <div class="title"><%= link_to news_item.title, news_item %></div>
+    <div class="title"><%= link_to news_item.title, news_item, :target => '_blank' %></div>
     <div class="pub-date"><%= news_item.pub_date.to_s(:short) %></div>
     <div class="description"><%= shorten news_item.description.gsub(/<\/?[^>]*>/, "") %></div>
     <div class="origin"><%= link_to  news_item.rssreader.name, news_item.rssreader %></div>
