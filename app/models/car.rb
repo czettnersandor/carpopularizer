@@ -13,7 +13,7 @@ class Car < ActiveRecord::Base
   ajaxful_rateable :stars => 10, :cache_column => :rating_average
 
   def invitable?
-    not Combat.find_by_challenger_id(self.id) || Combat.find_by_invited_id(self.id)
+    not Combat.find(:challenger_id => self.id, :status => "active") || Combat.find(:invited_id => self.id, :status => "active")
   end
 
   def all_combats

@@ -1,16 +1,16 @@
 set :application, "boxutca"
-set :repository, "ssh://eperpalanta.hu/home/git/repositories/boxutca.git"
+set :repository, "ssh://zoner@eperpalanta.hu/home/git/repositories/boxutca.git"
 ssh_options[:paranoid] = false
 default_run_options[:pty] = true
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-role :web, "eperpalanta.hu"
-role :app, "eperpalanta.hu"
-role :db, "eperpalanta.hu", :primary => true
-set :deploy_to, "/var/customers/webs/eper/#{application}"
+role :web, "hanzo.hu"
+role :app, "hanzo.hu"
+role :db, "hanzo.hu", :primary => true
+set :deploy_to, "/srv/www/boxutca.com/htdocs"
 
-set :user, "zoner"
-set :runner, "zoner"
+set :user, "boxutca"
+set :runner, "boxutca"
 set :use_sudo, false
 set :deploy_via, :remote_cache
 
