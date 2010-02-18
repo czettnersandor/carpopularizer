@@ -21,6 +21,7 @@ var RecaptchaOptions = {
     incorrect_try_again : "Hibás. Próbáld újra."
   }
 };
+
 (function($) {
   $.fn.unselectable = function() {
     return this.each(function() {
@@ -92,6 +93,8 @@ jQuery.fn.replyTo = function(id) {
 
 $(document).ready(function(){
   i = 0;
+
+  $(".cups .cup").tipsy();
 
   $('a.colorbox').colorbox({});
 
