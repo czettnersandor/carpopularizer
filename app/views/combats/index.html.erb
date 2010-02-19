@@ -4,3 +4,7 @@
 <hr class="clear" />
 <%= render :partial => "vote_pair", :locals => {:combat => @combat} if @combat %>
 
+<% if not @combat %>
+  <h3><%= _("There are no active combats") %></h3>
+<% end %>
+

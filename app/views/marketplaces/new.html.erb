@@ -1,0 +1,9 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+    <% form_for(@advert, :url => marketplaces_path) do |f| %>
+      <%= render :partial => "form", :locals => {:f => f} %>
+    <% end -%>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+    <h3><%= @title %></h3>
+    <% form_for(@car, :url => user_box_path(@user, @car)) do |f| %>
+      <%= render :partial => "form", :locals => {:f => f} %>
+    <% end -%>
+  </div>
+</div>
