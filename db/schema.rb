@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100217124726) do
+ActiveRecord::Schema.define(:version => 20100219111818) do
+
+  create_table "adverts", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "end_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "carcomments", :force => true do |t|
     t.integer  "user_id"
@@ -30,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20100217124726) do
     t.integer  "ordinal"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "advert_id"
   end
 
   create_table "cars", :force => true do |t|
