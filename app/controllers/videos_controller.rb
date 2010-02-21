@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.xml
   def index
-    @videos = Video.all
+    @videos = Video.paginate :page => params[:page], :per_page => 5
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,7 +41,7 @@ class VideosController < ApplicationController
   # POST /videos.xml
   def create
     @video = Video.new(params[:video])
-
+    @video.user_id = current_user.id
     respond_to do |format|
       if @video.save
         flash[:notice] = 'Video was successfully created.'

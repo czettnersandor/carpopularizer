@@ -655,23 +655,33 @@ hr.clear {
 * Profile
 */
 
-#profile-left .lightblue {
+#profile-left .lightblue,
+#layout-right .lightblue {
   background: url(../images/lightblue.png);
   border: 1px solid #2487bb;
   padding: 10px;
   border-top: none;
   border-right: none;
 }
-#profile-left .lightblue.first {
+#layout-right .lightblue {
+  border: 1px solid #2487bb;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+#profile-left .lightblue.first,
+#layout-right .lightblue.first {
   border-top: 1px solid #2487bb;
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px;
   height: 100px;
+}
+#layout-right .lightblue.first {
+  -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
 }
 #profile-left .lightblue.block {
   border-top: 1px solid #2487bb;
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px;
 }
-#profile-left .lightblue.block .block-header {
+#profile-left .lightblue.block .block-header,
+#layout-right .lightblue.block .block-header {
   margin: -10px -10px 10px -10px;
 }
 #profile-left .lightblue hr {
@@ -745,6 +755,13 @@ hr.clear {
   float: left;
   margin-right: 10px;
 }
+
+#layout-right {
+
+}
+#layout-left {
+  
+}
 table.profile-edit td {
   width: 50%;
 }
@@ -789,6 +806,10 @@ table.profile-edit td {
 }
 .news-item .description {
   clear: left;
+}
+.news-item .description img {
+  float: left;
+  margin-right: 10px;
 }
 .news-item .origin {
   float: right;
@@ -1174,6 +1195,7 @@ a.new-car {
   height: 250px;
   width: 419px;
   display: block;
+  position: relative;
   float: left;
   background: url(../images/lightblue-horiz-bottom.png) repeat-x bottom;
   border: 1px solid #2487bb;
@@ -1240,6 +1262,11 @@ a.new-car {
   width: 40px;
   height: 50px;
   background: url(../images/cups.png) 0 -450px;
+}
+#car-description .combat {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 #car-equipment {
   height: 58px;
@@ -1789,3 +1816,25 @@ h3#club-title {
   .tipsy-south { background-position: bottom center; }
   .tipsy-east { background-position: right center; }
   .tipsy-west { background-position: left center; }
+
+span.fejkep {
+  background: url(../images/fejkepek.png);
+  display: block;
+  float: left;
+  width: 60px;
+  height: 25px;
+  margin-left: -70px;
+  margin-top: 5px;
+}
+.small span.fejkep {
+  margin-top: 0;
+}
+span.fejkep.top5 {
+  background-position: 0 0;
+}
+span.fejkep.rss {
+  background-position: 0 -100px;
+}
+span.fejkep.freshnews {
+  background-position: 0 -150px;
+}

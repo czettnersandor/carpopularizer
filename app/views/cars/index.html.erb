@@ -1,17 +1,4 @@
-<div class="grid_3 alpha" id="profile-left">
-  <div class="lightblue block">
-    <div class="block-header fix small">
-      <h3><%= _("Top 5 cars") %></h3>
-    </div>
-    <% @top5.each do |car| %>
-      <%= render :partial => "cars/top5item", :locals => {:car => car} %>
-    <%end%>
-    <hr class="clear"/>
-  </div>
-</div>
-
-
-<div class="grid_9 omega" id="profile-right">
+<div class="grid_9 alpha" id="layout-left">
   <div class="orangebox">
 
     <%= render :partial => "searchform" %>
@@ -21,5 +8,18 @@
       <%= render :partial => "carlistitem", :locals => {:car => car, :user => car.user} %>
 
     <% end %>
+  </div>
+</div>
+
+<div class="grid_3 omega" id="layout-right">
+  <div class="lightblue block">
+    <div class="block-header fix small">
+      <span class="fejkep top5"></span>
+      <h3><%= _("Top 5 cars") %></h3>
+    </div>
+    <% @top5.each do |car| %>
+      <%= render :partial => "cars/top5item", :locals => {:car => car} %>
+    <%end%>
+    <hr class="clear"/>
   </div>
 </div>

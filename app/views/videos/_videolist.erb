@@ -1,0 +1,12 @@
+<% videos.each do |video| %>
+  <div class="news-item">
+    <div class="title"><%= link_to video.title, video %></div>
+    <div class="pub-date"><%= video.created_at.to_s(:short) %></div>
+    <div class="description">
+      <%= link_to image_tag("http://img.youtube.com/vi/"+video.video_id+"/2.jpg", :with=>120, :height=>90),
+        video %>
+      <%= shorten video.body.gsub(/<\/?[^>]*>/, "") %>
+    </div>
+    <hr/>
+  </div>
+<% end -%>

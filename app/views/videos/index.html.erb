@@ -1,30 +1,113 @@
-<h1>Listing videos</h1>
+<h1><%= _("Videos") %></h1>
 
-<table>
-  <tr>
-    <th>Url</th>
-    <th>Title</th>
-    <th>Body</th>
-    <th>User id</th>
-    <th>Hits</th>
-  </tr>
+<div class="grid_6 alpha">
+  <div class="block-header"><span class="fejkep rss"></span><h3><%= _("Newest videos") %></h3></div>
+  <div class="lightblue-block newsblock" id="rss-list">
+    <ul>
+      <li><a href="#tabs-video" class="video"></a></li>
+      <li><a href="#tabs-rssvideo" class="rssvideo"></a></li>
+    </ul>
 
-<% @videos.each do |video| %>
-  <tr>
-    <td>
-      <%= image_tag "http://img.youtube.com/vi/"+video.video_id+"/2.jpg", :with=>120, :height=>90 %>
-    </td>
-    <td><%=h video.title %></td>
-    <td><%=h video.body %></td>
-    <td><%=h video.user_id %></td>
-    <td><%=h video.hits %></td>
-    <td><%= link_to 'Show', video %></td>
-    <td><%= link_to 'Edit', edit_video_path(video) %></td>
-    <td><%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <div id="tabs-video">
+      <div class="child">
+        <%= render :partial => 'videolist', :locals => { :videos => @videos }  %>
+        <%= will_paginate @videos %>
+      </div>
+    </div>
+    <div id="tabs-rssvideo">
+      <div class="child">
+        <%= render :partial => 'videolist', :locals => { :videos => @videos }  %>
+        <%= will_paginate @videos %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br />
+<div class="grid_6 omega">
+  <div class="block-header"><span class="fejkep freshnews"></span><h3><%= _("Most viewed") %></h3></div>
+  <div class="lightblue-block newsblock" id="rss-list-by-hits">
+    <ul>
+      <li><a href="#tabs-hits-hu" class="video"></a></li>
+      <li><a href="#tabs-hits-en" class="rssvideo"></a></li>
+    </ul>
 
-<%= link_to 'New video', new_video_path %>
+    <div id="tabs-hits-hu" class="innertab">
+
+
+      <ul>
+        <li><a href="#tabs-hits-hu-monthly" class="monthly"><%= _('Month') %></a></li>
+        <li><a href="#tabs-hits-hu-weekly" class="weekly"><%= _('Week') %></a></li>
+        <li><a href="#tabs-hits-hu-daily" class="daily"><%= _('Day') %></a></li>
+      </ul>
+
+      <div id="tabs-hits-hu-monthly">
+        <div class="child">
+
+        </div>
+      </div>
+      <div id="tabs-hits-hu-weekly">
+        <div class="child">
+
+        </div>
+      </div>
+      <div id="tabs-hits-hu-daily">
+        <div class="child">
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div id="tabs-hits-en" class="innertab">
+
+      <ul>
+        <li><a href="#tabs-hits-en-monthly" class="monthly"><%= _('Month') %></a></li>
+        <li><a href="#tabs-hits-en-weekly" class="weekly"><%= _('Week') %></a></li>
+        <li><a href="#tabs-hits-en-daily" class="daily"><%= _('Day') %></a></li>
+      </ul>
+
+      <div id="tabs-hits-en-monthly">
+        <div class="child">
+
+        </div>
+      </div>
+      <div id="tabs-hits-en-weekly">
+        <div class="child">
+
+        </div>
+      </div>
+      <div id="tabs-hits-en-daily">
+        <div class="child">
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#tabs-hu .pagination a').ajaxLoad('#tabs-hu', '#tabs-hu .child');
+    $('#tabs-en .pagination a').ajaxLoad('#tabs-en', '#tabs-en .child');
+
+    $('#tabs-hits-hu-monthly .pagination a').ajaxLoad('#tabs-hits-hu-monthly', '#tabs-hits-hu-monthly .child');
+    $('#tabs-hits-hu-weekly .pagination a').ajaxLoad('#tabs-hits-hu-weekly', '#tabs-hits-hu-weekly .child');
+    $('#tabs-hits-hu-daily .pagination a').ajaxLoad('#tabs-hits-hu-daily', '#tabs-hits-hu-daily .child');
+
+    $('#tabs-hits-en-monthly .pagination a').ajaxLoad('#tabs-hits-en-monthly', '#tabs-hits-en-monthly .child');
+    $('#tabs-hits-en-weekly .pagination a').ajaxLoad('#tabs-hits-en-weekly', '#tabs-hits-en-weekly .child');
+    $('#tabs-hits-en-daily .pagination a').ajaxLoad('#tabs-hits-en-daily', '#tabs-hits-en-daily .child');
+
+    $('#rss-list').tabs({remote:true});
+    $('#rss-list-by-hits').tabs({remote:true});
+    $('#rss-list-by-hits #tabs-hits-hu').tabs({remote:true});
+    $('#rss-list-by-hits #tabs-hits-en').tabs({remote:true});
+
+  });
+
+</script>

@@ -1,0 +1,14 @@
+  <%= f.error_messages %>
+
+  <div class="form-item"><label for="url"><%=_('Youtube URL')%></label><br/>
+    <%= f.text_field :url %><hr/></div>
+
+  <div class="form-item"><label for="title"><%=_('Title')%></label><br/>
+    <%= f.text_field :title %><hr/></div>
+
+  <div class="form-item"><label for="body"><%=_('Description')%></label><br/>
+    <%= f.text_area :body %><hr/></div>
+
+  <p>
+    <%= f.submit _('Create') %>
+  </p>

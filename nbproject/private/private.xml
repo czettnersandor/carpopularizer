@@ -2,8 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/home/zoner/NetBeansProjects/boxutca/Capfile</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/config/deploy.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/config/environment.rb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/public/stylesheets/style.css</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/videos/index.html.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/videos/_videolist.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/controllers/videos_controller.rb</file>
     </open-files>
 </project-private>

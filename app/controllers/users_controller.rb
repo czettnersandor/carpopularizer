@@ -36,7 +36,7 @@ class UsersController < ApplicationController
         end
       end
       # flash[:notice] = _('User profile was succesfully updated.')
-      redirect_to :action => "index"
+      redirect_to @user
     else
       render :action => "edit"
     end

@@ -66,11 +66,12 @@ class UserMailer < ActionMailer::Base
   
   protected
   def setup_email(user)
-    @hostname = "boxutca.eperpalanta.hu"
+    @hostname = "boxutca.com"
     @recipients  = "#{user.email}"
     @from        = "admin@#{@hostname}"
     @subject     = "[BOXUTCA] "
     @sent_on     = Time.now
     @body[:user] = user
+    content_type "text/html"
   end
 end

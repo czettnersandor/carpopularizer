@@ -2,6 +2,8 @@ require 'hpricot'
 
 class Video < ActiveRecord::Base
 
+  default_scope :order => 'created_at DESC'
+
   def hit!
     self.class.increment_counter :hits, id
   end
