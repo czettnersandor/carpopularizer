@@ -785,6 +785,7 @@ table.profile-edit td {
 */
 .news-item {
   margin-bottom: 5px;
+  border-bottom: 1px dashed #2487BB;
 }
 .news-item .title {
   float: left;
@@ -873,7 +874,6 @@ table.profile-edit td {
   position: relative;
   clear: right;
   height: 24px;
-  border: 1px solid #2487BB;
 }
 .newsblock .innertab ul.ui-tabs-nav li {
   display: block;
@@ -888,7 +888,6 @@ table.profile-edit td {
   background: transparent;
 }
 .newsblock .innertab ul.ui-tabs-nav li a {
-  background: #b6dcf1;
   height: 24px !important;
 }
 .newsblock .innertab ul.ui-tabs-nav li:hover,
@@ -898,7 +897,6 @@ table.profile-edit td {
 }
 .newsblock .innertab ul.ui-tabs-nav li:hover a,
 .newsblock .innertab ul.ui-tabs-nav li.ui-tabs-selected a {
-  background: #ffffff;
   height: auto;
   color: black;
 }
