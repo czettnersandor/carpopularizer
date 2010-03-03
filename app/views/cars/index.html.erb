@@ -2,10 +2,12 @@
   <div class="orangebox">
 
     <%= render :partial => "searchform" %>
+    <% i=0 %>
+    <% @cars.each do |car|
+      i = i+1
+    %>
 
-    <% @cars.each do |car| %>
-
-      <%= render :partial => "carlistitem", :locals => {:car => car, :user => car.user} %>
+      <%= render :partial => "carlistitem", :locals => {:car => car, :user => car.user, :i => i} %>
 
     <% end %>
   </div>

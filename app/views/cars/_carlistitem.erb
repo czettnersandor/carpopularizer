@@ -1,5 +1,6 @@
 <div class="listitem">
   <div class="list-header">
+    <span class="counter"><%= i %></span>
     <%= image_tag('/images/genres/16/'+car.genre) %>
     <%= link_to(genre(car.genre)+" "+car.name, user_box_path(car.user, car)) %>
   </div>

@@ -94,15 +94,20 @@
 </div>
 
 <div class="grid_12 alpha omega" id="aggregators">
-  <div class="hu">
-    <% @rssreaders_hu.each do |rssreader| %>
-      <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
-    <% end -%>
-  </div>
-  <div class="en">
-    <% @rssreaders_en.each do |rssreader| %>
-      <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
-    <% end -%>
+
+  <div class="block-header"><span class="fejkep newsfeed"></span><h3><%= _("News feed") %></h3></div>
+  <div class="listitem">
+    
+    <div class="hu">
+      <% @rssreaders_hu.each do |rssreader| %>
+        <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
+      <% end -%>
+    </div>
+    <div class="en">
+      <% @rssreaders_en.each do |rssreader| %>
+        <%= link_to rssreader.name, rssreader, :class => "rssreader" %>
+      <% end -%>
+    </div>
   </div>
 </div>
 
