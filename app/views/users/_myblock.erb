@@ -6,10 +6,9 @@
       <% user.cars.each do |car| %>
         <%= link_to image_tag('/images/genres/32/'+car.genre), user_box_path(user, car), :title => car.name %>
       <% end %>
-      <%= link_to("", new_user_box_path(@user), :class => "new-car") if @user == current_user && user.cars.count < 3 %>
+      <%= link_to("", new_user_box_path(@user), :class => "new-car", :title => _("New car")) if @user == current_user && user.cars.count < 3 %>
     </div>
-  </div>
-  <div class="lightblue curve">
+
     <div class="profilehead"><%= _('Full name') %></div>
     <div class="profiledata"><%=  user.name %></div>
     <div class="profilehead"><%= _('Comments count') %></div>

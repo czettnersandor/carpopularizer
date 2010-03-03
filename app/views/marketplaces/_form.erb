@@ -1,20 +1,7 @@
 <%= f.error_messages %>
 
-
-<div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
-  <%= f.select :genre, genrelist(@car.genre) %><hr/></div>
-
-<div class="form-item"><label for="name"><%=_('Type')%></label><br/>
-  <%= f.text_field :name %><hr/></div>
-
-<div class="form-item"><label for="make"><%=_('Make')%></label><br/>
-  <%= f.select :make, makelist(@car.make) %><hr/></div>
-
-<div class="form-item"><label for="age_grade"><%=_('Age-grade')%></label><br/>
-  <%= f.text_field :age_grade %><hr/></div>
-
-<div class="form-item"><label for="for_sale"><%=_('For sale')%></label><br/>
-  <%= f.check_box :for_sale %><hr/></div>
+<div class="form-item"><label for="title"><%=_('Title')%></label><br/>
+  <%= f.text_field :title %><hr/></div>
 
 <div class="form-item"><label for="description"><%=_('Description')%></label><br/>
   <%= f.text_area :description %><hr/></div>

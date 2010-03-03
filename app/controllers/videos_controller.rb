@@ -1,8 +1,15 @@
 class VideosController < ApplicationController
   # GET /videos
   # GET /videos.xml
+  VIDS_PER_PAGE = 10
   def index
-    @videos = Video.paginate :page => params[:page], :per_page => 5
+    @videos = Video.paginate :page => params[:page], :per_page => VIDS_PER_PAGE
+    @videos_by_hits_monthly = Video.paginate :page => params[:page_by_hits], :per_page => VIDS_PER_PAGE,
+      :order=>"hits DESC"
+    @videos_by_hits_weekly = Video.paginate :page => params[:page_by_hits], :per_page => VIDS_PER_PAGE,
+      :order=>"hits DESC", :conditions => ["created_at > ?", Time.now-7.days]
+    @videos_by_hits_daily = Video.paginate :page => params[:page_by_hits], :per_page => VIDS_PER_PAGE,
+      :order=>"hits DESC", :conditions => ["created_at > ?", Time.now-24.hours]
 
     respond_to do |format|
       format.html # index.html.erb

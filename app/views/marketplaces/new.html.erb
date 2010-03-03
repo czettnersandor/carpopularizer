@@ -2,6 +2,7 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
+    <h2><%= _("New advert") %></h2>
     <% form_for(@advert, :url => marketplaces_path) do |f| %>
       <%= render :partial => "form", :locals => {:f => f} %>
     <% end -%>

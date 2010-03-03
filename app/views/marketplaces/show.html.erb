@@ -1,0 +1,67 @@
+<%= render :partial => "users/myblock", :locals => { :user => @user } %>
+
+<div class="grid_9 omega" id="profile-right">
+  <div class="orangebox">
+
+    <div id="car-gallery">
+      <div id = "car-photo">
+
+      </div>
+
+      <h3 id="car-title">
+        <% if admin_or_current? @user %>
+
+        <% end %>
+        <%= @advert.title %>
+      </h3>
+
+
+
+
+      <div id="car-gallery-box">
+        <div class="inner">
+          
+        </div>
+      </div>
+    </div>
+
+    <div id="auto-adatok-tabs">
+      <div id="data">
+
+      </div>
+    </div>
+    <div id="car-description">
+      <div class="block-header fix small"><h3><%= _("Description") %></h3></div>
+      <div class="inner">
+        <%= @advert.description %>
+      </div>
+    </div>
+
+    <hr class="clear" />
+  </div>
+</div>
+
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('a.image-edits.add').colorbox();
+
+  });
+
+<% if admin_or_current? @user %>
+
+    $('.image-admin a.edit').colorbox();
+    $('#car-gallery-box .item').hover(function(){
+      $(this).children('.image-admin').fadeIn(200);
+    }, function(){
+      $(this).children('.image-admin').fadeOut(200);
+    });
+
+    AUTH_TOKEN=('<%=u form_authenticity_token%>');
+    $('#car-gallery-box').unselectable();
+
+
+<% end %>
+
+</script>

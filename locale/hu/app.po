@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "POT-Creation-Date: 2010-02-15 10:11+0100\n"
-"PO-Revision-Date: 2010-02-15 10:14+0100\n"
+"PO-Revision-Date: 2010-03-03 14:44+0100\n"
 "Last-Translator: Sándor Czettner <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -288,7 +288,7 @@ msgstr "Dátum"
 #: app/views/fronts/index.html.erb:38
 #: app/views/fronts/index.html.erb:69
 msgid "Day"
-msgstr "Nap"
+msgstr "Mai"
 
 #: app/views/users/new.html.erb:18
 msgid "Dealer"
@@ -579,11 +579,11 @@ msgstr ""
 #: app/views/fronts/index.html.erb:36
 #: app/views/fronts/index.html.erb:67
 msgid "Month"
-msgstr "Hónap"
+msgstr "Havi"
 
 #: app/views/fronts/index.html.erb:25
 msgid "Most viewed"
-msgstr "Legtöbbet látogatott"
+msgstr "Legolvasottabb hírek"
 
 #: app/views/layouts/_login.erb:14
 msgid "My friends"
@@ -974,7 +974,7 @@ msgstr "Honlap"
 #: app/views/fronts/index.html.erb:37
 #: app/views/fronts/index.html.erb:68
 msgid "Week"
-msgstr "Hét"
+msgstr "Heti"
 
 #: app/views/layouts/_login.erb:3
 msgid "Welcome"

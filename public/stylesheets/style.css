@@ -222,9 +222,9 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 */
 #loginblock {
   display: block;
-  margin: 10px 0 0 620px;
+  margin: 10px 0 0 610px;
   height: 65px;
-  width: 320px;
+  width: 330px;
   text-align: right;
   position: relative;
 }
@@ -282,7 +282,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 }
 #loginblock div.icons {
   display: block;
-  width: 240px;
+  width: 250px;
   height: 40px;
   text-align: right;
   float: left;
@@ -307,6 +307,14 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
 #loginblock div.icons a.messages {
   width: 40px;
   background: url(../images/user.png) no-repeat 0 -160px;
+}
+#loginblock div.icons a.boxmessages {
+  width: 50px;
+  background: url(../images/user.png) no-repeat 0 -120px;
+}
+#loginblock div.icons a.events {
+  width: 40px;
+  background: url(../images/user.png) no-repeat 0 -200px;
 }
 #loginblock div.icons a:hover {
   /* for IE */
@@ -671,7 +679,7 @@ hr.clear {
 #layout-right .lightblue.first {
   border-top: 1px solid #2487bb;
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px;
-  height: 100px;
+  height: 250px;
 }
 #layout-right .lightblue.first {
   -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
@@ -698,6 +706,7 @@ hr.clear {
 #profile-left .profilehead {
   color: black;
   font-weight: bold;
+  clear: both;
 }
 #profile-left .profiledata {
   color: #2487bb;
@@ -786,6 +795,15 @@ table.profile-edit td {
 .news-item {
   margin-bottom: 5px;
   border-bottom: 1px dashed #2487BB;
+  height: 80px;
+  position: relative;
+}
+#rss-list {
+  padding-top: 20px;
+}
+#rss-list #tabs-hu {
+   border-top: 1px dashed #2487BB;
+   padding-top: 5px;
 }
 .news-item .title {
   float: left;
@@ -793,9 +811,10 @@ table.profile-edit td {
 }
 .news-item .title a,
 #aggregators .rssreader {
-  padding-left: 16px;
+  padding-left: 17px;
   background: url(../images/icon-16.png) no-repeat 0 -16px;
   margin-right: 10px;
+  color: #2487BB;
 }
 .news-item .title a:visited {
   background: url(../images/icon-16.png) no-repeat 0 0;
@@ -816,6 +835,9 @@ table.profile-edit td {
   float: right;
   font-weight: bold;
   clear: both;
+  position: absolute;
+  bottom: 2px;
+  right: 0;
 }
 .news-item .origin a {
   color: black;
@@ -866,11 +888,15 @@ table.profile-edit td {
 .newsblock ul.ui-tabs-nav li:hover a,
 .newsblock ul.ui-tabs-nav li.ui-tabs-selected a {
 }
-
+#tabs-hits-hu-monthly {
+  border-top:1px dashed #2487BB;
+  padding-top: 5px;
+  margin-top: 3px;
+}
 
 .newsblock .innertab ul.ui-tabs-nav {
   width: 186px;
-  margin: -10px 3px 20px 20px;
+  margin:-22px 3px 8px 10px;
   position: relative;
   clear: right;
   height: 24px;
