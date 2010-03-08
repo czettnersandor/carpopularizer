@@ -31,6 +31,7 @@ a:focus {
   outline: none;
 }
 
+/*
 input, textarea {
   background:transparent url(../images/form-text.png) repeat-x scroll 0 0;
   border-color:#0090e3 #90cded #90cded;
@@ -48,6 +49,7 @@ select {
   font-size:11px;
   padding:2px 0;
 }
+*/
 input.orange {
   background:transparent url(../images/form-text-orange.png) repeat-x scroll 0 0;
   border-color:#f6b235 #f8d38b #f8d38b;
@@ -58,9 +60,11 @@ textarea {
 input.error {
   border-color:#920000 #aa0000 #aa0000;
 }
+/*
 input:focus {
   border:1px dotted black;
 }
+*/
 input.error:focus {
   border-color:#ff0000;
   background: white;
