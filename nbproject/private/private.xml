@@ -3,8 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
         <file>file:/home/zoner/NetBeansProjects/boxutca/public/stylesheets/style.css</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/helpers/boxes_helper.rb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/cars/index.html.erb</file>
-        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/cars/_carlistitem.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/config/environment.rb</file>
     </open-files>
 </project-private>

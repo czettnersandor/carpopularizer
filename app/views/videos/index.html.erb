@@ -5,7 +5,7 @@
   <div class="lightblue-block newsblock" id="rss-list">
 
     <div id="tabs-video">
-      <div class="child">
+      <div class="child video">
         <%= render :partial => 'videolist', :locals => { :videos => @videos }  %>
         <%= will_paginate @videos %>
       </div>
@@ -28,25 +28,25 @@
       </ul>
 
       <div id="tabs-hits-hu-monthly">
-        <div class="child">
+        <div class="child video">
           <%= render :partial => 'videolist', :locals => { :videos => @videos_by_hits_monthly }  %>
-          <%= will_paginate @videos_by_hits_monthly %>
+          <%= will_paginate @videos_by_hits_monthly, :param_name => :page_by_hits  %>
         </div>
       </div>
       <div id="tabs-hits-hu-weekly">
-        <div class="child">
+        <div class="child video">
           <%= render :partial => 'videolist', :locals => { :videos => @videos_by_hits_weekly }  %>
-          <%= will_paginate @videos_by_hits_weekly %>
+          <%= will_paginate @videos_by_hits_weekly, :param_name => :page_by_hits  %>
         </div>
       </div>
       <div id="tabs-hits-hu-daily">
-        <div class="child">
+        <div class="child video">
           <%= render :partial => 'videolist', :locals => { :videos => @videos_by_hits_daily }  %>
-          <%= will_paginate @videos_by_hits_daily %>
+          <%= will_paginate @videos_by_hits_daily, :param_name => :page_by_hits  %>
         </div>
       </div>
 
-
+      <hr class="clear"/>
     </div>
 
   </div>
@@ -54,7 +54,7 @@
 
 <script type="text/javascript">// <![CDATA[
   $(document).ready(function(){
-
+    $('#tabs-video .pagination a').ajaxLoad('#tabs-video', '#tabs-video .child');
 
     $('#tabs-hits-hu-monthly .pagination a').ajaxLoad('#tabs-hits-hu-monthly', '#tabs-hits-hu-monthly .child');
     $('#tabs-hits-hu-weekly .pagination a').ajaxLoad('#tabs-hits-hu-weekly', '#tabs-hits-hu-weekly .child');

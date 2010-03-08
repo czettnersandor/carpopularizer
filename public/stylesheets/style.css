@@ -811,10 +811,15 @@ table.profile-edit td {
   height: 80px;
   position: relative;
 }
+div.child.video .news-item {
+  height: 100px;
+}
 #rss-list {
   padding-top: 20px;
 }
-#rss-list #tabs-hu {
+#rss-list #tabs-hu,
+#rss-list #tabs-en,
+#rss-list #tabs-video {
   border-top: 1px dashed #2487BB;
   padding-top: 5px;
 }
@@ -903,7 +908,9 @@ table.profile-edit td {
 .newsblock ul.ui-tabs-nav li:hover a,
 .newsblock ul.ui-tabs-nav li.ui-tabs-selected a {
 }
-#tabs-hits-hu-monthly {
+#tabs-hits-hu-monthly,
+#tabs-hits-hu-weekly,
+#tabs-hits-hu-daily {
   border-top:1px dashed #2487BB;
   padding-top: 5px;
   margin-top: 3px;
