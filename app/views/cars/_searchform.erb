@@ -54,7 +54,7 @@
         </tr>
       </table>
 
-      <%= submit_tag(_("Search"), :name => nil, :id => "submit") %>
+      <%= submit_tag(_("Search"), :name => nil, :class => "submit") %>
     <% end %>
   </div>
 
@@ -68,7 +68,7 @@
         <%= select_tag :make, makelist(params[:make]) %><hr/></div>
 
 
-      <%= submit_tag(_("Search"), :name => nil) %>
+      <%= submit_tag(_("Search"), :name => nil, :class => "submit") %>
     <% end %>
   </div>
 

@@ -5,6 +5,7 @@ class ForumsController < ApplicationController
   def index
     @forums = Forum.paginate :page => params[:page], :order => "updated_at DESC", :per_page => 10
     # reset the page of each forum we have visited when we go back to index
+    @title = _("Forum")
     session[:forum_page]=nil
     respond_to do |format|
       format.html
@@ -13,6 +14,7 @@ class ForumsController < ApplicationController
   end
 
   def show
+    @title = @forum.name;
     respond_to do |format|
       format.html do
         # keep track of when we last viewed this forum for activity indicators

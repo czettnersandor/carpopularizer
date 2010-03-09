@@ -1,31 +1,33 @@
-<h1>Forums#index</h1>
+<h1><%= _("Forum") %></h1>
 
-<table id="forums">
-  <thead>
-    <tr>
-      <th>Forum</th>
-      <th>Topics</th>
-      <th>Comments</th>
-      <th>Last topic</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @forums.each do |forum|%>
+<div id="forum-wrapper">
+  <table id="forums">
+    <thead>
       <tr>
-        <td>
-          <%= link_to h(forum.name), forum_path(forum), :class => "title" %>
-          <p class="description"><%= forum.description%></p>
-        </td>
-
-        <td class="num"><%= forum.topics_count %></td>
-        <td class="num"><%= forum.comments_count %></td>
-        <td class="num"><%= forum.updated_at %></td>
+        <th>Forum</th>
+        <th>Topics</th>
+        <th>Comments</th>
+        <th>Last topic</th>
       </tr>
+    </thead>
 
-    <% end %>
-  </tbody>
+    <tbody>
+      <% @forums.each do |forum|%>
+        <tr>
+          <td class="forumicon">
+            <%= link_to h(forum.name), forum_path(forum), :class => "title" %>
+            <p class="description"><%= forum.description%></p>
+          </td>
 
-</table>
+          <td class="num"><%= forum.topics_count %></td>
+          <td class="num"><%= forum.comments_count %></td>
+          <td class="num"><%= forum.updated_at %></td>
+        </tr>
 
-<%= will_paginate @forums %>
+      <% end %>
+    </tbody>
+
+  </table>
+
+  <%= will_paginate @forums %>
+</div>

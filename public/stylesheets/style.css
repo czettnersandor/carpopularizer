@@ -538,7 +538,7 @@ form .error .jquery-selectbox {
 table th {
   vertical-align: top;
   padding-right: 10px;
-  text-align: right;
+  text-align: left;
 }
 
 table td {
@@ -622,7 +622,7 @@ label.error {
 .listitem .list-header{
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
   background: white;
-  height: 18px;
+  height: 20px;
   display: block;
   margin: -10px -10px 0 -10px;
   padding: 0 10px 0 10px;
@@ -634,6 +634,7 @@ label.error {
 }
 .listitem .counter {
   float: left;
+  height: 20px;
   margin-right: 10px;
   margin-left: -10px;
   border-right: 1px solid #2487bb;
@@ -647,11 +648,17 @@ label.error {
 }
 .comment .profile-data,
 .listitem .profile-data {
-  width: 130px;
   display: block;
   float: left;
   /* border-right: 1px solid #2487bb; */
   margin-right: 10px;
+}
+.listitem .car-image {
+  float: left;
+  height: 100px;
+  width: 120px;
+  margin-left: -10px;
+  margin-right: 5px;
 }
 .listitem .profile-rate {
   font-size: 20px;
@@ -1950,6 +1957,38 @@ span.fejkep.newsfeed {
 #searchform input#color {
   width: 80px;
 }
-#searchform #submit {
+#searchform .submit {
   float: right;
+}
+
+
+
+/*
+* Forum
+*/
+#forum-wrapper {
+  padding: 10px;
+  background: ;
+  background: #349bd6 url(../images/darkblue.png) repeat-x;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+table#forums {
+  margin-bottom: 0;
+  width: 100%;
+}
+table#forums tr {
+  background: #dddddd;
+  border-bottom: 1px solid #2487BB;
+  padding: 1px 0;
+}
+table#forums tr td {
+  padding: 5px;
+}
+table#forums tr td.forumicon {
+  background: url(../images/forum/forum_read.gif) no-repeat 5px 5px;
+  padding-left: 35px;
+}
+table#forums thead tr {
+  background: transparent;
+  color: white;
 }
