@@ -3,6 +3,18 @@
     <span class="counter"><%= i %></span>
     <%= image_tag('/images/genres/16/'+car.genre) %>
     <%= link_to(genre(car.genre)+" "+car.name, user_box_path(car.user, car)) %>
+    <% if car.ccm != "" %>
+    <span class="ccm">
+      <%= car.ccm %>cm³
+    </span>
+    <% end %>
+
+    <% if car.fuel != "" %>
+    <span class="fuel">
+      <%= car.fuel %>
+    </span>
+    <% end %>
+
     <span class="year">
       <%= car.age_grade %>
     </span>
@@ -14,7 +26,10 @@
     <%= link_to(image_tag(car.carimages.first.image.url(:thumb)), user_box_path(car.user, car)) if car.carimages.first %>
   </div>
   <div class="description">
-    <%= shorten(car.description) %>
+    <strong><%= _("Description") %>: </strong><%= shorten(car.description) %>
+  </div>
+  <div class="origin">
+    <%= link_to car.user.login, car.user, :class => "login-required" %>
   </div>
   <hr class="clear" />
 </div>
