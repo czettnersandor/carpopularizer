@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-02-15 10:11+0100\n"
+"POT-Creation-Date: 2010-03-10 13:31+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,8 +66,12 @@ msgstr ""
 msgid "About Me"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:86 app/views/boxes/_form.erb:55
+#: app/views/boxes/show.html.erb:87 app/views/boxes/_form.erb:58
 msgid "Acceleration"
+msgstr ""
+
+#: app/controllers/marketplaces_controller.rb:22
+msgid "Ad was successfully created."
 msgstr ""
 
 #: app/views/meetings/new.html.erb:27 app/views/users/edit-dealer.html.erb:49
@@ -75,7 +79,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:60
+#: app/views/boxes/show.html.erb:61
 msgid "Age grade"
 msgstr ""
 
@@ -87,7 +91,7 @@ msgstr ""
 msgid "An error occured, your password was not changed."
 msgstr ""
 
-#: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
+#: app/views/boxes/show.html.erb:39 app/views/galleries/show.html.erb:24
 #: app/views/galleries/_gallery_admin.erb:8 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr ""
@@ -96,8 +100,8 @@ msgstr ""
 msgid "Argentina"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:98
-#: app/views/boxes/_form.erb:10 app/views/boxes/_form.erb:69
+#: app/views/boxes/show.html.erb:55 app/views/boxes/show.html.erb:99
+#: app/views/boxes/_form.erb:10 app/views/boxes/_form.erb:72
 msgid "Audio"
 msgstr ""
 
@@ -132,6 +136,10 @@ msgstr ""
 
 #: app/views/users/_usermenu.erb:1
 msgid "Box"
+msgstr ""
+
+#: app/views/layouts/_login.erb:14
+msgid "Box messages"
 msgstr ""
 
 #: app/helpers/users_helper.rb:9
@@ -170,6 +178,10 @@ msgstr ""
 msgid "Cars"
 msgstr ""
 
+#: app/views/cars/_searchform.erb:8
+msgid "Cars for sale"
+msgstr ""
+
 #: app/helpers/users_helper.rb:12
 msgid "Chile"
 msgstr ""
@@ -187,12 +199,18 @@ msgstr ""
 msgid "Club was successfully updated."
 msgstr ""
 
-#: app/views/layouts/_menu.erb:4 app/views/users/_usermenu.erb:3
+#: app/views/layouts/_menu.erb:4 app/views/clubs/index.html.erb:2
+#: app/views/users/_usermenu.erb:3
 msgid "Clubs"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:68 app/views/boxes/_form.erb:36
+#: app/views/boxes/show.html.erb:69 app/views/boxes/_form.erb:39
+#: app/views/cars/_searchform.erb:50 app/views/cars/_searchform.erb:99
 msgid "Color"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:134
+msgid "Combat"
 msgstr ""
 
 #: app/views/battles/_show_pair.erb:38
@@ -238,7 +256,7 @@ msgstr ""
 msgid "Coupe"
 msgstr ""
 
-#: app/views/meetings/new.html.erb:31
+#: app/views/meetings/new.html.erb:31 app/views/videos/_form.erb:13
 msgid "Create"
 msgstr ""
 
@@ -250,7 +268,7 @@ msgstr ""
 msgid "Current members"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:50 app/views/boxes/_form.erb:6
+#: app/views/boxes/show.html.erb:51 app/views/boxes/_form.erb:6
 msgid "Data"
 msgstr ""
 
@@ -259,6 +277,7 @@ msgid "Date"
 msgstr ""
 
 #: app/views/fronts/index.html.erb:38 app/views/fronts/index.html.erb:69
+#: app/views/videos/index.html.erb:33
 msgid "Day"
 msgstr ""
 
@@ -266,9 +285,10 @@ msgstr ""
 msgid "Dealer"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:62 app/views/boxes/_form.erb:26
-#: app/views/meetings/new.html.erb:11 app/views/clubs/_form.erb:9
-#: app/views/admin/forums/_form.erb:5
+#: app/views/boxes/show.html.erb:63 app/views/boxes/_form.erb:29
+#: app/views/meetings/new.html.erb:11 app/views/marketplaces/show.html.erb:34
+#: app/views/marketplaces/_form.erb:6 app/views/clubs/_form.erb:9
+#: app/views/admin/forums/_form.erb:5 app/views/videos/_form.erb:9
 msgid "Description"
 msgstr ""
 
@@ -276,11 +296,11 @@ msgstr ""
 msgid "Edit car"
 msgstr ""
 
-#: app/views/layouts/_login.erb:15
+#: app/views/layouts/_login.erb:17
 msgid "Edit my profile"
 msgstr ""
 
-#: app/views/layouts/_login.erb:23 app/views/sessions/new.html.erb:14
+#: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:14
 #: app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
@@ -289,12 +309,12 @@ msgstr ""
 msgid "Empty"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:92
-#: app/views/boxes/_form.erb:9 app/views/boxes/_form.erb:64
+#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:93
+#: app/views/boxes/_form.erb:9 app/views/boxes/_form.erb:67
 msgid "Engine"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:120
+#: app/views/boxes/show.html.erb:155
 msgid "Equipment"
 msgstr ""
 
@@ -302,8 +322,8 @@ msgstr ""
 msgid "Estate-car"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:51 app/views/boxes/show.html.erb:70
-#: app/views/boxes/_form.erb:8 app/views/boxes/_form.erb:39
+#: app/views/boxes/show.html.erb:52 app/views/boxes/show.html.erb:71
+#: app/views/boxes/_form.erb:8 app/views/boxes/_form.erb:42
 msgid "Exterior"
 msgstr ""
 
@@ -320,6 +340,10 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
+#: app/views/boxes/_form.erb:26
+msgid "For sale"
+msgstr ""
+
 #: app/views/passwords/new.html.erb.erb:1
 msgid "Forgot Password"
 msgstr ""
@@ -328,7 +352,8 @@ msgstr ""
 msgid "Forgotten password?"
 msgstr ""
 
-#: app/views/layouts/_menu.erb:6
+#: app/controllers/forums_controller.rb:8 app/views/layouts/_menu.erb:6
+#: app/views/forums/index.html.erb:1
 msgid "Forum"
 msgstr ""
 
@@ -348,7 +373,8 @@ msgstr ""
 msgid "Friends"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:84 app/views/boxes/_form.erb:52
+#: app/views/boxes/show.html.erb:85 app/views/boxes/_form.erb:55
+#: app/views/cars/_searchform.erb:30 app/views/cars/_searchform.erb:79
 msgid "Fuel"
 msgstr ""
 
@@ -371,7 +397,7 @@ msgid "Gender"
 msgstr ""
 
 #: app/views/boxes/_form.erb:14 app/views/clubs/_searchform.erb:3
-#: app/views/cars/_searchform.erb:3
+#: app/views/cars/_searchform.erb:18 app/views/cars/_searchform.erb:67
 msgid "Genre"
 msgstr ""
 
@@ -401,8 +427,8 @@ msgstr ""
 msgid "Hungary"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:52 app/views/boxes/show.html.erb:76
-#: app/views/boxes/_form.erb:7 app/views/boxes/_form.erb:31
+#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:77
+#: app/views/boxes/_form.erb:7 app/views/boxes/_form.erb:34
 msgid "Interior"
 msgstr ""
 
@@ -418,7 +444,7 @@ msgstr ""
 msgid "Invalid activation code"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:31
+#: app/controllers/sessions_controller.rb:33
 msgid "Invalid email or password"
 msgstr ""
 
@@ -440,6 +466,10 @@ msgstr ""
 
 #: app/helpers/users_helper.rb:20
 msgid "Japan"
+msgstr ""
+
+#: app/views/cars/_searchform.erb:107
+msgid "Km"
 msgstr ""
 
 #: app/helpers/users_helper.rb:21
@@ -466,7 +496,7 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:29
+#: app/controllers/sessions_controller.rb:31
 msgid "Logged in successfully"
 msgstr ""
 
@@ -478,16 +508,16 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: app/views/layouts/_login.erb:16
+#: app/views/layouts/_login.erb:18
 msgid "Logout"
 msgstr ""
 
-#: app/views/layouts/_login.erb:37
+#: app/views/layouts/_login.erb:39
 msgid "Lost password"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:58 app/views/boxes/_form.erb:20
-#: app/views/cars/_searchform.erb:6
+#: app/views/boxes/show.html.erb:59 app/views/boxes/_form.erb:20
+#: app/views/cars/_searchform.erb:26 app/views/cars/_searchform.erb:75
 msgid "Make"
 msgstr ""
 
@@ -502,6 +532,11 @@ msgstr ""
 
 #: app/views/layouts/_menu.erb:8 app/views/users/_usermenu.erb:7
 msgid "Marketplace"
+msgstr ""
+
+#: app/controllers/marketplaces_controller.rb:4
+#: app/views/marketplaces/index.html.erb:2
+msgid "Marketplaces"
 msgstr ""
 
 #: app/views/clubs/show.html.erb:25
@@ -525,7 +560,7 @@ msgid "Membership deleted"
 msgstr ""
 
 #: app/controllers/messages_controller.rb:6
-#: app/controllers/messages_controller.rb:13 app/views/layouts/_login.erb:13
+#: app/controllers/messages_controller.rb:13 app/views/layouts/_login.erb:15
 msgid "Messages"
 msgstr ""
 
@@ -534,6 +569,7 @@ msgid "Minibus"
 msgstr ""
 
 #: app/views/fronts/index.html.erb:36 app/views/fronts/index.html.erb:67
+#: app/views/videos/index.html.erb:31
 msgid "Month"
 msgstr ""
 
@@ -541,7 +577,11 @@ msgstr ""
 msgid "Most viewed"
 msgstr ""
 
-#: app/views/layouts/_login.erb:14
+#: app/views/videos/index.html.erb:24
+msgid "Most visited videos"
+msgstr ""
+
+#: app/views/layouts/_login.erb:16
 msgid "My friends"
 msgstr ""
 
@@ -553,12 +593,13 @@ msgstr ""
 msgid "Netherlands"
 msgstr ""
 
-#: app/controllers/boxes_controller.rb:21
-msgid "New car"
+#: app/controllers/marketplaces_controller.rb:9
+#: app/views/marketplaces/new.html.erb:5
+msgid "New advert"
 msgstr ""
 
-#: app/views/clubs/index.html.erb:9
-msgid "New club"
+#: app/controllers/boxes_controller.rb:21 app/views/users/_myblock.erb:9
+msgid "New car"
 msgstr ""
 
 #: app/views/galleries/_scroller.erb:37
@@ -577,8 +618,16 @@ msgstr ""
 msgid "New page"
 msgstr ""
 
+#: app/views/videos/index.html.erb:10
+msgid "Newest videos"
+msgstr ""
+
 #: app/controllers/fronts_controller.rb:4 app/views/layouts/_menu.erb:2
 msgid "News"
+msgstr ""
+
+#: app/views/fronts/index.html.erb:98
+msgid "News feed"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:3
@@ -599,7 +648,7 @@ msgid "Opening time"
 msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
-#: app/views/layouts/_login.erb:26 app/views/passwords/edit.html.erb.erb:4
+#: app/views/layouts/_login.erb:28 app/views/passwords/edit.html.erb.erb:4
 #: app/views/sessions/new.html.erb:17 app/views/users/edit-dealer.html.erb:17
 #: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
 msgid "Password"
@@ -629,7 +678,8 @@ msgstr ""
 msgid "Pending members"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:82 app/views/boxes/_form.erb:49
+#: app/views/boxes/show.html.erb:83 app/views/boxes/_form.erb:52
+#: app/views/cars/_searchform.erb:40 app/views/cars/_searchform.erb:89
 msgid "Performance"
 msgstr ""
 
@@ -666,6 +716,10 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
+#: app/views/cars/_searchform.erb:111
+msgid "Price"
+msgstr ""
+
 #: app/views/admin/front/index.html.erb:16
 msgid "RSS news readers"
 msgstr ""
@@ -674,7 +728,7 @@ msgstr ""
 msgid "Races"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:106
+#: app/views/boxes/show.html.erb:107
 msgid "Rating"
 msgstr ""
 
@@ -696,12 +750,12 @@ msgstr ""
 msgid "Recipient"
 msgstr ""
 
-#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:37
+#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:39
 #: app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:12
+#: app/controllers/sessions_controller.rb:13
 msgid "Register now!"
 msgstr ""
 
@@ -713,7 +767,7 @@ msgstr ""
 msgid "Registration type"
 msgstr ""
 
-#: app/views/layouts/_login.erb:30 app/views/sessions/new.html.erb:21
+#: app/views/layouts/_login.erb:32 app/views/sessions/new.html.erb:21
 msgid "Remember me"
 msgstr ""
 
@@ -741,20 +795,21 @@ msgstr ""
 msgid "Rssreader was successfully created."
 msgstr ""
 
-#: app/views/boxes/_form.erb:77 app/views/topics/new.html.erb:13
+#: app/views/boxes/_form.erb:80 app/views/topics/new.html.erb:13
 #: app/views/rssreaders/edit.html.erb:14 app/views/rssreaders/new.html.erb:14
 #: app/views/carimages/edit.html.erb:4 app/views/carimages/new.html.erb:10
 #: app/views/carimages/_multiupload.erb:9 app/views/images/edit.html.erb:3
 #: app/views/images/new.html.erb:8 app/views/images/_multiupload.erb:9
 #: app/views/pages/edit.html.erb:14 app/views/pages/new.html.erb:14
 #: app/views/galleries/edit.html.erb:6 app/views/galleries/new.html.erb:6
-#: app/views/clubs/_form.erb:18 app/views/users/edit-dealer.html.erb:67
-#: app/views/users/edit.html.erb:61
+#: app/views/marketplaces/_form.erb:10 app/views/clubs/_form.erb:18
+#: app/views/users/edit-dealer.html.erb:67 app/views/users/edit.html.erb:61
 msgid "Save"
 msgstr ""
 
 #: app/views/layouts/_searchblock.erb:9 app/views/clubs/_searchform.erb:9
-#: app/views/cars/_searchform.erb:10
+#: app/views/cars/_searchform.erb:13 app/views/cars/_searchform.erb:57
+#: app/views/cars/_searchform.erb:62 app/views/cars/_searchform.erb:125
 msgid "Search"
 msgstr ""
 
@@ -831,6 +886,10 @@ msgid ""
 "before logging in."
 msgstr ""
 
+#: app/views/combats/index.html.erb:8
+msgid "There are no active combats"
+msgstr ""
+
 #: app/controllers/comments_controller.rb:18
 #: app/controllers/comments_controller.rb:22
 msgid "This topic is locked."
@@ -840,6 +899,7 @@ msgstr ""
 #: app/views/rssreaders/new.html.erb:6 app/views/pages/edit.html.erb:4
 #: app/views/pages/new.html.erb:4 app/views/meetings/new.html.erb:7
 #: app/views/galleries/edit.html.erb:4 app/views/galleries/new.html.erb:4
+#: app/views/marketplaces/_form.erb:3 app/views/videos/_form.erb:6
 msgid "Title"
 msgstr ""
 
@@ -847,16 +907,20 @@ msgstr ""
 msgid "To check the details of this battle, follow the link below:"
 msgstr ""
 
-#: app/views/cars/index.html.erb:4
+#: app/views/cars/index.html.erb:20
 msgid "Top 5 cars"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:88 app/views/boxes/_form.erb:58
+#: app/views/boxes/show.html.erb:89 app/views/boxes/_form.erb:61
 msgid "Top speed"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:90 app/views/boxes/_form.erb:61
+#: app/views/boxes/show.html.erb:91 app/views/boxes/_form.erb:64
 msgid "Torque"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:128
+msgid "Tournament"
 msgstr ""
 
 #: app/views/battles/index.html.erb:7
@@ -867,7 +931,8 @@ msgstr ""
 msgid "Trash"
 msgstr ""
 
-#: app/views/boxes/_form.erb:17
+#: app/views/boxes/_form.erb:17 app/views/cars/_searchform.erb:22
+#: app/views/cars/_searchform.erb:71
 msgid "Type"
 msgstr ""
 
@@ -883,6 +948,14 @@ msgstr ""
 msgid "User"
 msgstr ""
 
+#: app/views/cars/_searchform.erb:4
+msgid "User cars"
+msgstr ""
+
+#: app/views/layouts/_login.erb:13
+msgid "User events"
+msgstr ""
+
 #: app/views/admin/front/index.html.erb:8
 msgid "Users"
 msgstr ""
@@ -896,6 +969,7 @@ msgid "Video administration"
 msgstr ""
 
 #: app/views/layouts/_menu.erb:7 app/views/admin/front/index.html.erb:12
+#: app/views/videos/index.html.erb:2
 msgid "Videos"
 msgstr ""
 
@@ -908,6 +982,7 @@ msgid "Website"
 msgstr ""
 
 #: app/views/fronts/index.html.erb:37 app/views/fronts/index.html.erb:68
+#: app/views/videos/index.html.erb:32
 msgid "Week"
 msgstr ""
 
@@ -927,6 +1002,10 @@ msgid ""
 "Enter the ring, choose a category and decide who has the hottest ride!"
 msgstr ""
 
+#: app/views/cars/_searchform.erb:36 app/views/cars/_searchform.erb:85
+msgid "Year"
+msgstr ""
+
 #: app/controllers/clubs_controller.rb:37
 msgid "You are not allowed to be a member of this club"
 msgstr ""
@@ -939,7 +1018,7 @@ msgstr ""
 msgid "You can visit your new club:"
 msgstr ""
 
-#: app/controllers/sessions_controller.rb:40
+#: app/controllers/sessions_controller.rb:42
 msgid "You have been logged out."
 msgstr ""
 
@@ -948,7 +1027,7 @@ msgid "You have requested to change your password"
 msgstr ""
 
 #: app/controllers/sessions_controller.rb:12
-msgid "You have to log in to be able to access here... Not yet a member? "
+msgid "You have to log in to be able to access here... Not yet a member?"
 msgstr ""
 
 #: app/models/user_mailer.rb:14
@@ -989,16 +1068,25 @@ msgstr ""
 msgid "Your selected car is already in a combat."
 msgstr ""
 
+#: app/views/videos/_form.erb:3
+msgid "Youtube URL"
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
 #: app/views/users/edit.html.erb:46
 msgid "ZIP"
 msgstr ""
 
-#: app/views/boxes/_form.erb:46
+#: app/views/boxes/_form.erb:49 app/views/cars/_searchform.erb:46
+#: app/views/cars/_searchform.erb:95
 msgid "ccm"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:128 app/views/topics/show.html.erb:10
+#: app/views/cars/_searchform.erb:116
+msgid "condition"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:163 app/views/topics/show.html.erb:10
 msgid "new comment"
 msgstr ""
 

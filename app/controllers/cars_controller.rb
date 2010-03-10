@@ -7,8 +7,8 @@ class CarsController < ApplicationController
 
     @top5 = Car.top5
 
-    @searchy = ""
-    [1900..Time.now.year].each do |s_year|
+    @searchy = '<option value="">--</option>'
+    (1900..Time.now.year.to_i).each do |s_year|
       @searchy += "<option value=#{s_year}>#{s_year}</option>"
     end
   end

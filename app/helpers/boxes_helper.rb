@@ -2,18 +2,42 @@ module BoxesHelper
   FastGettext.add_text_domain 'app', :path => File.join(RAILS_ROOT, 'locale')
   FastGettext.text_domain = 'app'
   MAKES = [
-    _("Cabriolet"),
-    _("Coupe"),
-    _("Van"),         #Egyterű
-    _("Hot Rod"),
-    _("Estate-car"),  #Kombi
-    _("Minibus"),
-    _("Sedan"),       #Lépcsőshátú
-    _("Pickup"),
-    _("Sport"),
-    _("Off-road"),
-    _("Hatchback"),
-    _("Old-timer")
+    _("convertible"),
+    _("coupe"),
+    _("MPV"),
+    _("short box"),
+    _("hot rod"),
+    _("van"),
+    _("truck"),
+    _("long box"),
+    _("saloon"),
+    _("pick-up"),
+    _("sedan"),
+    _("sport"),
+    _("SUV"),
+    _("other")
+  ]
+
+  FUELS = [
+    _("Gasoline"),
+    _("Diesel"),
+    _("Gas"),
+    _("Hybrid"),
+    _("Biodiesel"),
+    _("Electric"),
+    _("Etanol")
+  ]
+
+  CONDITIONS = [
+    _("brand new"),
+    _("perfect"),
+    _("like new"),
+    _("well protected"),
+    _("normal"),
+    _("no damage"),
+    _("engine problem"),
+    _("crashed"),
+    _("defected")
   ]
 
   GENRES = [
@@ -142,7 +166,7 @@ module BoxesHelper
   ]
   
   def genrelist(selected_genre='')
-    opt_list = '<option value="">'+_('-- Empty --')+'</option>'
+    opt_list = '<option value="">'+_('-- All --')+'</option>'
     GENRES.reverse.each do |genre|
       selected = selected_genre == genre[0] ? ' selected="true">' : '>'
       opt_list += '<option value='+genre[0]+selected+genre[1]+'</option>'
@@ -159,7 +183,7 @@ module BoxesHelper
   end
 
   def makelist(selected_make='')
-    opt_list = '<option value="">'+_('-- Empty --')+'</option>'
+    opt_list = '<option value="">'+_('-- All --')+'</option>'
     MAKES.each do |m|
       selected = selected_make == m ? ' selected="true">' : '>'
       opt_list += '<option value='+m+selected+ _(m) +'</option>'

@@ -627,6 +627,15 @@ label.error {
   margin: -10px -10px 0 -10px;
   padding: 0 10px 0 10px;
   border-bottom: 1px solid #2487bb;
+  position: relative;
+}
+.listitem .list-header .year {
+  position: absolute;
+  right: 100px;
+}
+.listitem .list-header .rating-avg {
+  position: absolute;
+  right: 50px;
 }
 .comment .list-header img,
 .listitem .list-header img {
@@ -659,10 +668,16 @@ label.error {
   width: 120px;
   margin-left: -10px;
   margin-right: 5px;
+  margin-bottom: -1px;
 }
 .listitem .profile-rate {
-  font-size: 20px;
+  font-size: 30px;
   color: #2487bb;
+  margin-top: 30px;
+}
+.rated .listitem .profile-rate {
+  margin-top: 0;
+  font-size: 24px;
 }
 
 .comment.reply {
@@ -847,6 +862,10 @@ div.child.video .news-item {
   /* color: #2487BB; */
   color:#333333;
 }
+div.child.video .news-item .title a {
+  background: none;
+  padding: 0;
+}
 .news-item .title a:visited {
   background: url(../images/icon-16.png) no-repeat 0 0;
 }
@@ -921,8 +940,11 @@ div.child.video .news-item {
 }
 #tabs-hits-hu-monthly,
 #tabs-hits-hu-weekly,
-#tabs-hits-hu-daily {
-  border-top:1px dashed #2487BB;
+#tabs-hits-hu-daily,
+#tabs-hits-en-monthly,
+#tabs-hits-en-weekly,
+#tabs-hits-en-daily {
+  border-top: 1px dashed #2487BB;
   padding-top: 5px;
   margin-top: 3px;
 }
@@ -1903,18 +1925,19 @@ span.fejkep.newsfeed {
 * Search form
 */
 #searchform {
+  position: relative;
   display: block;
   width: 680px;
   background: url(../images/darkblue.png);
   margin-bottom: 10px;
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
-  padding: 5px 10px 10px;
+  padding: 30px 10px 10px;
   color: white;
 }
 #searchform ul.ui-tabs-nav {
   position: absolute;
   top: 0;
-  right: 10px;
+  left: 10px;
 
 }
 #searchform td {
@@ -1937,7 +1960,9 @@ span.fejkep.newsfeed {
   margin-bottom: 0;
 }
 #searchform input#performance,
-#searchform input#performance2 {
+#searchform input#performance2,
+#searchform input#km,
+#searchform input#km2 {
   width: 45px;
   float: none;
   margin: 0 1px;
@@ -1945,12 +1970,15 @@ span.fejkep.newsfeed {
 #searchform input#year,
 #searchform input#year2,
 #searchform input#ccm2,
-#searchform input#ccm {
+#searchform input#ccm,
+#searchform input#price,
+#searchform input#price2 {
   width: 68px;
   float: none;
   margin: 0 1px;
 }
-#searchform #perf_type {
+#searchform #perf_type,
+#searchform #kmtype {
   width: 46px;
   float: none;
 }
@@ -1959,6 +1987,14 @@ span.fejkep.newsfeed {
 }
 #searchform .submit {
   float: right;
+}
+#searchform .form-itemperpage {
+  position: absolute;
+  width: 100px;
+  height: 44px;
+  display: block;
+  right: 100px;
+  bottom: 10px;
 }
 
 
@@ -1991,4 +2027,37 @@ table#forums tr td.forumicon {
 table#forums thead tr {
   background: transparent;
   color: white;
+}
+
+
+/*
+* Adder links
+*/
+
+a.newvideo {
+  width: 132px;
+  height: 31px;
+  display: block;
+  background: url(../images/videohozzadas.png) no-repeat;
+  padding: 6px 0 0 50px;
+  color: white;
+  text-transform: uppercase;
+}
+a.newclub {
+  width: 132px;
+  height: 31px;
+  display: block;
+  background: url(../images/klubhozzadas.png) no-repeat;
+  padding: 6px 0 0 50px;
+  color: white;
+  text-transform: uppercase;
+}
+a.newmarket {
+  width: 132px;
+  height: 31px;
+  display: block;
+  background: url(../images/aprohozzadas.png) no-repeat;
+  padding: 6px 0 0 50px;
+  color: white;
+  text-transform: uppercase;
 }

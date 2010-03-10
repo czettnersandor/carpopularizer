@@ -1,10 +1,17 @@
-<%= render :partial => "searchform" %>
+<div class="grid_9 alpha">
+<h1><%= _("Clubs") %></h1>
+</div>
+
+<div class="grid_3 omega">
+<%= link_to("Add club", new_club_path, :class => "newclub login-required")%>
+</div>
+
+<div class="grid_12 alpha omega">
+<%# render :partial => "searchform" %>
 
 <% @clubs.each do |club| %>
 
   <%= render :partial => "clublistitem", :locals => {:club => club} %>
 
 <% end %>
-
-<%= link_to _('New club'), new_club_path %>
-
+</div>

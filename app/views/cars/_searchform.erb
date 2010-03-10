@@ -10,7 +10,59 @@
   </ul>
 
   <div id ="usercars">
-    <h3><%= _("Search") %></h3>
+    <% form_tag(cars_path, :method => "get") do %>
+      <table>
+        <tr>
+          <td>
+            <div class="form-item"><label for="genre"><%=_('Make')%></label><br/>
+              <%= select_tag :genre, genrelist(params[:genre]) %><hr/></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="name"><%=_('Model')%></label><br/>
+              <%= text_field_tag :name %><hr/></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="genre"><%=_('Body type')%></label><br/>
+              <%= select_tag :make, makelist(params[:make]) %><hr/></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
+              <%= select_tag :fuel, '<option value="">'+_('-- All --')+'</option><option value=0>Benzin</option><option value=1>Diesel</option><option value=2>Gáz</option>' %><hr/></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-item"><label for="year"><%=_('Year')%></label><br/>
+              <%= select_tag :year, @searchy %>-<%= select_tag :year2, @searchy %></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
+              <%= text_field_tag :performance %>-<%= text_field_tag :performance2 %>
+              <%= select_tag :perf_type, '<option value="kW">kW</option><option value="LE">LE</option>' %>
+            </div>
+          </td>
+          <td>
+            <div class="form-item"><label for="ccm"><%=_('Search|Engine')%>(ccm)</label><br/>
+              <%= text_field_tag :ccm %>-<%= text_field_tag :ccm2 %></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
+              <%= text_field_tag :color %></div>
+          </td>
+
+        </tr>
+      </table>
+
+
+      <div class="form-itemperpage"><label for="items"><%=_('Hits/page')%></label><br/>
+        <%= select_tag :items, '<option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option>' %>
+      </div>
+
+      <%= submit_tag(_("Search"), :name => nil, :class => "submit") %>
+    <% end %>
+  </div>
+
+  <div id ="carsforsale">
     <% form_tag(cars_path, :method => "get") do %>
       <table>
         <tr>
@@ -22,52 +74,71 @@
             <div class="form-item"><label for="name"><%=_('Type')%></label><br/>
               <%= text_field_tag :name %><hr/></div>
           </td>
+
           <td>
-            <div class="form-item"><label for="genre"><%=_('Make')%></label><br/>
-              <%= select_tag :make, makelist(params[:make]) %><hr/></div>
+            <div class="form-item"><label for="price"><%=_('Price')%></label><br/>
+              <%= text_field_tag :price %>-<%= text_field_tag :price2 %>
+            </div>
           </td>
+
           <td>
             <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
-              <%= select_tag :fuel, '<option value="">--</option><option value=0>Benzin</option><option value=1>Diesel</option><option value=2>Gáz</option>' %><hr/></div>
+              <%= select_tag :fuel, '<option value="">'+_('-- All --')+'</option><option value=0>Benzin</option><option value=1>Diesel</option><option value=2>Gáz</option>' %><hr/></div>
           </td>
         </tr>
         <tr>
           <td>
             <div class="form-item"><label for="year"><%=_('Year')%></label><br/>
-              <%= text_field_tag :year %>-<%= text_field_tag :year2 %></div>
+              <%= select_tag :year, @searchy %>-<%= select_tag :year2, @searchy %></div>
           </td>
+
+          <td>
+            <div class="form-item"><label for="km"><%=_('Km')%></label><br/>
+              <%= text_field_tag :km %>-<%= text_field_tag :km2 %>
+
+              <%= select_tag :perf_type, '<option value="km">km</option><option value="mile">mile</option>' %>
+            </div>
+          </td>
+
+
+
           <td>
             <div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
               <%= text_field_tag :performance %>-<%= text_field_tag :performance2 %>
-            <%= select_tag :perf_type, '<option value="kW">kW</option><option value="LE">LE</option>' %>
-              </div>
+              <%= select_tag :km_type, '<option value="kW">kW</option><option value="LE">LE</option>' %>
+            </div>
           </td>
-          <td>
-            <div class="form-item"><label for="ccm"><%=_('ccm')%></label><br/>
-              <%= text_field_tag :ccm %>-<%= text_field_tag :ccm2 %></div>
-          </td>
+
           <td>
             <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
               <%= text_field_tag :color %></div>
           </td>
-          
+
+        </tr>
+
+        <tr>
+          <td>
+            <div class="form-item"><label for="genre"><%=_('Make')%></label><br/>
+              <%= select_tag :make, makelist(params[:make]) %><hr/></div>
+          </td>
+
+          <td>
+            <div class="form-item"><label for="condition"><%=_('condition')%></label><br/>
+              <%= select_tag :condition, '<option value="0">New</option><option value="1">Good</option><option value="2">Crashed</option>' %></div>
+          </td>
+          <td>
+            <div class="form-item"><label for="ccm"><%=_('Search|Engine')%> (ccm)</label><br/>
+              <%= text_field_tag :ccm %>-<%= text_field_tag :ccm2 %></div>
+          </td>
+
+          <td>
+          </td>
+
         </tr>
       </table>
-
-      <%= submit_tag(_("Search"), :name => nil, :class => "submit") %>
-    <% end %>
-  </div>
-
-  <div id ="carsforsale">
-    <% form_tag(cars_path, :method => "get") do %>
-
-      <div class="form-item"><label for="genre"><%=_('Genre')%></label><br/>
-        <%= select_tag :genre, genrelist(params[:genre]) %><hr/></div>
-
-      <div class="form-item"><label for="genre"><%=_('Make')%></label><br/>
-        <%= select_tag :make, makelist(params[:make]) %><hr/></div>
-
-
+      <div class="form-itemperpage"><label for="items"><%=_('Hits/page')%></label><br/>
+        <%= select_tag :items, '<option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option>' %>
+      </div>
       <%= submit_tag(_("Search"), :name => nil, :class => "submit") %>
     <% end %>
   </div>

@@ -1,4 +1,10 @@
+<div class="grid_9 alpha">
 <h1><%= _("Videos") %></h1>
+</div>
+
+<div class="grid_3 omega">
+<%= link_to("Add video", new_video_path, :class => "newvideo login-required") %>
+</div>
 
 <div class="grid_6 alpha">
   <div class="block-header"><span class="fejkep rss"></span><h3><%= _("Newest videos") %></h3></div>
@@ -15,7 +21,7 @@
 </div>
 
 <div class="grid_6 omega">
-  <div class="block-header"><span class="fejkep freshnews"></span><h3><%= _("Most viewed") %></h3></div>
+  <div class="block-header"><span class="fejkep freshnews"></span><h3><%= _("Most visited videos") %></h3></div>
   <div class="lightblue-block newsblock" id="rss-list-by-hits">
 
     <div id="tabs-hits-hu" class="innertab">
