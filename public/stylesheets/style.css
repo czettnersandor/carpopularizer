@@ -2075,6 +2075,9 @@ table#forums tr td.forumicon {
   background: url(../images/forum/forum_read.gif) no-repeat 5px 5px;
   padding-left: 35px;
 }
+table#forums tr td.forumicon.new {
+  background: url(../images/forum/forum_new.gif) no-repeat 5px 5px;
+}
 table#forums thead tr {
   background: transparent;
   color: white;

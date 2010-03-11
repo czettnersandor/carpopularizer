@@ -18,7 +18,7 @@
     <tbody>
       <% @topics.each do |topic|%>
         <tr>
-          <td class="forumicon">
+          <td class="forumicon<%= " new" if recent_topic_activity(topic) %>">
             <%= link_to h(topic.title), topic_path(@forum, topic), :class => "title" %>
           </td>
           <td class="num"><%= topic.comments_count %></td>
