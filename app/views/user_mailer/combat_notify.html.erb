@@ -1,7 +1,7 @@
-<%= @car1.user.login %>,
-<%= @car2.user.login %> has challenged your <%= @car1.name %> with his/her <%= @car2.name %>.
-The beginning of the battle: 5am.
-
-<%= _("To check the details of this battle, follow the link below:") %>
-  <%= user_battles_path @car1.user %>
+<%= @car1.user.login %>,<br/>
+<%= @car2.user.login %> has challenged your <%= @car1.name %> with his/her <%= @car2.name %>.<br/>
+The beginning of the battle: 5am.<br/>
+<br/>
+<%= _("To check the details of this battle, follow the link below:") %><br/>
+<%= link_to "http://"+@hostname+user_battles_path(@car1.user), "http://"+@hostname+user_battles_path(@car1.user) %><br/>
 

@@ -1,4 +1,4 @@
-<%= N_("%s, your membership to %s deleted by the club owner") % [@user.login, @club.name] %>
-<%= _("You are not listed in member list of this club:") %>
-
-  <%= @url %>
+<%= N_("%s, your membership to %s deleted by the club owner") % [@user.login, @club.name] %>  <br/>
+<%= _("You are not listed in member list of this club:") %> <br/>
+<br/>
+  <a href="<%= @url %>"><%= @url %></a>

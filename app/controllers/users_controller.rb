@@ -44,6 +44,12 @@ class UsersController < ApplicationController
 
   def new
     @title = _("Register")
+    @user = User.new(params[:user])
+  end
+
+  def new_front
+    @title = _("Register")
+    redirect_to current_user if logged_in?
   end
 
   def create

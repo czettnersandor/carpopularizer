@@ -825,7 +825,7 @@ hr.clear {
   float: right;
   height: 100px;
   width: 35px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 #profile-left img.profile-thumb {
   float: left;
@@ -1254,7 +1254,7 @@ a.new-car {
   left: 40px;
 }
 #auto-adatok-tabs {
-  height: 250px;
+  height: 252px;
   width: 255px;
   display: block;
   float: left;
@@ -1263,6 +1263,9 @@ a.new-car {
   margin: 10px 0 0 0;
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
   padding: 10px 0 0 10px;
+}
+#auto-adatok-tabs a.image-edits {
+  margin-top: -6px;
 }
 #auto-adatok-tabs .ui-tabs-panel {
   clear: both;
@@ -1286,6 +1289,7 @@ a.new-car {
   right: 0;
   top: 0;
   padding-bottom: 20px;
+  width: 215px;
 }
 #auto-adatok-tabs ul.ui-tabs-nav li {
   display: block;
@@ -1306,7 +1310,7 @@ a.new-car {
   color: black;
 }
 #car-description {
-  height: 250px;
+  height: 150px;
   width: 419px;
   display: block;
   position: relative;
@@ -1317,7 +1321,7 @@ a.new-car {
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #car-description .inner{
-  height: 204px;
+  height: 154px;
   width: 419px;
   padding: 0;
   overflow: auto;
@@ -1325,44 +1329,34 @@ a.new-car {
   -ms-overflow-x: hidden;
 }
 #car-description .rating {
-  padding: 10px 0 0 30px;
+  padding: 10px 0 0 0;
   display: block;
-  width: 304px;
-  height: 70px;
-  float: left;
-  text-align: center;
-}
-#car-description .rated {
-  display: block;
-  width: 75px;
-  height: 100px;
-  background: url(../images/car-photo.png);
-  padding: 5px 5px 0 5px;
+  width: 270px;
+  height: 114px;
   float: left;
   text-align: center;
 }
 #car-description .win-wrapper {
   display: block;
-  height: 30px;
-  width: 419px;
-  border-top: 1px solid #2487bb;
-  margin-top: 105px;
-  position: absolute;
+  height: 124px;
+  width: 148px;
+  border-right: 1px solid #2487bb;
+  float: left;
 }
 #car-description .win-wrapper .tournament-win,
 #car-description .win-wrapper .combat-win {
   text-align: center;
   display: block;
-  float: left;
-  width: 50%;
-  height: 63px;
-  padding: 5px 0 0;
+  width: 100%;
+  height: 62px;
+  background: #ffffff;
 }
 #car-description .win-wrapper .tournament-win {
-  background:  #f0f1f1 url(../images/cup.png) no-repeat 10px 0;
+  border-bottom: 1px solid #2487bb;
+  height: 61px;
 }
 #car-description .win-wrapper .combat-win {
-  background: #ffffff;
+  -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px;
 }
 #car-description .cups {
   display: block;
@@ -1383,7 +1377,7 @@ a.new-car {
   right: 10px;
 }
 #car-equipment {
-  height: 58px;
+  height: 100px;
   width: 419px;
   display: block;
   float: left;
@@ -2115,4 +2109,61 @@ a.newmarket {
   background: url(../images/aprohozzadas.png) no-repeat;
   padding: 6px 0 0 50px;
   color: white;
+}
+
+
+/*
+* Registration window
+*/
+#register-wrapper {
+  background: url(../images/register.png);
+  height: 372px;
+  position: relative;
+}
+#register-wrapper h2 {
+  position: absolute;
+  top: 90px;
+  left: 360px;
+  color: #1b6793;
+}
+#register-wrapper form {
+  width: 204px;
+  display: block;
+  float: left;
+}
+#register-wrapper form h3 {
+  font-size: 20px;
+  color: #1b6793;
+  margin: 5px 0 10px 0;
+}
+#register-wrapper form input {
+  width: 190px;
+}
+#register-wrapper form input[type="submit"] {
+  width: 132px;
+  height: 30px;
+  background: url(../images/regbutton.png);
+  border: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: white;
+  margin-left: 33px;
+  margin-top: 30px;
+}
+#register-wrapper form input[type="submit"]:hover {
+  color: gray;
+}
+#register-wrapper form .captcha {
+  height: 108px;
+  margin-left: -240px;
+  margin: 10px 0 10px -240px;
+}
+#register-wrapper #register-left {
+  padding: 273px 80px 0 80px;
+  width: 576px;
+  height: 97px;
+  display: block;
+  float: left;
+  font-weight: bold;
+  color: #1b6793;
 }

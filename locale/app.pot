@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-03-10 13:31+0100\n"
+"POT-Creation-Date: 2010-03-13 16:48+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,6 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/views/battles/index.html.erb:26
+msgid ""
+" This is an elimination race. Votes are evaluated on a daily basis. The "
+"number of participants is limited. Races are usually held by categories, "
+"makes, types or design. Follow the recent Tournaments and apply for them if "
+"your car fits the description of the competition. Enter the world of "
+"Tournaments, vote for your favorites and choose the ultimate champion!"
+msgstr ""
 
 #: app/models/user_mailer.rb:39
 #: app/views/user_mailer/member_request.html.erb:1
@@ -50,8 +59,9 @@ msgstr ""
 msgid "%s, your membership to %s deleted by the club owner"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:145 app/helpers/boxes_helper.rb:162
-msgid "-- Empty --"
+#: app/helpers/boxes_helper.rb:169 app/helpers/boxes_helper.rb:186
+#: app/views/cars/_searchform.erb:30 app/views/cars/_searchform.erb:86
+msgid "-- All --"
 msgstr ""
 
 #: app/controllers/passwords_controller.rb:14
@@ -66,7 +76,7 @@ msgstr ""
 msgid "About Me"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:87 app/views/boxes/_form.erb:58
+#: app/views/boxes/show.html.erb:88 app/views/boxes/_form.erb:58
 msgid "Acceleration"
 msgstr ""
 
@@ -79,7 +89,7 @@ msgstr ""
 msgid "Address"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:61
+#: app/views/boxes/show.html.erb:62
 msgid "Age grade"
 msgstr ""
 
@@ -87,11 +97,19 @@ msgstr ""
 msgid "Age-grade"
 msgstr ""
 
+#: app/views/battles/index.html.erb:12
+msgid ""
+"All of the cars are participating in this race. Pairs are coming up "
+"randomly. Every vote  counts! Cars receive their trophies according to the "
+"result they achieve in this ongoing competition. Enter the ring, choose a "
+"category and decide who has the hottest ride!"
+msgstr ""
+
 #: app/controllers/users_controller.rb:34
 msgid "An error occured, your password was not changed."
 msgstr ""
 
-#: app/views/boxes/show.html.erb:39 app/views/galleries/show.html.erb:24
+#: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
 #: app/views/galleries/_gallery_admin.erb:8 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr ""
@@ -100,7 +118,7 @@ msgstr ""
 msgid "Argentina"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:55 app/views/boxes/show.html.erb:99
+#: app/views/boxes/show.html.erb:56 app/views/boxes/show.html.erb:100
 #: app/views/boxes/_form.erb:10 app/views/boxes/_form.erb:72
 msgid "Audio"
 msgstr ""
@@ -125,6 +143,10 @@ msgstr ""
 msgid "Belgium"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:26
+msgid "Biodiesel"
+msgstr ""
+
 #: app/views/users/show.html.erb:22 app/views/users/edit.html.erb:43
 msgid "Birth date"
 msgstr ""
@@ -132,6 +154,10 @@ msgstr ""
 #: app/views/topics/_form.erb:6 app/views/pages/edit.html.erb:10
 #: app/views/pages/new.html.erb:10 app/views/messages/new.html.erb:6
 msgid "Body"
+msgstr ""
+
+#: app/views/cars/_searchform.erb:25
+msgid "Body type"
 msgstr ""
 
 #: app/views/users/_usermenu.erb:1
@@ -148,10 +174,6 @@ msgstr ""
 
 #: app/helpers/users_helper.rb:10
 msgid "Bulgaria"
-msgstr ""
-
-#: app/helpers/boxes_helper.rb:5
-msgid "Cabriolet"
 msgstr ""
 
 #: app/helpers/users_helper.rb:11
@@ -204,12 +226,12 @@ msgstr ""
 msgid "Clubs"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:69 app/views/boxes/_form.erb:39
-#: app/views/cars/_searchform.erb:50 app/views/cars/_searchform.erb:99
+#: app/views/boxes/show.html.erb:70 app/views/boxes/_form.erb:39
+#: app/views/cars/_searchform.erb:49 app/views/cars/_searchform.erb:113
 msgid "Color"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:134
+#: app/views/boxes/show.html.erb:126
 msgid "Combat"
 msgstr ""
 
@@ -252,10 +274,6 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:6
-msgid "Coupe"
-msgstr ""
-
 #: app/views/meetings/new.html.erb:31 app/views/videos/_form.erb:13
 msgid "Create"
 msgstr ""
@@ -268,7 +286,7 @@ msgstr ""
 msgid "Current members"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:51 app/views/boxes/_form.erb:6
+#: app/views/boxes/show.html.erb:52 app/views/boxes/_form.erb:6
 msgid "Data"
 msgstr ""
 
@@ -285,11 +303,16 @@ msgstr ""
 msgid "Dealer"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:63 app/views/boxes/_form.erb:29
-#: app/views/meetings/new.html.erb:11 app/views/marketplaces/show.html.erb:34
-#: app/views/marketplaces/_form.erb:6 app/views/clubs/_form.erb:9
-#: app/views/admin/forums/_form.erb:5 app/views/videos/_form.erb:9
+#: app/views/boxes/show.html.erb:64 app/views/boxes/show.html.erb:108
+#: app/views/boxes/_form.erb:29 app/views/meetings/new.html.erb:11
+#: app/views/marketplaces/show.html.erb:34 app/views/marketplaces/_form.erb:6
+#: app/views/clubs/_form.erb:9 app/views/admin/forums/_form.erb:5
+#: app/views/videos/_form.erb:9 app/views/cars/_carlistitem.erb:29
 msgid "Description"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:23
+msgid "Diesel"
 msgstr ""
 
 #: app/controllers/boxes_controller.rb:45
@@ -298,6 +321,10 @@ msgstr ""
 
 #: app/views/layouts/_login.erb:17
 msgid "Edit my profile"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:27
+msgid "Electric"
 msgstr ""
 
 #: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:14
@@ -309,20 +336,16 @@ msgstr ""
 msgid "Empty"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:93
+#: app/views/boxes/show.html.erb:55 app/views/boxes/show.html.erb:94
 #: app/views/boxes/_form.erb:9 app/views/boxes/_form.erb:67
 msgid "Engine"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:155
-msgid "Equipment"
+#: app/helpers/boxes_helper.rb:28
+msgid "Etanol"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:9
-msgid "Estate-car"
-msgstr ""
-
-#: app/views/boxes/show.html.erb:52 app/views/boxes/show.html.erb:71
+#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:72
 #: app/views/boxes/_form.erb:8 app/views/boxes/_form.erb:42
 msgid "Exterior"
 msgstr ""
@@ -352,7 +375,8 @@ msgstr ""
 msgid "Forgotten password?"
 msgstr ""
 
-#: app/controllers/forums_controller.rb:8 app/views/layouts/_menu.erb:6
+#: app/controllers/forums_controller.rb:8 app/views/topics/show.html.erb:2
+#: app/views/layouts/_menu.erb:6 app/views/forums/show.html.erb:2
 #: app/views/forums/index.html.erb:1
 msgid "Forum"
 msgstr ""
@@ -373,8 +397,8 @@ msgstr ""
 msgid "Friends"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:85 app/views/boxes/_form.erb:55
-#: app/views/cars/_searchform.erb:30 app/views/cars/_searchform.erb:79
+#: app/views/boxes/show.html.erb:86 app/views/boxes/_form.erb:55
+#: app/views/cars/_searchform.erb:29 app/views/cars/_searchform.erb:85
 msgid "Fuel"
 msgstr ""
 
@@ -391,13 +415,21 @@ msgstr ""
 msgid "Gallery was successfully created."
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:24
+msgid "Gas"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:22
+msgid "Gasoline"
+msgstr ""
+
 #: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:19
 #: app/views/users/edit.html.erb:23
 msgid "Gender"
 msgstr ""
 
 #: app/views/boxes/_form.erb:14 app/views/clubs/_searchform.erb:3
-#: app/views/cars/_searchform.erb:18 app/views/cars/_searchform.erb:67
+#: app/views/cars/_searchform.erb:70
 msgid "Genre"
 msgstr ""
 
@@ -405,29 +437,23 @@ msgstr ""
 msgid "Germany"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:15
-msgid "Hatchback"
+#: app/views/battles/index.html.erb:24
+msgid "Highway to the ultimate glory!"
 msgstr ""
 
-#: app/views/battles/index.html.erb:23
-msgid ""
-"Highway to the ultimate glory! This is an elimination race. Votes are "
-"evaluated on a daily basis. The number of participants is limited. Races are "
-"usually held by categories, makes, types or design. Follow the recent "
-"Tournaments and apply for them if your car fits the description of the "
-"competition. Enter the world of Tournaments, vote for your favorites and "
-"choose the ultimate champion!"
-msgstr ""
-
-#: app/helpers/boxes_helper.rb:8
-msgid "Hot Rod"
+#: app/views/cars/_searchform.erb:57 app/views/cars/_searchform.erb:139
+msgid "Hits/page"
 msgstr ""
 
 #: app/helpers/users_helper.rb:14
 msgid "Hungary"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:53 app/views/boxes/show.html.erb:77
+#: app/helpers/boxes_helper.rb:25
+msgid "Hybrid"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:54 app/views/boxes/show.html.erb:78
 #: app/views/boxes/_form.erb:7 app/views/boxes/_form.erb:34
 msgid "Interior"
 msgstr ""
@@ -468,7 +494,7 @@ msgstr ""
 msgid "Japan"
 msgstr ""
 
-#: app/views/cars/_searchform.erb:107
+#: app/views/cars/_searchform.erb:96
 msgid "Km"
 msgstr ""
 
@@ -508,7 +534,7 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: app/views/layouts/_login.erb:18
+#: app/views/users/_usermenu.erb:8
 msgid "Logout"
 msgstr ""
 
@@ -516,8 +542,12 @@ msgstr ""
 msgid "Lost password"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:59 app/views/boxes/_form.erb:20
-#: app/views/cars/_searchform.erb:26 app/views/cars/_searchform.erb:75
+#: app/helpers/boxes_helper.rb:7
+msgid "MPV"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:60 app/views/boxes/_form.erb:20
+#: app/views/cars/_searchform.erb:17 app/views/cars/_searchform.erb:121
 msgid "Make"
 msgstr ""
 
@@ -564,8 +594,8 @@ msgstr ""
 msgid "Messages"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:10
-msgid "Minibus"
+#: app/views/cars/_searchform.erb:21
+msgid "Model"
 msgstr ""
 
 #: app/views/fronts/index.html.erb:36 app/views/fronts/index.html.erb:67
@@ -635,14 +665,6 @@ msgstr ""
 msgid "Nickname"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:14
-msgid "Off-road"
-msgstr ""
-
-#: app/helpers/boxes_helper.rb:16
-msgid "Old-timer"
-msgstr ""
-
 #: app/views/users/edit-dealer.html.erb:55
 msgid "Opening time"
 msgstr ""
@@ -678,8 +700,8 @@ msgstr ""
 msgid "Pending members"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:83 app/views/boxes/_form.erb:52
-#: app/views/cars/_searchform.erb:40 app/views/cars/_searchform.erb:89
+#: app/views/boxes/show.html.erb:84 app/views/boxes/_form.erb:52
+#: app/views/cars/_searchform.erb:39 app/views/cars/_searchform.erb:106
 msgid "Performance"
 msgstr ""
 
@@ -694,10 +716,6 @@ msgstr ""
 
 #: app/views/users/edit-dealer.html.erb:52 app/views/users/edit.html.erb:52
 msgid "Phone number"
-msgstr ""
-
-#: app/helpers/boxes_helper.rb:12
-msgid "Pickup"
 msgstr ""
 
 #: app/models/user_mailer.rb:7
@@ -716,7 +734,7 @@ msgstr ""
 msgid "Poland"
 msgstr ""
 
-#: app/views/cars/_searchform.erb:111
+#: app/views/cars/_searchform.erb:79
 msgid "Price"
 msgstr ""
 
@@ -728,18 +746,12 @@ msgstr ""
 msgid "Races"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:107
+#: app/views/boxes/show.html.erb:115
 msgid "Rating"
 msgstr ""
 
 #: app/views/battles/index.html.erb:17
-msgid ""
-"Real prestige fights! You can find the list of cars that have been "
-"challenged for a battle. You can challenge another car and prove that your "
-"car is the coolest ride in town. There are no categories in this "
-"competition. Accepting a challenge is automatic, you have no choice. If you "
-"are challenged, you must take the battle. Enter the world of Ride Battles "
-"and vote now!"
+msgid "Real prestige fights!"
 msgstr ""
 
 #: app/views/messages/index.html.erb:9
@@ -795,6 +807,10 @@ msgstr ""
 msgid "Rssreader was successfully created."
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:17
+msgid "SUV"
+msgstr ""
+
 #: app/views/boxes/_form.erb:80 app/views/topics/new.html.erb:13
 #: app/views/rssreaders/edit.html.erb:14 app/views/rssreaders/new.html.erb:14
 #: app/views/carimages/edit.html.erb:4 app/views/carimages/new.html.erb:10
@@ -808,13 +824,12 @@ msgid "Save"
 msgstr ""
 
 #: app/views/layouts/_searchblock.erb:9 app/views/clubs/_searchform.erb:9
-#: app/views/cars/_searchform.erb:13 app/views/cars/_searchform.erb:57
-#: app/views/cars/_searchform.erb:62 app/views/cars/_searchform.erb:125
+#: app/views/cars/_searchform.erb:61 app/views/cars/_searchform.erb:142
 msgid "Search"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:11
-msgid "Sedan"
+#: app/views/cars/_searchform.erb:45 app/views/cars/_searchform.erb:130
+msgid "Search|Engine"
 msgstr ""
 
 #: app/views/combats/new.html.erb:5
@@ -864,10 +879,6 @@ msgstr ""
 msgid "Spain"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:13
-msgid "Sport"
-msgstr ""
-
 #: app/views/meetings/new.html.erb:15
 msgid "Starting date"
 msgstr ""
@@ -907,19 +918,19 @@ msgstr ""
 msgid "To check the details of this battle, follow the link below:"
 msgstr ""
 
-#: app/views/cars/index.html.erb:20
+#: app/views/cars/index.html.erb:21
 msgid "Top 5 cars"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:89 app/views/boxes/_form.erb:61
+#: app/views/boxes/show.html.erb:90 app/views/boxes/_form.erb:61
 msgid "Top speed"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:91 app/views/boxes/_form.erb:64
+#: app/views/boxes/show.html.erb:92 app/views/boxes/_form.erb:64
 msgid "Torque"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:128
+#: app/views/boxes/show.html.erb:120
 msgid "Tournament"
 msgstr ""
 
@@ -931,8 +942,7 @@ msgstr ""
 msgid "Trash"
 msgstr ""
 
-#: app/views/boxes/_form.erb:17 app/views/cars/_searchform.erb:22
-#: app/views/cars/_searchform.erb:71
+#: app/views/boxes/_form.erb:17 app/views/cars/_searchform.erb:74
 msgid "Type"
 msgstr ""
 
@@ -958,10 +968,6 @@ msgstr ""
 
 #: app/views/admin/front/index.html.erb:8
 msgid "Users"
-msgstr ""
-
-#: app/helpers/boxes_helper.rb:7
-msgid "Van"
 msgstr ""
 
 #: app/controllers/admin/videos_controller.rb:5
@@ -994,15 +1000,11 @@ msgstr ""
 msgid "What is the email address used to create your account?"
 msgstr ""
 
-#: app/views/battles/index.html.erb:11
-msgid ""
-"Who is the king of each category? All of the cars are participating in this "
-"race. Pairs are coming up randomly. Every vote  counts! Cars receive their "
-"trophies according to the result they achieve in this ongoing competition. "
-"Enter the ring, choose a category and decide who has the hottest ride!"
+#: app/views/battles/index.html.erb:10
+msgid "Who is the king of each category?"
 msgstr ""
 
-#: app/views/cars/_searchform.erb:36 app/views/cars/_searchform.erb:85
+#: app/views/cars/_searchform.erb:35 app/views/cars/_searchform.erb:91
 msgid "Year"
 msgstr ""
 
@@ -1012,6 +1014,15 @@ msgstr ""
 
 #: app/views/user_mailer/member_destroy.html.erb:2
 msgid "You are not listed in member list of this club:"
+msgstr ""
+
+#: app/views/battles/index.html.erb:19
+msgid ""
+"You can find the list of cars that have been challenged for a battle. You "
+"can challenge another car and prove that your car is the coolest ride in "
+"town. There are no categories in this competition. Accepting a challenge is "
+"automatic, you have no choice. If you are challenged, you must take the "
+"battle. Enter the world of Ride Battles and vote now!"
 msgstr ""
 
 #: app/views/user_mailer/member_accept.html.erb:2
@@ -1077,21 +1088,104 @@ msgstr ""
 msgid "ZIP"
 msgstr ""
 
-#: app/views/boxes/_form.erb:49 app/views/cars/_searchform.erb:46
-#: app/views/cars/_searchform.erb:95
+#: app/helpers/boxes_helper.rb:32
+msgid "brand new"
+msgstr ""
+
+#: app/views/boxes/_form.erb:49
 msgid "ccm"
 msgstr ""
 
-#: app/views/cars/_searchform.erb:116
+#: app/views/cars/_searchform.erb:126
 msgid "condition"
 msgstr ""
 
-#: app/views/boxes/show.html.erb:163 app/views/topics/show.html.erb:10
+#: app/helpers/boxes_helper.rb:5
+msgid "convertible"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:6
+msgid "coupe"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:39
+msgid "crashed"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:40
+msgid "defected"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:38
+msgid "engine problem"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:9
+msgid "hot rod"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:34
+msgid "like new"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:12
+msgid "long box"
+msgstr ""
+
+#: app/views/boxes/show.html.erb:148 app/views/topics/show.html.erb:10
 msgid "new comment"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:37
+msgid "no damage"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:36
+msgid "normal"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:18
+msgid "other"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:33
+msgid "perfect"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:14
+msgid "pick-up"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:13
+msgid "saloon"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:15
+msgid "sedan"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:8
+msgid "short box"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:16
+msgid "sport"
 msgstr ""
 
 #: app/views/user_mailer/forgot_password.html.erb:1
 msgid "to reset your password, please visit"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:11
+msgid "truck"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:10
+msgid "van"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:35
+msgid "well protected"
 msgstr ""
 
 #: app/views/user_mailer/activation.html.erb:1

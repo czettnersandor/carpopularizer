@@ -28,7 +28,7 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
-  map.resources :users do |user|
+  map.resources :users, :collection => { :new_front => :post } do |user|
     user.resources :messages
     user.resources :clubs
     user.resources :friends
@@ -83,7 +83,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "users", :action => "new"
+  map.root :controller => "users", :action => "new_front"
 
   # See how all your routes lay out with "rake routes"
 

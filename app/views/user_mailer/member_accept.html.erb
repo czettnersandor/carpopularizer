@@ -1,4 +1,4 @@
-<%= _("%s, your membership to %s accepted") % [@user.login, @club.name] %>
-<%= _("You can visit your new club:") %>
-
-  <%= @url %>
+<%= _("%s, your membership to %s accepted") % [@user.login, @club.name] %><br/>
+<%= _("You can visit your new club:") %><br/>
+<br/>
+<a href="<%= @url %>"><%= @url %></a>

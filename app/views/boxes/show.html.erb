@@ -14,7 +14,6 @@
         <%= link_to("",user_box_path(@user, @car), :class => "image-edits for-sale") if @car.for_sale %>
         <% if admin_or_current? @user %>
           <%= link_to("",new_user_box_carimage_path(@user, @car), :class => "image-edits add")%>
-          <%= link_to("",edit_user_box_path(@user, @car), :class => "image-edits edit")%>
         <% end %>
       </h3>
 
@@ -46,7 +45,9 @@
     </div>
 
     <div id="auto-adatok-tabs">
-
+      <% if admin_or_current? @user %>
+        <%= link_to("",edit_user_box_path(@user, @car), :class => "image-edits edit")%>
+      <% end %>
       <ul>
         <li><a href="#data"> <%= _("Data") %> </a></li>
         <li><a href="#exterior"> <%= _("Exterior") %> </a></li>
@@ -103,25 +104,16 @@
 
     </div>
 
+    <div id="car-equipment">
+      <div class="block-header fix small"><h3><%= _("Description") %></h3></div>
+      <div class="inner">
+        <%= @car.description %>
+      </div>
+    </div>
+
     <div id="car-description">
       <div class="block-header fix small"><h3><%= _("Rating") %></h3></div>
       <div class="inner">
-        <div class="rating">
-          <%= ratings_for @car, :remote_options => {:url => rate_user_box_path(@user, @car)} %>
-        </div>
-
-        <div class="rated">
-          <div class="listitem">
-            <div class="list-header">
-            </div>
-            <div class="profile-rate">
-              <%= @car.rating_average %>
-              <%= image_tag('/images/genres/32/'+@car.genre) %>
-            </div>
-            <hr class="clear" />
-          </div>
-        </div>
-
         <div class="win-wrapper">
 
           <div class="tournament-win">
@@ -135,12 +127,6 @@
             nyert-vesztett<br/>
             <%= @car.combat_win.to_i.to_s+"/"+@car.combat_lost.to_i.to_s %>
           </div>
-
-          <div class="cups">
-            <% @car.cups.each do |cup| %>
-              <div class="cup <%= cup.style %>" title="<%= _(cup.style) %> - <%= cup.description %>"></div>
-            <% end %>
-          </div>
         </div>
 
         <div class="combat">
@@ -148,13 +134,12 @@
             <%= link_to "Invite to a combat", new_user_box_combat_path(@user, @car) %>
           <% end %>
         </div>
-      </div>
-    </div>
 
-    <div id="car-equipment">
-      <div class="block-header fix small"><h3><%= _("Equipment") %></h3></div>
-      <div class="inner">
-        Icon | Icon | Icon | Icon |
+        <div class="rating">
+          <%= ratings_for @car, :remote_options => {:url => rate_user_box_path(@user, @car)} %>
+          <%= @car.rating_average %>
+        </div>
+
       </div>
     </div>
 

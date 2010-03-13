@@ -1,8 +1,8 @@
-<%= _('Your account has been created.') %>
-
-  <%= _('Nickname') %>: <%= @user.login %>
-  <%= _('Password') %>: <%= @user.password %>
-
-<%= _('Visit this url to activate your account') %>:
-
-  <%= @url %>
+<%= _('Your account has been created.') %><br/>
+<br/>
+<strong><%= _('Nickname') %>:</strong> <%= @user.login %><br/>
+<strong><%= _('Password') %>:</strong> <%= @user.password %><br/>
+<br/>
+<%= _('Visit this url to activate your account') %>:<br/>
+<br/>
+<a href="<%= @url %>"><%= @url %></a>

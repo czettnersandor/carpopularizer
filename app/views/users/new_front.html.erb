@@ -1,0 +1,28 @@
+<div id="register-wrapper" class="grid_12 alpha omega">
+  <h2>-<%= " a vezető közösség" %></h2>
+  <div id="register-left">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<%= link_to (battles_path) %>
+  </div>
+
+  <%= error_messages_for :user %>
+  <% form_for :user, :url => new_user_path, :html => { :class => "user-register" } do |f| -%>
+    <h3><%= _("Register on boxutca.com") %></h3>
+    <div class="form-item select">
+      <label for="usertype"><%=_('Registration type')%></label><br/>
+      <%= f.select('usertype',
+        options_for_select({_("User")=>0, _("Dealer")=>1})) %>
+      <hr/>
+    </div>
+
+    <div class="form-item"><label for="email"><%=_('Email')%></label><br/>
+      <%= f.text_field :email %><hr/></div>
+
+    <div class="form-item"><label for="password"><%=_('Password')%></label><br/>
+      <%= f.password_field :password %><hr/></div>
+
+    <div class="form-item"><%= submit_tag _('Register') %><hr/></div>
+  <% end -%>
+
+</div>
+
