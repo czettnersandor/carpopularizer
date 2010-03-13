@@ -243,6 +243,7 @@ ul.ui-tabs-nav li.ui-tabs-selected a {
   display: block;
   height: 50px;
   background: url(../images/login-bar.png) no-repeat;
+  margin-left: 30px;
 }
 #loginblock label {
   position:absolute; top:0; left:0

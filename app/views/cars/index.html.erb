@@ -10,6 +10,7 @@
       <%= render :partial => "carlistitem", :locals => {:car => car, :user => car.user, :i => i} %>
 
     <% end %>
+    <%= will_paginate @cars %>
   </div>
 </div>
 

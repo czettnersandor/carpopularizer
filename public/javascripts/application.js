@@ -138,6 +138,7 @@ $("#loginblock label").inFieldLabels();
     }
     );
 
+/*
   $(document.body).click(function(event) {
     var $target = $(event.target);
     if ($target.parents("#searchbar").length){
@@ -167,7 +168,7 @@ $("#loginblock label").inFieldLabels();
       }
     }
   });
-
+*/
 
 
   $("input#user_birth").mask("9999/99/99");

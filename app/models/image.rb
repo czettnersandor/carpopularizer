@@ -2,9 +2,13 @@ class Image < ActiveRecord::Base
   belongs_to :gallery
   validates_presence_of     :image
   has_attached_file :image,
+    :processors => [:watermark], 
     :styles => {
-    :full => "800x600>",
-    :thumb => "120x100#",
+    :full => {
+      :geometry => "800x600>",
+      :watermark_path => "#{RAILS_ROOT}/public/images/watermark.png",
+    },
+    :thumb => "120x100#"
   }
   attr_accessible :title, :image
   default_scope :order => 'ordinal ASC'

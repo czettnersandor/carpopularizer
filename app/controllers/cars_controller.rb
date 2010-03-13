@@ -2,7 +2,8 @@ class CarsController < ApplicationController
   
   def index
     @title = _("Cars")
-    @cars = Car.paginate(:page => params[:page], :per_page => 25, :order => 'created_at DESC',
+    per_page = params[:items]? params[:items] : 25
+    @cars = Car.paginate(:page => params[:page], :per_page => per_page, :order => 'created_at DESC',
       :conditions => gen_conditions(params, Car), :include => [:carimages, :user])
 
     @top5 = Car.top5
