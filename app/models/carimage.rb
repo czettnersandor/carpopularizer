@@ -3,7 +3,7 @@ class Carimage < ActiveRecord::Base
   validates_presence_of     :image
   has_attached_file :image,
     :path => ":rails_root/public/system/carimages/:id/:style/:basename.:extension",
-    :processors => [:watermark],
+    # :processors => [:watermark],
     :url  => "/system/carimages/:id/:style/:basename.:extension",
     :styles => {
     :full => {

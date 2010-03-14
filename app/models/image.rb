@@ -2,7 +2,7 @@ class Image < ActiveRecord::Base
   belongs_to :gallery
   validates_presence_of     :image
   has_attached_file :image,
-    :processors => [:watermark], 
+    # :processors => [:watermark],
     :styles => {
     :full => {
       :geometry => "800x600>",
