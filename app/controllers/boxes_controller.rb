@@ -30,7 +30,7 @@ class BoxesController < ApplicationController
     @car = Car.new(params[:car])
     @car.user = @user
     respond_to do |format|
-      if @user.cars.count >= 3 && @car.save
+      if @user.cars.count <= 3 && @car.save
         flash[:notice] = _('Car was successfully created.')
         format.html { redirect_to(user_box_path(@user, @car)) }
         format.xml  { render :xml => @car, :status => :created, :location => @car }
