@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     @title = @user.login
+
+    # User's Google Map
     if @user.city && @user.address
       coordinates = GoogleGeocoder.geocode(@user.zip+' '+@user.city+' '+@user.address)
       @map = GMap.new("map")
@@ -15,6 +17,13 @@ class UsersController < ApplicationController
       ianazones = GMarker.new([coordinates.lat, coordinates.lng])
       @map.overlay_init(ianazones)
     end
+
+    friendlist = Array.new
+    @user.friendships.each do |friend|
+      friendlist << friend.friend_id.to_s
+    end
+
+    @wall = Userevent.find_all_by_user_id friendlist
   end
 
   def edit

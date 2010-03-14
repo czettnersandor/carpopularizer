@@ -3,47 +3,78 @@
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
 
-    <table class="block_table">
-      <tbody>
+    <div id="user-tabs">
+      <ul>
+        <li><%= link_to _("User data"), '#userdata' %></li>
+        <li><%= link_to _("User wall"), '#userwall' %></li>
+        <li><%= link_to _("Friend's wall"), '#friendswall' %></li>
+      </ul>
+      <hr class="clear" />
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Full name') , :var => @user.name } %>
+      <div id="userdata">
+        <table class="block_table">
+          <tbody>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Comments count') , :var => @user.comments_count } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Full name') , :var => @user.name } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Comments count') , :var => @user.comments_count } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Country') , :var => @user.country } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('City') , :var => @user.city } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Country') , :var => @user.country } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('ZIP') , :var => @user.zip } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('City') , :var => @user.city } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Address') , :var => @user.address } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('ZIP') , :var => @user.zip } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Phone') , :var => @user.phone } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Address') , :var => @user.address } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Phone') , :var => @user.phone } %>
 
-        <%= render :partial => "users/profile_element",
-          :locals => { :header => _('About Me') , :var => @user.about } %>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
 
-      </tbody>
-    </table>
+            <%= render :partial => "users/profile_element",
+              :locals => { :header => _('About Me') , :var => @user.about } %>
+
+          </tbody>
+        </table>
+        <%= @map.div(:width => 698, :height => 300) if @map %>
+      </div>
+
+      <div id="userwall">
+        <% @user.userevents.each do |event| %>
+          <hr/>
+          <%= event.created_at.to_s(:short) %>
+          <%= link_to event.user.login, event.user %>
+          <%= event.message %>
+        <% end %>
+      </div>
+      <div id="friendswall">
+        <% @wall.each do |event| %>
+          <hr/>
+          <%= event.created_at.to_s(:short) %>
+          <%= link_to event.user.login, event.user %>
+          <%= event.message %>
+        <% end %>
+
+      </div>
+
+    </div>
 
     <% if logged_in? %>
       <%= link_to _("New message"), new_user_message_path(@user), :class => "colorbox newmessage" %>
@@ -53,9 +84,16 @@
         <% end %>
       <% end %>
     <% end %>
-    <hr class="clear" />
 
-    <%= @map.div(:width => 698, :height => 300) if @map %>
+
     <hr class="clear" />
   </div>
 </div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+
+    $('#user-tabs').tabs({ cache: true });
+
+  });
+</script>

@@ -586,11 +586,9 @@ table td.num {
 }
 
 label.error {
-  background: url(../images/exclamation.png) no-repeat;
+  background: url(../images/exclamation.png) no-repeat 0px 2px;
   padding-left: 16px;
-  height: 16px;
   display: block;
-  float:left;
 }
 
 .form-item hr {
@@ -819,6 +817,7 @@ hr.clear {
   border: 1px solid #fa981b;
   -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px;
   padding: 10px;
+  min-height: 400px;
 }
 #profile-left .usergenres {
   display: block;
@@ -2148,7 +2147,7 @@ a.newmarket {
   text-transform: uppercase;
   color: white;
   margin-left: 33px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 #register-wrapper form input[type="submit"]:hover {
   color: gray;
