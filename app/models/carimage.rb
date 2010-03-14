@@ -4,18 +4,22 @@ class Carimage < ActiveRecord::Base
   has_attached_file :image,
     :path => ":rails_root/public/system/carimages/:id/:style/:basename.:extension",
     # :processors => [:watermark],
-    :url  => "/system/carimages/:id/:style/:basename.:extension",
+  :url  => "/system/carimages/:id/:style/:basename.:extension",
     :styles => {
-    :full => {
-      :geometry => "800x600>",
-      :watermark_path => "#{RAILS_ROOT}/public/images/watermark.png",
-    },
+    :full => "800x600>",
     :thumb => "120x100#",
-    :car => {
-      :geometry => "265x200>",
-      :watermark_path => "#{RAILS_ROOT}/public/images/watermark_small.png",
-    }
+    :car => "265x200>"
   }
+  #:full => {
+  #  :geometry => "800x600>",
+  #  :watermark_path => "#{RAILS_ROOT}/public/images/watermark.png",
+  #},
+  #:thumb => "120x100#",
+  #:car => {
+  #  :geometry => "265x200>",
+  #  :watermark_path => "#{RAILS_ROOT}/public/images/watermark_small.png",
+  #}
+  #}
   attr_accessible :title, :image
   default_scope :order => 'ordinal ASC'
 
