@@ -9,7 +9,6 @@
     <%= @club.name %>
   </h3>
   <div id="club-description">
-    <%= @club.description %>
 
     <%= render :partial => "layouts/share", :locals => {:url => CGI::escape(request.url)} %>
 
@@ -26,7 +25,7 @@
     </ul>
 
     <div id="intro">
-      IDE Mi jön?
+      <%= RedCloth.new(@club.description).to_html %>
     </div>
 
     <div id="shoutbox">
