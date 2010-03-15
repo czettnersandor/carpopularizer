@@ -14,11 +14,29 @@ class MarketplacesController < ApplicationController
     @advert = Advert.find(params[:id])
   end
 
+  def edit
+    @advert = Advert.find(params[:id])
+  end
+
   def create
     @advert = Advert.new(params[:advert])
-
+    @advert.user = current_user
     respond_to do |format|
       if @advert.save
+        flash[:notice] = _('Ad was successfully created.')
+        format.html { redirect_to(marketplace_url(@advert)) }
+        format.xml  { render :xml => @advert, :status => :created, :location => @advert }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @advert.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def update
+    @advert = Advert.find(params[:id])
+    respond_to do |format|
+      if @advert.update_attributes(params[:advert])
         flash[:notice] = _('Ad was successfully created.')
         format.html { redirect_to(marketplace_url(@advert)) }
         format.xml  { render :xml => @advert, :status => :created, :location => @advert }

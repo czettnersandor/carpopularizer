@@ -1,4 +1,4 @@
-<%= render :partial => "cars/carlistitem", :locals => {:car => @car} %>
+<%= render :partial => "cars/carlistitem", :locals => {:car => @car, :i => 1} %>
 
 <% form_for(@combat, :url => user_box_combats_path(:user_id => @user.id, :box_id => @car.id)) do |form| %>
 

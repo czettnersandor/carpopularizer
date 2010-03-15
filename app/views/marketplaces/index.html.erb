@@ -9,9 +9,7 @@
 <div class="grid_12 alpha omega">
 
 <% @adverts.each do |ad| %>
-  <div class="listitem">
-    <%= link_to ad.title, marketplace_path(ad) %>
-  </div>
+  <%= render :partial => "listitem", :locals => {:ad => ad} %>
 <% end %>
   
 </div>

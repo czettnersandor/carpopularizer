@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :marketplaces
+  map.resources :marketplaces do |marketplace|
+    marketplace.resources :adimages, :collection => { :sort => :put }
+  end
   map.resources :videos
   map.resources :battles
   map.resources :combats, :member => { :vote => :get }

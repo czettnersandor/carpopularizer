@@ -1,5 +1,6 @@
 class Carimage < ActiveRecord::Base
   belongs_to :car
+  belongs_to :advert
   validates_presence_of     :image
   has_attached_file :image,
     :path => ":rails_root/public/system/carimages/:id/:style/:basename.:extension",

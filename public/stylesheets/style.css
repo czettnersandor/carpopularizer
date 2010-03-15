@@ -1327,6 +1327,15 @@ a.new-car {
   overflow-x: hidden;
   -ms-overflow-x: hidden;
 }
+#car-description.ad {
+  width: 100%;
+  margin-left: 0;
+  height: auto;
+}
+#car-description.ad .inner {
+  width: 100%;
+  height: auto;
+}
 #car-description .rating {
   padding: 10px 0 0 0;
   display: block;
