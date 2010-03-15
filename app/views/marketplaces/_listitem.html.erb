@@ -1,0 +1,15 @@
+<div class="listitem">
+  <div class="list-header">
+    <%= link_to ad.title, marketplace_path(ad) %>
+  </div>
+  <div class="car-image">
+    <%= link_to(image_tag(ad.carimages.first.image.url(:thumb)), marketplace_path(ad)) if ad.carimages.first %>
+  </div>
+  <div class="description">
+    <strong><%= _("Description") %>: </strong><%= shorten(ad.description) %>
+  </div>
+  <div class="origin">
+    <%= link_to ad.user.login, ad.user, :class => "login-required" %>
+  </div>
+  <hr class="clear" />
+</div>

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-03-13 16:48+0100\n"
+"POT-Creation-Date: 2010-03-15 22:13+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,7 +72,7 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: app/views/users/show.html.erb:43 app/views/users/edit.html.erb:58
+#: app/views/users/show.html.erb:52 app/views/users/edit.html.erb:58
 msgid "About Me"
 msgstr ""
 
@@ -80,12 +80,13 @@ msgstr ""
 msgid "Acceleration"
 msgstr ""
 
-#: app/controllers/marketplaces_controller.rb:22
+#: app/controllers/marketplaces_controller.rb:26
+#: app/controllers/marketplaces_controller.rb:40
 msgid "Ad was successfully created."
 msgstr ""
 
 #: app/views/meetings/new.html.erb:27 app/views/users/edit-dealer.html.erb:49
-#: app/views/users/show.html.erb:34 app/views/users/edit.html.erb:49
+#: app/views/users/show.html.erb:43 app/views/users/edit.html.erb:49
 msgid "Address"
 msgstr ""
 
@@ -105,12 +106,13 @@ msgid ""
 "category and decide who has the hottest ride!"
 msgstr ""
 
-#: app/controllers/users_controller.rb:34
+#: app/controllers/users_controller.rb:43
 msgid "An error occured, your password was not changed."
 msgstr ""
 
 #: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
-#: app/views/galleries/_gallery_admin.erb:8 app/views/clubs/_member.erb:6
+#: app/views/galleries/_gallery_admin.erb:8
+#: app/views/marketplaces/show.html.erb:37 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr ""
 
@@ -147,7 +149,7 @@ msgstr ""
 msgid "Biodiesel"
 msgstr ""
 
-#: app/views/users/show.html.erb:22 app/views/users/edit.html.erb:43
+#: app/views/users/show.html.erb:31 app/views/users/edit.html.erb:43
 msgid "Birth date"
 msgstr ""
 
@@ -166,6 +168,10 @@ msgstr ""
 
 #: app/views/layouts/_login.erb:14
 msgid "Box messages"
+msgstr ""
+
+#: app/views/users/new_front.html.erb:4
+msgid "Boxutca.com connects car fans, car owners and car fanatics!"
 msgstr ""
 
 #: app/helpers/users_helper.rb:9
@@ -209,7 +215,7 @@ msgid "Chile"
 msgstr ""
 
 #: app/views/meetings/new.html.erb:23 app/views/users/edit-dealer.html.erb:29
-#: app/views/users/show.html.erb:28 app/views/users/edit.html.erb:29
+#: app/views/users/show.html.erb:37 app/views/users/edit.html.erb:29
 msgid "City"
 msgstr ""
 
@@ -247,7 +253,7 @@ msgstr ""
 msgid "Combats"
 msgstr ""
 
-#: app/views/users/show.html.erb:13 app/views/users/_myblock.erb:14
+#: app/views/users/show.html.erb:22 app/views/users/_myblock.erb:14
 msgid "Comments count"
 msgstr ""
 
@@ -270,12 +276,19 @@ msgid "Could not find a user with that email address."
 msgstr ""
 
 #: app/views/meetings/new.html.erb:19 app/views/users/edit-dealer.html.erb:26
-#: app/views/users/show.html.erb:25 app/views/users/edit.html.erb:26
+#: app/views/users/show.html.erb:34 app/views/users/edit.html.erb:26
 msgid "Country"
 msgstr ""
 
 #: app/views/meetings/new.html.erb:31 app/views/videos/_form.erb:13
 msgid "Create"
+msgstr ""
+
+#: app/views/users/new_front.html.erb:5
+msgid ""
+"Create your own profile with your cars, friends and pictures. Share your "
+"thoughts with your friends. Discover what others doing right now. Challenge "
+"for a battle, vote for them or just browse and enjoy the cars on boxutca.com."
 msgstr ""
 
 #: app/helpers/users_helper.rb:13
@@ -299,15 +312,17 @@ msgstr ""
 msgid "Day"
 msgstr ""
 
-#: app/views/users/new.html.erb:18
+#: app/views/users/new_front.html.erb:16 app/views/users/new.html.erb:18
 msgid "Dealer"
 msgstr ""
 
 #: app/views/boxes/show.html.erb:64 app/views/boxes/show.html.erb:108
 #: app/views/boxes/_form.erb:29 app/views/meetings/new.html.erb:11
-#: app/views/marketplaces/show.html.erb:34 app/views/marketplaces/_form.erb:6
-#: app/views/clubs/_form.erb:9 app/views/admin/forums/_form.erb:5
-#: app/views/videos/_form.erb:9 app/views/cars/_carlistitem.erb:29
+#: app/views/marketplaces/show.html.erb:48
+#: app/views/marketplaces/_listitem.html.erb:9
+#: app/views/marketplaces/_form.erb:6 app/views/clubs/_form.erb:9
+#: app/views/admin/forums/_form.erb:5 app/views/videos/_form.erb:9
+#: app/views/cars/_carlistitem.erb:29
 msgid "Description"
 msgstr ""
 
@@ -328,7 +343,7 @@ msgid "Electric"
 msgstr ""
 
 #: app/views/layouts/_login.erb:25 app/views/sessions/new.html.erb:14
-#: app/views/users/new.html.erb:6
+#: app/views/users/new_front.html.erb:20 app/views/users/new.html.erb:6
 msgid "Email"
 msgstr ""
 
@@ -363,6 +378,12 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
+#: app/views/users/new_front.html.erb:6
+msgid ""
+"Follow the latest news, join clubs, upload your ads or search the cars for "
+"sale section and find the ride you’ve always wanted."
+msgstr ""
+
 #: app/views/boxes/_form.erb:26
 msgid "For sale"
 msgstr ""
@@ -393,6 +414,10 @@ msgstr ""
 msgid "France"
 msgstr ""
 
+#: app/views/users/show.html.erb:10
+msgid "Friend's wall"
+msgstr ""
+
 #: app/views/users/_usermenu.erb:2
 msgid "Friends"
 msgstr ""
@@ -402,7 +427,7 @@ msgstr ""
 msgid "Fuel"
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:10
+#: app/views/users/edit-dealer.html.erb:40 app/views/users/show.html.erb:19
 #: app/views/users/edit.html.erb:40 app/views/users/_myblock.erb:12
 msgid "Full name"
 msgstr ""
@@ -423,7 +448,7 @@ msgstr ""
 msgid "Gasoline"
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:19
+#: app/views/users/edit-dealer.html.erb:23 app/views/users/show.html.erb:28
 #: app/views/users/edit.html.erb:23
 msgid "Gender"
 msgstr ""
@@ -435,6 +460,18 @@ msgstr ""
 
 #: app/helpers/users_helper.rb:17
 msgid "Germany"
+msgstr ""
+
+#: app/models/combat_observer.rb:6
+msgid "Has challenged to a new combat tomorrow"
+msgstr ""
+
+#: app/models/car_observer.rb:5
+msgid "Has submitted a new car"
+msgstr ""
+
+#: app/models/car_observer.rb:13
+msgid "Has updated:"
 msgstr ""
 
 #: app/views/battles/index.html.erb:24
@@ -466,7 +503,7 @@ msgstr ""
 msgid "Invalid Reset Code entered."
 msgstr ""
 
-#: app/controllers/users_controller.rb:96
+#: app/controllers/users_controller.rb:111
 msgid "Invalid activation code"
 msgstr ""
 
@@ -506,7 +543,7 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: app/views/users/show.html.erb:40 app/views/users/edit.html.erb:55
+#: app/views/users/show.html.erb:49 app/views/users/edit.html.erb:55
 msgid "Languages spoken"
 msgstr ""
 
@@ -516,6 +553,10 @@ msgstr ""
 
 #: app/views/fronts/index.html.erb:2
 msgid "Latest headlines"
+msgstr ""
+
+#: app/views/users/new_front.html.erb:7
+msgid "Let’s do it together freely on boxutca.com."
 msgstr ""
 
 #: app/views/sessions/new.html.erb:24
@@ -624,7 +665,7 @@ msgid "Netherlands"
 msgstr ""
 
 #: app/controllers/marketplaces_controller.rb:9
-#: app/views/marketplaces/new.html.erb:5
+#: app/views/marketplaces/new.html.erb:3
 msgid "New advert"
 msgstr ""
 
@@ -640,7 +681,7 @@ msgstr ""
 msgid "New meeting"
 msgstr ""
 
-#: app/views/messages/new.html.erb:1 app/views/users/show.html.erb:49
+#: app/views/messages/new.html.erb:1 app/views/users/show.html.erb:80
 msgid "New message"
 msgstr ""
 
@@ -671,8 +712,9 @@ msgstr ""
 
 #: app/views/user_mailer/signup_notification.html.erb:4
 #: app/views/layouts/_login.erb:28 app/views/passwords/edit.html.erb.erb:4
-#: app/views/sessions/new.html.erb:17 app/views/users/edit-dealer.html.erb:17
-#: app/views/users/edit.html.erb:17 app/views/users/new.html.erb:9
+#: app/views/sessions/new.html.erb:17 app/views/users/new_front.html.erb:23
+#: app/views/users/edit-dealer.html.erb:17 app/views/users/edit.html.erb:17
+#: app/views/users/new.html.erb:9
 msgid "Password"
 msgstr ""
 
@@ -692,7 +734,7 @@ msgstr ""
 msgid "Password reset."
 msgstr ""
 
-#: app/controllers/users_controller.rb:32
+#: app/controllers/users_controller.rb:41
 msgid "Password successfully updated."
 msgstr ""
 
@@ -710,7 +752,7 @@ msgstr ""
 msgid "Permalink"
 msgstr ""
 
-#: app/views/users/show.html.erb:37
+#: app/views/users/show.html.erb:46
 msgid "Phone"
 msgstr ""
 
@@ -762,8 +804,9 @@ msgstr ""
 msgid "Recipient"
 msgstr ""
 
-#: app/controllers/users_controller.rb:46 app/views/layouts/_login.erb:39
-#: app/views/users/new.html.erb:24
+#: app/controllers/users_controller.rb:55
+#: app/controllers/users_controller.rb:60 app/views/layouts/_login.erb:39
+#: app/views/users/new_front.html.erb:26 app/views/users/new.html.erb:24
 msgid "Register"
 msgstr ""
 
@@ -771,11 +814,15 @@ msgstr ""
 msgid "Register now!"
 msgstr ""
 
-#: app/views/users/show.html.erb:16 app/views/users/_myblock.erb:16
+#: app/views/users/new_front.html.erb:12
+msgid "Register on boxutca.com"
+msgstr ""
+
+#: app/views/users/show.html.erb:25 app/views/users/_myblock.erb:16
 msgid "Registration time"
 msgstr ""
 
-#: app/views/users/new.html.erb:16
+#: app/views/users/new_front.html.erb:14 app/views/users/new.html.erb:16
 msgid "Registration type"
 msgstr ""
 
@@ -811,7 +858,8 @@ msgstr ""
 msgid "SUV"
 msgstr ""
 
-#: app/views/boxes/_form.erb:80 app/views/topics/new.html.erb:13
+#: app/views/boxes/_form.erb:80 app/views/adimages/edit.html.erb:4
+#: app/views/adimages/new.html.erb:10 app/views/topics/new.html.erb:13
 #: app/views/rssreaders/edit.html.erb:14 app/views/rssreaders/new.html.erb:14
 #: app/views/carimages/edit.html.erb:4 app/views/carimages/new.html.erb:10
 #: app/views/carimages/_multiupload.erb:9 app/views/images/edit.html.erb:3
@@ -856,7 +904,7 @@ msgstr ""
 msgid "Shoutbox"
 msgstr ""
 
-#: app/controllers/users_controller.rb:93
+#: app/controllers/users_controller.rb:108
 msgid "Signup complete!"
 msgstr ""
 
@@ -891,7 +939,7 @@ msgstr ""
 msgid "Taiwan"
 msgstr ""
 
-#: app/controllers/users_controller.rb:59
+#: app/controllers/users_controller.rb:74
 msgid ""
 "Thanks for signing up! Please check your email to activate your account "
 "before logging in."
@@ -954,7 +1002,7 @@ msgstr ""
 msgid "UK: Scotland"
 msgstr ""
 
-#: app/views/users/new.html.erb:18
+#: app/views/users/new_front.html.erb:16 app/views/users/new.html.erb:18
 msgid "User"
 msgstr ""
 
@@ -962,8 +1010,16 @@ msgstr ""
 msgid "User cars"
 msgstr ""
 
+#: app/views/users/show.html.erb:8
+msgid "User data"
+msgstr ""
+
 #: app/views/layouts/_login.erb:13
 msgid "User events"
+msgstr ""
+
+#: app/views/users/show.html.erb:9
+msgid "User wall"
 msgstr ""
 
 #: app/views/admin/front/index.html.erb:8
@@ -1083,7 +1139,7 @@ msgstr ""
 msgid "Youtube URL"
 msgstr ""
 
-#: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:31
+#: app/views/users/edit-dealer.html.erb:46 app/views/users/show.html.erb:40
 #: app/views/users/edit.html.erb:46
 msgid "ZIP"
 msgstr ""
@@ -1118,6 +1174,10 @@ msgstr ""
 
 #: app/helpers/boxes_helper.rb:38
 msgid "engine problem"
+msgstr ""
+
+#: app/models/friendship_observer.rb:6 app/models/friendship_observer.rb:12
+msgid "has new friend:"
 msgstr ""
 
 #: app/helpers/boxes_helper.rb:9
