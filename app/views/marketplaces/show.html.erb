@@ -1,6 +1,4 @@
-<%= render :partial => "users/myblock", :locals => { :user => @user } %>
-
-<div class="grid_9 omega" id="profile-right">
+<div class="grid_9 alpha" id="layout-left">
   <div class="orangebox">
 
     <div id="car-gallery">
@@ -52,6 +50,18 @@
     </div>
 
     <hr class="clear" />
+  </div>
+</div>
+
+<div class="grid_3 omega" id="layout-right">
+  <div class="lightblue block">
+    <div class="block-header fix small">
+      <h3><%= _("Last submitted") %></h3>
+    </div>
+    <% @last5.each do |ad| %>
+      <%= render :partial => "last5item", :locals => {:ad => ad} %>
+    <%end%>
+    <hr class="clear"/>
   </div>
 </div>
 

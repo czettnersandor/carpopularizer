@@ -1,7 +1,7 @@
 <div class="grid_3 alpha" id="profile-left">
   <div class="lightblue first">
-    <%= image_tag user.avatar.url(:thumb), :class=>"profile-thumb" %>
-    <%= user.login %>
+    <%= link_to image_tag(user.avatar.url(:thumb), :class=>"profile-thumb"), user %>
+    <%= link_to user.login, user %>
     <div class="usergenres">
       <% user.cars.each do |car| %>
         <%= link_to image_tag('/images/genres/32/'+car.genre), user_box_path(user, car), :title => car.name %>

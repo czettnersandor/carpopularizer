@@ -1,7 +1,6 @@
-<%= render :partial => "users/myblock", :locals => { :user => @user } %>
-
-<div class="grid_9 omega" id="profile-right">
+<div class="grid_9 alpha" id="layout-left">
   <div class="orangebox">
+    
     <h3><%= @title %></h3>
     <% form_for(@advert, :url => marketplace_path(@advert)) do |f| %>
       <%= render :partial => "form", :locals => {:f => f} %>

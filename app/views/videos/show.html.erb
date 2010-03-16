@@ -1,6 +1,10 @@
+<div class="grid_9 alpha" id="layout-left">
+  <h1><%= @video.title %></h1>
+  <div class="orangebox">
+
 <p>
-  <b>Url:</b>
-  <%=h @video.url %>
+  <b>Youtube URL:</b>
+  <%= link_to @video.url, @video.url %>
 </p>
 
 <div class="youtube_video">
@@ -11,16 +15,24 @@
   </object>
 </div>
 
-
 <p>
-  <b>Title:</b>
-  <%=h @video.title %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%=h @video.body %>
 </p>
 
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
+
+  </div>
+</div>
+
+<div class="grid_3 omega" id="layout-right">
+  <div class="lightblue block">
+    <div class="block-header fix small">
+      <h3><%= _("Last submitted") %></h3>
+    </div>
+    <% @last5.each do |video| %>
+      <%= render :partial => "last5item", :locals => {:video => video} %>
+    <%end%>
+    <hr class="clear"/>
+  </div>
+</div>

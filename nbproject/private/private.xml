@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/controllers/pages_controller.rb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/marketplaces/edit.html.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/marketplaces/_form.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/clubs/_form.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/clubs/show.html.erb</file>
+        <file>file:/home/zoner/NetBeansProjects/boxutca/app/views/pages/show.html.erb</file>
+    </open-files>
 </project-private>

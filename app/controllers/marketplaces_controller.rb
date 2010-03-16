@@ -12,6 +12,7 @@ class MarketplacesController < ApplicationController
 
   def show
     @advert = Advert.find(params[:id])
+    @last5 = Advert.find :all, :limit => 5
   end
 
   def edit

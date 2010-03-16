@@ -1,0 +1,11 @@
+<div class="listitem">
+  <div class="list-header">
+    <%= link_to(ad.title, marketplace_path(ad)) %>
+  </div>
+  <div class="car-image">
+    <%= link_to(image_tag(ad.carimages.first.image.url(:thumb)), marketplace_path(ad)) if ad.carimages.first %>
+  </div>
+
+
+  <hr class="clear" />
+</div>

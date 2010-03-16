@@ -1,0 +1,12 @@
+<div class="listitem">
+  <div class="list-header">
+    <%= link_to(video.title, video_path(video)) %>
+  </div>
+  <div class="car-image">
+    <%= link_to image_tag("http://img.youtube.com/vi/"+video.video_id+"/2.jpg", :with=>120, :height=>90),
+      video %>
+  </div>
+
+
+  <hr class="clear" />
+</div>

@@ -22,6 +22,7 @@ class VideosController < ApplicationController
   def show
     @video = Video.find(params[:id])
     @video.hit!
+    @last5 = Video.find :all, :limit => 5
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @video }
