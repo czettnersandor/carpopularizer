@@ -930,6 +930,10 @@ div.child.video .news-item .title a {
   float: right;
   color: gray;
   padding-left: 10px;
+}
+.news-item.video .pub-date {
+  color: gray;
+  padding-left: 10px;
   position: absolute;
   left: 123px;
   bottom: 5px;
