@@ -11,7 +11,7 @@ module UsersHelper
     ["ca", _("Canada"),  ["2.0","2.5"]],
     ["cl", _("Chile"),  ["2.0"]],
     ["hr", _("Croatia"),  ["2.0","2.5"]],
-    ["hu", _("Hungary"),  ["2.5"]],
+    ["h", _("Hungary"),  ["2.5"]],
     ["fi", _("Finland"),  ["1.0"]],
     ["fr", _("France"),  ["2.0"]],
     ["de", _("Germany"),  ["2.0","2.5"]],

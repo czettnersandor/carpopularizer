@@ -2,78 +2,88 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
+    <div id="form-wrapper">
+      <div id="user-tabs" class="form-tabs">
+        <ul>
+          <li><%= link_to _("User data"), '#userdata' %></li>
+          <li><%= link_to _("User wall"), '#userwall' %></li>
+          <li><%= link_to _("Friend's wall"), '#friendswall' %></li>
+        </ul>
+        <hr class="clear" />
 
-    <div id="user-tabs">
-      <ul>
-        <li><%= link_to _("User data"), '#userdata' %></li>
-        <li><%= link_to _("User wall"), '#userwall' %></li>
-        <li><%= link_to _("Friend's wall"), '#friendswall' %></li>
-      </ul>
-      <hr class="clear" />
+        <div id="userdata">
+          <table class="block_table">
+            <tbody>
 
-      <div id="userdata">
-        <table class="block_table">
-          <tbody>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Full name') , :var => @user.name } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Full name') , :var => @user.name } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Comments') , :var => @user.comments_count } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Comments count') , :var => @user.comments_count } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Registration') , :var => @user.activated_at } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Registration time') , :var => @user.activated_at } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Gender') , :var => gender(@user.nem.to_i) } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Country') , :var => @user.country } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Country') , :var => @user.country } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('City') , :var => @user.city } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('City') , :var => @user.city } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('ZIP') , :var => @user.zip } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('ZIP') , :var => @user.zip } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Address') , :var => @user.address } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Address') , :var => @user.address } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Phone') , :var => @user.phone } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Phone') , :var => @user.phone } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('Languages spoken') , :var => @user.langs } %>
+              <%= render :partial => "users/profile_element",
+                :locals => { :header => _('About Me') , :var => @user.about } %>
 
-            <%= render :partial => "users/profile_element",
-              :locals => { :header => _('About Me') , :var => @user.about } %>
+            </tbody>
+          </table>
+          <%= @map.div(:width => 676, :height => 300) if @map %>
+        </div>
 
-          </tbody>
-        </table>
-        <%= @map.div(:width => 698, :height => 300) if @map %>
+        <div id="userwall">
+
+          <% form_for(Userevent.new, :url => club_shouts_path(:club_id => 1, :user_id => 1)) do |form| %>
+
+            <div class="form-item"><label for="message"><%=_('Your message')%></label><br/>
+              <%= form.text_field :message %><hr/></div>
+            <div class="form-item"><%= submit_tag _('Send') %></div>
+
+          <% end %>
+
+          <% @user.userevents.each do |event| %>
+            <hr/>
+            <%= event.created_at.to_s(:short) %>
+            <%= link_to event.user.login, event.user %>
+            <%= event.message %>
+          <% end %>
+        </div>
+        <div id="friendswall">
+          <% @wall.each do |event| %>
+            <hr/>
+            <%= event.created_at.to_s(:short) %>
+            <%= link_to event.user.login, event.user %>
+            <%= event.message %>
+          <% end %>
+
+        </div>
+
       </div>
-
-      <div id="userwall">
-        <% @user.userevents.each do |event| %>
-          <hr/>
-          <%= event.created_at.to_s(:short) %>
-          <%= link_to event.user.login, event.user %>
-          <%= event.message %>
-        <% end %>
-      </div>
-      <div id="friendswall">
-        <% @wall.each do |event| %>
-          <hr/>
-          <%= event.created_at.to_s(:short) %>
-          <%= link_to event.user.login, event.user %>
-          <%= event.message %>
-        <% end %>
-
-      </div>
-
     </div>
 
     <% if logged_in? %>

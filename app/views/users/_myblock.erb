@@ -9,14 +9,14 @@
       <%= link_to("", new_user_box_path(@user), :class => "new-car", :title => _("New car")) if @user == current_user && user.cars.count < 3 %>
     </div>
 
-    <div class="profilehead"><%= _('Full name') %></div>
-    <div class="profiledata"><%=  user.name %></div>
-    <div class="profilehead"><%= _('Comments count') %></div>
-    <div class="profiledata"><%=  user.comments_count %></div>
-    <div class="profilehead"><%= _('Registration time') %></div>
-    <div class="profiledata"><%=  user.activated_at.to_s(:short) %></div>
-    <hr/>
-    <%= _('Last login') %>: <%= user.last_login.to_s(:short) if user.last_login %>
+    <div class="profiledata"><%=  user.city %>
+      (<%= user.country.upcase %>)
+    </div>
+<%#
+Ismerősnek jelöl,
+Üzenek
+Jelentem
+%>
   </div>
 
   <div class="lightblue usermenu">

@@ -199,7 +199,7 @@ $("#loginblock label").inFieldLabels();
       'user[email]': {
         required: true,
         email: true,
-        remote: "users/check_email"
+        remote: "/users/check_email"
       }
     },
     messages: {
@@ -236,6 +236,9 @@ $("#loginblock label").inFieldLabels();
       },
       'user[birth]': {
         date: true
+      },
+      'user[website]': {
+        url: true
       }
     },
     messages: {

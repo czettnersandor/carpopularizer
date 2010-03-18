@@ -641,6 +641,14 @@ label.error {
   margin-bottom: 10px;
   position: relative;
 }
+.listitem .list-header .countmembers {
+  position: absolute;
+  right: 260px;
+}
+.listitem .list-header .created_at {
+  position: absolute;
+  right: 10px;
+}
 .comment .list-header,
 .listitem .list-header{
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
@@ -702,6 +710,9 @@ label.error {
   margin-left: -10px;
   margin-bottom: -1px;
 }
+.comment .body {
+  margin-left: 69px;
+}
 .listitem .car-image {
   float: left;
   height: 100px;
@@ -759,7 +770,8 @@ hr.clear {
 #layout-right .lightblue.first {
   border-top: 1px solid #2487bb;
   -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px;
-  height: 250px;
+  height: 150px;
+  position: relative;
 }
 #layout-right .lightblue.first {
   -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px;
@@ -787,9 +799,6 @@ hr.clear {
   color: black;
   font-weight: bold;
   clear: both;
-}
-#profile-left .profiledata {
-  color: #2487bb;
 }
 #profile-left .lightblue.usermenu {
   background: url(../images/usermenu.png);
@@ -843,6 +852,9 @@ hr.clear {
   height: 100px;
   width: 35px;
   overflow-y: hidden;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }
 #profile-left img.profile-thumb {
   float: left;
@@ -918,6 +930,9 @@ div.child.video .news-item .title a {
   float: right;
   color: gray;
   padding-left: 10px;
+  position: absolute;
+  left: 123px;
+  bottom: 5px;
 }
 .news-item .description {
   clear: left;
@@ -933,7 +948,7 @@ div.child.video .news-item .title a {
   font-weight: bold;
   clear: both;
   position: absolute;
-  bottom: 2px;
+  bottom: 5px;
   right: 0;
 }
 .listitem .origin {
@@ -1271,7 +1286,7 @@ a.new-car {
   left: 40px;
 }
 #auto-adatok-tabs {
-  height: 252px;
+  height: 322px;
   width: 255px;
   display: block;
   float: left;
@@ -1286,7 +1301,7 @@ a.new-car {
 }
 #auto-adatok-tabs .ui-tabs-panel {
   clear: both;
-  height:226px;
+  height:296px;
   overflow-x:hidden;
   overflow-y:auto;
 }
@@ -1403,7 +1418,7 @@ a.new-car {
   right: 10px;
 }
 #car-equipment {
-  height: 100px;
+  height: 170px;
   width: 419px;
   display: block;
   float: left;
@@ -1411,6 +1426,10 @@ a.new-car {
   border: 1px solid #2487bb;
   margin: 10px 0 0 10px;
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+}
+#car-equipment .inner {
+  padding: 5px 10px;
+  text-align: justify;
 }
 #car-comments {
   clear:both;
@@ -1993,6 +2012,12 @@ span.fejkep.freshnews {
 span.fejkep.newsfeed {
   background-position: 0 -300px;
 }
+span.fejkep.video {
+  background-position: 0 -400px;
+}
+span.fejkep.newvideo {
+  background-position: 0 -425px;
+}
 
 /*
 * Search form
@@ -2145,6 +2170,7 @@ a.newmarket {
   background: url(../images/register.png);
   height: 480px;
   position: relative;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #register-wrapper h2 {
   position: absolute;
@@ -2190,6 +2216,10 @@ a.newmarket {
   height: 97px;
   display: block;
   float: left;
-  font-weight: bold;
   color: #1b6793;
+  text-align: justify;
+}
+
+#user-tabs {
+  padding-top: 30px;
 }

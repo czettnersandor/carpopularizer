@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   # anything else you want your user to change should be added here.
   attr_accessible :login, :email, :password, :password_confirmation,
     :address, :birth, :name, :city, :nem, :zip, :country, :langs, :about, :phone, :avatar,
-    :website, :nyitvatartas, :contact_person, :contact_phone
+    :website, :nyitvatartas, :contact_person, :contact_phone, :usertype
 
   acts_as_mappable :default_units => :kms,
     :default_formula => :sphere,

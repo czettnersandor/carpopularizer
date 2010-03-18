@@ -106,7 +106,7 @@ module BoxesHelper
     _("no damage"),
     _("engine problem"),
     _("crashed"),
-    _("defected")
+    _("defective")
   ]
 
   GENRES = [
@@ -256,6 +256,24 @@ module BoxesHelper
     MAKES.each do |m|
       selected = selected_make == m ? ' selected="true">' : '>'
       opt_list += '<option value='+m+selected+ _(m) +'</option>'
+    end
+    return opt_list
+  end
+
+  def fuellist(selected_fuel='')
+    opt_list = '<option value="">'+_('-- All --')+'</option>'
+    FUELS.each_with_index do |m, i|
+      selected = selected_fuel == i ? ' selected="true">' : '>'
+      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
+    end
+    return opt_list
+  end
+
+  def conditionlist(selected_cond='')
+    opt_list = '<option value="">'+_('-- All --')+'</option>'
+    CONDITIONS.each_with_index do |m, i|
+      selected = selected_cond == i ? ' selected="true">' : '>'
+      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
     end
     return opt_list
   end

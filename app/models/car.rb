@@ -2,7 +2,8 @@ class Car < ActiveRecord::Base
   belongs_to :user
   attr_accessible :genre, :name, :make, :age_grade, :ccm, :performance,
     :fuel, :acceleration, :topspeed, :torque, :color, :description, :interior,
-    :exterior, :engine, :audio, :for_sale
+    :exterior, :engine, :audio, :for_sale, :price, :km, :km_unit, :condition,
+    :performance_unit
   has_many :carimages
   has_many :carcomments
   has_many :combat_votes, :foreign_key => :voted_car

@@ -1,3 +1,6 @@
+<% if params[:genre] %>
+  <%= link_to _("Back to search form"), :cars %>
+<% else %>
 <div id="searchform">
   <ul>
     <li>
@@ -27,7 +30,7 @@
           </td>
           <td>
             <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
-              <%= select_tag :fuel, '<option value="">'+_('-- All --')+'</option><option value=0>Benzin</option><option value=1>Diesel</option><option value=2>Gáz</option>' %><hr/></div>
+              <%= select_tag :fuel, fuellist(params[:fuel]) %><hr/></div>
           </td>
         </tr>
         <tr>
@@ -153,3 +156,5 @@
 
   });
 </script>
+
+<% end %>

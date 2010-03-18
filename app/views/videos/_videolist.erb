@@ -7,7 +7,7 @@
       <%= shorten video.body.gsub(/<\/?[^>]*>/, ""), 160 %>
     </div>
     <div class="pub-date"><%= video.created_at.to_s(:short) %></div>
-
+    <div class="origin"><%= link_to video.user.login, video.user %></div>
     <hr/>
   </div>
 <% end -%>

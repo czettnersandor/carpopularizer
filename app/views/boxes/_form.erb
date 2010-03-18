@@ -6,8 +6,6 @@
       <li><a href="#data"><%= _("Data") %></a></li>
       <li><a href="#interior"><%= _("Interior") %></a></li>
       <li><a href="#exterior"><%= _("Exterior") %></a></li>
-      <li><a href="#engine"><%= _("Engine") %></a></li>
-      <li><a href="#audio"><%= _("Audio") %></a></li>
     </ul>
 
     <div id="data">
@@ -23,11 +21,72 @@
       <div class="form-item"><label for="age_grade"><%=_('Age-grade')%></label><br/>
         <%= f.text_field :age_grade %><hr/></div>
 
-      <div class="form-item"><label for="for_sale"><%=_('For sale')%></label><br/>
-        <%= f.check_box :for_sale %><hr/></div>
+      <div class="form-item"><label for="ccm"><%=_('ccm')%></label><br/>
+        <%= f.text_field :ccm %><hr/></div>
+
+      <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
+        <%= f.select :fuel, fuellist(@car.fuel) %><hr/></div>
+
+      <div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
+        <%= f.text_field :performance %><hr/></div>
+
+      <div class="form-item"><label for="performance_unit"><%=_('Performance unit')%></label><br/>
+        <%= f.select :performance_unit, '<option value="kW">kW</option><option value="HP">HP</option>' %><hr/></div>
+
+      <div class="form-item"><label for="acceleration"><%=_('Acceleration')%></label><br/>
+        <%= f.text_field :acceleration %><hr/></div>
+      <div class="form-item"><label for="acceleration_unit"><%=_('Acceleration unit')%></label><br/>
+        <%= f.select :acceleration_unit, '<option value="km">km</option><option value="mi">mi</option>' %><hr/></div>
+
+      <div class="form-item"><label for="topspeed"><%=_('Top speed')%></label><br/>
+        <%= f.text_field :topspeed %><hr/></div>
+
+      <div class="form-item"><label for="torque"><%=_('Torque')%></label><br/>
+        <%= f.text_field :torque %><hr/></div>
+
+      <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
+        <%= f.text_field :color %><hr/></div>
+
+      <div class="form-item"><label for="km"><%=_('Mileage')%></label><br/>
+        <%= f.text_field :km %><hr/></div>
+      <div class="form-item"><label for="km_unit"><%=_('Mileage unit')%></label><br/>
+        <%= f.select :km_unit, '<option value="km">km</option><option value="mi">mi</option>' %><hr/></div>
 
       <div class="form-item"><label for="description"><%=_('Description')%></label><br/>
         <%= f.text_area :description %><hr/></div>
+
+      <div class="form-item"><label for="for_sale"><%=_('For sale')%></label><br/>
+        <%= f.check_box :for_sale %><hr/></div>
+
+      <div class="form-item"><label for="price"><%=_('Price')%></label><br/>
+        <%= f.text_field :price %></div>
+
+      <div class="form-item"><label for="km_unit"><%=_('Price unit')%></label><br/>
+        <%= f.select :price_unit, '<option value="huf">HUF</option><option value="eur">EUR</option>' %><hr/></div>
+
+      <div class="form-item"><label for="condition"><%=_('Condition')%></label><br/>
+        <%= f.select :condition, conditionlist(@car.condition) %><hr/></div>
+
+      <table style="witdth: 100%">
+        <thead>
+          <tr>
+            <th><%= _("Technical extras") %></th>
+            <th><%= _("Comfort extras") %></th>
+            <th><%= _("Safety extras") %></th>
+            <th><%= _("Further extras") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+
     </div>
 
     <div id="interior">
@@ -36,42 +95,11 @@
     </div>
 
     <div id="exterior">
-      <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
-        <%= f.text_field :color %><hr/></div>
-
       <div class="form-item"><label for="exterior"><%=_('Exterior')%></label><br/>
         <%= f.text_area :exterior %><hr/></div>
-
     </div>
 
-    <div id="engine">
 
-      <div class="form-item"><label for="ccm"><%=_('ccm')%></label><br/>
-        <%= f.text_field :ccm %><hr/></div>
-
-      <div class="form-item"><label for="performance"><%=_('Performance')%></label><br/>
-        <%= f.text_field :performance %><hr/></div>
-
-      <div class="form-item"><label for="fuel"><%=_('Fuel')%></label><br/>
-        <%= f.text_field :fuel %><hr/></div>
-
-      <div class="form-item"><label for="acceleration"><%=_('Acceleration')%></label><br/>
-        <%= f.text_field :acceleration %><hr/></div>
-
-      <div class="form-item"><label for="topspeed"><%=_('Top speed')%></label><br/>
-        <%= f.text_field :topspeed %><hr/></div>
-
-      <div class="form-item"><label for="torque"><%=_('Torque')%></label><br/>
-        <%= f.text_field :torque %><hr/></div>
-
-      <div class="form-item"><label for="engine"><%=_('Engine')%></label><br/>
-        <%= f.text_area :engine %><hr/></div>
-    </div>
-
-    <div id="audio">
-      <div class="form-item"><label for="audio"><%=_('Audio')%></label><br/>
-        <%= f.text_area :audio %><hr/></div>
-    </div>
 
   </div>
 </div>
@@ -79,13 +107,20 @@
 <p>
 <div class="form-item"><%= submit_tag _('Save') %></div>
 </p>
-<hr class="clear">
+<hr class="clear"/>
 
 
 <script type="text/javascript">// <![CDATA[
+
+  function check_sale() {
+    if ($('car_for_sale').checked);
+  }
+
   $(document).ready(function(){
 
     $('.form-tabs').tabs();
+
+
 
   });
 

@@ -1,19 +1,19 @@
 <div id="register-wrapper" class="grid_12 alpha omega">
-  <h2>-<%= " a vezető közösség" %></h2>
+  <h2><span style="display:none">boxutca.com</span>- <%= _("the driving force") %></h2>
   <div id="register-left">
-    <p><%= _("Boxutca.com connects car fans, car owners and car fanatics!") %></p>
-    <p><%= _("Create your own profile with your cars, friends and pictures. Share your thoughts with your friends. Discover what others doing right now. Challenge for a battle, vote for them or just browse and enjoy the cars on boxutca.com.") %></p>
-    <p><%= _("Follow the latest news, join clubs, upload your ads or search the cars for sale section and find the ride you’ve always wanted.") %></p>
-    <p><%= _("Let’s do it together freely on boxutca.com.") %></p>
+    <h5><%= _("Boxutca.com connects car fans and car owners!") %></h5>
+    <p><%= _("Create your own <strong>profile</strong> with your <strong>cars</strong>, <strong>friends</strong> and <strong>pictures</strong>. Share your <strong>thoughts</strong> with your friends. Discover what others doing right now. <strong>Challenge</strong> for a battle, <strong>vote</strong> for them or just browse and enjoy the cars on boxutca.com.") %><br/>
+    <%= _("Follow the latest <strong>news</strong>, join <strong>clubs</strong>, upload your <strong>ads</strong> or search the <strong>cars for sale</strong> section and find the ride you’ve always wanted.") %></p>
+    <p><strong><%= _("Stay connected with boxutca.com.") %></strong></p>
   </div>
 
   <%= error_messages_for :user %>
   <% form_for :user, :url => new_user_path, :html => { :class => "user-register" } do |f| -%>
-    <h3><%= _("Register on boxutca.com") %></h3>
+    <h3><%= _("Register") %></h3>
     <div class="form-item select">
-      <label for="usertype"><%=_('Registration type')%></label><br/>
+      <label for="usertype"><%=  _('Registration type') %></label><br/>
       <%= f.select('usertype',
-        options_for_select({_("User")=>0, _("Dealer")=>1})) %>
+        '<option value="0">'+_("User")+'</option><option value="1">'+_("Dealer")+'</option>') %>
       <hr/>
     </div>
 

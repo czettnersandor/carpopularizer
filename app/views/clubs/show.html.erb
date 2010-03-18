@@ -10,6 +10,28 @@
   </h3>
   <div id="club-description">
 
+    <table class="block_table">
+      <tbody>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Short description') , :var => @club.short_description } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Club tags') , :var => @club.clubtag_list } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Car makes') , :var => @club.carmake_list } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Region') , :var => @club.region_list } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Club admin') , :var => link_to(@club.user.login, @club.user) } %>
+
+
+      </tbody>
+    </table>
+
     <%= render :partial => "layouts/share", :locals => {:url => CGI::escape(request.url)} %>
 
   </div>

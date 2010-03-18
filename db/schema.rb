@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100317230759) do
+ActiveRecord::Schema.define(:version => 20100318150149) do
 
   create_table "adverts", :force => true do |t|
     t.string   "title"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(:version => 20100317230759) do
     t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "price"
+    t.string   "method"
+    t.string   "condition"
+    t.string   "transfer"
   end
 
   create_table "carcomments", :force => true do |t|
@@ -61,14 +65,20 @@ ActiveRecord::Schema.define(:version => 20100317230759) do
     t.text     "description"
     t.text     "interior"
     t.text     "exterior"
-    t.text     "engine"
-    t.text     "audio"
-    t.decimal  "rating_average",  :precision => 6, :scale => 2, :default => 0.0
+    t.decimal  "rating_average",    :precision => 6, :scale => 2, :default => 0.0
     t.boolean  "for_sale"
     t.integer  "tournament_win"
     t.integer  "tournament_lost"
     t.integer  "combat_win"
     t.integer  "combat_lost"
+    t.integer  "price"
+    t.integer  "km"
+    t.string   "km_unit"
+    t.integer  "condition"
+    t.string   "price_unit"
+    t.string   "performance_unit"
+    t.integer  "month"
+    t.string   "acceleration_unit"
   end
 
   add_index "cars", ["user_id"], :name => "index_cars_on_user_id"
@@ -195,6 +205,14 @@ ActiveRecord::Schema.define(:version => 20100317230759) do
     t.boolean  "radiosmagno"
     t.boolean  "automataklima"
     t.boolean  "manualklima"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "favorites", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "favorable_type", :limit => 30
+    t.integer  "favorable_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

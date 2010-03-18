@@ -1,12 +1,30 @@
 <div class="listitem">
   <div class="list-header">
     <%= link_to(club.name, club) %>
+    <span class="countmembers"><%= _("Members") %>: <%= club.members.count %></span>
+    <span class="created_at"><%= _("Created") %>: <%= club.created_at.to_s(:onlydate) %></span>
   </div>
   <div class="car-image">
     <%= link_to(image_tag(club.logo.url(:thumb)), club_path(club)) if club.logo %>
   </div>
   <div class="description">
-    <%= shorten(club.description) %>
+    <table class="block_table">
+      <tbody>
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Short description') , :var => club.short_description } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Club tags') , :var => club.clubtag_list } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Car makes') , :var => club.carmake_list } %>
+
+        <%= render :partial => "users/profile_element",
+          :locals => { :header => _('Region') , :var => club.region_list } %>
+
+      </tbody>
+    </table>
+    <div class="origin"><%= link_to(club.user.login, club.user) %></div>
   </div>
   <hr class="clear" />
 </div>

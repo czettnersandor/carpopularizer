@@ -24,7 +24,7 @@
                 <%= f.select :nem, "<option value=1>"+_('Male')+"</option><option value=2>"+_('Female')+"</option>"%><hr/></div>
 
               <div class="form-item"><label for="country"><%=_('Country')%></label><br/>
-                <%= f.select :country, countrylist %><hr/></div>
+                <%= f.select :country, countrylist(@user.country) %><hr/></div>
 
               <div class="form-item"><label for="city"><%=_('City')%></label><br/>
                 <%= f.text_field :city %><hr/></div>

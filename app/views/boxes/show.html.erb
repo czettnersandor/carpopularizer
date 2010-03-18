@@ -24,7 +24,7 @@
         <div class="inner">
           <% @car.carimages.each do |image| %>
             <div class="item" id="item_<%= image.id %>">
-              <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb", :title => image.title),
+              <%= link_to(image_tag(image.image.url(:thumb), :class=>"image-thumb", :alt => image.title, :title => image.title),
                 image.image.url(:full), :class => "colorbox", :rel=>"gallery")%>
               <% if admin_or_current? @user %>
                 <div class="image-admin">
@@ -52,23 +52,38 @@
         <li><a href="#data"> <%= _("Data") %> </a></li>
         <li><a href="#exterior"> <%= _("Exterior") %> </a></li>
         <li><a href="#interior"> <%= _("Interior") %> </a></li>
-        <li><a href="#engine"> <%= _("Engine") %> </a></li>
-        <li><a href="#audio"> <%= _("Audio") %> </a></li>
+        <li><a href="#equipment"><%= _("Equipment") %></a></li>
       </ul>
 
       <div id="data">
+        <label><%= _('Price') %></label>
+        <span class="data"><%= @car.price %><%= @car.price_unit %></span>
         <label><%= _('Make') %></label>
         <span class="data"><%= @car.make %></span>
         <label><%= _('Age grade') %></label>
         <span class="data"><%= @car.age_grade %></span>
-        <label><%= _('Description') %></label>
-        <span class="data"><%= @car.description %></span>
+        <label><%= _('ccm') %></label>
+        <span class="data"><%= @car.ccm %></span>
+        <label><%= _('Performance') %></label>
+        <span class="data"><%= @car.performance %> <%= @car.performance_unit %></span>
+        <label><%= _('Fuel') %></label>
+        <span class="data"><%= @car.fuel %></span>
+        <label><%= _('0-100km/h') %></label>
+        <span class="data"><%= @car.acceleration %>s</span>
+        <label><%= _('Top speed') %></label>
+        <span class="data"><%= @car.topspeed %></span>
+        <label><%= _('Torque') %></label>
+        <span class="data"><%= @car.torque %></span>
+        <label><%= _('Color') %></label>
+        <span class="data"><%= @car.color %></span>
+        <label><%= _('Mileage') %></label>
+        <span class="data"><%= @car.km %><%= @car.km_unit %></span>
+        <label><%= _('Condition') %></label>
+        <span class="data"><%= @car.condition %></span>
         <hr class="clear"/>
       </div>
 
       <div id="exterior">
-        <label><%= _('Color') %></label>
-        <span class="data"><%= @car.color %></span>
         <label><%= _('Exterior') %></label>
         <span class="data"><%= @car.exterior %></span>
         <hr class="clear"/>
@@ -80,25 +95,9 @@
         <hr class="clear"/>
       </div>
 
-      <div id="engine">
-        <label><%= _('Performance') %></label>
-        <span class="data"><%= @car.performance %></span>
-        <label><%= _('Fuel') %></label>
-        <span class="data"><%= @car.fuel %></span>
-        <label><%= _('Acceleration') %></label>
-        <span class="data"><%= @car.acceleration %></span>
-        <label><%= _('Top speed') %></label>
-        <span class="data"><%= @car.topspeed %></span>
-        <label><%= _('Torque') %></label>
-        <span class="data"><%= @car.torque %></span>
-        <label><%= _('Engine') %></label>
-        <span class="data"><%= @car.engine %></span>
-        <hr class="clear"/>
-      </div>
+      <div id="equipment">
 
-      <div id="audio">
-        <label><%= _('Audio') %></label>
-        <span class="data"><%= @car.audio %></span>
+
         <hr class="clear"/>
       </div>
 
@@ -108,6 +107,7 @@
       <div class="block-header fix small"><h3><%= _("Description") %></h3></div>
       <div class="inner">
         <%= @car.description %>
+
       </div>
     </div>
 
@@ -129,15 +129,14 @@
           </div>
         </div>
 
-        <div class="combat">
-          <% if current_user && current_user != @car.user && @car.invitable? %>
-            <%= link_to "Invite to a combat", new_user_box_combat_path(@user, @car) %>
-          <% end %>
-        </div>
-
         <div class="rating">
           <%= ratings_for @car, :remote_options => {:url => rate_user_box_path(@user, @car)} %>
           <%= @car.rating_average %>
+          <div class="combat">
+          <% if current_user && current_user != @car.user && @car.invitable? %>
+            <%= link_to "Challenge", new_user_box_combat_path(@user, @car) %>
+          <% end %>
+        </div>
         </div>
 
       </div>
