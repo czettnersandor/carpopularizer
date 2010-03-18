@@ -3,6 +3,7 @@ class Club < ActiveRecord::Base
   has_many :memberships
   has_many :members, :through => :memberships, :conditions => "status = 'accepted'", :source => 'user'
   has_many :pending_members, :through => :memberships, :conditions => "status = 'pending'", :source => 'user'
+  acts_as_taggable_on :clubtags, :carmakes, :regions
 
   has_attached_file :logo,
     :styles => {
@@ -13,5 +14,6 @@ class Club < ActiveRecord::Base
 
   default_scope :order => 'created_at DESC'
 
-  attr_accessible :name, :short_description, :description, :logo
+  attr_accessible :name, :short_description, :description, :logo, :clubtag_list, :carmake_list, :region_list, :public
+
 end

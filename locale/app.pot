@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-03-15 22:13+0100\n"
+"POT-Creation-Date: 2010-03-17 13:21+0100\n"
 "PO-Revision-Date: 2010-01-08 23:07+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgstr ""
 msgid "%s, your membership to %s deleted by the club owner"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:169 app/helpers/boxes_helper.rb:186
+#: app/helpers/boxes_helper.rb:238 app/helpers/boxes_helper.rb:255
 #: app/views/cars/_searchform.erb:30 app/views/cars/_searchform.erb:86
 msgid "-- All --"
 msgstr ""
@@ -80,8 +80,8 @@ msgstr ""
 msgid "Acceleration"
 msgstr ""
 
-#: app/controllers/marketplaces_controller.rb:26
-#: app/controllers/marketplaces_controller.rb:40
+#: app/controllers/marketplaces_controller.rb:27
+#: app/controllers/marketplaces_controller.rb:41
 msgid "Ad was successfully created."
 msgstr ""
 
@@ -112,7 +112,7 @@ msgstr ""
 
 #: app/views/boxes/show.html.erb:38 app/views/galleries/show.html.erb:24
 #: app/views/galleries/_gallery_admin.erb:8
-#: app/views/marketplaces/show.html.erb:37 app/views/clubs/_member.erb:6
+#: app/views/marketplaces/show.html.erb:35 app/views/clubs/_member.erb:6
 msgid "Are you sure?"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Belgium"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:26
+#: app/helpers/boxes_helper.rb:95
 msgid "Biodiesel"
 msgstr ""
 
@@ -295,7 +295,7 @@ msgstr ""
 msgid "Croatia"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:43
+#: app/views/clubs/show.html.erb:42
 msgid "Current members"
 msgstr ""
 
@@ -318,7 +318,7 @@ msgstr ""
 
 #: app/views/boxes/show.html.erb:64 app/views/boxes/show.html.erb:108
 #: app/views/boxes/_form.erb:29 app/views/meetings/new.html.erb:11
-#: app/views/marketplaces/show.html.erb:48
+#: app/views/marketplaces/show.html.erb:46
 #: app/views/marketplaces/_listitem.html.erb:9
 #: app/views/marketplaces/_form.erb:6 app/views/clubs/_form.erb:9
 #: app/views/admin/forums/_form.erb:5 app/views/videos/_form.erb:9
@@ -326,7 +326,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:23
+#: app/helpers/boxes_helper.rb:92
 msgid "Diesel"
 msgstr ""
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "Edit my profile"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:27
+#: app/helpers/boxes_helper.rb:96
 msgid "Electric"
 msgstr ""
 
@@ -356,7 +356,7 @@ msgstr ""
 msgid "Engine"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:28
+#: app/helpers/boxes_helper.rb:97
 msgid "Etanol"
 msgstr ""
 
@@ -440,11 +440,11 @@ msgstr ""
 msgid "Gallery was successfully created."
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:24
+#: app/helpers/boxes_helper.rb:93
 msgid "Gas"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:22
+#: app/helpers/boxes_helper.rb:91
 msgid "Gasoline"
 msgstr ""
 
@@ -486,7 +486,7 @@ msgstr ""
 msgid "Hungary"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:25
+#: app/helpers/boxes_helper.rb:94
 msgid "Hybrid"
 msgstr ""
 
@@ -495,7 +495,7 @@ msgstr ""
 msgid "Interior"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:22
+#: app/views/clubs/show.html.erb:21
 msgid "Introduction"
 msgstr ""
 
@@ -549,6 +549,10 @@ msgstr ""
 
 #: app/views/users/_myblock.erb:19
 msgid "Last login"
+msgstr ""
+
+#: app/views/marketplaces/show.html.erb:59 app/views/videos/show.html.erb:31
+msgid "Last submitted"
 msgstr ""
 
 #: app/views/fronts/index.html.erb:2
@@ -610,15 +614,15 @@ msgstr ""
 msgid "Marketplaces"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:25
+#: app/views/clubs/show.html.erb:24
 msgid "Meetings"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:53
+#: app/views/clubs/show.html.erb:52
 msgid "Member request"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:24
+#: app/views/clubs/show.html.erb:23
 msgid "Members"
 msgstr ""
 
@@ -738,7 +742,7 @@ msgstr ""
 msgid "Password successfully updated."
 msgstr ""
 
-#: app/views/clubs/show.html.erb:47
+#: app/views/clubs/show.html.erb:46
 msgid "Pending members"
 msgstr ""
 
@@ -900,7 +904,7 @@ msgstr ""
 msgid "Short description"
 msgstr ""
 
-#: app/views/clubs/show.html.erb:23
+#: app/views/clubs/show.html.erb:22
 msgid "Shoutbox"
 msgstr ""
 
@@ -1144,12 +1148,88 @@ msgstr ""
 msgid "ZIP"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:32
+#: app/helpers/boxes_helper.rb:55
+msgid "a few mileage"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:51
+msgid "abs"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:61
+msgid "adjustable back seats"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:63
+msgid "adjustable passenger seat"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:62
+msgid "adjustable seat height"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:57
+msgid "adjustable wheel"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:27
+msgid "airbag off switch"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:23 app/helpers/boxes_helper.rb:24
+msgid "airbags in the back"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:67
+msgid "alarm system"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:35
+msgid "aluminium wheel"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:50
+msgid "asr"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:86
+msgid "automatic A/C"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:56
+msgid "automatic transmission"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:70
+msgid "awd"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:101
 msgid "brand new"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:30
+msgid "car document expired"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:36
+msgid "car set-off possible"
 msgstr ""
 
 #: app/views/boxes/_form.erb:49
 msgid "ccm"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:83
+msgid "cd case"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:47
+msgid "cd player"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:73
+msgid "central lock"
 msgstr ""
 
 #: app/views/cars/_searchform.erb:126
@@ -1164,27 +1244,111 @@ msgstr ""
 msgid "coupe"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:39
+#: app/helpers/boxes_helper.rb:108
 msgid "crashed"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:40
+#: app/helpers/boxes_helper.rb:109
 msgid "defected"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:38
+#: app/helpers/boxes_helper.rb:53
+msgid "dragbar"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:28
+msgid "driver's airbag"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:60
+msgid "driver's seat memory"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:46
+msgid "dvd"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:66
+msgid "electric back window"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:72
+msgid "electric mirror"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:65
+msgid "electric roof"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:68
+msgid "electric window"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:107
 msgid "engine problem"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:49
+msgid "esp"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:78
+msgid "female owner"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:77
+msgid "first owner"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:81
+msgid "fog light"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:42
+msgid "full extra"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:45
+msgid "gps"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:39
+msgid "has foreign documents"
 msgstr ""
 
 #: app/models/friendship_observer.rb:6 app/models/friendship_observer.rb:12
 msgid "has new friend:"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:71
+msgid "heated mirror"
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:9
 msgid "hot rod"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:34
+#: app/helpers/boxes_helper.rb:26
+msgid "immobiliser"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:41
+msgid "isofix system"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:84
+msgid "kept in garage"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:69
+msgid "leather seats"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:43
+msgid "led headlight"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:103
 msgid "like new"
 msgstr ""
 
@@ -1192,23 +1356,55 @@ msgstr ""
 msgid "long box"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:48
+msgid "main computer"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:87
+msgid "manual A/C"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:59
+msgid "manual transmission"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:64
+msgid "moon roof"
+msgstr ""
+
 #: app/views/boxes/show.html.erb:148 app/views/topics/show.html.erb:10
 msgid "new comment"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:37
+#: app/helpers/boxes_helper.rb:106
 msgid "no damage"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:36
+#: app/helpers/boxes_helper.rb:74
+msgid "non smoking"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:105
 msgid "normal"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:40
+msgid "often serviced"
 msgstr ""
 
 #: app/helpers/boxes_helper.rb:18
 msgid "other"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:33
+#: app/helpers/boxes_helper.rb:31
+msgid "package-locker net"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:22 app/helpers/boxes_helper.rb:25
+msgid "passenger airbag"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:102
 msgid "perfect"
 msgstr ""
 
@@ -1216,20 +1412,56 @@ msgstr ""
 msgid "pick-up"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:38
+msgid "plush seats"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:58
+msgid "power steering wheel"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:34
+msgid "reinforcement bars"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:32
+msgid "reverse sensor"
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:13
 msgid "saloon"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:79
+msgid "second owner"
 msgstr ""
 
 #: app/helpers/boxes_helper.rb:15
 msgid "sedan"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:75
+msgid "service book"
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:8
 msgid "short box"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:29
+msgid "side airbags"
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:16
 msgid "sport"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:76
+msgid "taxi"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:54 app/helpers/boxes_helper.rb:82
+msgid "tinted glass"
 msgstr ""
 
 #: app/views/user_mailer/forgot_password.html.erb:1
@@ -1240,12 +1472,24 @@ msgstr ""
 msgid "truck"
 msgstr ""
 
+#: app/helpers/boxes_helper.rb:80
+msgid "valid guarantee"
+msgstr ""
+
 #: app/helpers/boxes_helper.rb:10
 msgid "van"
 msgstr ""
 
-#: app/helpers/boxes_helper.rb:35
+#: app/helpers/boxes_helper.rb:104
 msgid "well protected"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:33
+msgid "wooden package"
+msgstr ""
+
+#: app/helpers/boxes_helper.rb:44
+msgid "xenon headlight"
 msgstr ""
 
 #: app/views/user_mailer/activation.html.erb:1

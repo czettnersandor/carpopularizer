@@ -6,7 +6,16 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :battles
   map.resources :combats, :member => { :vote => :get }
   
-  map.resources :clubs, :member => { :add_user => :get, :accept_member => :get, :remove_member => :get } do |club|
+  map.resources :clubs, :member => {
+    :add_user => :get,
+    :accept_member => :get,
+    :remove_member => :get,
+  },
+    :collection => {
+    :findclubtag => :get,
+    :findcarmake => :get,
+    :findregion => :get
+  } do |club|
     club.resources :shouts
     club.resources :meetings
   end

@@ -1,5 +1,5 @@
 class ClubsController < ApplicationController
-  before_filter :preload_club, :except => [:new, :create, :index]
+  before_filter :preload_club, :except => [:new, :create, :index, :findclubtag, :findcarmake, :findregion]
 
   def index
     if params[:user_id]
@@ -109,6 +109,43 @@ class ClubsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def findclubtag
+    if params[:q]
+      @tags = Tag.named_like(params[:q])
+    else
+      @tags = Tag.all
+    end
+    respond_to do |wants|
+      wants.html
+      wants.js {render :text => @tags.map{|tag| tag.name}.join("\n")}
+    end
+  end
+  def findcarmake
+    if params[:q]
+      @tags = Tag.named_like(params[:q])
+    else
+      @tags = Tag.all
+    end
+    respond_to do |wants|
+      wants.html
+      wants.js {render :text => @tags.map{|tag| tag.name}.join("\n")}
+    end
+  end
+  def findregion
+    if params[:q]
+      @tags = Tag.named_like(params[:q])
+    else
+      @tags = Tag.all
+    end
+    respond_to do |wants|
+      wants.html
+      wants.js {render :text => @tags.map{|tag| tag.name}.join("\n")}
+    end
+  end
+
+  private
+ 
 
   protected
   

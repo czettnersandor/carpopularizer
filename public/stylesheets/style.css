@@ -70,9 +70,27 @@ input:focus {
   border:1px dotted black;
 }
 */
+
+.ac_results {
+  background: white;
+  border: 1px solid #000000;
+  padding: 5px;
+}
+.ac_results ul,
+.ac_results li {
+  list-style: none;
+  margin: 0;
+}
+.ac_results li.ac_over {
+  background: #0a6091;
+  color: white;
+}
 input.error:focus {
   border-color:#ff0000;
   background: white;
+}
+input.ac_loading {
+  background: url(../images/ajaxinput.gif) right center no-repeat;
 }
 
 /*
