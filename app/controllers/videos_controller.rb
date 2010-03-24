@@ -3,6 +3,7 @@ class VideosController < ApplicationController
   # GET /videos.xml
   VIDS_PER_PAGE = 10
   def index
+    @title = _("Videos")
     @videos = Video.paginate :page => params[:page], :per_page => VIDS_PER_PAGE
     @videos_by_hits_monthly = Video.paginate :page => params[:page_by_hits], :per_page => VIDS_PER_PAGE,
       :order=>"hits DESC"

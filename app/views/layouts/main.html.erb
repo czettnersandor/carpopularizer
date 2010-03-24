@@ -3,6 +3,11 @@
 
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="autó, autós, párbaj, galéria, értékelés, hírek, klub, klubok, közösség, apró, eladó autó" />
+    <meta name="description" content="Autó kedvelőket és autó tulajdonosokat összekötő közösségi portál! Hozd létre saját profilodat autóiddal, barátokkal, képekkel. Mond el milyen kedved van, oszd meg ismerőseiddel éppen mi jár a fejedben. Hívd ki párbajra, értékeld, nézegesd" />
+    <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+
     <title><%= @title %> | Boxutca</title>
     <%= stylesheet_link_tag("reset") %>
     <%= stylesheet_link_tag("960") %>
@@ -20,14 +25,10 @@
     <%= javascript_include_tag 'jquery.infieldlabel' %>
     <%= javascript_include_tag 'jquery.colorbox' %>
     <%= javascript_include_tag 'jquery.autocomplete' %>
-
-
-
     <% if @map %>
       <%= GMap.header %>
       <%= @map.to_html %>
     <% end -%>
-
     <% if (current_user && current_user.has_role?('admin')) %>
       <%= javascript_include_tag 'markitup/jquery.markitup' %>
       <%= javascript_include_tag "markitup/sets/textile/set" %>
@@ -52,6 +53,7 @@
         </div>
 
         <a href="/" id="logo"></a>
+        <span id="logo-home"></span>
 
         <div id="loginblock">
           <%= render :partial => 'layouts/login' %>

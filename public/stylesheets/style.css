@@ -127,6 +127,15 @@ a#logo {
   margin-top: 10px;
   float: left;
 }
+#logo-home {
+  background: url(../images/logo-home.jpg);
+  display: block;
+  width: 46px;
+  height: 30px;
+  display: none;
+  float: left;
+  margin-top: 30px;
+}
 div.pagination {
   display: block;
   background-color: #b6dcf1;
@@ -2140,30 +2149,31 @@ table#forums thead tr {
 
 /* TODO: opacity */
 a.newvideo {
-  width: 132px;
-  height: 31px;
+  width: 170px;
+  height: 27px;
   display: block;
   background: url(../images/videohozzadas.png) no-repeat;
   padding: 6px 0 0 50px;
   color: white;
-
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 a.newclub {
-  width: 132px;
-  height: 31px;
+  width: 170px;
+  height: 27px;
   display: block;
   background: url(../images/klubhozzadas.png) no-repeat;
   padding: 6px 0 0 50px;
   color: white;
-
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 a.newmarket {
-  width: 132px;
-  height: 31px;
+  width: 170px;
+  height: 27px;
   display: block;
   background: url(../images/aprohozzadas.png) no-repeat;
   padding: 6px 0 0 50px;
   color: white;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 
 

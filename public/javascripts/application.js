@@ -254,4 +254,13 @@ $("#loginblock label").inFieldLabels();
     }
   });
 
+  $('a#logo').hover(function(){
+    // Over
+    $('#logo-home').show('fast');
+  },
+  function(){
+    // Hover
+    $('#logo-home').hide();
+  });
+
 });
