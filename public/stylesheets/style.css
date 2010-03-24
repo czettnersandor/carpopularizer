@@ -2171,14 +2171,14 @@ a.newmarket {
 * Registration window
 */
 #register-wrapper {
-  background: url(../images/register.png);
+  background: url(../images/register.png) no-repeat 0 -30px;
   height: 480px;
   position: relative;
   -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
 #register-wrapper h2 {
   position: absolute;
-  top: 90px;
+  top: 60px;
   left: 360px;
   color: #1b6793;
 }
