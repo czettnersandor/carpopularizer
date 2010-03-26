@@ -95,8 +95,8 @@ $(document).ready(function(){
   i = 0;
 
   $(".cups .cup").tipsy();
-  $("div.equipments label").tipsy({
-  });
+  $("div.equipments label").tipsy();
+  $("#equipment label").tipsy();
 
   $('a.colorbox').colorbox({});
 

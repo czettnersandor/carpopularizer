@@ -45,7 +45,7 @@
         <%= f.text_field :torque %><hr/></div>
 
       <div class="form-item"><label for="color"><%=_('Color')%></label><br/>
-        <%= f.text_field :color %><hr/></div>
+        <%= f.select :color, colorlist(@car.color) %><hr/></div>
 
       <div class="form-item"><label for="km"><%=_('Mileage')%></label><br/>
         <%= f.text_field :km %><hr/></div>

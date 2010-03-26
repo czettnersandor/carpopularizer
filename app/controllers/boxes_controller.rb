@@ -18,6 +18,7 @@ class BoxesController < ApplicationController
   def new
     @user = User.find(params[:user_id])
     @car = Car.new
+     @equipment = Equipment.new
     @title = _('New car')
     respond_to do |format|
       format.html # new.html.erb
@@ -43,7 +44,7 @@ class BoxesController < ApplicationController
 
   def edit
     @title = _("Edit car")+" » "+@car.name
-    @equipment = Equipment.find_by_car_id @car.id
+    @equipment = Equipment.find_or_create_by_car_id @car.id
   end
 
   def update

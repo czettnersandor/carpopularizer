@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
-"POT-Creation-Date: 2010-03-18 18:17+0100\n"
-"PO-Revision-Date: 2010-03-26 09:09+0100\n"
+"POT-Creation-Date: 2010-03-26 15:52+0100\n"
+"PO-Revision-Date: 2010-03-26 15:54+0100\n"
 "Last-Translator: Sándor Czettner <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr "%s felvételét kérte egy klubodba"
 msgid "%s has requested to be your friend"
 msgstr "%s ismerősöd szeretne lenni"
 
-#: app/controllers/clubs_controller.rb:17
+#: app/controllers/clubs_controller.rb:18
 msgid "%s » club memberships"
 msgstr "%s » klub tagságok"
 
@@ -57,10 +57,11 @@ msgstr "%s, a tagságod %s klubba törölték"
 msgid "%s, your membership to %s deleted by the club owner"
 msgstr "%s, a tagságod %s klubba törölte a klub adminisztrátora"
 
-#: app/helpers/boxes_helper.rb:238
-#: app/helpers/boxes_helper.rb:255
-#: app/helpers/boxes_helper.rb:264
-#: app/helpers/boxes_helper.rb:273
+#: app/helpers/boxes_helper.rb:258
+#: app/helpers/boxes_helper.rb:275
+#: app/helpers/boxes_helper.rb:284
+#: app/helpers/boxes_helper.rb:293
+#: app/helpers/boxes_helper.rb:302
 #: app/views/cars/_searchform.erb:89
 msgid "-- All --"
 msgstr "-- Összes --"
@@ -156,7 +157,7 @@ msgstr "Vissza a keresőhöz"
 msgid "Belgium"
 msgstr "Belgium"
 
-#: app/helpers/boxes_helper.rb:95
+#: app/helpers/boxes_helper.rb:115
 msgid "Biodiesel"
 msgstr "Biodízel"
 
@@ -200,11 +201,11 @@ msgstr "Bulgária"
 msgid "Canada"
 msgstr "Kanada"
 
-#: app/controllers/clubs_controller.rb:51
+#: app/controllers/clubs_controller.rb:52
 msgid "Cannot accept membership"
 msgstr "A tagság nem fogadható el"
 
-#: app/controllers/clubs_controller.rb:64
+#: app/controllers/clubs_controller.rb:65
 msgid "Cannot remove member"
 msgstr "A tagság nem törölhető"
 
@@ -214,11 +215,11 @@ msgstr "A tagság nem törölhető"
 msgid "Car makes"
 msgstr "Márka"
 
-#: app/controllers/boxes_controller.rb:34
+#: app/controllers/boxes_controller.rb:35
 msgid "Car was successfully created."
 msgstr "Az autó sikeresen létrejött."
 
-#: app/controllers/boxes_controller.rb:51
+#: app/controllers/boxes_controller.rb:56
 msgid "Car was successfully updated."
 msgstr "Az autó módosítva lett."
 
@@ -252,11 +253,11 @@ msgstr "Klub adminisztrátor"
 msgid "Club tags"
 msgstr "Klub tag-ek"
 
-#: app/controllers/clubs_controller.rb:81
+#: app/controllers/clubs_controller.rb:82
 msgid "Club was successfully created."
 msgstr "A klub sikeresen létrejött."
 
-#: app/controllers/clubs_controller.rb:95
+#: app/controllers/clubs_controller.rb:96
 msgid "Club was successfully updated."
 msgstr "A klub frissítve lett."
 
@@ -289,7 +290,7 @@ msgstr "Párbaj szavazatok"
 msgid "Combats"
 msgstr "Párbajok"
 
-#: app/views/boxes/_form.erb:74
+#: app/views/boxes/_form.erb:76
 msgid "Comfort extras"
 msgstr "Kényelmi extrák"
 
@@ -382,7 +383,7 @@ msgstr "Kereskedő"
 msgid "Description"
 msgstr "Leírás"
 
-#: app/helpers/boxes_helper.rb:92
+#: app/helpers/boxes_helper.rb:112
 msgid "Diesel"
 msgstr "Dízel"
 
@@ -390,7 +391,7 @@ msgstr "Dízel"
 msgid "EUR"
 msgstr "EUR"
 
-#: app/controllers/boxes_controller.rb:45
+#: app/controllers/boxes_controller.rb:46
 msgid "Edit car"
 msgstr "Autó szerkesztése"
 
@@ -398,7 +399,7 @@ msgstr "Autó szerkesztése"
 msgid "Edit my profile"
 msgstr "Saját profil szerkesztése"
 
-#: app/helpers/boxes_helper.rb:96
+#: app/helpers/boxes_helper.rb:116
 msgid "Electric"
 msgstr "Elektromos"
 
@@ -417,14 +418,14 @@ msgstr "Üres"
 msgid "Equipment"
 msgstr "Felszereltség"
 
-#: app/helpers/boxes_helper.rb:97
+#: app/helpers/boxes_helper.rb:117
 msgid "Etanol"
 msgstr "Etanol"
 
 #: app/views/boxes/show.html.erb:53
 #: app/views/boxes/show.html.erb:87
 #: app/views/boxes/_form.erb:8
-#: app/views/boxes/_form.erb:98
+#: app/views/boxes/_form.erb:172
 msgid "Exterior"
 msgstr "Külső"
 
@@ -499,7 +500,7 @@ msgstr "Üzemanyag"
 msgid "Full name"
 msgstr "Teljes név"
 
-#: app/views/boxes/_form.erb:76
+#: app/views/boxes/_form.erb:78
 msgid "Further extras"
 msgstr "Egyéb"
 
@@ -511,11 +512,11 @@ msgstr "Képek"
 msgid "Gallery was successfully created."
 msgstr "A galéria sikeresen létrejött."
 
-#: app/helpers/boxes_helper.rb:93
+#: app/helpers/boxes_helper.rb:113
 msgid "Gas"
 msgstr "Gáz"
 
-#: app/helpers/boxes_helper.rb:91
+#: app/helpers/boxes_helper.rb:111
 msgid "Gasoline"
 msgstr "Benzin"
 
@@ -560,14 +561,14 @@ msgstr "Találat/oldal"
 msgid "Hungary"
 msgstr "Magyarország"
 
-#: app/helpers/boxes_helper.rb:94
+#: app/helpers/boxes_helper.rb:114
 msgid "Hybrid"
 msgstr "Hibrid"
 
 #: app/views/boxes/show.html.erb:54
 #: app/views/boxes/show.html.erb:93
 #: app/views/boxes/_form.erb:7
-#: app/views/boxes/_form.erb:93
+#: app/views/boxes/_form.erb:167
 msgid "Interior"
 msgstr "Belső"
 
@@ -626,6 +627,7 @@ msgid "Languages spoken"
 msgstr "Beszélt nyelvek"
 
 #: app/views/marketplaces/show.html.erb:59
+#: app/views/clubs/index.html.erb:22
 #: app/views/videos/show.html.erb:26
 msgid "Last submitted"
 msgstr "Utoljára beküldött"
@@ -702,11 +704,11 @@ msgstr "Tagságra vár"
 msgid "Members"
 msgstr "Tagok"
 
-#: app/controllers/clubs_controller.rb:47
+#: app/controllers/clubs_controller.rb:48
 msgid "Membership accepted"
 msgstr "Tagság elfogadva"
 
-#: app/controllers/clubs_controller.rb:60
+#: app/controllers/clubs_controller.rb:61
 msgid "Membership deleted"
 msgstr "Tagság törölve"
 
@@ -761,7 +763,7 @@ msgstr "Hollandia"
 msgid "New advert"
 msgstr "Új hirdetés"
 
-#: app/controllers/boxes_controller.rb:21
+#: app/controllers/boxes_controller.rb:22
 #: app/views/users/_myblock.erb:9
 msgid "New car"
 msgstr "Új autó"
@@ -984,11 +986,11 @@ msgstr "Az Rss olvasó sikeresen létrejött."
 msgid "SUV"
 msgstr "Terepjáró"
 
-#: app/views/boxes/_form.erb:75
+#: app/views/boxes/_form.erb:77
 msgid "Safety extras"
 msgstr "Biztonsági extrák"
 
-#: app/views/boxes/_form.erb:108
+#: app/views/boxes/_form.erb:182
 #: app/views/adimages/edit.html.erb:4
 #: app/views/adimages/new.html.erb:10
 #: app/views/topics/new.html.erb:13
@@ -1089,7 +1091,7 @@ msgstr "Svédország"
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#: app/views/boxes/_form.erb:73
+#: app/views/boxes/_form.erb:75
 msgid "Technical extras"
 msgstr "Műszaki extrák"
 
@@ -1191,6 +1193,7 @@ msgstr "Felhasználók"
 msgid "Video administration"
 msgstr "Video adminisztráció"
 
+#: app/controllers/videos_controller.rb:6
 #: app/views/layouts/_menu.erb:7
 #: app/views/admin/front/index.html.erb:12
 #: app/views/videos/index.html.erb:2
@@ -1228,7 +1231,7 @@ msgstr "Döntsd el melyik autó a kategóriák királya!"
 msgid "Year"
 msgstr "évjárat"
 
-#: app/controllers/clubs_controller.rb:37
+#: app/controllers/clubs_controller.rb:38
 msgid "You are not allowed to be a member of this club"
 msgstr "Ennek a klubnak nem lehetsz tagja"
 
@@ -1268,7 +1271,7 @@ msgstr "A felhasználói fiókod létrejött."
 msgid "Your invitation has done."
 msgstr "A kihívásod kész."
 
-#: app/controllers/clubs_controller.rb:33
+#: app/controllers/clubs_controller.rb:34
 msgid "Your membership recorded. The Club admin can accept your request. Please be patient."
 msgstr "A tagság kérelmed rögzítve lett. A klub adminisztrátora hamarosan elfogadja. Kérjük, légy türelemmel."
 
@@ -1304,72 +1307,88 @@ msgstr "Youtube URL"
 msgid "ZIP"
 msgstr "Irányítószám"
 
-#: app/helpers/boxes_helper.rb:55
+#: app/helpers/boxes_helper.rb:75
 msgid "a few mileage"
 msgstr "keveset futott"
 
-#: app/helpers/boxes_helper.rb:51
+#: app/helpers/boxes_helper.rb:71
 msgid "abs"
 msgstr "ABS"
 
-#: app/helpers/boxes_helper.rb:61
+#: app/helpers/boxes_helper.rb:81
 msgid "adjustable back seats"
 msgstr "állítható hátsó ülések"
 
-#: app/helpers/boxes_helper.rb:63
+#: app/helpers/boxes_helper.rb:83
 msgid "adjustable passenger seat"
 msgstr "dönthető utasoldali ülés"
 
-#: app/helpers/boxes_helper.rb:62
+#: app/helpers/boxes_helper.rb:82
 msgid "adjustable seat height"
 msgstr " ülésmagasság állítás "
 
-#: app/helpers/boxes_helper.rb:57
+#: app/helpers/boxes_helper.rb:77
 msgid "adjustable wheel"
 msgstr " állítható kormány "
 
-#: app/helpers/boxes_helper.rb:27
+#: app/helpers/boxes_helper.rb:47
 msgid "airbag off switch"
 msgstr " légzsák kikapcsoló "
 
-#: app/helpers/boxes_helper.rb:23
-#: app/helpers/boxes_helper.rb:24
+#: app/helpers/boxes_helper.rb:43
+#: app/helpers/boxes_helper.rb:44
 msgid "airbags in the back"
 msgstr " hátsó oldal légzsák "
 
-#: app/helpers/boxes_helper.rb:67
+#: app/helpers/boxes_helper.rb:87
 msgid "alarm system"
 msgstr " riasztó "
 
-#: app/helpers/boxes_helper.rb:35
+#: app/helpers/boxes_helper.rb:55
 msgid "aluminium wheel"
 msgstr " könnyűfém felni "
 
-#: app/helpers/boxes_helper.rb:50
+#: app/helpers/boxes_helper.rb:70
 msgid "asr"
 msgstr " ASR (kipörgésgátló) "
 
-#: app/helpers/boxes_helper.rb:86
+#: app/helpers/boxes_helper.rb:106
 msgid "automatic A/C"
 msgstr "automata klíma"
 
-#: app/helpers/boxes_helper.rb:56
+#: app/helpers/boxes_helper.rb:76
 msgid "automatic transmission"
 msgstr "automata váltó"
 
-#: app/helpers/boxes_helper.rb:70
+#: app/helpers/boxes_helper.rb:90
 msgid "awd"
 msgstr "összkerékhajtás"
 
-#: app/helpers/boxes_helper.rb:101
+#: app/helpers/boxes_helper.rb:36
+msgid "beige"
+msgstr "bézs"
+
+#: app/helpers/boxes_helper.rb:22
+msgid "black"
+msgstr "fekete"
+
+#: app/helpers/boxes_helper.rb:28
+msgid "blue"
+msgstr "kék"
+
+#: app/helpers/boxes_helper.rb:121
 msgid "brand new"
 msgstr "új autó"
 
-#: app/helpers/boxes_helper.rb:30
+#: app/helpers/boxes_helper.rb:31
+msgid "brown"
+msgstr "barna"
+
+#: app/helpers/boxes_helper.rb:50
 msgid "car document expired"
 msgstr "nincs érvényes forgalmi"
 
-#: app/helpers/boxes_helper.rb:36
+#: app/helpers/boxes_helper.rb:56
 msgid "car set-off possible"
 msgstr "autóbeszámítás lehetséges"
 
@@ -1378,17 +1397,21 @@ msgstr "autóbeszámítás lehetséges"
 msgid "ccm"
 msgstr "lökettérfogat"
 
-#: app/helpers/boxes_helper.rb:83
+#: app/helpers/boxes_helper.rb:103
 msgid "cd case"
 msgstr "CD tár"
 
-#: app/helpers/boxes_helper.rb:47
+#: app/helpers/boxes_helper.rb:67
 msgid "cd player"
 msgstr "CD-s autórádió"
 
-#: app/helpers/boxes_helper.rb:73
+#: app/helpers/boxes_helper.rb:93
 msgid "central lock"
 msgstr "centrálzár"
+
+#: app/helpers/boxes_helper.rb:33
+msgid "champagne"
+msgstr "pezsgő"
 
 #: app/views/cars/_searchform.erb:129
 msgid "condition"
@@ -1402,75 +1425,83 @@ msgstr "cabrio"
 msgid "coupe"
 msgstr "coupe"
 
-#: app/helpers/boxes_helper.rb:108
+#: app/helpers/boxes_helper.rb:128
 msgid "crashed"
 msgstr "törött"
 
-#: app/helpers/boxes_helper.rb:109
+#: app/helpers/boxes_helper.rb:26
+msgid "dark red"
+msgstr "bordó"
+
+#: app/helpers/boxes_helper.rb:129
 msgid "defective"
 msgstr "hiányos"
 
-#: app/helpers/boxes_helper.rb:53
+#: app/helpers/boxes_helper.rb:73
 msgid "dragbar"
 msgstr "vonóhorog"
 
-#: app/helpers/boxes_helper.rb:28
+#: app/helpers/boxes_helper.rb:48
 msgid "driver's airbag"
 msgstr "vezetőoldali légzsák "
 
-#: app/helpers/boxes_helper.rb:60
+#: app/helpers/boxes_helper.rb:80
 msgid "driver's seat memory"
 msgstr "memóriás vezetőülés"
 
-#: app/helpers/boxes_helper.rb:46
+#: app/helpers/boxes_helper.rb:66
 msgid "dvd"
 msgstr "dvd"
 
-#: app/helpers/boxes_helper.rb:66
+#: app/helpers/boxes_helper.rb:86
 msgid "electric back window"
 msgstr "elektromos ablak(elöl-hátul)"
 
-#: app/helpers/boxes_helper.rb:72
+#: app/helpers/boxes_helper.rb:92
 msgid "electric mirror"
 msgstr "elektromos tükör"
 
-#: app/helpers/boxes_helper.rb:65
+#: app/helpers/boxes_helper.rb:85
 msgid "electric roof"
 msgstr "Elektromos tető"
 
-#: app/helpers/boxes_helper.rb:68
+#: app/helpers/boxes_helper.rb:88
 msgid "electric window"
 msgstr "elektromos tükör"
 
-#: app/helpers/boxes_helper.rb:107
+#: app/helpers/boxes_helper.rb:127
 msgid "engine problem"
 msgstr "motorhibás"
 
-#: app/helpers/boxes_helper.rb:49
+#: app/helpers/boxes_helper.rb:69
 msgid "esp"
 msgstr " ESP (menetstabilizátor) "
 
-#: app/helpers/boxes_helper.rb:78
+#: app/helpers/boxes_helper.rb:98
 msgid "female owner"
 msgstr " hölgy tulajdonostól "
 
-#: app/helpers/boxes_helper.rb:77
+#: app/helpers/boxes_helper.rb:97
 msgid "first owner"
 msgstr "első tulajdonos"
 
-#: app/helpers/boxes_helper.rb:81
+#: app/helpers/boxes_helper.rb:101
 msgid "fog light"
 msgstr "ködlámpa"
 
-#: app/helpers/boxes_helper.rb:42
+#: app/helpers/boxes_helper.rb:62
 msgid "full extra"
 msgstr "full extra"
 
-#: app/helpers/boxes_helper.rb:45
+#: app/helpers/boxes_helper.rb:65
 msgid "gps"
 msgstr "GPS navigáció"
 
-#: app/helpers/boxes_helper.rb:39
+#: app/helpers/boxes_helper.rb:27
+msgid "green"
+msgstr "zöld"
+
+#: app/helpers/boxes_helper.rb:59
 msgid "has foreign documents"
 msgstr "külföldi papírokkal rendelkezik "
 
@@ -1479,7 +1510,7 @@ msgstr "külföldi papírokkal rendelkezik "
 msgid "has new friend:"
 msgstr "új ismerőse:"
 
-#: app/helpers/boxes_helper.rb:71
+#: app/helpers/boxes_helper.rb:91
 msgid "heated mirror"
 msgstr "fűthető tükör"
 
@@ -1487,27 +1518,27 @@ msgstr "fűthető tükör"
 msgid "hot rod"
 msgstr "hot rod"
 
-#: app/helpers/boxes_helper.rb:26
+#: app/helpers/boxes_helper.rb:46
 msgid "immobiliser"
 msgstr "immobiliser"
 
-#: app/helpers/boxes_helper.rb:41
+#: app/helpers/boxes_helper.rb:61
 msgid "isofix system"
 msgstr "isofix rendszer"
 
-#: app/helpers/boxes_helper.rb:84
+#: app/helpers/boxes_helper.rb:104
 msgid "kept in garage"
 msgstr "garázsban tartott"
 
-#: app/helpers/boxes_helper.rb:69
+#: app/helpers/boxes_helper.rb:89
 msgid "leather seats"
 msgstr "bőr belső"
 
-#: app/helpers/boxes_helper.rb:43
+#: app/helpers/boxes_helper.rb:63
 msgid "led headlight"
 msgstr "LED fényszóró"
 
-#: app/helpers/boxes_helper.rb:103
+#: app/helpers/boxes_helper.rb:123
 msgid "like new"
 msgstr "újszerű"
 
@@ -1515,19 +1546,23 @@ msgstr "újszerű"
 msgid "long box"
 msgstr "kombi"
 
-#: app/helpers/boxes_helper.rb:48
+#: app/helpers/boxes_helper.rb:68
 msgid "main computer"
 msgstr " fedélzeti computer "
 
-#: app/helpers/boxes_helper.rb:87
+#: app/helpers/boxes_helper.rb:107
 msgid "manual A/C"
 msgstr "manuális klíma"
 
-#: app/helpers/boxes_helper.rb:59
+#: app/helpers/boxes_helper.rb:79
 msgid "manual transmission"
 msgstr "manuális váltó"
 
-#: app/helpers/boxes_helper.rb:64
+#: app/helpers/boxes_helper.rb:35
+msgid "military"
+msgstr "terep"
+
+#: app/helpers/boxes_helper.rb:84
 msgid "moon roof"
 msgstr " napfénytető "
 
@@ -1536,36 +1571,40 @@ msgstr " napfénytető "
 msgid "new comment"
 msgstr "új hozzászólás"
 
-#: app/helpers/boxes_helper.rb:106
+#: app/helpers/boxes_helper.rb:126
 msgid "no damage"
 msgstr "sérülésmentes"
 
-#: app/helpers/boxes_helper.rb:74
+#: app/helpers/boxes_helper.rb:94
 msgid "non smoking"
 msgstr "nem dohányzó"
 
-#: app/helpers/boxes_helper.rb:105
+#: app/helpers/boxes_helper.rb:125
 msgid "normal"
 msgstr "normál"
 
-#: app/helpers/boxes_helper.rb:40
+#: app/helpers/boxes_helper.rb:60
 msgid "often serviced"
 msgstr "rendszeresen karbantartott"
+
+#: app/helpers/boxes_helper.rb:34
+msgid "orange"
+msgstr "narancs"
 
 #: app/helpers/boxes_helper.rb:18
 msgid "other"
 msgstr "egyéb"
 
-#: app/helpers/boxes_helper.rb:31
+#: app/helpers/boxes_helper.rb:51
 msgid "package-locker net"
 msgstr " csomag rögzítő háló "
 
-#: app/helpers/boxes_helper.rb:22
-#: app/helpers/boxes_helper.rb:25
+#: app/helpers/boxes_helper.rb:42
+#: app/helpers/boxes_helper.rb:45
 msgid "passenger airbag"
 msgstr "utasoldali légzsák"
 
-#: app/helpers/boxes_helper.rb:102
+#: app/helpers/boxes_helper.rb:122
 msgid "perfect"
 msgstr "kitűnő"
 
@@ -1573,19 +1612,31 @@ msgstr "kitűnő"
 msgid "pick-up"
 msgstr "pick-up"
 
-#: app/helpers/boxes_helper.rb:38
+#: app/helpers/boxes_helper.rb:32
+msgid "pink"
+msgstr "rózsaszínű"
+
+#: app/helpers/boxes_helper.rb:58
 msgid "plush seats"
 msgstr " plüss kárpit "
 
-#: app/helpers/boxes_helper.rb:58
+#: app/helpers/boxes_helper.rb:78
 msgid "power steering wheel"
 msgstr " szervokormány "
 
-#: app/helpers/boxes_helper.rb:34
+#: app/helpers/boxes_helper.rb:30
+msgid "purple"
+msgstr "lila"
+
+#: app/helpers/boxes_helper.rb:25
+msgid "red"
+msgstr "piros"
+
+#: app/helpers/boxes_helper.rb:54
 msgid "reinforcement bars"
 msgstr "bukócső"
 
-#: app/helpers/boxes_helper.rb:32
+#: app/helpers/boxes_helper.rb:52
 msgid "reverse sensor"
 msgstr "tolatóradar"
 
@@ -1593,7 +1644,11 @@ msgstr "tolatóradar"
 msgid "saloon"
 msgstr "szalon állapotú"
 
-#: app/helpers/boxes_helper.rb:79
+#: app/helpers/boxes_helper.rb:37
+msgid "sand"
+msgstr "homok"
+
+#: app/helpers/boxes_helper.rb:99
 msgid "second owner"
 msgstr "második tulajdonos"
 
@@ -1601,7 +1656,7 @@ msgstr "második tulajdonos"
 msgid "sedan"
 msgstr "sedan"
 
-#: app/helpers/boxes_helper.rb:75
+#: app/helpers/boxes_helper.rb:95
 msgid "service book"
 msgstr "szervízkönyv"
 
@@ -1609,15 +1664,19 @@ msgstr "szervízkönyv"
 msgid "short box"
 msgstr "ferdehátú"
 
-#: app/helpers/boxes_helper.rb:29
+#: app/helpers/boxes_helper.rb:49
 msgid "side airbags"
 msgstr "oldal légzsák"
+
+#: app/helpers/boxes_helper.rb:24
+msgid "silver"
+msgstr "ezüst"
 
 #: app/helpers/boxes_helper.rb:16
 msgid "sport"
 msgstr "sport"
 
-#: app/helpers/boxes_helper.rb:76
+#: app/helpers/boxes_helper.rb:96
 msgid "taxi"
 msgstr "taxi"
 
@@ -1625,8 +1684,8 @@ msgstr "taxi"
 msgid "the driving force"
 msgstr "a vezető közösség"
 
-#: app/helpers/boxes_helper.rb:54
-#: app/helpers/boxes_helper.rb:82
+#: app/helpers/boxes_helper.rb:74
+#: app/helpers/boxes_helper.rb:102
 msgid "tinted glass"
 msgstr "színezett üveg"
 
@@ -1638,7 +1697,11 @@ msgstr "A jelszó beállításához kattints ide:"
 msgid "truck"
 msgstr "kistehergépjármű"
 
-#: app/helpers/boxes_helper.rb:80
+#: app/helpers/boxes_helper.rb:38
+msgid "turquise"
+msgstr "türkíz"
+
+#: app/helpers/boxes_helper.rb:100
 msgid "valid guarantee"
 msgstr "garanciális"
 
@@ -1646,17 +1709,25 @@ msgstr "garanciális"
 msgid "van"
 msgstr "kisbusz"
 
-#: app/helpers/boxes_helper.rb:104
+#: app/helpers/boxes_helper.rb:124
 msgid "well protected"
 msgstr "megkímélt"
 
-#: app/helpers/boxes_helper.rb:33
+#: app/helpers/boxes_helper.rb:23
+msgid "white"
+msgstr "fehér"
+
+#: app/helpers/boxes_helper.rb:53
 msgid "wooden package"
 msgstr "faberakás"
 
-#: app/helpers/boxes_helper.rb:44
+#: app/helpers/boxes_helper.rb:64
 msgid "xenon headlight"
 msgstr "xenon fényszóró"
+
+#: app/helpers/boxes_helper.rb:29
+msgid "yellow"
+msgstr "sárga"
 
 #: app/views/user_mailer/activation.html.erb:1
 msgid "your account has been activated."

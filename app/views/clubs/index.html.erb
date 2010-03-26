@@ -1,4 +1,4 @@
-<div class="grid_9 alpha">
+<div class="grid_9 alpha" id="layout-left">
 <h1><%= _("Clubs") %></h1>
 </div>
 
@@ -6,7 +6,7 @@
 <%= link_to("Add club", new_club_path, :class => "newclub login-required")%>
 </div>
 
-<div class="grid_12 alpha omega">
+<div class="grid_9 alpha" id="layout-left">
 <%# render :partial => "searchform" %>
 
 <% @clubs.each do |club| %>
@@ -14,4 +14,16 @@
   <%= render :partial => "clublistitem", :locals => {:club => club} %>
 
 <% end %>
+</div>
+
+<div class="grid_3 omega" id="layout-right">
+  <div class="lightblue block">
+    <div class="block-header fix small">
+      <h3><%= _("Last submitted") %></h3>
+    </div>
+    <% @last5.each do |club| %>
+      <%= render :partial => "last5item", :locals => {:club => club} %>
+    <%end%>
+    <hr class="clear"/>
+  </div>
 </div>

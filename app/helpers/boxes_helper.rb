@@ -18,6 +18,26 @@ module BoxesHelper
     _("other")
   ]
 
+  COLORS = [
+    _("black"),
+    _("white"),
+    _("silver"),
+    _("red"),
+    _("dark red"),
+    _("green"),
+    _("blue"),
+    _("yellow"),
+    _("purple"),
+    _("brown"),
+    _("pink"),
+    _("champagne"),
+    _("orange"),
+    _("military"),
+    _("beige"),
+    _("sand"),
+    _("turquise"),
+  ]
+
   EQUIPMENT = {
     :fuggonylegzsak => {:pos => 0, :name => _("passenger airbag")},
     :hatsooldallegzsak => {:pos => 1, :name => _("airbags in the back")},
@@ -278,6 +298,18 @@ module BoxesHelper
     return opt_list
   end
 
+  def colorlist(selected_color='')
+    opt_list = '<option value="">'+_('-- All --')+'</option>'
+    COLORS.each_with_index do |m, i|
+      selected = selected_color == i ? ' selected="true">' : '>'
+      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
+    end
+    return opt_list
+  end
+  def color_by_id(id=0)
+    COLORS[id]
+  end
+
   def eq_check(check_id, f)
     rval  = '<label for="car_equipment_'+check_id.to_s+'"'+
       ' style="background-position: 0 -'+(EQUIPMENT[check_id][:pos]*32).to_s+'px"'+
@@ -285,5 +317,23 @@ module BoxesHelper
       ' title="'+EQUIPMENT[check_id][:name]+'">'+
       EQUIPMENT[check_id][:name]+'</label>'
     rval += f.check_box check_id
+  end
+
+  def eq_list(equipment)
+    rval = ""
+    EQUIPMENT.each_pair do |ekey, eq|
+      if(equipment[ekey])
+        rval += '<label style="background-position: 0 -'+(eq[:pos]*32).to_s+'px"'+
+          ' class="'+ekey.to_s+'"'+
+          ' title="'+eq[:name]+'">'
+      end
+    end
+    rval
+  end
+  def eq_listitem(check_id)
+    '<label style="background-position: 0 -'+(EQUIPMENT[check_id][:pos]*32).to_s+'px"'+
+      ' class="'+check_id.to_s+'"'+
+      ' title="'+EQUIPMENT[check_id][:name]+'">'+
+      EQUIPMENT[check_id][:name]+'</label>'
   end
 end

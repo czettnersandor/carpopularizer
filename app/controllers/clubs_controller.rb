@@ -7,6 +7,7 @@ class ClubsController < ApplicationController
     else
       @clubs = Club.paginate(:page => params[:page], :per_page => 25, :order => 'created_at DESC',
         :conditions => gen_conditions(params, Club))
+      @last5 = Club.find_all_by_public true, :order => 'created_at DESC', :limit => 5
     end
     
   end

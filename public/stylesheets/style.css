@@ -2244,7 +2244,8 @@ a.newmarket {
 div.equipments td {
   width: 25%;
 }
-div.equipments label {
+div.equipments label,
+#equipment label {
   display: block;
   background: url(../images/equipments.png) no-repeat;
   height: 32px;
@@ -2253,10 +2254,11 @@ div.equipments label {
   float: left;
   padding-left: 32px;
 }
+#equipment label {
+  clear: none;
+  margin-left: 1px;
+}
 div.equipments input{
   float: left;
   margin: 8px 12px 0 -3px;
-}
-#car_equipment_fuggonylegzsak {
-  background: url(../images/equipments.png);
 }
