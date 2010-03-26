@@ -130,6 +130,11 @@
     $('#rss-list-by-hits #tabs-hits-hu').tabs({remote:true});
     $('#rss-list-by-hits #tabs-hits-en').tabs({remote:true});
 
+    <% if I18n.locale='en' %>
+        $('#rss-list a.en').click();
+        $('#rss-list-by-hits a.en').click();
+    <% end %>
+
   });
 
 </script>

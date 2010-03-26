@@ -43,11 +43,15 @@ class BoxesController < ApplicationController
 
   def edit
     @title = _("Edit car")+" » "+@car.name
+    @equipment = Equipment.find_by_car_id @car.id
   end
 
   def update
     respond_to do |format|
       if @car.update_attributes(params[:car])
+        @equipment = Equipment.find_or_create_by_car_id(@car)
+        @equipment.update_attributes!(params[:car][:equipment])
+        @car.equipment = @equipment
         flash[:notice] = _('Car was successfully updated.')
         format.html { redirect_to(user_box_path(@user, @car)) }
         format.xml  { head :ok }

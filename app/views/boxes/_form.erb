@@ -67,24 +67,98 @@
       <div class="form-item"><label for="condition"><%=_('Condition')%></label><br/>
         <%= f.select :condition, conditionlist(@car.condition) %><hr/></div>
 
-      <table style="witdth: 100%">
-        <thead>
-          <tr>
-            <th><%= _("Technical extras") %></th>
-            <th><%= _("Comfort extras") %></th>
-            <th><%= _("Safety extras") %></th>
-            <th><%= _("Further extras") %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+      <% f.fields_for @equipment do |eform| -%>
+        <div class="equipments">
+          <table style="width: 100%">
+            <thead>
+              <tr>
+                <th><%= _("Technical extras") %></th>
+                <th><%= _("Comfort extras") %></th>
+                <th><%= _("Safety extras") %></th>
+                <th><%= _("Further extras") %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%# Technical extras  %>
+                  <%= eq_check(:isof, eform) %>
+                  <%= eq_check(:full, eform) %>
+                  <%= eq_check(:led, eform) %>
+                  <%= eq_check(:xen, eform) %>
+                  <%= eq_check(:gps, eform) %>
+                  <%= eq_check(:dvd, eform) %>
+                  <%= eq_check(:cd, eform) %>
+                  <%= eq_check(:comp, eform) %>
+                  <%= eq_check(:esp, eform) %>
+                  <%= eq_check(:vonohorog, eform) %>
+                  <%= eq_check(:szinezettuveg, eform) %>
+                  <%= eq_check(:manualisvalto, eform) %>
+                  <%= eq_check(:osszkerek, eform) %>
+                  <%= eq_check(:futheto_tukor, eform) %>
+                  <%= eq_check(:alufelni, eform) %>
+                  <%= eq_check(:kodlampa, eform) %>
+                  <%= eq_check(:szinesuveg, eform) %>
+                  <%= eq_check(:cdtar, eform) %>
+                  <%= eq_check(:radiosmagno, eform) %>
+                </td>
+                <td><%# Comfort extras  %>
+                  <%= eq_check(:tempomat, eform) %>
+                  <%= eq_check(:automatavalto, eform) %>
+                  <%= eq_check(:allithatokormany, eform) %>
+                  <%= eq_check(:szervo, eform) %>
+                  <%= eq_check(:ulesmemoria, eform) %>
+                  <%= eq_check(:allithato_hatso_ules, eform) %>
+                  <%= eq_check(:allithato_ulesmagassag, eform) %>
+                  <%= eq_check(:donthetoules, eform) %>
+                  <%= eq_check(:napfenyteto, eform) %>
+                  <%= eq_check(:elektromosteto, eform) %>
+                  <%= eq_check(:el_ablak_elolhatul, eform) %>
+                  <%= eq_check(:elektromos_ablak, eform) %>
+                  <%= eq_check(:borbelso, eform) %>
+                  <%= eq_check(:elektromos_tukor, eform) %>
+                  <%= eq_check(:centralzar, eform) %>
+                  <%= eq_check(:automataklima, eform) %>
+                  <%= eq_check(:manualklima, eform) %>
+                  <%= eq_check(:tolatoradar, eform) %>
+                </td>
+                <td><%# Safety extras  %>
+                  <%= eq_check(:fuggonylegzsak, eform) %>
+                  <%= eq_check(:hatsooldallegzsak, eform) %>
+                  <%= eq_check(:hatsolegzsak, eform) %>
+                  <%= eq_check(:utaslegzsak, eform) %>
+                  <%= eq_check(:im, eform) %>
+                  <%= eq_check(:legzsakoff, eform) %>
+                  <%= eq_check(:vezetolegzsak, eform) %>
+                  <%= eq_check(:oldallegzsak, eform) %>
+                  <%= eq_check(:bukocso, eform) %>
+                  <%= eq_check(:asr, eform) %>
+                  <%= eq_check(:abs, eform) %>
+                  <%= eq_check(:riaszto, eform) %>
+                </td>
+                <td><%# Further extras  %>
+                  <%= eq_check(:nincsforgalmi, eform) %>
+                  <%= eq_check(:csomaghalo, eform) %>
+                  <%= eq_check(:faberakas, eform) %>
+                  <%= eq_check(:hasznaltauto_beszamitas, eform) %>
+                  <%= eq_check(:torzskonyv, eform) %>
+                  <%= eq_check(:pluss_karpit, eform) %>
+                  <%= eq_check(:kulfoldi_papirok, eform) %>
+                  <%= eq_check(:karbantartott, eform) %>
+                  <%= eq_check(:kevesetfutott, eform) %>
+                  <%= eq_check(:nemdohanyzo, eform) %>
+                  <%= eq_check(:szervizkonyv, eform) %>
+                  <%= eq_check(:taxi, eform) %>
+                  <%= eq_check(:elsotulaj, eform) %>
+                  <%= eq_check(:holgytulaj, eform) %>
+                  <%= eq_check(:masodiktulaj, eform) %>
+                  <%= eq_check(:garancialis, eform) %>
+                  <%= eq_check(:garazsbantartott, eform) %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <% end -%>
 
 
     </div>

@@ -2193,7 +2193,7 @@ a.newmarket {
   color: #1b6793;
 }
 #register-wrapper form {
-  width: 204px;
+  width: 224px;
   display: block;
   float: left;
 }
@@ -2203,7 +2203,7 @@ a.newmarket {
   margin: 5px 0 10px 0;
 }
 #register-wrapper form input {
-  width: 190px;
+  width: 205px;
 }
 #register-wrapper form input[type="submit"] {
   width: 132px;
@@ -2225,7 +2225,7 @@ a.newmarket {
   margin: 10px 0 10px -240px;
 }
 #register-wrapper #register-left {
-  padding: 273px 80px 0 80px;
+  padding: 273px 60px 0 80px;
   width: 576px;
   height: 97px;
   display: block;
@@ -2236,4 +2236,27 @@ a.newmarket {
 
 #user-tabs {
   padding-top: 30px;
+}
+
+/*
+* Felszereltségek
+*/
+div.equipments td {
+  width: 25%;
+}
+div.equipments label {
+  display: block;
+  background: url(../images/equipments.png) no-repeat;
+  height: 32px;
+  width: 0;
+  overflow: hidden;
+  float: left;
+  padding-left: 32px;
+}
+div.equipments input{
+  float: left;
+  margin: 8px 12px 0 -3px;
+}
+#car_equipment_fuggonylegzsak {
+  background: url(../images/equipments.png);
 }

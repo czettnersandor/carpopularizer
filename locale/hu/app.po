@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: version 0.0.1\n"
 "POT-Creation-Date: 2010-03-18 18:17+0100\n"
-"PO-Revision-Date: 2010-03-18 18:17+0100\n"
+"PO-Revision-Date: 2010-03-26 09:09+0100\n"
 "Last-Translator: Sándor Czettner <sandor@czettner.hu>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -741,7 +741,7 @@ msgstr "Legolvasottabb hírek"
 
 #: app/views/videos/index.html.erb:24
 msgid "Most visited videos"
-msgstr "Legtöbbet nézett videók"
+msgstr "Legnézettebb videók"
 
 #: app/views/layouts/_login.erb:16
 msgid "My friends"
@@ -1400,7 +1400,7 @@ msgstr "cabrio"
 
 #: app/helpers/boxes_helper.rb:6
 msgid "coupe"
-msgstr "Kupé"
+msgstr "coupe"
 
 #: app/helpers/boxes_helper.rb:108
 msgid "crashed"
@@ -1599,7 +1599,7 @@ msgstr "második tulajdonos"
 
 #: app/helpers/boxes_helper.rb:15
 msgid "sedan"
-msgstr "Szedán"
+msgstr "sedan"
 
 #: app/helpers/boxes_helper.rb:75
 msgid "service book"
@@ -1644,7 +1644,7 @@ msgstr "garanciális"
 
 #: app/helpers/boxes_helper.rb:10
 msgid "van"
-msgstr "van"
+msgstr "kisbusz"
 
 #: app/helpers/boxes_helper.rb:104
 msgid "well protected"

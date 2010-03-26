@@ -95,6 +95,8 @@ $(document).ready(function(){
   i = 0;
 
   $(".cups .cup").tipsy();
+  $("div.equipments label").tipsy({
+  });
 
   $('a.colorbox').colorbox({});
 
@@ -262,5 +264,7 @@ $("#loginblock label").inFieldLabels();
     // Hover
     $('#logo-home').hide();
   });
+
+
 
 });

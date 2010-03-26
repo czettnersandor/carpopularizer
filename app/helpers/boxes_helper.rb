@@ -34,10 +34,10 @@ module BoxesHelper
     :bukocso => {:pos => 12, :name => _("reinforcement bars")},
     :alufelni => {:pos => 13, :name => _("aluminium wheel")},
     :hasznaltauto_beszamitas => {:pos => 14, :name => _("car set-off possible")},
-    :torzskonyv => {:pos => 15, :name => ""}, #torzskonyv
+    :torzskonyv => {:pos => 15, :name => "törzskönyv"}, #torzskonyv
     :pluss_karpit => {:pos => 16, :name => _("plush seats")},
     :kulfoldi_papirok => {:pos => 17, :name => _("has foreign documents")},
-    :karbentartott => {:pos => 18, :name => _("often serviced")},
+    :karbantartott => {:pos => 18, :name => _("often serviced")},
     :isof => {:pos => 19, :name => _("isofix system")},
     :full => {:pos => 20, :name => _("full extra")},
     :led => {:pos => 21, :name => _("led headlight")},
@@ -49,7 +49,7 @@ module BoxesHelper
     :esp => {:pos => 27, :name => _("esp")},
     :asr => {:pos => 28, :name => _("asr")},
     :abs => {:pos => 29, :name => _("abs")},
-    :tempomat => {:pos => 30, :name => ""}, #tempomat
+    :tempomat => {:pos => 30, :name => "tempomat"}, #tempomat
     :vonohorog => {:pos => 31, :name => _("dragbar")},
     :szinezettuveg => {:pos => 32, :name => _("tinted glass")},
     :kevesetfutott => {:pos => 33, :name => _("a few mileage")},
@@ -82,7 +82,7 @@ module BoxesHelper
     :szinesuveg => {:pos => 60, :name => _("tinted glass")},
     :cdtar => {:pos => 61, :name => _("cd case")},
     :garazsbantartott => {:pos => 62, :name => _("kept in garage")},
-    :radiosmagno => {:pos => 63, :name => ""}, #radiosmagno
+    :radiosmagno => {:pos => 63, :name => "radio"}, #radiosmagno
     :automataklima => {:pos => 64, :name => _("automatic A/C")},
     :manualklima => {:pos => 65, :name => _("manual A/C")}
   }
@@ -276,5 +276,14 @@ module BoxesHelper
       opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
     end
     return opt_list
+  end
+
+  def eq_check(check_id, f)
+    rval  = '<label for="car_equipment_'+check_id.to_s+'"'+
+      ' style="background-position: 0 -'+(EQUIPMENT[check_id][:pos]*32).to_s+'px"'+
+      ' class="'+check_id.to_s+'"'+
+      ' title="'+EQUIPMENT[check_id][:name]+'">'+
+      EQUIPMENT[check_id][:name]+'</label>'
+    rval += f.check_box check_id
   end
 end
