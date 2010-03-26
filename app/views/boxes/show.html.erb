@@ -56,30 +56,18 @@
       </ul>
 
       <div id="data">
-        <label><%= _('Price') %></label>
-        <span class="data"><%= @car.price %><%= @car.price_unit %></span>
-        <label><%= _('Make') %></label>
-        <span class="data"><%= @car.make %></span>
-        <label><%= _('Age grade') %></label>
-        <span class="data"><%= @car.age_grade %></span>
-        <label><%= _('ccm') %></label>
-        <span class="data"><%= @car.ccm %></span>
-        <label><%= _('Performance') %></label>
-        <span class="data"><%= @car.performance %> <%= @car.performance_unit %></span>
-        <label><%= _('Fuel') %></label>
-        <span class="data"><%= @car.fuel %></span>
-        <label><%= _('0-100km/h') %></label>
-        <span class="data"><%= @car.acceleration %>s</span>
-        <label><%= _('Top speed') %></label>
-        <span class="data"><%= @car.topspeed %></span>
-        <label><%= _('Torque') %></label>
-        <span class="data"><%= @car.torque %></span>
-        <label><%= _('Color') %></label>
-        <span class="data"><%= _(color_by_id(@car.color.to_i)) %></span>
-        <label><%= _('Mileage') %></label>
-        <span class="data"><%= @car.km %><%= @car.km_unit %></span>
-        <label><%= _('Condition') %></label>
-        <span class="data"><%= @car.condition %></span>
+        <%= show_filled(_('Price'), @car.price, @car.price_unit) %>
+        <%= show_filled(_('Make'), @car.make) %>
+        <%= show_filled(_('Age grade'), @car.age_grade) %>
+        <%= show_filled(_('ccm'), @car.ccm) %>
+        <%= show_filled(_('Performance'), @car.performance, @car.performance_unit) %>
+        <%= show_filled(_('Fuel'), fuel_by_id(@car.fuel)) %>
+        <%= show_filled(_('0-100km/h'), @car.acceleration.to_s, 's') %>
+        <%= show_filled(_('Top speed'), @car.topspeed.to_s) %>
+        <%= show_filled(_('Torque'), @car.torque.to_s, 'Nm') %>
+        <%= show_filled(_('Color'), _(color_by_id(@car.color.to_i))) %>
+        <%= show_filled(_('Mileage'), @car.km.to_s, @car.km_unit) %>
+        <%= show_filled(_('Condition'), condition_by_id(@car.condition)) %>
         <hr class="clear"/>
       </div>
 
@@ -96,7 +84,7 @@
       </div>
 
       <div id="equipment">
-        <%= eq_list @car.equipment %>
+        <%= eq_list @car.equipment if @car.equipment %>
 
         <hr class="clear"/>
       </div>

@@ -283,31 +283,40 @@ module BoxesHelper
   def fuellist(selected_fuel='')
     opt_list = '<option value="">'+_('-- All --')+'</option>'
     FUELS.each_with_index do |m, i|
-      selected = selected_fuel == i ? ' selected="true">' : '>'
-      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
+      selected = selected_fuel == i+1 ? ' selected="true">' : '>'
+      opt_list += '<option value='+(i+1).to_s+selected+ _(m) +'</option>'
     end
     return opt_list
+  end
+  def fuel_by_id(id=0)
+    return "" if id==0
+    _(FUELS[id-1])
   end
 
   def conditionlist(selected_cond='')
     opt_list = '<option value="">'+_('-- All --')+'</option>'
     CONDITIONS.each_with_index do |m, i|
-      selected = selected_cond == i ? ' selected="true">' : '>'
-      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
+      selected = selected_cond == i+1 ? ' selected="true">' : '>'
+      opt_list += '<option value='+(i+1).to_s+selected+ _(m) +'</option>'
     end
     return opt_list
+  end
+  def condition_by_id(id=0)
+    return "" if id==0
+    _(CONDITIONS[id-1])
   end
 
   def colorlist(selected_color='')
     opt_list = '<option value="">'+_('-- All --')+'</option>'
     COLORS.each_with_index do |m, i|
-      selected = selected_color == i ? ' selected="true">' : '>'
-      opt_list += '<option value='+i.to_s+selected+ _(m) +'</option>'
+      selected = selected_color == i+1 ? ' selected="true">' : '>'
+      opt_list += '<option value='+(i+1).to_s+selected+ _(m) +'</option>'
     end
     return opt_list
   end
+
   def color_by_id(id=0)
-    COLORS[id]
+    COLORS[id-1]
   end
 
   def eq_check(check_id, f)
@@ -335,5 +344,10 @@ module BoxesHelper
       ' class="'+check_id.to_s+'"'+
       ' title="'+EQUIPMENT[check_id][:name]+'">'+
       EQUIPMENT[check_id][:name]+'</label>'
+  end
+
+  # Label and value shows only if value is not empty
+  def show_filled(label, value, unit='')
+    '<label>'+label+'</label>'+'<span class="data">'+value+' '+unit+'</span>' if value
   end
 end
