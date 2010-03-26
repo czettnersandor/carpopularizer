@@ -62,11 +62,11 @@
         <%= show_filled(_('ccm'), @car.ccm) %>
         <%= show_filled(_('Performance'), @car.performance, @car.performance_unit) %>
         <%= show_filled(_('Fuel'), fuel_by_id(@car.fuel)) %>
-        <%= show_filled(_('0-100km/h'), @car.acceleration.to_s, 's') %>
-        <%= show_filled(_('Top speed'), @car.topspeed.to_s) %>
-        <%= show_filled(_('Torque'), @car.torque.to_s, 'Nm') %>
+        <%= show_filled(_('0-100km/h'), @car.acceleration, 's') %>
+        <%= show_filled(_('Top speed'), @car.topspeed) %>
+        <%= show_filled(_('Torque'), @car.torque, 'Nm') %>
         <%= show_filled(_('Color'), _(color_by_id(@car.color.to_i))) %>
-        <%= show_filled(_('Mileage'), @car.km.to_s, @car.km_unit) %>
+        <%= show_filled(_('Mileage'), @car.km, @car.km_unit) %>
         <%= show_filled(_('Condition'), condition_by_id(@car.condition)) %>
         <hr class="clear"/>
       </div>

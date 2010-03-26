@@ -289,7 +289,7 @@ module BoxesHelper
     return opt_list
   end
   def fuel_by_id(id=0)
-    return "" if id==0
+    return "" if id==0 || id == nil
     _(FUELS[id-1])
   end
 
@@ -302,7 +302,7 @@ module BoxesHelper
     return opt_list
   end
   def condition_by_id(id=0)
-    return "" if id==0
+    return "" if id==0 || id == nil
     _(CONDITIONS[id-1])
   end
 
@@ -348,6 +348,10 @@ module BoxesHelper
 
   # Label and value shows only if value is not empty
   def show_filled(label, value, unit='')
-    '<label>'+label+'</label>'+'<span class="data">'+value+' '+unit+'</span>' if value
+    if value != nil && value != ''
+      value = value.to_s if not value.class == :string
+      unit = unit.to_s if not unit.class == :string
+      return '<label>'+label+'</label>'+'<span class="data">'+value+' '+unit+'</span>'
+    end
   end
 end

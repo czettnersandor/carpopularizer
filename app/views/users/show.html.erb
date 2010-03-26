@@ -31,7 +31,7 @@
                 :locals => { :header => _('Birth date') , :var => @user.birth.strftime("%Y/%m/%d") } if @user.birth%>
 
               <%= render :partial => "users/profile_element",
-                :locals => { :header => _('Country') , :var => @user.country } %>
+                :locals => { :header => _('Country') , :var => country_by_code(@user.country) } %>
 
               <%= render :partial => "users/profile_element",
                 :locals => { :header => _('City') , :var => @user.city } %>
