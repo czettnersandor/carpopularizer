@@ -2,14 +2,36 @@
 
 <div class="grid_9 omega" id="profile-right">
   <div class="orangebox">
-    <h2>Current Friends</h2>
-    <%= render :partial => 'friends/friends' %>
+    <div id="form-wrapper">
+      <div id="user-tabs" class="form-tabs">
+        <ul>
+          <li><%= link_to _("Current friends"), '#current' %></li>
+          <% if admin_or_current? @user %>
+          <li><%= link_to _("Requested Friends"), '#requested' %></li>
+          <li><%= link_to _("Pending Friends"), '#pending' %></li>
+          <% end %>
+        </ul>
+        <hr class="clear" />
 
-    <% if admin_or_current? @user %>
-      <h2>Requested Friends</h2>
-      <%= render :partial => 'friends/requested_friends' %>
-      <h2>Pending Friends</h2>
-      <%= render :partial => 'friends/pending_friends' %>
-    <% end %>
+        <div id="current">
+          <%= render :partial => 'friends/friends' %>
+        </div>
+        <% if admin_or_current? @user %>
+          <div id="requested">
+            <%= render :partial => 'friends/requested_friends' %>
+          </div>
+          <div id="pending">
+            <%= render :partial => 'friends/pending_friends' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+
+<script type="text/javascript">// <![CDATA[
+  $(document).ready(function(){
+    $('.lampa a').tipsy({gravity: 'w'});
+    $('#user-tabs').tabs();
+  });
+</script>

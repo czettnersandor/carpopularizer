@@ -10,7 +10,9 @@
     </div>
 
     <div class="profiledata"><%=  user.city %>
+      <% if user.country %>
       (<%= user.country.upcase %>)
+      <% end %>
     </div>
 <%#
 Ismerősnek jelöl,

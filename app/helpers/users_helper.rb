@@ -44,7 +44,11 @@ module UsersHelper
     return opt_list
   end
   def country_by_code(code_id='')
-    _(COUNTRIES.detect {|c| c[0] == code_id}[1])
+    if code_id
+      return _(COUNTRIES.detect {|c| c[0] == code_id}[1])
+    else
+      return ''
+    end
   end
 
   def gender(id)

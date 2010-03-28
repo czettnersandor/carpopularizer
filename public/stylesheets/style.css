@@ -883,6 +883,25 @@ table.profile-edit td {
 .friends-list .item {
   padding: 10px;
   border: 1px solid #2487BB;
+  height: 70px;
+  margin-top: 10px;
+}
+.friends-list .item .profile-image {
+  float: left;
+  margin-right: 10px;
+}
+.friends-list .item .lampa {
+  width: 26px;
+  height: 60px;
+  background: url(../images/lampa.png);
+  float: left;
+  margin-right: 10px;
+  padding-top: 6px;
+}
+.friends-list .item .lampa a {
+  display: block;
+  width: 26px;
+  height: 30px;
 }
 
 /*
